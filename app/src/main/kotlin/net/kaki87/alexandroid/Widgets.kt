@@ -143,6 +143,7 @@ class ToggleWidgetConfigActivity : Activity() {
 
 class WidgetActionReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
+        android.util.Log.i("Alexandroid", "widget action ${intent.action} extras=${intent.extras?.keySet()?.toList()}")
         if (intent.action != ACTION_TOGGLE) return
         val entityId = intent.getStringExtra("entityId") ?: return
         val on = intent.getBooleanExtra("on", true)
@@ -151,7 +152,9 @@ class WidgetActionReceiver : BroadcastReceiver() {
             try {
                 val store = Store(context)
                 AlexaApi(store).setPower(Device(entityId, "", "", "", null), on)
-            } catch (_: Exception) {
+                android.util.Log.i("Alexandroid", "widget toggled $entityId to $on")
+            } catch (e: Exception) {
+                android.util.Log.e("Alexandroid", "widget toggle failed", e)
             } finally {
                 ListWidgetProvider.refreshAll(context)
                 pending.finish()

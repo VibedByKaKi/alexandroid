@@ -32,6 +32,7 @@ class LoginActivity : Activity() {
                             Auth.register(store, pending, code)
                             runOnUiThread { setResult(RESULT_OK); finish() }
                         } catch (e: Exception) {
+                            android.util.Log.e("Alexandroid", "registration failed", e)
                             runOnUiThread { Toast.makeText(this@LoginActivity, e.message, Toast.LENGTH_LONG).show(); finish() }
                         }
                     }

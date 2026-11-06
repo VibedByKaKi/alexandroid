@@ -63,7 +63,7 @@ object Auth {
             .put("cookies", JSONObject().put("website_cookies", JSONArray()).put("domain", ".amazon.${store.tld}"))
             .put("registration_data", JSONObject()
                 .put("domain", "Device").put("app_version", APP_VERSION).put("device_type", DEVICE_TYPE)
-                .put("device_name", "Alexandroid").put("os_version", "18.5")
+                .put("device_name", "Alexandroid " + hex(serial).take(4)).put("os_version", "18.5")
                 .put("device_serial", hex(serial).uppercase()).put("device_model", "iPhone")
                 .put("app_name", "Alexandroid").put("software_version", "1"))
             .put("auth_data", JSONObject()

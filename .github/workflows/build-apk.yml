@@ -61,6 +61,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="build-${GITHUB_SHA::8}"
-          gh release create "$TAG" alexandroid.apk --prerelease --target "$GITHUB_SHA" \
-            --title "Alexandroid ${TAG}" --notes "Signed APK built from ${GITHUB_SHA} on ${GITHUB_REF_NAME}." \
-            || gh release upload "$TAG" alexandroid.apk --clobber
+          for attempt in 1 2 3 4 5; do
+            if gh release view "$TAG" >/dev/null 2>&1; then
+              gh release upload "$TAG" alexandroid.apk --clobber && exit 0
+            else
+              gh release create "$TAG" alexandroid.apk --prerelease --target "$GITHUB_SHA" \
+                --title "Alexandroid ${TAG}" --notes "Signed APK built from ${GITHUB_SHA} on ${GITHUB_REF_NAME}." && exit 0
+            fi
+            echo "attempt ${attempt} failed, retrying" >&2
+            sleep $((attempt * 10))
+          done
+          exit 1

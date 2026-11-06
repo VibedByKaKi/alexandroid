@@ -135,7 +135,7 @@ class AlexaApi(private val store: Store) {
         ensureCsrf()
         val arr = JSONObject(request("GET", "/api/devices-v2/device?cached=false")).optJSONArray("devices") ?: return emptyList()
         return (0 until arr.length()).map { arr.getJSONObject(it) }
-            .filter { it.optString("deviceFamily") in setOf("ECHO", "KNIGHT", "ROOK", "TABLET", "FIRE_TV") || it.optBoolean("online") }
+            .filter { it.optString("deviceFamily") in setOf("ECHO", "KNIGHT", "ROOK", "TABLET", "FIRE_TV") }
             .map { EchoDevice(it.getString("serialNumber"), it.getString("deviceType"), it.optString("accountName"), it.optString("deviceAccountId")) }
     }
 
@@ -154,11 +154,12 @@ class AlexaApi(private val store: Store) {
                     deviceType = it.optString("deviceType"),
                     triggerMillis = it.optLong("alarmTime", it.optLong("triggerTime", 0)),
                     remainingMillis = it.optLong("remainingTime", 0),
+                    clock = it.optString("originalTime").take(5),
                     recurring = it.optString("recurringPattern").takeIf { p -> p.isNotEmpty() && p != "null" },
                     raw = it,
                 )
             }
-            .sortedBy { it.triggerMillis }
+            .sortedWith(compareBy<Notification>({ it.type }, { it.clock }, { it.triggerMillis }))
     }
 
     /** status: "ON", "OFF" (alarms), "PAUSED"/"ON" (timers). */
@@ -173,28 +174,54 @@ class AlexaApi(private val store: Store) {
         request("DELETE", "/api/notifications/${n.id}")
     }
 
-    fun createTimer(device: EchoDevice, seconds: Int, label: String) {
+    private fun devicePrefs(serial: String): JSONObject? {
+        val prefs = JSONObject(request("GET", "/api/device-preferences")).optJSONArray("devicePreferences") ?: return null
+        for (i in 0 until prefs.length()) if (prefs.getJSONObject(i).optString("deviceSerialNumber") == serial) return prefs.getJSONObject(i)
+        return null
+    }
+
+    /**
+     * The legacy notification endpoint rejects new timers (HTTP 500) and the gateway timer API only targets the
+     * phone, so the timer is created by sending a text command to the Echo in its own language.
+     */
+    fun createTimer(device: EchoDevice, minutes: Int) {
         ensureCsrf()
-        val now = System.currentTimeMillis()
-        val body = baseNotification(device, "Timer", now)
-            .put("timerLabel", label.ifBlank { JSONObject.NULL })
-            .put("originalDuration", seconds * 1000L)
-            .put("remainingTime", seconds * 1000L)
-            .put("triggerTime", 0)
-            .put("status", "ON")
-        request("PUT", "/api/notifications/createReminder", body.toString())
+        val prefs = JSONObject(request("GET", "/api/device-preferences")).optJSONArray("devicePreferences")
+        var locale = "en-US"
+        if (prefs != null) for (i in 0 until prefs.length()) {
+            val p = prefs.getJSONObject(i)
+            if (p.optString("deviceSerialNumber") == device.serial) locale = p.optString("locale", locale)
+        }
+        val lang = locale.substringBefore('-').lowercase()
+        val text = when (lang) {
+            "fr" -> "minuteur de $minutes minutes"
+            "de" -> "Timer für $minutes Minuten"
+            "es" -> "temporizador de $minutes minutos"
+            "it" -> "timer di $minutes minuti"
+            else -> "set a timer for $minutes minutes"
+        }
+        val customerId = JSONObject(request("GET", "/api/bootstrap?version=0")).getJSONObject("authentication").getString("customerId")
+        val payload = JSONObject().put("deviceType", device.type).put("deviceSerialNumber", device.serial)
+            .put("locale", locale.substringBefore('-') + "-" + locale.substringAfter('-', "US").uppercase())
+            .put("customerId", customerId).put("text", text)
+        val seq = JSONObject().put("@type", "com.amazon.alexa.behaviors.model.Sequence").put("startNode", JSONObject()
+            .put("@type", "com.amazon.alexa.behaviors.model.OpaquePayloadOperationNode")
+            .put("type", "Alexa.TextCommand").put("skillId", "amzn1.ask.1p.tellalexa").put("operationPayload", payload))
+        request("POST", "/api/behaviors/preview", JSONObject().put("behaviorId", "PREVIEW").put("sequenceJson", seq.toString()).put("status", "ENABLED").toString())
     }
 
     fun createAlarm(device: EchoDevice, hour: Int, minute: Int) {
         ensureCsrf()
-        val cal = java.util.Calendar.getInstance().apply {
+        val zone = devicePrefs(device.serial)?.optString("timeZoneId")?.takeIf { it.isNotBlank() && it != "null" } ?: TimeZone.getDefault().id
+        val cal = java.util.Calendar.getInstance(TimeZone.getTimeZone(zone)).apply {
             set(java.util.Calendar.HOUR_OF_DAY, hour); set(java.util.Calendar.MINUTE, minute)
             set(java.util.Calendar.SECOND, 0); set(java.util.Calendar.MILLISECOND, 0)
             if (timeInMillis <= System.currentTimeMillis()) add(java.util.Calendar.DAY_OF_YEAR, 1)
         }
-        val date = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(cal.time)
+        val date = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).apply { timeZone = TimeZone.getTimeZone(zone) }.format(cal.time)
         val time = String.format(java.util.Locale.US, "%02d:%02d:00.000", hour, minute)
         val body = baseNotification(device, "Alarm", System.currentTimeMillis())
+            .put("timeZoneId", zone)
             .put("alarmTime", cal.timeInMillis)
             .put("originalDate", date)
             .put("originalTime", time)

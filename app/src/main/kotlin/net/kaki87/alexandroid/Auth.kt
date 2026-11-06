@@ -24,6 +24,16 @@ object Auth {
 
     private fun hex(b: ByteArray) = b.joinToString("") { "%02x".format(it) }
 
+    private fun handle(tld: String) = when (tld) {
+        "com" -> "amzn_dp_project_dee_ios"
+        "co.uk" -> "amzn_dp_project_dee_android_uk"
+        "co.jp" -> "amzn_dp_project_dee_android_jp"
+        "com.au" -> "amzn_dp_project_dee_android_au"
+        "com.br" -> "amzn_dp_project_dee_android_br"
+        "com.mx" -> "amzn_dp_project_dee_android_mx"
+        else -> "amzn_dp_project_dee_android_$tld"
+    }
+
     fun begin(tld: String): Pending {
         val rnd = SecureRandom()
         val id = ByteArray(16).also { rnd.nextBytes(it) }
@@ -34,9 +44,9 @@ object Auth {
         val challenge = Base64.encodeToString(MessageDigest.getInstance("SHA-256").digest(verifier.toByteArray()), flags)
         val q = linkedMapOf(
             "openid.return_to" to "https://www.amazon.$tld/ap/maplanding",
-            "openid.assoc_handle" to "amzn_dp_project_dee_ios",
+            "openid.assoc_handle" to handle(tld),
             "openid.identity" to "http://specs.openid.net/auth/2.0/identifier_select",
-            "pageId" to "amzn_dp_project_dee_ios",
+            "pageId" to handle(tld),
             "accountStatusPolicy" to "P1",
             "openid.claimed_id" to "http://specs.openid.net/auth/2.0/identifier_select",
             "openid.mode" to "checkid_setup",

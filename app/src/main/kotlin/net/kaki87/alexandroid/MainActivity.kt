@@ -217,7 +217,7 @@ class MainActivity : Activity() {
             val fmt = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT)
             list.forEach { n ->
                 val isTimer = n.type == "Timer"
-                val title = if (isTimer) (n.label.ifBlank { "Timer" } + " · " + remaining(n)) else fmt.format(Date(n.triggerMillis))
+                val title = if (isTimer) (n.label.ifBlank { "Timer" } + " · " + remaining(n)) else n.clock
                 val sub = listOfNotNull(names[n.deviceSerial], n.recurring?.let { "repeats" }, if (n.status == "PAUSED") "paused" else null).joinToString(" · ")
                 val sw = Switch(this).apply { isChecked = n.status == "ON" }
                 sw.setOnClickListener {
@@ -256,11 +256,10 @@ class MainActivity : Activity() {
 
     private fun addTimer() = pickEcho { echo ->
         val minutes = EditText(this).apply { hint = "Minutes"; inputType = InputType.TYPE_CLASS_NUMBER }
-        val label = EditText(this).apply { hint = "Label (optional)" }
-        val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(20), dp(8), dp(20), 0); addView(minutes); addView(label) }
+        val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(20), dp(8), dp(20), 0); addView(minutes) }
         AlertDialog.Builder(this).setTitle("New timer").setView(form).setPositiveButton("Start") { _, _ ->
             val m = minutes.text.toString().toIntOrNull() ?: return@setPositiveButton
-            run({ api.createTimer(echo, m * 60, label.text.toString()) }) { show(1) }
+            run({ api.createTimer(echo, m) }) { show(1) }
         }.setNegativeButton("Cancel", null).show()
     }
 

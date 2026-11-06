@@ -25,7 +25,7 @@ The APK is attached to a `build-<sha>` pre-release (and to the `alexandroid-apk`
 
 The app opens the regular Amazon sign-in page in a WebView (so two-step verification works), registers itself as
 a device with OAuth2 code and PKCE, and stores the refresh token. It exchanges that token for web cookies and renews
-them when Amazon rejects a request. Pick your Amazon region in Settings before signing in.
+them when Amazon rejects a request. Pick your Amazon region in Settings before signing in. Accounts are per marketplace: the same email can have different devices on amazon.com and amazon.fr, and the sign-in page uses a per-region `amzn_dp_project_dee_android_<region>` handle.
 
 ## Endpoints used
 
@@ -36,7 +36,8 @@ against a live account.
 |---|---|
 | Device list and state | `POST https://alexa.amazon.<tld>/nexus/v1/graphql`, query `listEndpoints` with `features { ... on Power { powerStateValue } }` |
 | Toggle | same endpoint, mutation `setEndpointFeatures` with `featureName: power` and `featureOperationName: turnOn` or `turnOff` |
-| Alarms and timers | `GET`, `PUT` and `DELETE https://alexa.amazon.<tld>/api/notifications[/{id}]`; creation is `PUT /api/notifications/createReminder` |
+| Alarms | `GET`, `PUT` and `DELETE https://alexa.amazon.<tld>/api/notifications[/{id}]`; creation is `PUT /api/notifications/createReminder` with `status: ON` |
+| Timers | listed, paused (`PUT` with `status: PAUSED`), resumed and deleted through `/api/notifications`. Creating one through that endpoint returns HTTP 500, so the app sends the text command "set a timer for N minutes" (in the device's language) to `POST /api/behaviors/preview` |
 | Echo devices | `GET /api/devices-v2/device?cached=false` |
 | Voice history | `GET https://www.amazon.<tld>/alexa-privacy/apd/rvh/customer-history-records?startTime=&endTime=` |
 

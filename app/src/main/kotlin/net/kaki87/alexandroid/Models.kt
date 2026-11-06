@@ -14,6 +14,7 @@ data class Notification(
     val triggerMillis: Long,
     val remainingMillis: Long,
     val recurring: String?,
+    val clock: String,
     val raw: org.json.JSONObject,
 )
 

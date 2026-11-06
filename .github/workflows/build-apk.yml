@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -47,6 +50,17 @@ jobs:
         run: rm -rf "${RUNNER_TEMP}/keystore"
 
       - uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: alexandroid-apk
           path: alexandroid.apk
+
+      - name: Publish pre-release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="build-${GITHUB_SHA::8}"
+          gh release create "$TAG" alexandroid.apk --prerelease --target "$GITHUB_SHA" \
+            --title "Alexandroid ${TAG}" --notes "Signed APK built from ${GITHUB_SHA} on ${GITHUB_REF_NAME}." \
+            || gh release upload "$TAG" alexandroid.apk --clobber

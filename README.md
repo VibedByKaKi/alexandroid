@@ -19,7 +19,7 @@ Voice control, chats, lists, notes, reminders, routines, skills and the calendar
 
 CI (`.github/workflows/build-apk.yml`) builds a release APK and signs it with the keystore stored in the
 `ALEXA_KEYSTORE_BASE64`, `ALEXA_KEYSTORE_PASSWORD`, `ALEXA_KEY_PASSWORD` and `ALEXA_KEY_ALIAS` repository secrets.
-The APK is uploaded as the `alexandroid-apk` artifact.
+The APK is attached to a `build-<sha>` pre-release (and to the `alexandroid-apk` artifact when storage quota allows).
 
 ## Sign-in
 

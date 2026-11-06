@@ -1,0 +1,90 @@
+package com.amazon.alexa.accessory.frames.metrics;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes15.dex */
+public final class MetricsConstants {
+    public static final String AUTO_CAPTURED_SUFFIX = "_auto_captured";
+    public static final String COMPONENT_NAME = "EchoFramesAndroid";
+    public static final double COUNTER_VALUE = 1.0d;
+    public static final String CUSTOM_SHORTCUT_BACK = "Zen_customShortcut_heartbeat_daily_back_";
+    public static final String CUSTOM_SHORTCUT_FRONT = "Zen_customShortcut_heartbeat_daily_front_";
+    public static final String CUSTOM_SHORTCUT_HEARTBEAT_DAILY = "Zen_customShortcut_heartbeat_daily_";
+    public static final String CUSTOM_SHORTCUT_PREFIX = "Zen_customShortcut_";
+    public static final String FW_VERSION_CRADLE_VERSION_TEMPLATE = "Zen_frames_%s_cradle_%s";
+    public static final String HEARTBEAT_DAILY = "heartbeat_daily_";
+    public static final String MANUAL_CAPTURED_SUFFIX = "_manual_captured";
+    public static final String MEDIA_VIEWER_DELETE_CANCELLED = "MediaViewer_delete_cancelled";
+    public static final String MEDIA_VIEWER_DELETE_CONFIRMED = "MediaViewer_delete_confirmed";
+    public static final String MEDIA_VIEWER_DELETE_DIALOG_SHOWN = "MediaViewer_delete_dialog_shown";
+    public static final String MEDIA_VIEWER_DELETE_LAST_ITEM = "MediaViewer_delete_last_item";
+    public static final String MEDIA_VIEWER_DELETE_MEDIAINDEX_FAILED = "MediaViewer_delete_mediaindex_failed";
+    public static final String MEDIA_VIEWER_DELETE_MEDIAINDEX_SUCCESS = "MediaViewer_delete_mediaindex_success";
+    public static final String MEDIA_VIEWER_DELETE_MEDIAINDEX_SUCCESS_AUTO_CAPTURED = "MediaViewer_delete_mediaindex_success_auto_captured";
+    public static final String MEDIA_VIEWER_DELETE_MEDIAINDEX_SUCCESS_MANUAL_CAPTURED = "MediaViewer_delete_mediaindex_success_manual_captured";
+    public static final String MEDIA_VIEWER_DELETE_MEDIASTORE_FAILED = "MediaViewer_delete_mediastore_failed";
+    public static final String MEDIA_VIEWER_DELETE_MEDIASTORE_SUCCESS = "MediaViewer_delete_mediastore_success";
+    public static final String MEDIA_VIEWER_MEDIA_VIEWED = "MediaViewer_media_viewed";
+    public static final String MEDIA_VIEWER_PREFIX = "MediaViewer_";
+    public static final String MEDIA_VIEWER_SHARE_FAILED = "MediaViewer_share_failed";
+    public static final String MEDIA_VIEWER_SHARE_INITIATED = "MediaViewer_share_initiated";
+    public static final String MEDIA_VIEWER_VIEWED_AFTER_WINDOW = "MediaViewer_viewed_after_5min";
+    public static final String MEDIA_VIEWER_VIEWED_WITHIN_WINDOW = "MediaViewer_viewed_within_5min";
+    public static final long MEDIA_VIEW_IMMEDIATE_WINDOW_MS = 300000;
+    public static final String OS_ASSISTANT_HEARTBEAT_DAILY = "Zen_osassistant_heartbeat_daily_";
+    public static final String OS_ASSISTANT_PREFIX = "Zen_osassistant_";
+    public static final String OS_ASSISTANT_TOGGLE_VALUE_OFF = "Zen_osassistant_heartbeat_daily_selection_OFF";
+    public static final String OS_ASSISTANT_TOGGLE_VALUE_ON = "Zen_osassistant_heartbeat_daily_selection_ON";
+    public static final String OTG_MOBILYTICS_IDENTIFIER = "42534835-54fc-4240-8452-ba6c44493b3b";
+    public static final String PERSONALIZED_GREETING_PLAYED = "PersonalizedGreeting_played";
+    public static final String PERSONALIZED_GREETING_SKIP_CLIP_MISSING = "PersonalizedGreeting_skip_clipMissing";
+    public static final String PERSONALIZED_GREETING_SKIP_ERROR = "PersonalizedGreeting_skip_error";
+    public static final String PERSONALIZED_GREETING_SKIP_FOCUS_DENIED = "PersonalizedGreeting_skip_focusDenied";
+    public static final String PERSONALIZED_GREETING_SKIP_FOCUS_UNAVAILABLE = "PersonalizedGreeting_skip_focusUnavailable";
+    public static final String PERSONALIZED_GREETING_SKIP_MEDIA_OR_CALL = "PersonalizedGreeting_skip_mediaOrCall";
+    public static final String SUB_COMPONENT_NAME = "default";
+    public static final String TOP_CONTACT_ARTIFACT_FILE_PATH_REQUESTED_BEFORE_ARTIFACT_DOWNLOAD = "TopContact_artifact_filepath_requested_before_artifact_download";
+    public static final String TOP_CONTACT_ARTIFACT_FILE_PATH_RETRIEVAL_FAIL = "TopContact_artifact_filepath_retrieval_fail";
+    public static final String TOP_CONTACT_ARTIFACT_FILE_PATH_RETURNED_FOR_DEFAULT_LOCALE = "TopContact_artifact_filepath_returned_default_locale";
+    public static final String TOP_CONTACT_ATTEMPTED_SEND_ANNOUNCE_EVENT = "TopContact_attempted_to_send_announce_event";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_FAILED_TO_ACQUIRE = "TopContact_audio_focus_failed_to_acquire";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_GRANTED = "TopContact_audioFocus_granted";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_NOT_REQUEST = "TopContact_audioFocus_not_request";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_NOT_REQUEST_AUDIO_BUSY = "TopContact_audioFocus_not_request_audio_busy";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_NOT_REQUEST_SCHEDULE_FAIL = "TopContact_audioFocus_not_request_schedule_fail";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_NOT_REQUEST_TTS_STATE = "TopContact_audioFocus_not_request_tts_state";
+    public static final String TOP_CONTACT_AUDIO_FOCUS_REQUESTED = "TopContact_audioFocus_requested";
+    public static final String TOP_CONTACT_CALL_PLACED = "TopContact_call_placed";
+    public static final String TOP_CONTACT_CANCELLED = "TopContact_cancelled";
+    public static final String TOP_CONTACT_CONTACT_CALLING_SUFFIX = "_contact_calling";
+    public static final String TOP_CONTACT_CREATE_TTS_LATENCY = "TopContact_create_tts_latency";
+    public static final String TOP_CONTACT_DOWNLOAD_TTS_LATENCY = "TopContact_download_tts_latency";
+    public static final String TOP_CONTACT_EVENT_BUS_TIME_OUT = "TopContact_event_bus_time_out";
+    public static final String TOP_CONTACT_FAILED_SEND_ANNOUNCE_EVENT = "TopContact_failed_to_send_announce_event";
+    public static final String TOP_CONTACT_GESTURE_RECEIVED = "TopContact_gesture_received";
+    public static final String TOP_CONTACT_INVALID_SEND_ANNOUNCE_EVENT = "TopContact_invalid_send_announce_event_message";
+    public static final String TOP_CONTACT_LOCAL_STORAGE_CLEAR_FAILED = "TopContact_local_storage_clear_failed";
+    public static final String TOP_CONTACT_LOCAL_STORAGE_PUT_VALUE_FAILED = "TopContact_local_storage_put_value_failed";
+    public static final String TOP_CONTACT_PARSE_EVENT_BUS_MESSAGE_FAILED = "TopContact_parse_event_bus_message_failed";
+    public static final String TOP_CONTACT_PREFIX = "TopContact_";
+    public static final String TOP_CONTACT_SUCCEEDED_SEND_ANNOUNCE_EVENT = "TopContact_succeeded_to_send_announce_event";
+    public static final String TOP_CONTACT_TTS_DOWNLOAD_FAILED = "TopContact_ttsDownload_failed";
+    public static final String TOP_CONTACT_TTS_DOWNLOAD_SUCCEEDED = "TopContact_ttsDownload_succeeded";
+    public static final String TOP_CONTACT_TTS_PLAY_ERROR = "TopContact_ttsPlay_error";
+    public static final String TOP_CONTACT_TTS_PLAY_ERROR_CONTACT_CALLING = "TopContact_ttsPlay_error_contact_calling";
+    public static final String TOP_CONTACT_TTS_PLAY_INTERRUPTED = "TopContact_ttsPlay_interrupted";
+    public static final String TOP_CONTACT_TTS_PLAY_INTERRUPTED_CONTACT_CALLING = "TopContact_ttsPlay_interrupted_contact_calling";
+    public static final String TOP_CONTACT_TTS_PLAY_SCHEDULED = "TopContact_ttsPlay_scheduled";
+    public static final String TOP_CONTACT_TTS_PLAY_SCHEDULED_CALLING_UNAVAILABLE = "TopContact_ttsPlay_scheduled_calling_unavailable";
+    public static final String TOP_CONTACT_TTS_PLAY_SCHEDULED_CONTACT_CALLING = "TopContact_ttsPlay_scheduled_contact_calling";
+    public static final String TOP_CONTACT_TTS_PLAY_SCHEDULED_CONTACT_SETUP = "TopContact_ttsPlay_scheduled_contact_setup";
+    public static final String TOP_CONTACT_TTS_PLAY_SUCCESSFUL = "TopContact_ttsPlay_successful";
+    public static final String TOP_CONTACT_TTS_PLAY_SUCCESSFUL_CONTACT_CALLING = "TopContact_ttsPlay_successful_contact_calling";
+    public static final String TOP_CONTACT_TTS_REQUESTED = "TopContact_tts_requested";
+    public static final String TOP_CONTACT_TTS_REQUEST_FAILED = "TopContact_ttsRequest_failed";
+    public static final String TOP_CONTACT_TTS_REQUEST_SUCCEEDED = "TopContact_ttsRequest_succeeded";
+    public static final String ZEN_PREFIX = "Zen_";
+    public static final String ZEPHYR_MOBILYTICS_IDENTIFIER = "4c22bd9e-f936-44d2-95c3-249c93bd6042";
+
+    private MetricsConstants() {
+    }
+}

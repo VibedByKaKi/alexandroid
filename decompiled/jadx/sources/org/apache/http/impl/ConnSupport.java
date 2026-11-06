@@ -1,0 +1,50 @@
+package org.apache.http.impl;
+
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.CodingErrorAction;
+import org.apache.http.config.ConnectionConfig;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes11.dex */
+public final class ConnSupport {
+    public static CharsetDecoder createDecoder(ConnectionConfig connectionConfig) {
+        if (connectionConfig == null) {
+            return null;
+        }
+        Charset charset = connectionConfig.getCharset();
+        CodingErrorAction malformedInputAction = connectionConfig.getMalformedInputAction();
+        CodingErrorAction unmappableInputAction = connectionConfig.getUnmappableInputAction();
+        if (charset == null) {
+            return null;
+        }
+        CharsetDecoder newDecoder = charset.newDecoder();
+        if (malformedInputAction == null) {
+            malformedInputAction = CodingErrorAction.REPORT;
+        }
+        CharsetDecoder onMalformedInput = newDecoder.onMalformedInput(malformedInputAction);
+        if (unmappableInputAction == null) {
+            unmappableInputAction = CodingErrorAction.REPORT;
+        }
+        return onMalformedInput.onUnmappableCharacter(unmappableInputAction);
+    }
+
+    public static CharsetEncoder createEncoder(ConnectionConfig connectionConfig) {
+        Charset charset;
+        if (connectionConfig == null || (charset = connectionConfig.getCharset()) == null) {
+            return null;
+        }
+        CodingErrorAction malformedInputAction = connectionConfig.getMalformedInputAction();
+        CodingErrorAction unmappableInputAction = connectionConfig.getUnmappableInputAction();
+        CharsetEncoder newEncoder = charset.newEncoder();
+        if (malformedInputAction == null) {
+            malformedInputAction = CodingErrorAction.REPORT;
+        }
+        CharsetEncoder onMalformedInput = newEncoder.onMalformedInput(malformedInputAction);
+        if (unmappableInputAction == null) {
+            unmappableInputAction = CodingErrorAction.REPORT;
+        }
+        return onMalformedInput.onUnmappableCharacter(unmappableInputAction);
+    }
+}

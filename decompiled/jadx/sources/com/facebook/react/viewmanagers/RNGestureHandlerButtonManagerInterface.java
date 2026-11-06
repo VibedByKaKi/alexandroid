@@ -1,0 +1,29 @@
+package com.facebook.react.viewmanagers;
+
+import android.view.View;
+import androidx.annotation.Nullable;
+import com.facebook.react.uimanager.ViewManagerWithGeneratedInterface;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes18.dex */
+public interface RNGestureHandlerButtonManagerInterface<T extends View> extends ViewManagerWithGeneratedInterface {
+    void setBorderColor(T t, @Nullable Integer num);
+
+    void setBorderStyle(T t, @Nullable String str);
+
+    void setBorderWidth(T t, float f);
+
+    void setBorderless(T t, boolean z);
+
+    void setEnabled(T t, boolean z);
+
+    void setExclusive(T t, boolean z);
+
+    void setForeground(T t, boolean z);
+
+    void setRippleColor(T t, @Nullable Integer num);
+
+    void setRippleRadius(T t, int i);
+
+    void setTouchSoundDisabled(T t, boolean z);
+}

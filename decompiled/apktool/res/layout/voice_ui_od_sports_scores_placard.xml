@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000011" android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-2" android:layout_height="@2131168231">
+            <ImageView android:id="@2131427619" android:layout_width="@2131168218" android:layout_height="@2131168215" android:contentDescription="@2132020913" android:layout_marginStart="@2131168217" android:layout_marginEnd="@2131168216" />
+            <TextView android:textSize="@2131168112" android:textColor="?16842806" android:id="@2131427620" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168091" android:maxLines="2" />
+            <TextView android:textSize="@2131168115" android:textColor="?16842806" android:id="@2131427621" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168233" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="0x00000030" android:layout_width="@2131168230" android:layout_height="@2131168229" android:src="@2131232059" android:contentDescription="@2132020913" />
+        <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-2" android:layout_height="@2131168231">
+            <ImageView android:id="@2131428475" android:layout_width="@2131168218" android:layout_height="@2131168215" android:contentDescription="@2132020913" android:layout_marginStart="@2131168217" android:layout_marginEnd="@2131168216" />
+            <TextView android:textSize="@2131168112" android:textColor="?16842806" android:id="@2131428476" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168091" android:maxLines="2" />
+            <TextView android:textSize="@2131168115" android:textColor="?16842806" android:id="@2131428477" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168233" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:gravity="0x00000011" android:id="@2131428192" android:layout_width="-2" android:layout_height="-2" android:minHeight="200.0px" android:text="" android:inputType="0x00000001" />
+    <Button android:id="@2131428463" android:layout_width="-1" android:layout_height="-2" android:text="" android:textAllCaps="false" />
+</LinearLayout>

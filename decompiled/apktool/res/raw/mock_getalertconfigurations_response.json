@@ -1,0 +1,191 @@
+{
+  "maxAllowedCustomAlertCapacity": 20,
+  "alertConfigurations": [
+    {
+      "id": "some-smarthome-alert-id",
+      "start": "0910",
+      "end": "1010",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "FIRST_ACTIVITY_OF_THE_DAY"
+      },
+      "alertCategory": "CUSTOM",
+      "deviceActivities": [
+        {
+          "deviceIdentifier": {
+            "@type": "SHDeviceIdentifier",
+            "endpointId": "endpointId2"
+          },
+          "nameSpace": "V3.Alexa.ContactSensor.detectionState",
+          "actionType": "OPENS",
+          "deviceName": "Kitchen Medicine Cabinet"
+        }
+      ],
+      "status": "ENABLED",
+      "title": "Rmlyc3QgY29udGFjdCBzZW5zb3I=",
+      "subtitle": "The first time Kitchen Medicine Cabinet is interacted with",
+      "deviceStatus": "REGISTERED",
+      "deviceCategory": "CONTACT_SENSOR"
+    },
+    {
+      "id": "mockAlertId1",
+      "start": "0060",
+      "end": "2000",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "NO_ACTIVITY_DETECTED"
+      },
+      "alertCategory": "CUSTOM",
+      "deviceStatus": "REGISTERED",
+      "deviceActivities": [
+        {
+          "deviceIdentifier": {
+            "@type": "SHDeviceIdentifier",
+            "endpointId": "endpointId2"
+          },
+          "deviceName": "Kitchen Medicine Cabinet",
+          "actionType": "NO_ACTIVITY",
+          "nameSpace": "V3.Alexa.ContactSensor.detectionState"
+        }
+      ],
+      "status": "ENABLED",
+      "title": "TWVkaWNpbmUgQ2FiaW5ldCBOb3QgVXNlZCBBbGVydA==",
+      "subtitle": "When medicine cabinet is not used",
+      "description": "",
+      "deviceCategory": "CONTACT_SENSOR"
+    },
+    {
+      "id": "mockAlertId2",
+      "start": "0600",
+      "end": "2000",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "FIRST_ACTIVITY_OF_THE_DAY"
+      },
+      "alertCategory": "CUSTOM",
+      "deviceStatus": "DEREGISTERED",
+      "deviceActivities": [
+        {
+          "deviceIdentifier": {
+            "@type": "AlexaDeviceIdentifier",
+            "dsn": "A000168732FJ0FLU20LV2",
+            "encryptedDeviceType": "AB72C64C86AW2"
+          },
+          "deviceName": "Bob's 40th Echo dot",
+          "actionType": "FIRST_ACTIVITY"
+        }
+      ],
+      "status": "ENABLED",
+      "title": "RWNobyBkb3QgQWxlcnQ=",
+      "subtitle": "First time Bob's 40th Echo dot is used",
+      "deviceCategory": "ECHO_ALEXA_DEVICE"
+    },
+    {
+      "id": "mockAlertId3",
+      "start": "0600",
+      "end": "2000",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "NO_ACTIVITY_DETECTED"
+      },
+      "alertCategory": "HOUSEHOLD",
+      "deviceActivityExclusions": [
+        {
+          "deviceIdentifier": {
+            "@type": "SHDeviceIdentifier",
+            "endpointId": "endpointId2"
+          },
+          "nameSpace": "V3.Alexa.ContactSensor.detectionState",
+          "actionType": "OPENS"
+        }
+      ],
+      "status": "DISABLED",
+      "title": "No Activity Alert",
+      "subtitle": "When Monika doesn't interact with Alexa",
+      "description": "except 1 device"
+    },
+    {
+      "id": "mockAlertId4",
+      "start": "0600",
+      "end": "2000",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "FIRST_ACTIVITY_OF_THE_DAY"
+      },
+      "alertCategory": "HOUSEHOLD",
+      "deviceActivityExclusions": [
+        {
+          "deviceIdentifier": {
+            "@type": "AlexaDeviceIdentifier",
+            "dsn": "A000168732FJ0FLU20LV2",
+            "encryptedDeviceType": "AB72C64C86AW2"
+          }
+        }
+      ],
+      "status": "ENABLED",
+      "title": "First Alexa activity",
+      "subtitle": "When Monika interacts with Alexa for the first time",
+      "description": "except 1 device"
+    },
+    {
+      "id": "temperature_sensor_id",
+      "start": "1910",
+      "end": "2010",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "FIRST_ACTIVITY_OF_THE_DAY"
+      },
+      "alertCategory": "CUSTOM",
+      "deviceActivities": [
+        {
+          "deviceIdentifier": {
+            "@type": "SHDeviceIdentifier",
+            "endpointId": "arn:alexa:smarthome:device:225c1d89-95eb-263b-1e05-1512c1f2adf1"
+          },
+          "nameSpace": "V3.Alexa.TemperatureSensor.temperature",
+          "actionType": "OPENS",
+          "deviceName": "Vaughn's temperature sensor"
+        }
+      ],
+      "status": "ENABLED",
+      "title": "TGl2aW5nIHJvb20gdGhlcm1vc3RhdA==",
+      "subtitle": "When temperature is above 100C",
+      "deviceStatus": "REGISTERED",
+      "temperature": {
+        "scale": "CELSIUS",
+        "value": 100
+      },
+      "deviceCategory": "THERMOSTAT"
+    },
+    {
+      "id": "mockAlertId5",
+      "start": "0600",
+      "end": "2000",
+      "triggerCondition": {
+        "@type": "AllDevicesTriggerCondition",
+        "conditionType": "FIRST_ACTIVITY_OF_THE_DAY"
+      },
+      "alertCategory": "CUSTOM",
+      "deviceStatus": "REGISTERED",
+      "deviceActivities": [
+        {
+          "deviceIdentifier": {
+            "@type": "AlexaDeviceIdentifier",
+            "dsn": "some unknown dsn",
+            "encryptedDeviceType": "AB72C64C86AW2"
+          },
+          "deviceName": "Some unknown Echo dot",
+          "actionType": "FIRST_ACTIVITY"
+        }
+      ],
+      "status": "ENABLED",
+      "title": "QWxlcnQgd2l0aG91dCBhY3Rpb25z",
+      "subtitle": "First time Some unknown Echo dot is used",
+      "deviceCategory": "ECHO_ALEXA_DEVICE"
+    }
+  ],
+  "paginationContext": {
+    "nextToken": "dummyNextToken",
+    "previousToken": null
+  }
+}

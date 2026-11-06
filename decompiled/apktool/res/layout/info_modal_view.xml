@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="-1" android:layout_height="-2" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="1" android:background="?2130969753" android:layout_width="-2" android:layout_height="-2">
+            <LinearLayout android:orientation="1" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+                <com.amazon.alexa.font.FontTextView android:textColor="@2131103215" android:id="@2131428554" android:tag="" android:paddingLeft="@2131166137" app:fontName="amazon_ember_bold" style="@style/mosaic_list_header_secondary_text" />
+                <com.amazon.alexa.font.FontTextView android:id="@2131428557" android:tag="" android:padding="@2131166137" app:fontName="amazon_ember_bold" style="@style/mosaic_list_header_primary_text" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:textColor="@2131103215" android:id="@2131428551" android:tag="" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:textColor="@2131103215" android:id="@2131428552" android:tag="" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:id="@2131429101" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:textColor="@2131103215" android:id="@2131428553" android:tag="" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:id="@2131427941" android:tag="" android:layout_width="-1" android:layout_height="-2">
+                <View style="@style/mosaic_list_item_divider" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131166940" android:textColor="@2131103215" android:id="@2131428556" android:tag="" android:layout_marginTop="@2131166937" app:fontName="amazon_ember_bold" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:id="@2131429100" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167663" android:textColor="@2131103215" android:id="@2131428555" android:tag="" style="@style/mosaic_list_item_secondary_text_no_max_lines" />
+                <LinearLayout android:gravity="0x00000003" android:id="@2131427940" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="@2131166137">
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_drop_in_request" app:primaryText="@string/drop_in" />
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_call" app:primaryText="@string/call" />
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_chat" app:primaryText="@string/biloba_message" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131428559" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+        <Button android:id="@2131428558" android:tag="" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" style="@style/mosaic_button" />
+    </LinearLayout>
+    <include layout="@layout/status_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+package com.amazon.alexa.voice.ui.onedesign.empty;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public enum EmptiableCardType {
+    CALENDAR_NOT_LINKED("calendar_not_linked"),
+    NO_CALENDAR_EVENT("no_calendar_event"),
+    SHOPPING("shopping"),
+    TODOS("todo"),
+    UNKNOWN("unknown");
+
+    private final String cardTypeAsString;
+
+    EmptiableCardType(String str) {
+        this.cardTypeAsString = str;
+    }
+
+    public static EmptiableCardType from(String str) {
+        for (EmptiableCardType emptiableCardType : values()) {
+            if (emptiableCardType.cardTypeAsString.equals(str)) {
+                return emptiableCardType;
+            }
+        }
+        return UNKNOWN;
+    }
+
+    @Override // java.lang.Enum
+    public String toString() {
+        return this.cardTypeAsString;
+    }
+}

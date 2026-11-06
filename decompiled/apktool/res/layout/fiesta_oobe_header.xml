@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429041" android:background="@2131100090" android:layout_width="-1" android:layout_height="@2131167326" android:layout_marginBottom="@2131167327"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="0x00000010" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0">
+        <Space android:layout_width="@2131167328" android:layout_height="-1" />
+        <ImageView android:id="@2131429034" android:background="@2131103590" android:visibility="0" android:layout_width="-2" android:layout_height="-2" android:src="@2131231419" android:cropToPadding="true" android:contentDescription="@2132017909" />
+    </LinearLayout>
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131100107" android:gravity="0x00000011" android:layout_gravity="0x00000010" android:id="@2131429042" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="2.2" android:textAllCaps="true" app:fontName="app_text_regular" style="@style/AlexaHeader" />
+    <Button android:textColor="@2131100107" android:layout_gravity="0x00000010" android:id="@2131429072" android:background="@2131103590" android:padding="0.0dip" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-2" android:layout_margin="0.0dip" android:text="@2132020573" android:layout_weight="1.0" android:textAllCaps="true" />
+</LinearLayout>

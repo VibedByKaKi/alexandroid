@@ -1,0 +1,76 @@
+package androidx.media3.ui;
+
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.RelativeSizeSpan;
+import androidx.media3.common.text.Cue;
+import androidx.media3.common.text.LanguageFeatureSpan;
+import androidx.media3.common.util.Assertions;
+import com.google.common.base.Predicate;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes14.dex */
+final class SubtitleViewUtils {
+    private SubtitleViewUtils() {
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ boolean lambda$removeAllEmbeddedStyling$0(Object obj) {
+        return !(obj instanceof LanguageFeatureSpan);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ boolean lambda$removeEmbeddedFontSizes$1(Object obj) {
+        return (obj instanceof AbsoluteSizeSpan) || (obj instanceof RelativeSizeSpan);
+    }
+
+    public static void removeAllEmbeddedStyling(Cue.Builder builder) {
+        builder.clearWindowColor();
+        if (builder.getText() instanceof Spanned) {
+            if (!(builder.getText() instanceof Spannable)) {
+                builder.setText(SpannableString.valueOf(builder.getText()));
+            }
+            removeSpansIf((Spannable) Assertions.checkNotNull(builder.getText()), new SubtitleViewUtils$$ExternalSyntheticLambda0(0));
+        }
+        removeEmbeddedFontSizes(builder);
+    }
+
+    public static void removeEmbeddedFontSizes(Cue.Builder builder) {
+        builder.setTextSize(-3.4028235E38f, Integer.MIN_VALUE);
+        if (builder.getText() instanceof Spanned) {
+            if (!(builder.getText() instanceof Spannable)) {
+                builder.setText(SpannableString.valueOf(builder.getText()));
+            }
+            removeSpansIf((Spannable) Assertions.checkNotNull(builder.getText()), new SubtitleViewUtils$$ExternalSyntheticLambda0(1));
+        }
+    }
+
+    private static void removeSpansIf(Spannable spannable, Predicate<Object> predicate) {
+        for (Object obj : spannable.getSpans(0, spannable.length(), Object.class)) {
+            if (predicate.apply(obj)) {
+                spannable.removeSpan(obj);
+            }
+        }
+    }
+
+    public static float resolveTextSize(int i, float f, int i2, int i3) {
+        float f2;
+        if (f == -3.4028235E38f) {
+            return -3.4028235E38f;
+        }
+        if (i == 0) {
+            f2 = i3;
+        } else {
+            if (i != 1) {
+                if (i != 2) {
+                    return -3.4028235E38f;
+                }
+                return f;
+            }
+            f2 = i2;
+        }
+        return f * f2;
+    }
+}

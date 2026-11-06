@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="?2130969753" android:baselineAligned="false" style="@style/viewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131427793" layout="@layout/fiesta_audio_call_header_layout" />
+    <LinearLayout android:id="@2131428699" android:background="?2130969753" android:focusableInTouchMode="true" android:clickable="true" android:baselineAligned="false" style="@style/viewLayout">
+        <LinearLayout android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492900">
+            <include android:layout_gravity="0x00000011" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_call_participant_information" />
+        </LinearLayout>
+        <View android:id="@2131428225" android:visibility="1" android:layout_width="-1" android:layout_height="@2131165596" android:layout_weight="@2131492899" />
+        <include android:id="@2131429389" android:visibility="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" layout="@layout/mosaic_rtt_section" />
+        <LinearLayout android:baselineAligned="false" style="@style/TwoRowFloatingActionButtonGroup">
+            <LinearLayout android:gravity="0x00000001" android:layout_gravity="0x00000001" android:layout_marginBottom="@2131167658" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+                <include android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="@2131167658" android:layout_marginEnd="@2131167658" layout="@layout/mosaic_speaker_call_button" />
+                <include android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="@2131167658" android:layout_marginEnd="@2131167658" layout="@layout/mosaic_dial_pad_toggle" />
+                <include android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="@2131167658" android:layout_marginEnd="@2131167658" layout="@layout/mosaic_microphone_call_button" />
+            </LinearLayout>
+            <include android:layout_width="-1" android:layout_height="-2" layout="@layout/mosaic_end_call_button" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@2131428109" android:visibility="2" layout="@layout/mosaic_dial_pad" />
+</LinearLayout>

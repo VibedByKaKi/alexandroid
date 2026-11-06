@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000011" android:orientation="0" android:background="@2131232648" android:layout_width="-1" android:layout_height="@2131167892"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@2131429714" android:layout_width="-2" android:layout_height="-2" android:src="@2131232650" android:contentDescription="@2132020700" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131167893" android:textColor="@2131232649" android:id="@2131428162" android:layout_width="-2" android:layout_height="-2" android:text="@2132020701" android:layout_marginStart="@2131167894" app:fontName="app_text_medium" />
+</LinearLayout>

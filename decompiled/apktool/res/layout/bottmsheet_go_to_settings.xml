@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarStyle="0x02000000" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="@2131167045" android:layout_marginEnd="@2131167045">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:layout_width="@2131167006" android:layout_height="@2131167006" android:layout_marginTop="@2131167045" android:src="@2131231731" android:tint="?2130971247" android:importantForAccessibility="2" />
+            <TextView android:textAppearance="@2132084362" android:textColor="?2130971250" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167046" android:text="@2132020906" />
+            <TextView android:textAppearance="@2132084350" android:textColor="?2130971245" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167045" android:text="@2132020905" />
+            <TextView android:textAppearance="@2132084350" android:textColor="?2130971248" android:id="@2131428627" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167045" android:text="@2132020914" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="@2131168073" android:layout_margin="@2131168074">
+        <Button android:layout_gravity="0x00000001" android:id="@2131428622" android:layout_width="0.0dip" android:layout_marginTop="@2131168126" android:layout_marginBottom="@2131168123" android:text="@2132020986" android:layout_weight="1.0" style="@style/voice_ui_od_secondary_button" />
+        <Button android:layout_gravity="0x00000001" android:id="@2131429460" android:focusable="true" android:layout_width="0.0dip" android:text="@2132020903" android:hint="@2132020904" android:layout_weight="1.0" android:importantForAccessibility="1" android:layout_marginStart="@2131168075" style="@style/voice_ui_od_primary_button" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:background="@2131232600" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167048">
+        <include android:id="@2131428452" android:layout_width="-1" android:layout_height="-2" layout="@layout/bottom_sheet_assistant_header" />
+        <ScrollView android:scrollbarStyle="0x02000000" android:id="@2131429326" android:layout_width="-1" android:layout_height="0.0dip" android:maxWidth="@2131167519" android:layout_weight="1.0" android:layout_marginStart="@2131168091" android:layout_marginEnd="@2131168091">
+            <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                <TextView android:textAppearance="@2132084362" android:textColor="?2130970736" android:id="@2131429330" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167045" android:text="@2132017955" android:textAlignment="5" />
+                <TextView android:textAppearance="@2132084350" android:textColor="?2130970729" android:id="@2131429327" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167050" android:text="@2132020408" android:textAlignment="5" />
+                <TextView android:textAppearance="@2132084350" android:textColor="?2130970729" android:id="@2131429328" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167050" android:text="@2132020409" android:textAlignment="5" />
+                <TextView android:textAppearance="@2132084350" android:textColor="?2130970729" android:id="@2131429329" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167050" android:text="@2132020410" android:textAlignment="5" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

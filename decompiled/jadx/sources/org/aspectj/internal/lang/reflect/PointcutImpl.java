@@ -1,0 +1,97 @@
+package org.aspectj.internal.lang.reflect;
+
+import com.amazon.alexa.ra.core.ui.markdown.parser.formatter.MarkdownConstants;
+import java.lang.reflect.Method;
+import java.util.StringTokenizer;
+import org.aspectj.lang.reflect.AjType;
+import org.aspectj.lang.reflect.AjTypeSystem;
+import org.aspectj.lang.reflect.Pointcut;
+import org.aspectj.lang.reflect.PointcutExpression;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes11.dex */
+public class PointcutImpl implements Pointcut {
+    private final Method baseMethod;
+    private final AjType declaringType;
+    private final String name;
+    private String[] parameterNames;
+    private final PointcutExpression pc;
+
+    public PointcutImpl(String str, String str2, Method method, AjType ajType, String str3) {
+        this.parameterNames = new String[0];
+        this.name = str;
+        this.pc = new PointcutExpressionImpl(str2);
+        this.baseMethod = method;
+        this.declaringType = ajType;
+        this.parameterNames = splitOnComma(str3);
+    }
+
+    private String[] splitOnComma(String str) {
+        StringTokenizer stringTokenizer = new StringTokenizer(str, ",");
+        int countTokens = stringTokenizer.countTokens();
+        String[] strArr = new String[countTokens];
+        for (int i = 0; i < countTokens; i++) {
+            strArr[i] = stringTokenizer.nextToken().trim();
+        }
+        return strArr;
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public AjType getDeclaringType() {
+        return this.declaringType;
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public int getModifiers() {
+        return this.baseMethod.getModifiers();
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public String getName() {
+        return this.name;
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public String[] getParameterNames() {
+        return this.parameterNames;
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public AjType<?>[] getParameterTypes() {
+        Class<?>[] parameterTypes = this.baseMethod.getParameterTypes();
+        int length = parameterTypes.length;
+        AjType<?>[] ajTypeArr = new AjType[length];
+        for (int i = 0; i < length; i++) {
+            ajTypeArr[i] = AjTypeSystem.getAjType(parameterTypes[i]);
+        }
+        return ajTypeArr;
+    }
+
+    @Override // org.aspectj.lang.reflect.Pointcut
+    public PointcutExpression getPointcutExpression() {
+        return this.pc;
+    }
+
+    public String toString() {
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(getName());
+        stringBuffer.append(MarkdownConstants.LEFT_PARENTHESIS);
+        AjType<?>[] parameterTypes = getParameterTypes();
+        int i = 0;
+        while (i < parameterTypes.length) {
+            stringBuffer.append(parameterTypes[i].getName());
+            String[] strArr = this.parameterNames;
+            if (strArr != null && strArr[i] != null) {
+                stringBuffer.append(" ");
+                stringBuffer.append(this.parameterNames[i]);
+            }
+            i++;
+            if (i < parameterTypes.length) {
+                stringBuffer.append(",");
+            }
+        }
+        stringBuffer.append(") : ");
+        stringBuffer.append(getPointcutExpression().asString());
+        return stringBuffer.toString();
+    }
+}

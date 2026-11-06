@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="0x00000071" android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165880" android:layout_marginBottom="@2131165879"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:id="@2131428094" android:layout_width="-1" android:layout_height="-2" app:fontName="app_text_bold" style="@style/AlexaComms.dialpad.number" />
+    <com.amazon.alexa.font.FontTextView android:id="@2131428093" android:layout_width="-1" android:layout_height="-2" app:fontName="app_text_bold" style="@style/AlexaComms.dialpad.letters" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+package amazon.speech.simclient.context;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes.dex */
+public class DeviceContextBinding {
+    public static final String BASE_PERMISSION = "amazon.speech.permission.SEND_DATA_TO_ALEXA";
+    public static final String BIND_ACTION = "amazon.speech.simclient.context.BIND";
+    public static final String TEST_PERMISSION = "amazon.speech.permission.CSM_TEST_APPLICATION";
+}

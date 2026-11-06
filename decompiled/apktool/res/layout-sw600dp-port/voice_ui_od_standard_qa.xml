@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429564" android:visibility="2" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131168238" android:paddingStart="@2131168236" android:paddingEnd="@2131168236">
+        <include layout="@layout/voice_ui_od_standard_qa_image" />
+        <include android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168238" layout="@layout/voice_ui_od_standard_qa_text" />
+    </LinearLayout>
+</LinearLayout>

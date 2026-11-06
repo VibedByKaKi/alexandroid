@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429293" android:tag="" android:focusable="true" android:layout_width="-1" android:layout_height="-2" android:importantForAccessibility="1" style="@style/list_item_container_double_line"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="0x00000010" android:id="@2131427430" android:tag="" android:src="@2131231980" android:tint="?2130969815" style="@style/image_24" />
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131166160">
+        <com.amazon.alexa.font.FontTextView android:id="@2131427435" android:tag="" style="@style/list_item_text_row_1_maxLines_3" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131427434" android:tag="" style="@style/list_item_text_row_2_maxLines_2" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131429597" android:background="@2131232676" android:layout_width="-1" android:layout_height="-2" android:minHeight="@2131167852"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131167847" android:layout_centerVertical="true" android:layout_toStartOf="@2131427868">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167853" android:textColor="@2131103536" android:id="@2131429598" android:layout_width="-1" android:layout_height="-2" app:fontName="amazon_ember_regular" />
+        <Space android:layout_width="0.0dip" android:layout_height="@2131167851" />
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167854" android:textColor="@2131103537" android:id="@2131429596" android:layout_width="-1" android:layout_height="-2" app:fontName="amazon_ember_regular" />
+    </LinearLayout>
+    <ImageView android:id="@2131427868" android:layout_width="@2131167850" android:layout_height="@2131167850" android:src="@2131231806" android:layout_centerVertical="true" android:layout_marginEnd="@2131167847" android:layout_alignParentEnd="true" />
+</RelativeLayout>

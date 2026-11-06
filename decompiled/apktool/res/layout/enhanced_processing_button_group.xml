@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:padding="@2131165605" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428226" android:layout_width="-1" android:layout_marginBottom="36.0dip" android:text="@2132019099" android:textAlignment="4" style="@style/Callui.Button.Primary" />
+    <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428039" android:layout_width="-1" android:layout_marginBottom="18.0dip" android:text="@2132019100" android:textAlignment="4" style="@style/Callui.Button.Borderless" />
+</LinearLayout>

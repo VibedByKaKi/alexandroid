@@ -1,0 +1,15 @@
+[
+  {
+    "type": "AlexaInterface",
+    "interface": "Alexa.ActivityDetectionEventSource",
+    "version": "1.1",
+    "configuration": {
+      "supportedActivities": [
+        {"type": "IDLE"},
+        {"type": "WALKING"},
+        {"type": "RUNNING"},
+        {"type": "BIKING"}
+      ]
+    }
+  }
+]

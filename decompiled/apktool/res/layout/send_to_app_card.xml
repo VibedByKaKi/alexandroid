@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429452" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="0x00000010" android:layout_width="-1" android:layout_height="@2131167600">
+        <ImageView android:id="@2131429453" android:layout_width="@2131167601" android:layout_height="@2131167601" android:scaleType="3" android:layout_marginStart="@2131167603" android:layout_marginEnd="@2131167603" />
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layout_marginEnd="@2131167603" android:layout_toEndOf="@2131429453">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167607" android:textStyle="0x00000001" android:textColor="?2130969815" android:ellipsize="3" android:id="@2131429455" android:layout_width="-1" android:layout_height="-2" android:maxLines="@2131493074" app:fontName="amazon_ember_bold" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167605" android:textColor="?2130969816" android:ellipsize="3" android:id="@2131429454" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167604" android:maxLines="@2131493073" android:singleLine="false" app:fontName="amazon_ember_regular" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

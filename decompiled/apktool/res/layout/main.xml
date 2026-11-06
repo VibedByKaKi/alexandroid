@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@2131428153" android:tag="" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@2131429380" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout android:id="@2131429761" android:layout_width="-1" android:layout_height="-2" app:layout_constraintTop_toTopOf="parent">
+            <androidx.appcompat.widget.Toolbar android:id="@2131429759" android:tag="" android:layout_width="-1" android:layout_height="@2131167931" app:contentInsetLeft="0.0dip" app:contentInsetStart="0.0dip" />
+            <FrameLayout android:id="@2131428155" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:animateLayoutChanges="false" app:contentInsetLeft="0.0dip" app:contentInsetStart="0.0dip" />
+        </FrameLayout>
+        <View android:id="@2131429800" android:tag="" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/toolbar_layout_container" />
+        <FrameLayout android:id="@2131428701" android:tag="" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_alignWithParentIfMissing="true" android:animateLayoutChanges="false" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar_layout_container">
+            <FrameLayout android:id="@2131428400" android:tag="" android:layout_width="-1" android:layout_height="-1" android:animateLayoutChanges="false" />
+            <FrameLayout android:id="@2131427994" android:tag="" android:layout_width="-1" android:layout_height="-1" android:animateLayoutChanges="false" />
+            <ViewStub android:gravity="0x00000050" android:id="@2131429897" android:tag="" android:layout="@2131624663" android:inflatedId="@2131429895" android:layout_width="-1" android:layout_height="-1" />
+            <com.amazon.dee.app.ui.view.LoadingView android:gravity="0x00000050" android:id="@2131429223" android:tag="" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167931" android:contentDescription="@2132019589" android:translationZ="1.0dip" app:animDuration="30" app:dotPadding="10.0dip" app:fillColor="#ff0070ba" app:maxRadius="8.0dip" app:minRadius="2.0dip" />
+            <FrameLayout android:gravity="0x00000050" android:id="@2131428009" android:tag="" android:layout_width="-1" android:layout_height="-1" />
+            <FrameLayout android:id="@2131429364" android:tag="" android:layout_width="-1" android:layout_height="-1" android:animateLayoutChanges="false" />
+            <FrameLayout android:id="@2131429192" android:tag="" android:nextFocusLeft="@2131429760" android:nextFocusDown="@2131429610" android:layout_width="-1" android:layout_height="-1" android:animateLayoutChanges="false" />
+        </FrameLayout>
+        <FrameLayout android:id="@2131428480" android:tag="" android:layout_width="0.0dip" android:layout_height="0.0dip" android:animateLayoutChanges="false" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <FrameLayout android:orientation="0" android:id="@2131429799" android:tag="" android:layout_width="0.0dip" android:layout_height="-2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        <View android:id="@2131427668" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_marginBottom="-6.0dip" android:layout_marginEnd="41.0dip" app:layout_constraintBottom_toTopOf="@id/transparent_nav_container" app:layout_constraintEnd_toEndOf="parent" />
+        <FrameLayout android:id="@2131429798" android:tag="" android:background="@17170445" android:layout_width="0.0dip" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+            <ViewSwitcher android:id="@2131429615" android:tag="" android:background="@17170445" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2">
+                <include layout="@layout/bottom_navigation_bar" />
+                <include layout="@layout/agent_forward_floating_alexa_input_bar" />
+            </ViewSwitcher>
+        </FrameLayout>
+        <FrameLayout android:orientation="1" android:id="@2131428154" android:tag="" android:layout_width="-1" android:layout_height="-2" android:animateLayoutChanges="false" app:layout_constraintBottom_toBottomOf="parent" />
+        <FrameLayout android:id="@2131429172" android:tag="" android:layout_width="-1" android:layout_height="-1" app:layout_constraintBottom_toTopOf="@id/transparent_nav_container" />
+        <FrameLayout android:id="@2131429255" android:tag="" android:layout_width="0.0dip" android:layout_height="0.0dip" android:animateLayoutChanges="false" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

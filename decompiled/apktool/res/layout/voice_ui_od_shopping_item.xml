@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="?16843534" android:focusable="true" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131168200" android:paddingEnd="@2131168200"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/voice_ui_od_shopping_item_image" />
+    <Space android:layout_width="-1" android:layout_height="@2131168208" />
+    <include layout="@layout/voice_ui_od_shopping_item_content" />
+</LinearLayout>

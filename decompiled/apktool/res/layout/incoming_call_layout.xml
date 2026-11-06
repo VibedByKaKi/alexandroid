@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="1" android:background="#000000" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:id="@2131429309" android:background="@2131232351" android:src="@2131231459" android:contentDescription="@2132018016" app:layout_constraintBottom_toBottomOf="@id/answerCallButton" app:layout_constraintEnd_toStartOf="@id/answerCallButton" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/answerCallButton" app:tint="@17170443" style="@style/CallingFloatingActionButton" />
+    <ImageButton android:id="@2131427548" android:background="@2131232350" android:layout_marginBottom="64.0dip" android:src="@2131231449" android:contentDescription="@2132017837" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@id/rejectCallButton" app:tint="@17170443" style="@style/CallingFloatingActionButton" />
+    <androidx.constraintlayout.widget.Group android:id="@2131428545" android:visibility="2" android:layout_width="-2" android:layout_height="-2" app:constraint_referenced_ids="answerCallButton, rejectCallButton" />
+</merge>

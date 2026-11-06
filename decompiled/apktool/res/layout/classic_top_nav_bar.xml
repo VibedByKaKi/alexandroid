@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429770" android:tag="" android:layout_width="-1" android:layout_height="@2131167931"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="0x00800013" android:id="@2131429760" android:layout_width="-2" android:layout_height="-2">
+        <android.widget.ImageView android:gravity="0x00000010" android:id="@2131427623" android:tag="" android:background="?2130972138" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:focusable="true" android:layout_width="-2" android:layout_height="-2" android:src="@2131231417" android:contentDescription="@2132019564" android:nextFocusForward="@2131429736" android:paddingStart="16.0dip" android:paddingEnd="4.0dip" />
+    </FrameLayout>
+    <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-1" android:layout_marginLeft="36.0dip" android:layout_marginRight="36.0dip">
+        <android.widget.TextView android:textSize="14.0dip" android:ellipsize="3" android:layout_gravity="0x00000001" android:id="@2131429736" android:tag="" android:background="?2130972137" android:focusable="true" android:nextFocusDown="@2131428087" android:layout_width="-2" android:layout_height="-2" android:maxLines="1" android:nextFocusForward="@2131428506" />
+    </LinearLayout>
+</LinearLayout>

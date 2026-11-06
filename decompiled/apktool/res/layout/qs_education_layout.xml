@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131099737" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="0x00000011" android:id="@2131429242" android:saveEnabled="false" android:layout_width="-1" android:layout_height="-2" android:adjustViewBounds="true" app:layout_constraintBottom_toTopOf="@id/qs_education_title_textView" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:lottie_autoPlay="true" app:lottie_loop="true" />
+    <TextView android:id="@2131429246" android:layout_width="@2131166881" android:layout_height="-2" android:layout_marginTop="@2131165355" android:layout_marginBottom="@2131165352" android:text="@2132020157" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165353" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/qs_education_animation" style="@style/SetupTitleText" />
+    <ScrollView android:id="@2131429243" android:scrollbars="0x00000200" android:layout_width="@2131166881" android:layout_height="@2131166881" android:layout_marginTop="@2131165355" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165353" app:layout_constraintBottom_toTopOf="@id/qs_education_done_button" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/qs_education_title_textView">
+        <TableLayout android:layout_width="-1" android:layout_height="-2" android:shrinkColumns="">
+            <ViewStub android:id="@2131429245" android:layout_width="-1" android:layout_height="-1" />
+        </TableLayout>
+    </ScrollView>
+    <Button android:id="@2131429244" android:layout_width="@2131165481" android:layout_marginTop="@2131165345" android:layout_marginBottom="@2131165341" android:text="@2132020151" android:layout_marginStart="@2131165344" android:layout_marginEnd="@2131165343" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/SetupPrimaryButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

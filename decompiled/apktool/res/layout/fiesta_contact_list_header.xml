@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131427979" android:background="@2131100090" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="12.0sp" android:textColor="@2131100109" android:id="@2131428194" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167965" android:layout_marginBottom="@2131166019" android:text="@2132018269" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019" app:font="@string/amazon_ember_regular" />
+    <include android:id="@2131428958" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_contact_list_my_contact" />
+    <include android:id="@2131427442" android:visibility="2" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_contact_list_add_contact" />
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131100109" android:ellipsize="3" android:gravity="0x00000010" android:id="@2131428083" android:background="@2131100106" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165743" android:text="@2132019868" android:textAllCaps="true" android:paddingStart="@2131166019" android:paddingEnd="@2131166019" app:fontName="app_text_regular" />
+    <LinearLayout android:orientation="1" android:id="@2131428954" android:layout_width="-1" android:layout_height="-2" />
+</LinearLayout>

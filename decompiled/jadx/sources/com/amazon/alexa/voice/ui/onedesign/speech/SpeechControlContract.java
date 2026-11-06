@@ -1,0 +1,27 @@
+package com.amazon.alexa.voice.ui.onedesign.speech;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public interface SpeechControlContract {
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public interface Interactor {
+        void cancel();
+
+        void recognizeSpeech();
+
+        boolean shouldEmbedVoiceIngress();
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public interface Presenter {
+        void buttonClicked();
+
+        void start();
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public interface View {
+        void displayVoiceIngressButton(boolean z);
+    }
+}

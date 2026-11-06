@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131428071" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/voice_ui_od_header" />
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-1" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <include layout="@layout/voice_ui_od_local_image_big" />
+        <androidx.legacy.widget.Space android:layout_width="36.0dip" android:layout_height="-1" />
+        <androidx.core.widget.NestedScrollView android:id="@2131429414" android:layout_width="-1" android:layout_height="-1">
+            <include layout="@layout/voice_ui_od_local_detail_info" />
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

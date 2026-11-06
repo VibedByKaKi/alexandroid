@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000001" android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@2131165436" android:textStyle="0x00000001" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165415" android:layout_marginBottom="@2131165415" android:text="" />
+    <RelativeLayout android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165415">
+        <TextView android:textSize="@2131165434" android:layout_width="-2" android:layout_height="-2" android:text="" android:layout_marginStart="@2131165420" />
+        <Switch android:id="@2131427736" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165415">
+        <TextView android:textSize="@2131165434" android:layout_width="-2" android:layout_height="-2" android:text="" android:layout_marginStart="@2131165420" />
+        <Switch android:id="@2131428680" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <Button android:id="@2131428265" android:layout_width="-2" android:layout_height="-2" android:text="" />
+</LinearLayout>

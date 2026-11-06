@@ -1,0 +1,76 @@
+package androidx.navigation;
+
+import androidx.navigation.NavArgument;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import rx.Single$$ExternalSyntheticBUOutline0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@NavDestinationDsl
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0006\u0010\u001b\u001a\u00020\u001cR\u0014\u0010\u0003\u001a\b\u0012\u0002\b\u0003\u0018\u00010\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R(\u0010\b\u001a\u0004\u0018\u00010\u00012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0001@FX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR$\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\r@FX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R,\u0010\u0013\u001a\u0006\u0012\u0002\b\u00030\u00042\n\u0010\u0007\u001a\u0006\u0012\u0002\b\u00030\u00048F@FX\u0086\u000e¢\u0006\f\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R$\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\r@@X\u0080\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u0010\"\u0004\b\u001a\u0010\u0012¨\u0006\u001d"}, d2 = {"Landroidx/navigation/NavArgumentBuilder;", "", "()V", "_type", "Landroidx/navigation/NavType;", "builder", "Landroidx/navigation/NavArgument$Builder;", "value", "defaultValue", "getDefaultValue", "()Ljava/lang/Object;", "setDefaultValue", "(Ljava/lang/Object;)V", "", "nullable", "getNullable", "()Z", "setNullable", "(Z)V", "type", "getType", "()Landroidx/navigation/NavType;", "setType", "(Landroidx/navigation/NavType;)V", "unknownDefaultValuePresent", "getUnknownDefaultValuePresent$navigation_common_release", "setUnknownDefaultValuePresent$navigation_common_release", JsonPOJOBuilder.DEFAULT_BUILD_METHOD, "Landroidx/navigation/NavArgument;", "navigation-common_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes14.dex */
+public final class NavArgumentBuilder {
+
+    @Nullable
+    private NavType<?> _type;
+
+    @NotNull
+    private final NavArgument.Builder builder = new NavArgument.Builder();
+
+    @Nullable
+    private Object defaultValue;
+    private boolean nullable;
+    private boolean unknownDefaultValuePresent;
+
+    @NotNull
+    public final NavArgument build() {
+        return this.builder.build();
+    }
+
+    @Nullable
+    public final Object getDefaultValue() {
+        return this.defaultValue;
+    }
+
+    public final boolean getNullable() {
+        return this.nullable;
+    }
+
+    @NotNull
+    public final NavType<?> getType() {
+        NavType<?> navType = this._type;
+        if (navType != null) {
+            return navType;
+        }
+        Single$$ExternalSyntheticBUOutline0.m$2("NavType has not been set on this builder.");
+        return null;
+    }
+
+    /* renamed from: getUnknownDefaultValuePresent$navigation_common_release, reason: from getter */
+    public final boolean getUnknownDefaultValuePresent() {
+        return this.unknownDefaultValuePresent;
+    }
+
+    public final void setDefaultValue(@Nullable Object obj) {
+        this.defaultValue = obj;
+        this.builder.setDefaultValue(obj);
+    }
+
+    public final void setNullable(boolean z) {
+        this.nullable = z;
+        this.builder.setIsNullable(z);
+    }
+
+    public final void setType(@NotNull NavType<?> navType) {
+        navType.getClass();
+        this._type = navType;
+        this.builder.setType(navType);
+    }
+
+    public final void setUnknownDefaultValuePresent$navigation_common_release(boolean z) {
+        this.unknownDefaultValuePresent = z;
+        this.builder.setUnknownDefaultValuePresent$navigation_common_release(z);
+    }
+}

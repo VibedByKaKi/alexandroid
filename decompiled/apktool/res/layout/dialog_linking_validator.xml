@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="#ffffff" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="0" android:id="@2131428649" android:layout_width="409.0dip" android:layout_height="100.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <Space android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="0.1" />
+        <ImageView android:layout_gravity="0x00000011" android:id="@2131427708" android:layout_width="0.0dip" android:layout_height="50.0dip" android:src="@2131231007" android:layout_weight="0.15" />
+        <TextView android:textSize="20.0sp" android:gravity="0x00000011" android:id="@2131428662" android:layout_width="0.0dip" android:layout_height="-1" android:text="" android:layout_weight="0.65" />
+        <Space android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="0.1" />
+    </LinearLayout>
+    <Spinner android:id="@2131428647" android:visibility="0" android:layout_width="351.0dip" android:layout_height="50.0dip" app:layout_constraintBottom_toTopOf="@id/linkingValidatorButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linkingValidatorText" />
+    <TextView android:textSize="20.0sp" android:gravity="0x00000011" android:id="@2131428661" android:layout_width="312.0dip" android:layout_height="-2" android:layout_marginTop="30.0dip" android:text="" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linkingValidatorHeader" />
+    <EditText android:id="@2131428648" android:visibility="1" android:layout_width="-2" android:layout_height="-2" android:hint="" android:ems="10" android:inputType="0x00000001" app:layout_constraintBottom_toTopOf="@id/linkingValidatorButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linkingValidatorText" />
+    <Button android:textColor="#ffffff" android:id="@2131428646" android:background="#377feb" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="50.0dip" android:text="" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout android:orientation="0" android:id="@2131428021" android:visibility="2" android:layout_width="0.0dip" android:layout_height="-2" app:layout_constraintBottom_toTopOf="@id/linkingValidatorButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linkingValidatorText">
+        <Space android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_weight="0.1" />
+        <EditText android:id="@2131428598" android:layout_width="0.0dip" android:layout_height="-2" android:text="" android:hint="" android:ems="10" android:layout_weight="0.35" android:inputType="0x00000001" />
+        <Space android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_weight="0.1" />
+        <EditText android:id="@2131429850" android:layout_width="0.0dip" android:layout_height="-2" android:text="" android:hint="" android:ems="10" android:layout_weight="0.35" android:inputType="0x00000001" />
+        <Space android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_weight="0.1" />
+    </LinearLayout>
+    <LinearLayout android:orientation="1" android:id="@2131428660" android:visibility="2" android:layout_width="0.0dip" android:layout_height="-2" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/linkingValidatorButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linkingValidatorHeader">
+        <TextView android:textSize="20.0sp" android:id="@2131429685" android:layout_width="-1" android:layout_height="30.0dip" android:text="" />
+        <Space android:layout_width="0.0dip" android:layout_height="30.0dip" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428650" android:layout_width="-1" android:layout_height="50.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="10.0dip" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428651" android:layout_width="-1" android:layout_height="50.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="10.0dip" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428652" android:layout_width="-1" android:layout_height="50.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="10.0dip" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428653" android:layout_width="-1" android:layout_height="50.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="30.0dip" />
+        <TextView android:textSize="20.0sp" android:id="@2131429687" android:layout_width="-1" android:layout_height="30.0dip" android:text="" />
+        <Space android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_weight="0.5" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428654" android:layout_width="-1" android:layout_height="50.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="0.5" />
+        <io.branch.referral.validators.LinkingValidatorDialogRowItem android:id="@2131428655" android:layout_width="-1" android:layout_height="50.0dip" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

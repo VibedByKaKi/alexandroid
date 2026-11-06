@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="0x00000010" android:orientation="1" android:id="@2131427970" android:background="@2131103570" android:layout_width="-1" android:layout_height="@2131165726" android:layout_marginTop="@2131165722">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167915" android:textColor="@2131099974" android:id="@2131428562" android:layout_width="-1" android:layout_height="-2" android:text="@2132019182" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+    </LinearLayout>
+    <View android:id="@2131427977" android:visibility="2" style="@style/contactInfoDividerStyle" />
+    <LinearLayout android:orientation="1" android:id="@2131427971" android:layout_width="-1" android:layout_height="-2" />
+    <include android:id="@2131427984" android:visibility="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" layout="@layout/contact_card_unreachable" />
+</LinearLayout>

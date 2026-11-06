@@ -1,0 +1,32 @@
+package com.amazonaws.services.cognitoidentity.model.transform;
+
+import com.amazonaws.services.cognitoidentity.model.IdentityPoolShortDescription;
+import com.amazonaws.util.json.AwsJsonWriter;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+class IdentityPoolShortDescriptionJsonMarshaller {
+    private static IdentityPoolShortDescriptionJsonMarshaller instance;
+
+    public static IdentityPoolShortDescriptionJsonMarshaller getInstance() {
+        if (instance == null) {
+            instance = new IdentityPoolShortDescriptionJsonMarshaller();
+        }
+        return instance;
+    }
+
+    public void marshall(IdentityPoolShortDescription identityPoolShortDescription, AwsJsonWriter awsJsonWriter) throws Exception {
+        awsJsonWriter.beginObject();
+        if (identityPoolShortDescription.getIdentityPoolId() != null) {
+            String identityPoolId = identityPoolShortDescription.getIdentityPoolId();
+            awsJsonWriter.name("IdentityPoolId");
+            awsJsonWriter.value(identityPoolId);
+        }
+        if (identityPoolShortDescription.getIdentityPoolName() != null) {
+            String identityPoolName = identityPoolShortDescription.getIdentityPoolName();
+            awsJsonWriter.name("IdentityPoolName");
+            awsJsonWriter.value(identityPoolName);
+        }
+        awsJsonWriter.endObject();
+    }
+}

@@ -1,0 +1,43 @@
+package com.amazon.alexa.accessory.capabilities;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes15.dex */
+public enum Capability {
+    KEY_EXCHANGE,
+    SPEECH_RECOGNITION,
+    BULK_DATA,
+    DEVICE,
+    TRANSPORT,
+    STATE,
+    DIAGNOSTIC,
+    CALLING,
+    CBL,
+    SYSTEM,
+    CENTRAL,
+    METRICS,
+    FIRMWARE,
+    FITNESS,
+    INSTRUMENTATION,
+    INPUT_EVENTS,
+    MEDIA,
+    SIDEWALK,
+    HEARING_ENHANCEMENT,
+    NON_HFP_CALLING,
+    DISPLAY_CONTENT,
+    NOTIFICATION,
+    CLOUD_PAIRING,
+    AAMB,
+    ACCESSORY_CONTEXT,
+    WIFI_CONFIG,
+    CAMERA,
+    LCRC,
+    ASSET_TRANSFER,
+    DEVICE_PROXIMITY,
+    AMBIENT_CONTEXT,
+    VISION_CAPTURE,
+    VOICE_STREAMING,
+    TRANSLATION,
+    NATURAL_TURN_DETECTION,
+    WIFI_AWARE,
+    ACCESS_PROOF
+}

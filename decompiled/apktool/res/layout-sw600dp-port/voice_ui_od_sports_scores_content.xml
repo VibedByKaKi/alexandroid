@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168225" layout="@layout/voice_ui_od_sports_scores_placard" />
+    <include android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168228" layout="@layout/voice_ui_od_sports_scores_score_card" />
+    <include android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168224" android:layout_marginBottom="@2131168223" layout="@layout/voice_ui_od_sports_next_game" />
+</LinearLayout>

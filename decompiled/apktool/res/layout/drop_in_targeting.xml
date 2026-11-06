@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:fitsSystemWindows="false" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:background="@2131100042" android:focusableInTouchMode="true" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:orientation="1" android:id="@2131428082" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:visibility="0" android:layout_width="-1" android:layout_height="@2131165751" android:text="@2132018400" android:textAllCaps="true" app:fontName="app_text_regular" style="@style/AlexaDeviceTargetingHeader" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@2131428086" android:scrollbars="0x00000200" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165875" android:paddingStart="@2131165875" android:paddingEnd="@2131165875" />
+        </LinearLayout>
+        <LinearLayout android:orientation="1" android:id="@2131427985" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:visibility="0" android:layout_width="-1" android:layout_height="@2131167885" android:text="@2132018291" android:textAllCaps="true" app:fontName="app_text_regular" style="@style/AlexaDeviceTargetingHeader" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@2131427988" android:scrollbars="0x00000200" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165873" android:paddingStart="@2131165875" android:paddingEnd="@2131165875" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

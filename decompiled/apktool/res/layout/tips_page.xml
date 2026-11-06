@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:id="@2131429735" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@2131429734" android:layout_width="-1" android:layout_height="-2" />
+    </LinearLayout>
+    <com.amazon.alexa.mosaic.view.ErrorView android:id="@2131428261" android:tag="" android:layout_width="-1" android:layout_height="-1" app:bodyText="@string/error_tips_body" app:headlineText="@string/error_tips_headline" app:iconSrc="@null" app:iconTint="?mosaicNeutral10" app:linkText="@string/error_tap_to_retry" />
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+    <include layout="@layout/status_banner" />
+</FrameLayout>

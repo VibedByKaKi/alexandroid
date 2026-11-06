@@ -1,0 +1,49 @@
+package com.amazonaws.services.kms.model.transform;
+
+import com.amazonaws.services.kms.model.GrantConstraints;
+import com.amazonaws.util.json.AwsJsonWriter;
+import java.util.Map;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+class GrantConstraintsJsonMarshaller {
+    private static GrantConstraintsJsonMarshaller instance;
+
+    public static GrantConstraintsJsonMarshaller getInstance() {
+        if (instance == null) {
+            instance = new GrantConstraintsJsonMarshaller();
+        }
+        return instance;
+    }
+
+    public void marshall(GrantConstraints grantConstraints, AwsJsonWriter awsJsonWriter) throws Exception {
+        awsJsonWriter.beginObject();
+        if (grantConstraints.getEncryptionContextSubset() != null) {
+            Map<String, String> encryptionContextSubset = grantConstraints.getEncryptionContextSubset();
+            awsJsonWriter.name("EncryptionContextSubset");
+            awsJsonWriter.beginObject();
+            for (Map.Entry<String, String> entry : encryptionContextSubset.entrySet()) {
+                String value = entry.getValue();
+                if (value != null) {
+                    awsJsonWriter.name(entry.getKey());
+                    awsJsonWriter.value(value);
+                }
+            }
+            awsJsonWriter.endObject();
+        }
+        if (grantConstraints.getEncryptionContextEquals() != null) {
+            Map<String, String> encryptionContextEquals = grantConstraints.getEncryptionContextEquals();
+            awsJsonWriter.name("EncryptionContextEquals");
+            awsJsonWriter.beginObject();
+            for (Map.Entry<String, String> entry2 : encryptionContextEquals.entrySet()) {
+                String value2 = entry2.getValue();
+                if (value2 != null) {
+                    awsJsonWriter.name(entry2.getKey());
+                    awsJsonWriter.value(value2);
+                }
+            }
+            awsJsonWriter.endObject();
+        }
+        awsJsonWriter.endObject();
+    }
+}

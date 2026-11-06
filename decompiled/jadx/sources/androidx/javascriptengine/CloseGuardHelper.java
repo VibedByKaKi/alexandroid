@@ -1,0 +1,78 @@
+package androidx.javascriptengine;
+
+import android.os.Build;
+import android.util.CloseGuard;
+import androidx.annotation.RequiresApi;
+import androidx.core.util.Preconditions;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes14.dex */
+final class CloseGuardHelper {
+    private final CloseGuardImpl mImpl;
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @RequiresApi(30)
+    public static final class CloseGuardApi30Impl implements CloseGuardImpl {
+        private final CloseGuard mPlatformImpl = new CloseGuard();
+
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void close() {
+            this.mPlatformImpl.close();
+        }
+
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void open(String str) {
+            this.mPlatformImpl.open(str);
+        }
+
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void warnIfOpen() {
+            this.mPlatformImpl.warnIfOpen();
+        }
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public interface CloseGuardImpl {
+        void close();
+
+        void open(String str);
+
+        void warnIfOpen();
+    }
+
+    private CloseGuardHelper(CloseGuardImpl closeGuardImpl) {
+        this.mImpl = closeGuardImpl;
+    }
+
+    public static CloseGuardHelper create() {
+        return Build.VERSION.SDK_INT >= 30 ? new CloseGuardHelper(new CloseGuardApi30Impl()) : new CloseGuardHelper(new CloseGuardNoOpImpl());
+    }
+
+    public void close() {
+        this.mImpl.close();
+    }
+
+    public void open(String str) {
+        this.mImpl.open(str);
+    }
+
+    public void warnIfOpen() {
+        this.mImpl.warnIfOpen();
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public static final class CloseGuardNoOpImpl implements CloseGuardImpl {
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void open(String str) {
+            Preconditions.checkNotNull(str, "CloseMethodName must not be null.");
+        }
+
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void close() {
+        }
+
+        @Override // androidx.javascriptengine.CloseGuardHelper.CloseGuardImpl
+        public void warnIfOpen() {
+        }
+    }
+}

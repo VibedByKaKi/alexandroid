@@ -1,0 +1,21 @@
+package com.amazon.identity.auth.device;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes5.dex */
+public abstract class no {
+    public static Integer a(String str) {
+        try {
+            return Integer.valueOf(Integer.parseInt(str));
+        } catch (NumberFormatException unused) {
+            return null;
+        }
+    }
+
+    public static Long b(String str) {
+        try {
+            return Long.valueOf(Long.parseLong(str));
+        } catch (NumberFormatException unused) {
+            return null;
+        }
+    }
+}

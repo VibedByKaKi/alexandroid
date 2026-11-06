@@ -1,0 +1,49 @@
+package com.amazonaws.util;
+
+import com.amazonaws.internal.SdkFilterInputStream;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.CRC32;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+public class CRC32ChecksumCalculatingInputStream extends SdkFilterInputStream {
+    private CRC32 crc32;
+
+    public CRC32ChecksumCalculatingInputStream(InputStream inputStream) {
+        super(inputStream);
+        this.crc32 = new CRC32();
+    }
+
+    public long getCRC32Checksum() {
+        return this.crc32.getValue();
+    }
+
+    @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
+    public int read() throws IOException {
+        abortIfNeeded();
+        int read = ((FilterInputStream) this).in.read();
+        if (read != -1) {
+            this.crc32.update(read);
+        }
+        return read;
+    }
+
+    @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
+    public synchronized void reset() throws IOException {
+        abortIfNeeded();
+        this.crc32.reset();
+        ((FilterInputStream) this).in.reset();
+    }
+
+    @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
+    public int read(byte[] bArr, int i, int i2) throws IOException {
+        abortIfNeeded();
+        int read = ((FilterInputStream) this).in.read(bArr, i, i2);
+        if (read != -1) {
+            this.crc32.update(bArr, i, read);
+        }
+        return read;
+    }
+}

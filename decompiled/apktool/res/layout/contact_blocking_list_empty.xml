@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:paddingTop="@2131165704" android:paddingBottom="@2131165701" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131165703" android:paddingEnd="@2131165702"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165705" android:textColor="@2131099976" android:layout_width="-1" android:layout_height="-2" android:text="@2132018257" app:fontName="app_text_medium" />
+</LinearLayout>

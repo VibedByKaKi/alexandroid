@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="#1a1a1a" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@2131429375" android:layout_width="-1" android:layout_height="0.0dip" android:divider="@0" android:dividerHeight="0.0dip" android:layout_weight="1.0" />
+    <View android:id="@2131429370" android:background="@17170432" android:visibility="2" android:layout_width="-1" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+        <ProgressBar android:id="@2131429371" android:paddingLeft="16.0dip" android:visibility="2" android:layout_width="-2" android:layout_height="-1" android:indeterminateOnly="true" style="@16973854" />
+        <TextView android:textSize="14.0sp" android:textColor="@17170443" android:id="@2131429374" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:lineSpacingExtra="4.0dip" android:fontFamily="" />
+    </LinearLayout>
+    <LinearLayout android:orientation="0" android:background="@2131232599" android:layout_width="-1" android:layout_height="-2">
+        <Button android:id="@2131429369" android:text="@2132018119" style="@style/redboxButton" />
+        <Button android:id="@2131429372" android:text="@2132018131" style="@style/redboxButton" />
+        <Button android:id="@2131429373" android:visibility="2" android:text="@2132018133" style="@style/redboxButton" />
+    </LinearLayout>
+</LinearLayout>

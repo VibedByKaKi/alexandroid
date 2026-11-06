@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131230995" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewFlipper android:orientation="0" android:id="@2131428453" android:layout_width="-1" android:layout_height="-2" android:measureAllChildren="false">
+        <include layout="@layout/bottom_sheet_assistant_header" />
+        <include layout="@layout/bottomsheet_overflow_menu_header" />
+    </ViewFlipper>
+    <ViewFlipper android:orientation="0" android:id="@2131427997" android:layout_width="-1" android:layout_height="-1" android:measureAllChildren="false" android:inAnimation="@2130771991" android:outAnimation="@2130771988">
+        <include android:id="@2131427702" layout="@layout/bottom_sheet_assistant" />
+        <include android:id="@2131429122" layout="@layout/bottomsheet_overflow_menu" />
+    </ViewFlipper>
+</LinearLayout>

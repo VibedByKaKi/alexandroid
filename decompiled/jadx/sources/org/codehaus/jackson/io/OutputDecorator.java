@@ -1,0 +1,13 @@
+package org.codehaus.jackson.io;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.Writer;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes11.dex */
+public abstract class OutputDecorator {
+    public abstract OutputStream decorate(IOContext iOContext, OutputStream outputStream) throws IOException;
+
+    public abstract Writer decorate(IOContext iOContext, Writer writer) throws IOException;
+}

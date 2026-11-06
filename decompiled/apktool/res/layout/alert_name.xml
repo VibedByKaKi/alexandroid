@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="0x00000001" android:id="@2131427464" android:layout_width="-1" android:layout_height="-1">
+        <ScrollView android:layout_width="-1" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/alert_name_setup_button_layout" app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+                <include layout="@layout/status_banner" />
+                <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428252" android:visibility="2" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" />
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131427467" android:layout_width="-1" android:layout_height="-2" android:text="@2132017274" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.InstructionalTemplate.Headline" />
+                <com.google.android.material.textfield.TextInputLayout android:id="@2131427463" android:hint="@2132017271" style="@style/TextInput">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@2131427461" android:tag="" style="@style/TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131427466" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+            <Button android:id="@2131427465" android:tag="" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132019878" android:layout_weight="1.0" style="@style/mosaic_button" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+</FrameLayout>

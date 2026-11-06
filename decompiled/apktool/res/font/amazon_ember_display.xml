@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:font="@2131296258" android:fontWeight="300" android:fontStyle="0" app:font="@font/alexa_sans_display_light" app:fontStyle="normal" app:fontWeight="300" />
+    <font android:font="@2131296262" android:fontWeight="400" android:fontStyle="0" app:font="@font/alexa_sans_display_regular" app:fontStyle="normal" app:fontWeight="400" />
+    <font android:font="@2131296260" android:fontWeight="500" android:fontStyle="0" app:font="@font/alexa_sans_display_medium" app:fontStyle="normal" app:fontWeight="500" />
+    <font android:font="@2131296256" android:fontWeight="700" android:fontStyle="0" app:font="@font/alexa_sans_display_bold" app:fontStyle="normal" app:fontWeight="700" />
+</font-family>

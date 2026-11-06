@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1" style="?voiceOdContentWindowStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="-1" android:layout_height="-1">
+        <com.amazon.alexa.voice.ui.onedesign.widget.background.CardSolidColorLayout android:id="@2131427817" style="?voiceOdContentStyle">
+            <LinearLayout android:orientation="1" android:id="@2131427992" android:layout_width="-1" android:layout_height="-1">
+                <include layout="@layout/voice_ui_od_header" />
+                <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="0x02000000" android:id="@2131427991" android:paddingBottom="@2131168098" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-1" android:fillViewport="true" android:importantForAccessibility="2" app:layoutManager="LinearLayoutManager" />
+            </LinearLayout>
+        </com.amazon.alexa.voice.ui.onedesign.widget.background.CardSolidColorLayout>
+    </FrameLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

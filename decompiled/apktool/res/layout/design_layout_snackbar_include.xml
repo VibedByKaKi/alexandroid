@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:theme="@2132083739" android:layout_gravity="0x00000050" android:layout_width="-1" android:layout_height="-2" class="com.google.android.material.snackbar.SnackbarContentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@2132083476" android:ellipsize="3" android:layout_gravity="0x00800013" android:id="@2131429527" android:paddingLeft="@2131165861" android:paddingTop="@2131165862" android:paddingRight="@2131165861" android:paddingBottom="@2131165862" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492917" android:layout_weight="1.0" android:textAlignment="5" />
+    <Button android:textColor="?2130968875" android:layout_gravity="0x00800015" android:id="@2131429526" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="@2131165858" android:minWidth="48.0dip" android:layout_marginStart="@2131165858" style="?borderlessButtonStyle" />
+</view>

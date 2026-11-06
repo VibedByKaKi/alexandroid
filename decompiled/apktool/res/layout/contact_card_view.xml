@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@2131429414" android:background="@2131103288" android:focusable="false" android:focusableInTouchMode="false" android:descendantFocusability="2" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="@2131492913"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+        <RelativeLayout android:gravity="0x00000011" android:id="@2131427976" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165484" android:textColor="@2131099970" android:gravity="0x00000011" android:id="@2131427633" android:background="@2131099971" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:text="@2132017912" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165751" android:textColor="@2131099972" android:id="@2131427980" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165750" android:layout_marginStart="@2131165748" android:layout_marginEnd="@2131165749" app:fontName="app_text_light" />
+        <com.amazon.alexa.font.FontTextView android:textAppearance="?16842817" android:textSize="@2131167272" android:textColor="@2131099974" android:id="@2131428959" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167271" android:layout_marginBottom="@2131167268" android:layout_marginStart="@2131167269" android:layout_marginEnd="@2131167270" app:fontName="app_text_regular" />
+        <LinearLayout android:id="@2131427730" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165566" android:layout_marginTop="@2131166104" android:layout_marginStart="@2131165567" android:layout_marginEnd="@2131165568">
+            <ImageButton android:id="@2131428769" android:src="@2131231490" android:contentDescription="@2132019700" style="@style/contactCardButtonStyle" />
+            <ImageButton android:id="@2131427599" android:src="@2131231458" android:contentDescription="@2132017881" android:layout_marginStart="@2131166103" style="@style/contactCardButtonStyle" />
+            <ImageButton android:id="@2131429858" android:src="@2131232033" android:contentDescription="@2132020877" android:layout_marginStart="@2131166103" style="@style/contactCardButtonStyle" />
+            <ImageButton android:id="@2131428156" android:background="@2131231145" android:visibility="2" android:clickable="true" android:layout_width="@2131165717" android:layout_height="@2131165716" android:src="@2131232647" android:contentDescription="@2132018493" android:layout_marginStart="@2131166103" />
+        </LinearLayout>
+        <include android:id="@2131428485" android:visibility="2" android:layout_width="-1" android:layout_height="-2" layout="@layout/contact_card_home_group_layout" />
+        <LinearLayout android:orientation="1" android:id="@2131427973" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" />
+        <include android:id="@2131427871" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" layout="@layout/child_account_item" />
+        <include android:id="@2131427882" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" layout="@layout/child_contact_list" />
+        <LinearLayout android:orientation="1" android:id="@2131427972" android:layout_width="-1" android:layout_height="-2">
+            <LinearLayout android:orientation="0" android:id="@2131429157" android:background="@2131103570" android:layout_width="-1" android:layout_height="@2131165726" android:layout_marginTop="@2131165722" android:baselineAligned="false">
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167915" android:textColor="@2131099974" android:layout_gravity="0x00000010" android:id="@2131429156" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020046" android:layout_weight="1.0" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+                <ImageView android:id="@2131429154" android:clickable="true" android:src="@2131231588" android:contentDescription="@2132019243" style="@style/helpIconStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="0" android:id="@2131429147" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:baselineAligned="false" android:layout_marginStart="@2131165725">
+                <LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131493099">
+                    <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165728" android:textColor="@2131099974" android:id="@2131428163" android:layout_width="-2" android:layout_height="-2" android:text="@2132017456" app:fontName="app_text_regular" />
+                    <com.amazon.alexa.font.FontTextView android:textSize="@2131165727" android:textColor="@2131099972" android:id="@2131428157" android:layout_width="-2" android:layout_height="-2" android:text="@2132018494" app:fontName="app_text_regular" />
+                </LinearLayout>
+                <ToggleButton android:layout_gravity="0x00000010" android:id="@2131428164" android:layout_weight="@2131493098" style="@style/toggleButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:id="@2131427926" android:layout_width="-1" android:layout_height="-2">
+                <View style="@style/contactCardDividerStyle" />
+                <LinearLayout android:orientation="0" android:id="@2131427927" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:baselineAligned="false" android:layout_marginStart="@2131165725">
+                    <LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131493099">
+                        <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165728" android:textColor="@2131099974" android:id="@2131427928" android:layout_width="-2" android:layout_height="-2" android:text="@2132018179" app:fontName="app_text_regular" />
+                        <com.amazon.alexa.font.FontTextView android:textSize="@2131165727" android:textColor="@2131099972" android:id="@2131427925" android:layout_width="-2" android:layout_height="-2" android:text="@2132018178" app:fontName="app_text_regular" />
+                    </LinearLayout>
+                    <ToggleButton android:layout_gravity="0x00000010" android:id="@2131427929" android:layout_weight="@2131493098" style="@style/toggleButtonStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include android:id="@2131428158" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" layout="@layout/card_group_details" />
+        <include android:id="@2131428560" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" layout="@layout/contact_card_info" />
+        <LinearLayout android:orientation="1" android:id="@2131427963" android:layout_width="-1" android:layout_height="-2">
+            <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131427965" android:background="@2131103570" android:layout_width="-1" android:layout_height="@2131165726">
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167915" android:textColor="@2131099974" android:id="@2131427964" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132018404" android:layout_weight="1.0" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+                <ImageView android:id="@2131428089" android:clickable="true" android:src="@2131231588" android:contentDescription="@2132019243" style="@style/helpIconStyle" />
+            </LinearLayout>
+            <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131168048" android:textColor="@2131099974" android:id="@2131429884" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:text="@2132020891" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+            <LinearLayout android:orientation="0" android:id="@2131429467" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:baselineAligned="false">
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131168047" android:textColor="@2131099972" android:layout_gravity="0x00000011" android:id="@2131429468" android:layout_width="-2" android:layout_height="-2" android:text="@2132019178" android:layout_weight="@2131493099" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+                <ToggleButton android:layout_gravity="0x00000010" android:id="@2131429885" android:layout_weight="@2131493098" style="@style/toggleButtonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00800003" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165698" android:textColor="@2131100167" android:id="@2131427961" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165722" android:layout_marginBottom="@2131165721" android:text="@2132018265" android:layout_marginStart="@2131165725" app:fontName="app_text_regular" />
+        </LinearLayout>
+        <Button android:id="@2131427347" android:layout_height="-2" android:layout_marginTop="@2131165720" android:layout_marginBottom="@2131165723" android:text="@2132017191" style="@style/aboutAlexaCommsButtonStyle" />
+    </LinearLayout>
+</ScrollView>

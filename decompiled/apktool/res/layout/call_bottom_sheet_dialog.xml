@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:fitsSystemWindows="false" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:id="@2131429162" android:background="@2131100042" android:focusableInTouchMode="true" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:ellipsize="3" android:id="@2131427770" android:visibility="0" android:layout_width="-1" android:layout_height="@2131167885" android:text="@2132017987" android:maxLines="1" android:textAllCaps="true" app:fontName="app_text_regular" style="@style/AlexaDeviceTargetingHeader" />
+        <LinearLayout android:id="@2131427483" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+            <com.amazon.alexa.font.FontTextView android:ellipsize="3" android:layout_gravity="0x00000011" android:id="@2131427769" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131165723" android:text="@2132017317" android:maxLines="1" android:paddingStart="@2131165875" android:paddingEnd="@2131165875" app:fontName="app_text_regular" style="@style/AlexaDeviceTargetingName" />
+        </LinearLayout>
+        <LinearLayout android:id="@2131427494" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+            <com.amazon.alexa.font.FontTextView android:ellipsize="3" android:layout_gravity="0x00000011" android:id="@2131427773" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131165723" android:text="@2132017447" android:maxLines="1" android:paddingStart="@2131165875" android:paddingEnd="@2131165875" app:fontName="app_text_regular" style="@style/AlexaDeviceTargetingName" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@2131429161" android:scrollbars="0x00000200" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165873" android:paddingStart="@2131165875" android:paddingEnd="@2131165875" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@2131230913" android:layout_width="-1" android:layout_height="-2" android:paddingHorizontal="@2131167037" android:paddingVertical="@2131167049"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.widget.ImageView android:id="@2131428976" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_alignTop="@2131429691" android:importantForAccessibility="2" android:layout_marginEnd="@2131167033" android:layout_alignParentStart="true" />
+    <LinearLayout android:orientation="1" android:id="@2131429691" android:layout_width="-1" android:layout_height="-2" android:layout_marginEnd="@2131167033" android:layout_toStartOf="@2131428975" android:layout_toEndOf="@2131428976">
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131102428" android:gravity="0x00000010" android:id="@2131428978" android:layout_width="-1" android:layout_height="-2" android:maxLines="2" android:lineHeight="20.0sp" style="@style/mosaic_font_body_02" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131102419" android:gravity="0x00000010" android:id="@2131428977" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131166982" android:contentDescription="@2132017851" style="@style/mosaic_font_body_02" />
+    </LinearLayout>
+    <android.widget.ImageView android:id="@2131428975" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@2131231468" android:layout_alignTop="@2131429691" android:contentDescription="@2132017850" android:layout_alignParentEnd="true" />
+</RelativeLayout>

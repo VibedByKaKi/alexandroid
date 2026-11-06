@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131100090" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="1" android:layout_width="-1" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:id="@2131428947" android:layout_width="-2" android:layout_height="@2131166026" android:layout_marginTop="@2131167337" android:layout_marginBottom="@2131167342" android:src="@2131231791" android:adjustViewBounds="true" android:maxWidth="500.0dip" android:importantForAccessibility="2" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167784" android:textColor="@2131100107" android:id="@2131428948" android:paddingBottom="@2131166019" android:layout_width="-2" android:layout_height="-2" android:text="@2132018509" android:paddingStart="@2131166019" android:paddingEnd="0.0dip" app:fontName="app_text_bold" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131428946" android:paddingBottom="@2131166019" android:layout_width="-2" android:layout_height="-2" android:text="@2132018508" android:paddingStart="@2131166019" android:paddingEnd="0.0dip" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131427785" android:paddingBottom="@2131167339" android:layout_width="-2" android:layout_height="-2" android:text="@2132018510" android:paddingStart="@2131165916" android:paddingEnd="0.0dip" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131427786" android:paddingBottom="@2131167339" android:layout_width="-2" android:layout_height="-2" android:text="@2132018511" android:paddingStart="@2131165916" android:paddingEnd="0.0dip" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131427787" android:paddingBottom="@2131167339" android:layout_width="-2" android:layout_height="-2" android:text="@2132018512" android:paddingStart="@2131165916" android:paddingEnd="0.0dip" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131427788" android:paddingBottom="@2131167339" android:layout_width="-2" android:layout_height="-2" android:text="@2132018513" android:paddingStart="@2131165916" android:paddingEnd="0.0dip" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167350" android:textColor="@2131100107" android:id="@2131427789" android:paddingBottom="@2131167339" android:layout_width="-2" android:layout_height="-2" android:text="@2132018514" android:paddingStart="@2131165916" android:paddingEnd="0.0dip" />
+            <LinearLayout android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131166019" android:paddingEnd="0.0dip">
+                <Button android:textSize="@2131167351" android:textStyle="0x00000001" android:textColor="@2131100102" android:id="@2131427783" android:background="@2131103590" android:layout_width="-2" android:layout_height="-2" android:text="@2132018506" android:textAllCaps="false" android:layout_marginEnd="@2131167323" />
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167351" android:textColor="@2131100107" android:id="@2131427784" android:layout_width="-2" android:layout_height="-2" android:text="@2132018507" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="0" android:id="@2131429059" android:paddingBottom="@2131167340" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:id="@2131429036" android:layout_width="-1" android:layout_height="-2" style="@style/AlexaComms.ButtonLayout">
+            <com.amazon.deecomms.common.ui.CommsButton android:textSize="@2131167351" android:textStyle="0x00000001" android:textColor="@2131100102" android:id="@2131429061" android:layout_height="@2131167324" android:text="@2132018444" android:textAllCaps="true" app:typeface="@string/amazon_ember_bold" style="@style/AlexaCommsButton.Tertiary.Variable" />
+            <com.amazon.deecomms.common.ui.CommsButton android:textSize="@2131167351" android:textStyle="0x00000001" android:id="@2131429058" android:background="@2131231287" android:layout_height="@2131167324" android:text="@2132018428" android:textAllCaps="true" app:typeface="@string/amazon_ember_bold" style="@style/AlexaCommsButton.Primary.Variable" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

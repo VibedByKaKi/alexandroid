@@ -1,0 +1,78 @@
+package com.amazon.commscore.commsidentity.repo.model;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public class IdentityV2 {
+    private String aor;
+    private String commsId;
+    private String commsProvisionStatus;
+    private String hashedCommsId;
+    private String homeGroupId;
+    private String homeGroupPceId;
+    private Name name;
+    private String pceId;
+
+    public String getAor() {
+        return this.aor;
+    }
+
+    public String getCommsId() {
+        return this.commsId;
+    }
+
+    public String getCommsProvisionStatus() {
+        return this.commsProvisionStatus;
+    }
+
+    public String getHashedCommsId() {
+        return this.hashedCommsId;
+    }
+
+    public String getHomeGroupId() {
+        return this.homeGroupId;
+    }
+
+    public String getHomeGroupPceId() {
+        return this.homeGroupPceId;
+    }
+
+    public Name getName() {
+        return this.name;
+    }
+
+    public String getPceId() {
+        return this.pceId;
+    }
+
+    public void setAor(String str) {
+        this.aor = str;
+    }
+
+    public void setCommsId(String str) {
+        this.commsId = str;
+    }
+
+    public void setCommsProvisionStatus(String str) {
+        this.commsProvisionStatus = str;
+    }
+
+    public void setHashedCommsId(String str) {
+        this.hashedCommsId = str;
+    }
+
+    public void setHomeGroupId(String str) {
+        this.homeGroupId = str;
+    }
+
+    public void setHomeGroupPceId(String str) {
+        this.homeGroupPceId = str;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
+
+    public void setPceId(String str) {
+        this.pceId = str;
+    }
+}

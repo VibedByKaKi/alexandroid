@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@2131429306" android:layout_width="-1" android:layout_height="-2" />
+    <RelativeLayout android:layout_width="-1" android:layout_height="-2" android:layout_below="@2131429306">
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131101582" android:id="@2131428907" android:layout_width="-2" android:layout_height="-2" android:text="@2132019767" android:layout_centerVertical="true" android:layout_toStartOf="@2131428754" android:layout_alignParentStart="true" app:fontName="app_text_bold" style="@style/header_title" />
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167278" android:textColor="@2131101580" android:gravity="0x00000011" android:id="@2131428755" android:background="@2131232396" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_centerVertical="true" android:contentDescription="@2132021083" android:layout_toStartOf="@2131428754" app:fontName="app_display_medium" />
+        <ImageView android:gravity="0x00000010" android:id="@2131428754" android:visibility="0" android:src="@2131231710" android:layout_centerInParent="true" android:contentDescription="@2132020168" android:layout_alignParentEnd="true" style="@style/header_button" />
+    </RelativeLayout>
+</RelativeLayout>

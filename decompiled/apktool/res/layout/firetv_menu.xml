@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="0x00800005" android:background="@2131231320" android:layout_width="@2131166941" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@2131428752" android:padding="24.0dip" android:layout_width="-1" android:layout_height="-1" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+        <TextView android:textAppearance="@2132083406" android:gravity="0x00800005" android:id="@2131428765" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="40.0dip" android:text="@2132017725" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+        <TextView android:textAppearance="@2132083406" android:gravity="0x00800005" android:id="@2131428764" android:layout_width="-2" android:layout_height="-2" android:layout_below="@2131428765" android:layout_alignParentEnd="true" />
+        <TextView android:textAppearance="@2132083406" android:gravity="0x00800005" android:id="@2131428753" android:focusable="true" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="24.0dip" android:text="@2132018599" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+        <TextView android:textAppearance="@2132083406" android:gravity="0x00800005" android:id="@2131428758" android:focusable="true" android:visibility="2" android:nextFocusDown="@2131428753" android:layout_width="-2" android:layout_height="-2" android:text="@2132020033" android:layout_above="@2131428753" android:layout_alignParentEnd="true" />
+        <TextView android:textAppearance="@2132083406" android:gravity="0x00800005" android:id="@2131428762" android:focusable="true" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:text="@2132020445" android:layout_above="@2131428753" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

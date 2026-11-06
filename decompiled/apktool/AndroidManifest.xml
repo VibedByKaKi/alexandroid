@@ -1,0 +1,1872 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="37" android:compileSdkVersionCodename="" android:requiredSplitTypes="" android:splitTypes="" package="com.amazon.dee.app" platformBuildVersionCode="37" platformBuildVersionName="17">
+    <uses-feature android:name="" android:required="false"/>
+    <uses-permission android:name="" android:required="true"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:minSdkVersion="34" android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name="" android:required="false"/>
+    <uses-permission android:maxSdkVersion="30" android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name="" android:usesPermissionFlags="0x00010000"/>
+    <uses-permission android:name="" android:required="false"/>
+    <uses-permission android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:maxSdkVersion="32" android:name=""/>
+    <uses-permission android:maxSdkVersion="32" android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-feature android:name="" android:required="false"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <uses-permission android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <queries>
+        <intent>
+            <action android:name=""/>
+            <category android:name=""/>
+            <data android:scheme=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+            <category android:name=""/>
+            <data android:scheme=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <intent>
+            <action android:name=""/>
+            <category android:name=""/>
+        </intent>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <package android:name=""/>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <package android:name=""/>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <intent>
+            <action android:name=""/>
+        </intent>
+        <package android:name=""/>
+        <intent>
+            <action android:name=""/>
+        </intent>
+    </queries>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false" android:version="2"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000003"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="" android:required="false" android:version="8"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false" android:version="6"/>
+    <uses-permission android:name=""/>
+    <permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:minSdkVersion="34" android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:minSdkVersion="34" android:name=""/>
+    <uses-permission android:minSdkVersion="34" android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:description="@2132017525" android:label="@2132017524" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:description="@2132017520" android:label="@2132017521" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name="" android:required="false"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:label="" android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <permission android:name="" android:protectionLevel="0x00000003"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-feature android:glEsVersion="0x00030000" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-feature android:name="" android:required="false"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <permission android:label="" android:name="" android:permissionGroup="" android:protectionLevel="0x00000012"/>
+    <permission android:label="" android:name="" android:permissionGroup="" android:protectionLevel="0x00000012"/>
+    <permission-group android:name=""/>
+    <uses-feature android:name="" android:required="false"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <uses-permission android:name=""/>
+    <application android:allowBackup="false" android:appComponentFactory="" android:enableOnBackInvokedCallback="false" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@2131820555" android:label="@2132017312" android:name="" android:networkSecurityConfig="@2132213775" android:supportsRtl="true" android:theme="@2132082821">
+        <meta-data android:name="" android:value="@2132018742"/>
+        <meta-data android:name="" android:value="@2132018741"/>
+        <meta-data android:name="" android:value="@2132018743"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value="0"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value="false"/>
+        <activity android:configChanges="0x000005A0" android:exported="true" android:label="@2132017312" android:launchMode="2" android:name="" android:theme="@2132083579" android:windowSoftInputMode="0x00000010">
+            <intent-filter android:autoVerify="true">
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:host="" android:scheme=""/>
+                <data android:host="" android:scheme=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:host="" android:scheme=""/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:scheme=""/>
+                <data android:scheme=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:scheme=""/>
+                <data android:scheme=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="false" android:exported="false" android:name="">
+            <meta-data android:name="" android:value="true"/>
+        </service>
+        <activity android:configChanges="0x00000FA0" android:exported="true" android:label="@2132017312" android:launchMode="1" android:name="" android:resizeableActivity="true" android:theme="@2132083579" android:windowSoftInputMode="0x00000010"/>
+        <activity-alias android:exported="true" android:label="@2132017312" android:name="" android:resizeableActivity="false" android:targetActivity="" android:windowSoftInputMode="0x00000020">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:label="@2132017312" android:name="" android:resizeableActivity="false" android:targetActivity="" android:windowSoftInputMode="0x00000020">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:label="@2132017312" android:name="" android:targetActivity="" android:windowSoftInputMode="0x00000020">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:label="@2132017312" android:name="" android:targetActivity="" android:windowSoftInputMode="0x00000020">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:scheme=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:host=""/>
+                <data android:pathPattern=""/>
+                <data android:pathPattern=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@2131820546" android:label="@2132017312" android:name="" android:roundIcon="@2131820546" android:targetActivity="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@2131820555" android:label="@2132017312" android:name="" android:roundIcon="@2131820555" android:targetActivity="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:icon="@2131820555" android:label="@2132017312" android:name="" android:roundIcon="@2131820555" android:targetActivity="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity-alias>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value="true"/>
+        <meta-data android:name="" android:value="@2132017156"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <activity android:allowTaskReparenting="true" android:configChanges="@2131492911" android:exported="false" android:label="" android:launchMode="1" android:name="" android:permission=""/>
+        <activity android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:exported="true" android:icon="@2131232708" android:label="@2132017856" android:launchMode="2" android:name="" android:taskAffinity="" android:theme="@2132083585">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="" android:targetActivity="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="" android:targetActivity="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2131232041"/>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="" android:targetActivity="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2131232041"/>
+        </activity-alias>
+        <activity-alias android:exported="true" android:icon="@2131232708" android:label="@2132017292" android:name="" android:targetActivity="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2131232041"/>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="" android:targetActivity="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="" android:resizeableActivity="false" android:theme="@2132083576" android:windowSoftInputMode="0x00000020"/>
+        <activity android:configChanges="0x000005A0" android:exported="false" android:name="" android:resizeableActivity="false" android:theme="@2132083577" android:windowSoftInputMode="0x00000010">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x00000480" android:exported="false" android:name="" android:resizeableActivity="false" android:theme="@2132083576" android:windowSoftInputMode="0x00000020"/>
+        <activity android:exported="true" android:name=""/>
+        <activity android:exported="false" android:name="" android:resizeableActivity="false"/>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <amazon:enable-feature android:name="" android:required="false"/>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <uses-library android:name="" android:required="false"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value="true"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <service android:exported="false" android:name="" android:stopWithTask="true"/>
+        <service android:exported="true" android:icon="@2131230891" android:label="@2132017858" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="0x00000480" android:exported="false" android:name="" android:theme="@16973830"/>
+        <activity android:configChanges="0x00000480" android:directBootAware="true" android:excludeFromRecents="true" android:name="" android:theme="@2132083400"/>
+        <provider android:authorities="" android:directBootAware="true" android:exported="false" android:name=""/>
+        <service android:directBootAware="true" android:exported="true" android:foregroundServiceType="0x00000020" android:name="" android:permission="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name=""/>
+        <receiver android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="" android:screenOrientation="1" android:theme="@2132083724"/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="">
+            <intent-filter android:priority="1000">
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000008" android:name=""/>
+        <activity android:exported="false" android:label="@2132017292" android:launchMode="1" android:name="" android:noHistory="true" android:theme="@2132083617"/>
+        <activity android:excludeFromRecents="false" android:exported="false" android:label="@2132017292" android:launchMode="1" android:name="" android:noHistory="false" android:theme="@2132083617"/>
+        <activity android:excludeFromRecents="false" android:exported="false" android:label="@2132017292" android:launchMode="1" android:name="" android:noHistory="false" android:theme="@2132083617"/>
+        <activity android:configChanges="0x000005A0" android:exported="false" android:name="" android:resizeableActivity="false" android:screenOrientation="1" android:theme="@2132083617" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x000005A0" android:exported="false" android:name="" android:noHistory="true" android:theme="@2132083617" android:windowSoftInputMode="0x00000010"/>
+        <receiver android:enabled="true" android:exported="false" android:name=""/>
+        <receiver android:enabled="true" android:exported="false" android:name=""/>
+        <service android:name="" android:permission=""/>
+        <activity android:exported="false" android:name="" android:theme="@16973840"/>
+        <meta-data android:name="" android:value="true"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="" android:noHistory="true" android:permission="" android:resizeableActivity="false" android:theme="@2132083160">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x00000780" android:excludeFromRecents="true" android:launchMode="3" android:name="" android:resizeableActivity="false" android:taskAffinity="" android:theme="@2132083119" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x00000780" android:excludeFromRecents="true" android:launchMode="3" android:name="" android:resizeableActivity="false" android:taskAffinity="" android:theme="@2132083119" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:label="" android:name="" android:noHistory="true" android:resizeableActivity="false" android:taskAffinity="" android:theme="@2132083160" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:label="" android:name="" android:noHistory="true" android:resizeableActivity="false" android:taskAffinity="" android:theme="@2132083160" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="3" android:name="" android:taskAffinity="" android:theme="@2132083253"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="3" android:name="" android:taskAffinity="" android:theme="@2132083145" android:windowSoftInputMode="0x00000010"/>
+        <activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="3" android:name="" android:noHistory="true" android:resizeableActivity="false" android:taskAffinity="" android:theme="@2132083160" android:windowSoftInputMode="0x00000010"/>
+        <activity android:excludeFromRecents="true" android:name="" android:theme="@16973840"/>
+        <activity android:configChanges="0x000005A0" android:excludeFromRecents="true" android:exported="true" android:launchMode="1" android:name="" android:noHistory="true" android:theme="@2132083145">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+                <data android:mimeType=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="1" android:name="" android:theme="@2132083145"/>
+        <provider android:authorities="@2132018935" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213764"/>
+        </provider>
+        <provider android:authorities="@2132018287" android:exported="false" android:name=""/>
+        <provider android:authorities="@2132018019" android:enabled="true" android:exported="true" android:name="" android:readPermission=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name=""/>
+        <service android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <provider android:authorities="@2132019705" android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <receiver android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="" android:process="@2132017214"/>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="" android:permission="" android:process="@2132017214"/>
+        <activity android:launchMode="1" android:name="" android:theme="@2132084289"/>
+        <provider android:authorities="" android:enabled="true" android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:name=""/>
+        <uses-library android:name="" android:required="false"/>
+        <activity android:exported="false" android:launchMode="0" android:name="" android:resizeableActivity="false" android:screenOrientation="10" android:showOnLockScreen="true" android:theme="@2132083727" android:windowSoftInputMode="0x00000010"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="0" android:name="" android:theme="@2132083253"/>
+        <service android:exported="false" android:foregroundServiceType="0x00000004" android:name=""/>
+        <service android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="0x00000004" android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:host="" android:path="" android:scheme=""/>
+            </intent-filter>
+        </activity>
+        <receiver android:name=""/>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213780"/>
+        </provider>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <uses-library android:name="" android:required="false"/>
+        <uses-library android:name="" android:required="false"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:theme="@2132083618"/>
+        <service android:exported="false" android:foregroundServiceType="0x00000400" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="0x00000400" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value="1.3"/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:directBootAware="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="3" android:name="" android:screenOrientation="13" android:theme="@16973831"/>
+        <activity android:configChanges="0x00000424" android:exported="false" android:name="" android:theme="@2132083630">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000004A4" android:name="" android:theme="@2132083630"/>
+        <activity android:configChanges="0x000004A4" android:name="" android:theme="@2132083630"/>
+        <activity android:configChanges="0x000004A4" android:name="" android:theme="@2132083630"/>
+        <activity android:configChanges="0x000004A4" android:exported="false" android:name="" android:theme="@2132083630">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000004A4" android:name="" android:theme="@2132083630"/>
+        <service android:exported="false" android:label="@2132021086" android:name="" android:permission="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="" android:theme="@2132083585"/>
+        <activity android:name="" android:theme="@2132083585"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:theme="@2132083585">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:label="@2132017856" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2132213761"/>
+        </receiver>
+        <provider android:authorities="" android:exported="false" android:name=""/>
+        <service android:enabled="false" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="@2132017915" android:enabled="true" android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="0x40000D80" android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083606" android:turnScreenOn="true" android:windowSoftInputMode="0x00000010">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000080" android:name=""/>
+        <provider android:authorities="" android:exported="false" android:name=""/>
+        <service android:exported="false" android:foregroundServiceType="0x00000020" android:name=""/>
+        <service android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="0x00000008" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="0x00000008" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value="1.1"/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:noHistory="true" android:process="" android:showWhenLocked="true" android:stateNotNeeded="true" android:theme="@16973840" android:turnScreenOn="true"/>
+        <activity android:exported="false" android:name="" android:theme="@2132083630"/>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213767"/>
+        </provider>
+        <receiver android:exported="false" android:name=""/>
+        <service android:enabled="true" android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="0x00000480" android:launchMode="0" android:name="" android:screenOrientation="0" android:theme="@16973831"/>
+        <activity android:configChanges="0x00000480" android:launchMode="0" android:name="" android:screenOrientation="4"/>
+        <service android:exported="true" android:foregroundServiceType="0x00000082" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="@2132020789" android:enabled="true" android:exported="false" android:name="" android:process=""/>
+        <provider android:authorities="@2132017914" android:exported="true" android:name="" android:permission=""/>
+        <activity android:configChanges="0x000005A0" android:exported="false" android:name="" android:theme="@2132083585">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083585"/>
+        <activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083585"/>
+        <activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083585">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000000A0" android:exported="false" android:name="" android:theme="@2132083585"/>
+        <activity android:enabled="false" android:excludeFromRecents="true" android:exported="true" android:label="@2132017857" android:name="" android:theme="@16973909">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000000A0" android:exported="true" android:name="" android:theme="@2132083585">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <meta-data android:name="" android:resource="@2131230891"/>
+        <activity android:exported="false" android:launchMode="2" android:name="" android:theme="@16973909">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:enabled="false" android:exported="false" android:icon="@2131231372" android:label="@2132017357" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:enabled="false" android:exported="false" android:label="@2132017343" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:host="" android:path="" android:scheme=""/>
+            </intent-filter>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:resource="@2132017415"/>
+            <meta-data android:name="" android:resource="@2131231372"/>
+        </activity>
+        <activity-alias android:exported="false" android:name="" android:targetActivity="">
+            <meta-data android:name="" android:resource="@2132017415"/>
+            <meta-data android:name="" android:resource="@2131231372"/>
+        </activity-alias>
+        <receiver android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:process="@2132017214">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:process="@2132017214">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:process="@2132017214">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <activity android:label="@2132017415" android:name=""/>
+        <activity android:exported="false" android:label="@2132017415" android:launchMode="3" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@2132017415" android:launchMode="3" android:name=""/>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083629">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="0x000004A4" android:name="" android:theme="@2132083630"/>
+        <activity android:name="" android:theme="@2132083629"/>
+        <activity android:name="" android:theme="@2132083629"/>
+        <receiver android:enabled="true" android:name=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <uses-library android:name="" android:required="false"/>
+        <service android:exported="true" android:name="" android:permission="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="" android:permission="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="@2132020605" android:enabled="true" android:exported="false" android:name="" android:process=""/>
+        <provider android:authorities="@2132020604" android:enabled="true" android:exported="false" android:name="" android:process=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <provider android:authorities="" android:exported="false" android:multiprocess="false" android:name=""/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x0000008A" android:label="@2132017861" android:name="" android:stopWithTask="false"/>
+        <meta-data android:name="" android:resource="@2131952167"/>
+        <service android:enabled="false" android:exported="false" android:foregroundServiceType="0x0000008A" android:label="@2132017528" android:name="" android:process="" android:stopWithTask="false"/>
+        <service android:enabled="false" android:exported="true" android:label="@2132017527" android:name="" android:permission="" android:process=""/>
+        <service android:exported="false" android:name="" android:permission="" android:process=""/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:noHistory="true" android:process="" android:showWhenLocked="true" android:stateNotNeeded="true" android:theme="@16973840" android:turnScreenOn="true"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:noHistory="true" android:process="" android:stateNotNeeded="true" android:theme="@16973840"/>
+        <receiver android:exported="false" android:name="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="" android:exported="true" android:grantUriPermissions="false" android:name="" android:permission="" android:process=""/>
+        <provider android:authorities="" android:enabled="true" android:exported="false" android:name="" android:process=""/>
+        <service android:exported="false" android:name="" android:process=""/>
+        <activity android:exported="false" android:launchMode="2" android:name="" android:theme="@2132083629"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000010" android:name=""/>
+        <provider android:authorities="@2132020880" android:exported="true" android:name="" android:readPermission=""/>
+        <receiver android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:name="" android:permission=""/>
+        <service android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <uses-library android:name="" android:required="false"/>
+        <uses-library android:name="" android:required="false"/>
+        <uses-library android:name="" android:required="false"/>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <property android:name="" android:value="true"/>
+        <service android:name="" android:permission=""/>
+        <service android:name="" android:permission=""/>
+        <activity android:name="" android:theme="@2132083862"/>
+        <provider android:authorities="" android:directBootAware="true" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </provider>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:name="" android:permission=""/>
+        <activity android:configChanges="@2131492911" android:exported="false" android:label="" android:name="" android:permission=""/>
+        <activity android:configChanges="0x00002484" android:exported="true" android:launchMode="2" android:name="" android:theme="@16973840">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <category android:name=""/>
+                <data android:host="" android:pathPrefix="" android:scheme=""/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="false" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000010" android:label="" android:name="" android:process=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:noHistory="true" android:stateNotNeeded="true" android:theme="@16973840">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:scheme=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+                <data android:scheme=""/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="" android:exported="false" android:multiprocess="true" android:name=""/>
+        <receiver android:enabled="true" android:exported="false" android:label="@2132020550" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2132213781"/>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:label="@2132017982" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2132213762"/>
+        </receiver>
+        <service android:name="" android:permission=""/>
+        <service android:name="" android:permission=""/>
+        <receiver android:enabled="true" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:name="" android:permission=""/>
+        <service android:enabled="true" android:name=""/>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="" android:permission="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:label="@2132020166" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:resource="@2132213777"/>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000008" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="0x00000680" android:excludeFromRecents="true" android:exported="false" android:icon="@2131232708" android:label="@2132017856" android:launchMode="2" android:name="" android:noHistory="false" android:process="" android:resizeableActivity="false" android:showOnLockScreen="true" android:taskAffinity="" android:theme="@2132083604" android:turnScreenOn="true">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:exported="false" android:icon="@2131232708" android:label="@2132020763" android:launchMode="2" android:name="" android:noHistory="false" android:process="" android:taskAffinity="" android:theme="@2132083583" android:windowSoftInputMode="0x00000004">
+            <intent-filter>
+                <category android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="" android:enabled="true" android:exported="false" android:name=""/>
+        <provider android:authorities="@2132020086" android:exported="false" android:name="" android:process=""/>
+        <receiver android:exported="false" android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213763"/>
+        </provider>
+        <provider android:authorities="" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+        </provider>
+        <service android:exported="true" android:foregroundServiceType="0x00000080" android:name="" android:permission="">
+            <meta-data android:name="" android:value=""/>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="" android:process="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="false" android:enabled="@2131034119" android:exported="false" android:foregroundServiceType="0x00000001" android:name=""/>
+        <receiver android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <data android:scheme=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+                <data android:mimeType=""/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="false" android:enabled="@2131034118" android:exported="false" android:name=""/>
+        <service android:directBootAware="false" android:enabled="@2131034120" android:exported="true" android:name="" android:permission=""/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name=""/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <action android:name=""/>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@2131034118" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name=""/>
+        <service android:enabled="true" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <activity android:configChanges="0x000005A0" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="" android:theme="@2132083646"/>
+        <activity android:configChanges="0x000005A0" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="" android:theme="@2132083646"/>
+        <service android:directBootAware="true" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <provider android:authorities="" android:exported="false" android:initOrder="99" android:name=""/>
+        <service android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="" android:theme="@16973840"/>
+        <service android:exported="true" android:name="" android:permission="" android:visibleToInstantApps="true"/>
+        <receiver android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="">
+            <intent-filter android:priority="-500">
+                <action android:name=""/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <activity android:exported="false" android:name="" android:theme="@16973840"/>
+        <provider android:authorities="" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name=""/>
+        <meta-data android:name="" android:value="@2131492928"/>
+        <receiver android:enabled="true" android:exported="true" android:name="" android:process="@2132017214">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="0x00000010" android:name="" android:process="@2132017214"/>
+        <service android:exported="false" android:name="" android:permission="" android:process="@2132017214"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:name="" android:process="@2132017214" android:theme="@2132083575"/>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213776"/>
+        </provider>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213768"/>
+        </provider>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213779"/>
+        </provider>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213764"/>
+        </provider>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value="true"/>
+        <activity android:name=""/>
+        <receiver android:name=""/>
+        <receiver android:name=""/>
+        <service android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <uses-library android:name="" android:required="false"/>
+        <service android:enabled="false" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <receiver android:enabled="false" android:exported="false" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="" android:exported="false" android:initOrder="9001" android:name=""/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="" android:enabled="true" android:exported="false" android:name="" android:process="" android:readPermission="" android:writePermission=""/>
+        <receiver android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+        </service>
+        <service android:exported="false" android:name="" android:permission=""/>
+        <receiver android:exported="false" android:name=""/>
+        <activity android:exported="false" android:name="" android:stateNotNeeded="true" android:theme="@2132083729"/>
+        <provider android:authorities="" android:exported="false" android:grantUriPermissions="true" android:name="">
+            <meta-data android:name="" android:resource="@2132213765"/>
+        </provider>
+        <uses-native-library android:name="" android:required="false"/>
+        <uses-native-library android:name="" android:required="false"/>
+        <uses-native-library android:name="" android:required="false"/>
+        <meta-data android:name="" android:value="true"/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:value=""/>
+        <meta-data android:name="" android:resource="@2132213782"/>
+        <meta-data android:name="" android:value="2"/>
+    </application>
+</manifest>

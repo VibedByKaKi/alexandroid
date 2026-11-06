@@ -1,0 +1,70 @@
+package androidx.camera.video.internal.audio;
+
+import android.media.AudioTimestamp;
+import androidx.annotation.NonNull;
+import androidx.core.util.Preconditions;
+import defpackage.a$$ExternalSyntheticOutline0;
+import rx.Single$$ExternalSyntheticBUOutline0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes.dex */
+public final class AudioUtils {
+    private AudioUtils() {
+    }
+
+    public static int channelCountToChannelConfig(int i) {
+        return i == 1 ? 16 : 12;
+    }
+
+    public static int channelCountToChannelMask(int i) {
+        return i == 1 ? 16 : 12;
+    }
+
+    public static long computeInterpolatedTimeNs(int i, long j, @NonNull AudioTimestamp audioTimestamp) {
+        Preconditions.checkArgument(((long) i) > 0, "sampleRate must be greater than 0.");
+        Preconditions.checkArgument(j >= 0, "framePosition must be no less than 0.");
+        long frameCountToDurationNs = audioTimestamp.nanoTime + frameCountToDurationNs(j - audioTimestamp.framePosition, i);
+        if (frameCountToDurationNs < 0) {
+            return 0L;
+        }
+        return frameCountToDurationNs;
+    }
+
+    public static long frameCountToDurationNs(long j, int i) {
+        long j2 = i;
+        Preconditions.checkArgument(j2 > 0, "sampleRate must be greater than 0.");
+        return (1000000000 * j) / j2;
+    }
+
+    public static long frameCountToSize(long j, int i) {
+        long j2 = i;
+        Preconditions.checkArgument(j2 > 0, "bytesPerFrame must be greater than 0.");
+        return j * j2;
+    }
+
+    public static int getBytesPerFrame(int i, int i2) {
+        Preconditions.checkArgument(i2 > 0, "Invalid channel count: " + i2);
+        if (i == 2) {
+            return i2 * 2;
+        }
+        if (i == 3) {
+            return i2;
+        }
+        if (i != 4) {
+            if (i == 21) {
+                return i2 * 3;
+            }
+            if (i != 22) {
+                Single$$ExternalSyntheticBUOutline0.m$3(a$$ExternalSyntheticOutline0.m(i, "Invalid audio encoding: "));
+                return 0;
+            }
+        }
+        return i2 * 4;
+    }
+
+    public static long sizeToFrameCount(long j, int i) {
+        long j2 = i;
+        Preconditions.checkArgument(j2 > 0, "bytesPerFrame must be greater than 0.");
+        return j / j2;
+    }
+}

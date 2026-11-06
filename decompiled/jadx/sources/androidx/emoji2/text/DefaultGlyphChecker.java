@@ -1,0 +1,43 @@
+package androidx.emoji2.text;
+
+import android.text.TextPaint;
+import androidx.annotation.AnyThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.RestrictTo;
+import androidx.core.graphics.PaintCompat;
+import androidx.emoji2.text.EmojiCompat;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@AnyThread
+@RestrictTo({RestrictTo.Scope.LIBRARY})
+/* loaded from: classes14.dex */
+class DefaultGlyphChecker implements EmojiCompat.GlyphChecker {
+    private static final int PAINT_TEXT_SIZE = 10;
+    private static final ThreadLocal<StringBuilder> sStringBuilder = new ThreadLocal<>();
+    private final TextPaint mTextPaint;
+
+    public DefaultGlyphChecker() {
+        TextPaint textPaint = new TextPaint();
+        this.mTextPaint = textPaint;
+        textPaint.setTextSize(10.0f);
+    }
+
+    private static StringBuilder getStringBuilder() {
+        ThreadLocal<StringBuilder> threadLocal = sStringBuilder;
+        if (threadLocal.get() == null) {
+            threadLocal.set(new StringBuilder());
+        }
+        return threadLocal.get();
+    }
+
+    @Override // androidx.emoji2.text.EmojiCompat.GlyphChecker
+    public boolean hasGlyph(@NonNull CharSequence charSequence, int i, int i2, int i3) {
+        StringBuilder stringBuilder = getStringBuilder();
+        stringBuilder.setLength(0);
+        while (i < i2) {
+            stringBuilder.append(charSequence.charAt(i));
+            i++;
+        }
+        return PaintCompat.hasGlyph(this.mTextPaint, stringBuilder.toString());
+    }
+}

@@ -1,0 +1,97 @@
+package com.amazon.coral.google.common.graph;
+
+import java.util.Set;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@ElementTypesAreNonnullByDefault
+/* loaded from: classes19.dex */
+abstract class ForwardingGraph<N> extends AbstractGraph<N> {
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.Graph
+    public Set<N> adjacentNodes(N n) {
+        return delegate().adjacentNodes(n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.Graph
+    public boolean allowsSelfLoops() {
+        return delegate().allowsSelfLoops();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public int degree(N n) {
+        return delegate().degree(n);
+    }
+
+    public abstract BaseGraph<N> delegate();
+
+    @Override // com.amazon.coral.google.common.graph.AbstractBaseGraph
+    public long edgeCount() {
+        return delegate().edges().size();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public boolean hasEdgeConnecting(N n, N n2) {
+        return delegate().hasEdgeConnecting(n, n2);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public int inDegree(N n) {
+        return delegate().inDegree(n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public ElementOrder<N> incidentEdgeOrder() {
+        return delegate().incidentEdgeOrder();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public Set<EndpointPair<N>> incidentEdges(N n) {
+        return delegate().incidentEdges(n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.Graph
+    public boolean isDirected() {
+        return delegate().isDirected();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.Graph
+    public ElementOrder<N> nodeOrder() {
+        return delegate().nodeOrder();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.Graph
+    public Set<N> nodes() {
+        return delegate().nodes();
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public int outDegree(N n) {
+        return delegate().outDegree(n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.PredecessorsFunction, com.amazon.coral.google.common.graph.Graph
+    public Set<N> predecessors(N n) {
+        return delegate().predecessors((BaseGraph<N>) n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.SuccessorsFunction, com.amazon.coral.google.common.graph.Graph
+    public Set<N> successors(N n) {
+        return delegate().successors((BaseGraph<N>) n);
+    }
+
+    @Override // com.amazon.coral.google.common.graph.AbstractGraph, com.amazon.coral.google.common.graph.AbstractBaseGraph, com.amazon.coral.google.common.graph.BaseGraph
+    public boolean hasEdgeConnecting(EndpointPair<N> endpointPair) {
+        return delegate().hasEdgeConnecting(endpointPair);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.PredecessorsFunction, com.amazon.coral.google.common.graph.Graph
+    public /* bridge */ /* synthetic */ Iterable predecessors(Object obj) {
+        return predecessors((ForwardingGraph<N>) obj);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.amazon.coral.google.common.graph.BaseGraph, com.amazon.coral.google.common.graph.SuccessorsFunction, com.amazon.coral.google.common.graph.Graph
+    public /* bridge */ /* synthetic */ Iterable successors(Object obj) {
+        return successors((ForwardingGraph<N>) obj);
+    }
+}

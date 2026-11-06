@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1" android:weightSum="568.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="260.0" layout="@layout/voice_ui_od_sports_scores_placard" />
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="308.0">
+        <include android:layout_width="-1" android:layout_height="-2" layout="@layout/voice_ui_od_sports_scores_score_card" />
+        <include android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168224" layout="@layout/voice_ui_od_sports_next_game" />
+        <androidx.legacy.widget.Space android:layout_width="-1" android:layout_height="@2131168098" android:layout_margin="20.0dip" />
+    </LinearLayout>
+</LinearLayout>

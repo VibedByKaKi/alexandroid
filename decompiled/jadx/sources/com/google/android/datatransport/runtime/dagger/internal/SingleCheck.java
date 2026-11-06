@@ -1,0 +1,36 @@
+package com.google.android.datatransport.runtime.dagger.internal;
+
+import javax.inject.Provider;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes7.dex */
+public final class SingleCheck<T> implements Provider<T> {
+    static final /* synthetic */ boolean $assertionsDisabled = false;
+    private static final Object UNINITIALIZED = new Object();
+    private volatile Object instance = UNINITIALIZED;
+    private volatile Provider<T> provider;
+
+    private SingleCheck(Provider<T> provider) {
+        this.provider = provider;
+    }
+
+    public static <P extends Provider<T>, T> Provider<T> provider(P p) {
+        return !(p instanceof SingleCheck) ? p instanceof DoubleCheck ? p : new SingleCheck((Provider) Preconditions.checkNotNull(p)) : p;
+    }
+
+    @Override // javax.inject.Provider
+    public T get() {
+        T t = (T) this.instance;
+        if (t != UNINITIALIZED) {
+            return t;
+        }
+        Provider<T> provider = this.provider;
+        if (provider == null) {
+            return (T) this.instance;
+        }
+        T t2 = provider.get();
+        this.instance = t2;
+        this.provider = null;
+        return t2;
+    }
+}

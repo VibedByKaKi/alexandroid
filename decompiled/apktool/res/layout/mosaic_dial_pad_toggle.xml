@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" style="@style/FloatingActionButtonWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:layout_gravity="0x00000011" android:id="@2131428091" android:background="@2131232352" android:layout_width="@2131165594" android:layout_height="@2131165594" android:src="@2131231302" android:layout_centerHorizontal="true" android:contentDescription="@2132018455" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165589" android:textColor="?2130969815" android:ellipsize="3" android:layout_gravity="0x00000011" android:id="@2131428092" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165590" android:text="@2132018030" android:maxLines="1" android:includeFontPadding="false" app:fontName="app_text_bold" />
+</LinearLayout>

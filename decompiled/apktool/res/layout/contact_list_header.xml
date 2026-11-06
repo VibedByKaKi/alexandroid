@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131427979" android:background="@2131103288" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@2131428958" android:layout_width="-1" android:layout_height="-2" layout="@layout/contact_list_my_contact" />
+    <include android:id="@2131427442" android:visibility="2" android:layout_width="-1" android:layout_height="-2" layout="@layout/contact_list_add_contact" />
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131099977" android:ellipsize="3" android:gravity="0x00000010" android:id="@2131428083" android:background="@2131100058" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165743" android:text="@2132019868" android:textAllCaps="true" android:paddingStart="@2131165737" android:paddingEnd="@2131165737" app:fontName="app_text_regular" />
+    <LinearLayout android:orientation="1" android:id="@2131428954" android:layout_width="-1" android:layout_height="-2" />
+</LinearLayout>

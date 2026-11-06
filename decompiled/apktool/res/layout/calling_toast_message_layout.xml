@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@2131429751" android:background="@2131099726" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:elevation="5.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165603" android:textColor="?2130969815" android:gravity="0x00000011" android:id="@2131428771" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166019" android:layout_marginBottom="@2131166019" android:textAlignment="4" android:paddingStart="@2131166019" android:paddingEnd="@2131166019" style="@style/TextAppearance.AppCompat.Caption" />
+    </FrameLayout>
+</merge>

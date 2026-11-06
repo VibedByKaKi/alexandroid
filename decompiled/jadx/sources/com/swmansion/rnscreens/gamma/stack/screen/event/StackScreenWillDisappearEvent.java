@@ -1,0 +1,50 @@
+package com.swmansion.rnscreens.gamma.stack.screen.event;
+
+import com.swmansion.rnscreens.gamma.common.event.NamingAwareEventType;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import org.jetbrains.annotations.NotNull;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\b\u0000\u0018\u0000 \u00072\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\u0007B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\b"}, d2 = {"Lcom/swmansion/rnscreens/gamma/stack/screen/event/StackScreenWillDisappearEvent;", "Lcom/swmansion/rnscreens/gamma/stack/screen/event/StackScreenLifecycleEvent;", "surfaceId", "", "viewId", "<init>", "(II)V", "Companion", "react-native-screens_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes9.dex */
+public final class StackScreenWillDisappearEvent extends StackScreenLifecycleEvent<StackScreenWillDisappearEvent> {
+
+    /* renamed from: Companion, reason: from kotlin metadata */
+    @NotNull
+    public static final Companion INSTANCE = new Companion(null);
+
+    @NotNull
+    public static final String EVENT_NAME = "topWillDisappear";
+
+    @NotNull
+    public static final String EVENT_REGISTRATION_NAME = "onWillDisappear";
+
+    public StackScreenWillDisappearEvent(int i, int i2) {
+        super(i, i2, "topWillDisappear", "onWillDisappear");
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\b\u0010\u0007\u001a\u00020\u0005H\u0016J\b\u0010\b\u001a\u00020\u0005H\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/swmansion/rnscreens/gamma/stack/screen/event/StackScreenWillDisappearEvent$Companion;", "Lcom/swmansion/rnscreens/gamma/common/event/NamingAwareEventType;", "<init>", "()V", "EVENT_NAME", "", "EVENT_REGISTRATION_NAME", "getEventName", "getEventRegistrationName", "react-native-screens_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class Companion implements NamingAwareEventType {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        @Override // com.swmansion.rnscreens.gamma.common.event.NamingAwareEventType
+        @NotNull
+        public String getEventName() {
+            return "topWillDisappear";
+        }
+
+        @Override // com.swmansion.rnscreens.gamma.common.event.NamingAwareEventType
+        @NotNull
+        /* renamed from: getEventRegistrationName */
+        public String getRegistrationName() {
+            return "onWillDisappear";
+        }
+
+        private Companion() {
+        }
+    }
+}

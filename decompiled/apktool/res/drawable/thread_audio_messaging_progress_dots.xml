@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="15" android:drawable="@2131232454" />
+    <item android:duration="15" android:drawable="@2131232455" />
+    <item android:duration="15" android:drawable="@2131232456" />
+    <item android:duration="15" android:drawable="@2131232457" />
+    <item android:duration="15" android:drawable="@2131232458" />
+    <item android:duration="15" android:drawable="@2131232459" />
+    <item android:duration="15" android:drawable="@2131232460" />
+    <item android:duration="15" android:drawable="@2131232461" />
+    <item android:duration="15" android:drawable="@2131232462" />
+    <item android:duration="15" android:drawable="@2131232463" />
+    <item android:duration="15" android:drawable="@2131232464" />
+    <item android:duration="15" android:drawable="@2131232465" />
+    <item android:duration="15" android:drawable="@2131232466" />
+    <item android:duration="15" android:drawable="@2131232467" />
+    <item android:duration="15" android:drawable="@2131232468" />
+    <item android:duration="15" android:drawable="@2131232469" />
+    <item android:duration="15" android:drawable="@2131232470" />
+    <item android:duration="15" android:drawable="@2131232471" />
+    <item android:duration="15" android:drawable="@2131232472" />
+    <item android:duration="15" android:drawable="@2131232473" />
+    <item android:duration="15" android:drawable="@2131232474" />
+    <item android:duration="15" android:drawable="@2131232475" />
+    <item android:duration="15" android:drawable="@2131232476" />
+    <item android:duration="15" android:drawable="@2131232477" />
+    <item android:duration="15" android:drawable="@2131232478" />
+    <item android:duration="15" android:drawable="@2131232479" />
+    <item android:duration="15" android:drawable="@2131232480" />
+    <item android:duration="15" android:drawable="@2131232481" />
+    <item android:duration="15" android:drawable="@2131232482" />
+    <item android:duration="15" android:drawable="@2131232483" />
+    <item android:duration="15" android:drawable="@2131232484" />
+    <item android:duration="15" android:drawable="@2131232485" />
+    <item android:duration="15" android:drawable="@2131232486" />
+    <item android:duration="15" android:drawable="@2131232487" />
+    <item android:duration="15" android:drawable="@2131232488" />
+    <item android:duration="15" android:drawable="@2131232489" />
+    <item android:duration="15" android:drawable="@2131232490" />
+    <item android:duration="15" android:drawable="@2131232491" />
+    <item android:duration="15" android:drawable="@2131232492" />
+    <item android:duration="15" android:drawable="@2131232493" />
+    <item android:duration="15" android:drawable="@2131232494" />
+    <item android:duration="15" android:drawable="@2131232495" />
+    <item android:duration="15" android:drawable="@2131232496" />
+    <item android:duration="15" android:drawable="@2131232497" />
+    <item android:duration="15" android:drawable="@2131232498" />
+    <item android:duration="15" android:drawable="@2131232499" />
+    <item android:duration="15" android:drawable="@2131232500" />
+    <item android:duration="15" android:drawable="@2131232501" />
+</animation-list>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429697" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167787" android:minHeight="@2131167788"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="?2130972409">
+        <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131428540" android:paddingTop="@2131167794" android:paddingBottom="@2131167794" android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131167793">
+            <FrameLayout android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0">
+                <com.amazon.alexa.font.FontTextView android:textSize="@2131167791" android:textColor="@2131103513" android:ellipsize="3" android:gravity="0x00000010" android:id="@2131428541" android:layout_width="-2" android:layout_height="-1" android:maxLines="2" android:scrollHorizontally="false" app:fontName="?textUiBodyFont" />
+                <LinearLayout android:gravity="0x00000010" android:orientation="1" android:id="@2131429193" android:visibility="2" android:layout_width="-2" android:layout_height="-2">
+                    <com.amazon.alexa.font.FontTextView android:textSize="@2131167791" android:textColor="@2131103513" android:ellipsize="3" android:id="@2131428542" android:layout_width="-2" android:layout_height="-2" android:maxLines="1" android:scrollHorizontally="false" app:fontName="?textUiBodyFont" />
+                    <com.amazon.alexa.font.FontTextView android:textSize="@2131167796" android:textColor="@2131103514" android:ellipsize="3" android:id="@2131428543" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167789" android:maxLines="1" android:scrollHorizontally="false" app:fontName="?textUiBodyFont" />
+                </LinearLayout>
+            </FrameLayout>
+            <ImageView android:id="@2131428539" android:layout_width="@2131167786" android:layout_height="@2131167786" android:src="@2131231806" android:layout_marginStart="@2131167792" android:layout_marginEnd="@2131167792" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:layout_gravity="0x00800005" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+</LinearLayout>

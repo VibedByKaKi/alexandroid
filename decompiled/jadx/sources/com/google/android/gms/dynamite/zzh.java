@@ -1,0 +1,25 @@
+package com.google.android.gms.dynamite;
+
+import android.content.Context;
+import com.google.android.gms.dynamite.DynamiteModule;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes7.dex */
+final class zzh implements DynamiteModule.VersionPolicy {
+    @Override // com.google.android.gms.dynamite.DynamiteModule.VersionPolicy
+    public final DynamiteModule.VersionPolicy.SelectionResult selectModule(Context context, String str, DynamiteModule.VersionPolicy.IVersions iVersions) throws DynamiteModule.LoadingException {
+        DynamiteModule.VersionPolicy.SelectionResult selectionResult = new DynamiteModule.VersionPolicy.SelectionResult();
+        int zzb = iVersions.zzb(context, str);
+        selectionResult.localVersion = zzb;
+        if (zzb != 0) {
+            selectionResult.selection = -1;
+            return selectionResult;
+        }
+        int zza = iVersions.zza(context, str, true);
+        selectionResult.remoteVersion = zza;
+        if (zza != 0) {
+            selectionResult.selection = 1;
+        }
+        return selectionResult;
+    }
+}

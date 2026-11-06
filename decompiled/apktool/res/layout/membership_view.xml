@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+        <include layout="@layout/status_banner" />
+        <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131428751" android:layout_width="-1" android:layout_height="-2" app:text="@string/membership_account_owner_heading" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428743" android:tag="" style="@style/mosaic_list_item_primary_text" />
+        <com.amazon.alexa.font.FontTextView android:text="@2132019672" style="@style/mosaic_list_divider" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428744" android:tag="" style="@style/mosaic_list_item_primary_text" />
+        <com.amazon.alexa.font.FontTextView android:text="@2132019684" style="@style/mosaic_list_divider" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131428048" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="@2131166988" android:layout_marginTop="@2131166988" android:layout_marginRight="@2131166988" style="@style/TextAppearance.Mosaic.Body" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:textColorLink="?2130969747" android:id="@2131428750" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="@2131166988" android:layout_marginRight="@2131166988" style="@style/TextAppearance.Mosaic.Body" />
+    </LinearLayout>
+</ScrollView>

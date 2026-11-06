@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@2131427989" android:layout_width="-1" android:layout_height="-1" />
+    <ImageView android:layout_gravity="0x00800005" android:id="@2131427850" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="16.0dip" android:src="@2131231142" />
+</FrameLayout>

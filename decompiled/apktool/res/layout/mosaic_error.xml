@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?2130969753" android:clickable="true" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000010" android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.85">
+        <ImageView android:id="@2131428005" android:layout_width="@2131167061" android:layout_height="@2131167060" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428456" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.Confirmation.Headline" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131427659" style="@style/Mosaic.View.Confirmation.Body" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428644" style="@style/Mosaic.View.Confirmation.Link" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428469" style="@style/Mosaic.View.Confirmation.Hint" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

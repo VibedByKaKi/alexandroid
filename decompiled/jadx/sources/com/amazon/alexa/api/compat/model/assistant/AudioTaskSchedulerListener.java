@@ -1,0 +1,15 @@
+package com.amazon.alexa.api.compat.model.assistant;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes16.dex */
+public abstract class AudioTaskSchedulerListener {
+    public abstract void onAudioTaskBackground(String str);
+
+    public abstract void onAudioTaskForeground(String str);
+
+    public abstract void onAudioTaskPause(String str);
+
+    public abstract void onAudioTaskResume(String str);
+
+    public abstract void onAudioTaskStop(String str);
+}

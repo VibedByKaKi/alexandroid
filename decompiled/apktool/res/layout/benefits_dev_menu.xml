@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:id="@2131428409" android:padding="8.0dip" android:layout_width="-1" android:layout_height="-2">
+        <TextView android:textAppearance="@16974327" android:textColor="@2131099706" android:layout_width="-1" android:layout_height="-2" android:text="" />
+        <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.benefits.view.component.DropDownEditText android:id="@2131428408" android:layout_width="0.0dip" android:layout_height="-2" android:hint="" android:layout_weight="1.0" android:inputType="0x00000001" />
+            <Button android:id="@2131427900" android:layout_width="-2" android:layout_height="-2" android:text="" />
+        </LinearLayout>
+        <Button android:id="@2131427782" android:layout_width="-1" android:layout_height="-2" android:text="" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,43 @@
+package com.amazonaws.services.cognitoidentity.model.transform;
+
+import com.amazonaws.services.cognitoidentity.model.Credentials;
+import com.amazonaws.util.json.AwsJsonWriter;
+import java.util.Date;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+class CredentialsJsonMarshaller {
+    private static CredentialsJsonMarshaller instance;
+
+    public static CredentialsJsonMarshaller getInstance() {
+        if (instance == null) {
+            instance = new CredentialsJsonMarshaller();
+        }
+        return instance;
+    }
+
+    public void marshall(Credentials credentials, AwsJsonWriter awsJsonWriter) throws Exception {
+        awsJsonWriter.beginObject();
+        if (credentials.getAccessKeyId() != null) {
+            String accessKeyId = credentials.getAccessKeyId();
+            awsJsonWriter.name("AccessKeyId");
+            awsJsonWriter.value(accessKeyId);
+        }
+        if (credentials.getSecretKey() != null) {
+            String secretKey = credentials.getSecretKey();
+            awsJsonWriter.name("SecretKey");
+            awsJsonWriter.value(secretKey);
+        }
+        if (credentials.getSessionToken() != null) {
+            String sessionToken = credentials.getSessionToken();
+            awsJsonWriter.name("SessionToken");
+            awsJsonWriter.value(sessionToken);
+        }
+        if (credentials.getExpiration() != null) {
+            Date expiration = credentials.getExpiration();
+            awsJsonWriter.name("Expiration");
+            awsJsonWriter.value(expiration);
+        }
+        awsJsonWriter.endObject();
+    }
+}

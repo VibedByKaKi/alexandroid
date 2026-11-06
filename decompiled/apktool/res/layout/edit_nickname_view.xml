@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@2131429414" android:background="@2131103288" android:focusable="false" android:focusableInTouchMode="false" android:descendantFocusability="2" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="0x00000011" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165907" android:textColor="@2131099974" android:id="@2131428993" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165906" android:text="@2132019880" android:layout_marginStart="@2131165905" app:fontName="app_text_regular" />
+        <com.amazon.deecomms.common.ui.CommsEditText android:theme="@2132083155" android:textSize="@2131165909" android:textColor="@2131099971" android:textColorHint="@2131099971" android:id="@2131428177" android:layout_width="-1" android:layout_height="-2" android:hint="@2132019879" android:layout_below="@2131428993" android:inputType="0x00002061" android:paddingStart="@2131165911" android:paddingEnd="@2131165911" android:layout_marginStart="@2131165912" android:layout_marginEnd="@2131165910" app:typeface="@string/amazon_ember_regular" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131100072" android:id="@2131427982" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_below="@2131428177" android:layout_marginStart="@2131165729" style="@style/AlexaComms.small" />
+    </RelativeLayout>
+</ScrollView>

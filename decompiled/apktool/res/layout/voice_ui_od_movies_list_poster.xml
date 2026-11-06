@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:tag="" android:focusable="true" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="-1" android:layout_height="-2">
+        <ImageView android:id="@2131428524" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="6" android:contentDescription="@2132020913" app:layout_constraintDimensionRatio="27:40" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:textSize="@2131168192" android:textColor="?16842806" android:ellipsize="3" android:id="@2131429181" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="8.0dip" android:maxLines="1" />
+    <TextView android:textSize="@2131168113" android:textColor="?16842808" android:ellipsize="3" android:id="@2131428070" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="2.0dip" android:maxLines="1" />
+    <TextView android:textSize="@2131168113" android:textColor="?16842808" android:ellipsize="3" android:id="@2131428056" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="2.0dip" android:maxLines="1" />
+</LinearLayout>

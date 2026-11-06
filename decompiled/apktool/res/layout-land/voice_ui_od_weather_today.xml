@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="1" android:id="@2131428632" android:layout_width="-2" android:layout_height="-2" app:layout_constraintGuide_percent="0.1266" />
+    <LinearLayout android:gravity="0x00000011" android:orientation="1" android:id="@2131429754" android:focusable="true" android:layout_width="@2131168102" android:layout_height="-2" android:layout_marginEnd="@2131168091" app:layout_constraintStart_toStartOf="@id/left_guideline">
+        <include android:layout_width="-1" android:layout_height="-2" layout="@layout/voice_ui_od_current_weather" />
+    </LinearLayout>
+    <ImageView android:id="@2131428524" android:focusable="true" android:layout_width="@2131168101" android:layout_height="@2131168100" android:scaleType="3" android:layout_marginStart="@2131168091" app:layout_constraintStart_toEndOf="@id/todayContainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

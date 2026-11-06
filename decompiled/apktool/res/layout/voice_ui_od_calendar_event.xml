@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:focusable="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@2131168118" android:textColor="?16842806" android:layout_gravity="0x00000011" android:id="@2131428799" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131168079" />
+    <LinearLayout android:orientation="0" android:layout_width="-2" android:layout_height="-2">
+        <LinearLayout android:gravity="0x00800005" android:orientation="1" android:layout_width="@2131168077" android:layout_height="-2" android:layout_marginStart="@2131168094" android:layout_marginEnd="@2131168095">
+            <TextView android:textSize="@2131168078" android:textColor="?16842806" android:id="@2131428035" android:layout_width="-2" android:layout_height="-2" android:alpha="0.7" />
+            <TextView android:textSize="@2131168076" android:textColor="?16842806" android:id="@2131428034" android:layout_width="-2" android:layout_height="-2" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00800033" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <TextView android:textSize="@2131168112" android:textColor="?16842806" android:ellipsize="3" android:id="@2131428960" android:layout_width="-2" android:layout_height="-2" android:maxLines="2" />
+            <TextView android:textSize="@2131168119" android:textColor="?16842806" android:ellipsize="3" android:id="@2131429720" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168084" android:maxLines="1" />
+            <TextView android:textSize="@2131168119" android:textColor="?16842806" android:ellipsize="3" android:id="@2131428683" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168083" android:maxLines="1" />
+            <TextView android:textSize="@2131168113" android:textColor="?16842806" android:ellipsize="3" android:id="@2131427739" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168084" android:maxLines="1" android:alpha="0.7" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

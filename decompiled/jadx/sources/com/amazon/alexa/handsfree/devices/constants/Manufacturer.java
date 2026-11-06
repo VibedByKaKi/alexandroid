@@ -1,0 +1,57 @@
+package com.amazon.alexa.handsfree.devices.constants;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes17.dex */
+public enum Manufacturer {
+    AMAZON("Amazon"),
+    ACME("TCL"),
+    LAMBDA("LGE"),
+    SIGMA("Sony"),
+    MIKE("motorola"),
+    XRAY("Xiaomi"),
+    QUEBEC("QUALCOMM"),
+    OSCAR("OnePlus"),
+    HAWKING("HAWKING"),
+    NEWTON("NEWTON"),
+    FARADAY("FARADAY"),
+    GALILEI("GALILEI"),
+    ROMEO("realme"),
+    ALPS("alps"),
+    PIXEL("Google"),
+    OPERA("OPPO");
+
+    private final String mManufacturer;
+
+    Manufacturer(@NonNull String str) {
+        this.mManufacturer = str;
+    }
+
+    @NonNull
+    public static List<String> getAllManufacturers() {
+        ArrayList arrayList = new ArrayList();
+        for (Manufacturer manufacturer : values()) {
+            arrayList.add(manufacturer.getManufacturer());
+        }
+        return arrayList;
+    }
+
+    @Nullable
+    public static Manufacturer getManufacturer(@NonNull String str) {
+        for (Manufacturer manufacturer : values()) {
+            if (manufacturer.getManufacturer().equals(str)) {
+                return manufacturer;
+            }
+        }
+        return null;
+    }
+
+    @NonNull
+    public String getManufacturer() {
+        return this.mManufacturer;
+    }
+}

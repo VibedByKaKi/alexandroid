@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?2130969753" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginBottom="@2131167965" app:layout_constraintBottom_toTopOf="@id/enableButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:layout_gravity="0x00000001" android:id="@2131429763" android:layout_width="-2" android:layout_height="-2" android:adjustViewBounds="true" android:maxWidth="@2131166111" android:importantForAccessibility="2" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166019" android:text="@2132018049" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019" style="@style/callingHeadline1" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166019" android:text="@2132018045" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019" style="@style/callingBodyText" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131428627" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131166019" android:text="@2132018048" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019" style="@style/callingBodyText" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@2131428226" android:layout_width="0.0dip" android:layout_marginBottom="@2131167658" android:foreground="?2130972137" android:text="@2132018046" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019" app:layout_constraintBottom_toTopOf="@id/declineButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/CallingButtonPrimary" />
+    <Button android:id="@2131428039" android:layout_marginBottom="@2131167658" android:text="@2132018047" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/borderlessButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

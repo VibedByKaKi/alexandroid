@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429220" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:leftIcon="@drawable/ic_accounts_round" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+            <View style="@style/mosaic_list_item_divider" />
+            <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429221" android:tag="" android:layout_width="-1" android:layout_height="-2" app:leftIcon="@drawable/ic_recent" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+            <View style="@style/mosaic_list_item_divider" />
+            <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429218" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:leftIcon="@drawable/ic_communication" app:primaryText="@string/profile_settings_alexa_communications_heading" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+            <View style="@style/mosaic_list_item_divider" />
+            <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429219" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:leftIcon="@drawable/ic_mosaic_call_emergency" app:primaryText="@string/emergency_heading" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+            <View style="@style/mosaic_list_item_divider" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131429592" android:tag="" android:padding="@2131166988" android:layout_width="-1" android:layout_height="-2" style="@style/TextAppearance.Mosaic.Body" />
+        </LinearLayout>
+    </ScrollView>
+    <com.amazon.alexa.mosaic.view.ErrorView android:id="@2131428261" android:tag="" android:layout_width="-1" android:layout_height="-1" app:bodyText="@string/error_care_settings_body" app:headlineText="@string/error_care_settings_headline" app:iconContentDescription="@string/alexa_logo" app:iconSrc="@null" app:iconTint="?mosaicNeutral10" app:linkText="@string/error_tap_to_retry" />
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+    <include layout="@layout/status_banner" />
+</FrameLayout>

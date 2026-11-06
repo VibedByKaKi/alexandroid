@@ -1,0 +1,16 @@
+package com.amazon.identity.auth.device;
+
+import java.util.HashMap;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes5.dex */
+public final class xj {
+    public static final /* synthetic */ int f = 0;
+
+    /* renamed from: a, reason: collision with root package name */
+    public String f1073a;
+    public String b;
+    public int c;
+    public final HashMap d = new HashMap();
+    public String e;
+}

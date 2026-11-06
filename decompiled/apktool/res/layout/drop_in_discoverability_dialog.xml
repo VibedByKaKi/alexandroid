@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131231293" android:layout_width="-1" android:layout_height="-1" android:minHeight="@2131165890"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165888" android:src="@2131232164" android:adjustViewBounds="true" android:contentDescription="@2132018484" />
+    <com.amazon.alexa.font.FontTextView android:id="@2131428119" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165888" android:layout_marginStart="@2131165888" app:fontName="app_text_bold" style="@style/AlexaCommsFiesta.large" />
+    <ScrollView android:orientation="1" android:id="@2131428112" android:background="@2131231293" android:layout_width="-1" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="1" android:background="@2131231293" android:layout_width="-1" android:layout_height="0.0dip" android:layout_marginStart="@2131165888" android:layout_marginEnd="@2131165891">
+            <RelativeLayout android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165889">
+                <com.amazon.alexa.font.FontTextView android:id="@2131429174" android:background="@2131231293" android:layout_width="-2" android:layout_height="-2" app:fontName="app_text_regular" style="@style/AlexaCommsFiesta.xsmall" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165889">
+                <com.amazon.alexa.font.FontTextView android:id="@2131429175" android:background="@2131231293" android:layout_width="-2" android:layout_height="-2" app:fontName="app_text_regular" style="@style/AlexaCommsFiesta.xsmall" />
+            </RelativeLayout>
+            <com.amazon.alexa.font.FontTextView android:id="@2131428111" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" app:fontName="app_text_regular" style="@style/AlexaCommsFiesta.xsmall" />
+            <LinearLayout android:orientation="0" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165888" android:layout_marginBottom="@2131165888" android:paddingStart="@2131165888" android:paddingEnd="@2131165887">
+                <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428117" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132018429" android:layout_weight="1.0" android:textAllCaps="true" android:layout_marginEnd="@2131165789" style="@style/AlexaCommsButtonFiesta.LightBorderless" />
+                <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428118" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132018447" android:layout_weight="1.0" android:textAllCaps="true" android:layout_marginStart="@2131165789" style="@style/AlexaCommsButtonFiesta.Primary" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

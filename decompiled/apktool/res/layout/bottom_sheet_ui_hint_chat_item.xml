@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131427697" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167051"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="?2130968738">
+        <LinearLayout android:layout_gravity="0x00800003" android:orientation="0" android:id="@2131427686" android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131167029" android:paddingVertical="@2131167049">
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130970174" android:ellipsize="3" android:layout_gravity="0x00000010" android:id="@2131427684" android:layout_width="0.0dip" android:layout_height="-2" android:maxLines="2" android:scrollHorizontally="false" android:layout_weight="1.0" style="@style/mosaic_font_utterance_02" />
+            <ImageView android:layout_gravity="0x00000010" android:id="@2131427685" android:layout_width="@2131167011" android:layout_height="@2131167011" android:src="@2131232053" android:layout_marginStart="@2131167034" android:layout_marginEnd="@2131167034" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:layout_gravity="0x00800005" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+</LinearLayout>

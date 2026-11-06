@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131429848" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="12.0sp" android:textColor="@2131103593" android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131429847" android:layout_width="-2" android:layout_height="-2" app:fontName="app_display_bold" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@2131232600" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167048">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="-1" android:layout_height="-1">
+            <LinearLayout android:id="@2131428336" android:layout_width="-1" android:layout_height="-2" app:layout_constraintTop_toTopOf="parent">
+                <include android:id="@2131428452" android:layout_width="-1" android:layout_height="-2" layout="@layout/bottom_sheet_assistant_header" />
+            </LinearLayout>
+            <TextView android:gravity="0x00000011" android:id="@2131429324" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167541" android:text="@2132020398" app:layout_constraintBottom_toTopOf="@id/remarkable_alexa_feedback_radio_group" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/feedback_header_view" style="@style/mosaic_font_body_01" />
+            <RadioGroup android:orientation="1" android:id="@2131429325" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167541" android:textAlignment="2" android:layoutDirection="1" app:layout_constraintTop_toBottomOf="@id/remarkable_alexa_feedback_page_description_message" style="@style/mosaic_font_body_01" />
+            <TextView android:textSize="@2131167558" android:textColor="@2131101580" android:gravity="0x00000011" android:id="@2131429331" android:background="@2131232725" android:layout_width="-1" android:layout_height="@2131167555" android:layout_margin="@2131167556" android:maxWidth="@2131167557" android:text="@2132020402" android:layout_weight="@2131167559" android:textAllCaps="false" android:backgroundTint="@2131103414" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

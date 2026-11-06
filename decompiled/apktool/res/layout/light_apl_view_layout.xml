@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.apl.android.APLLayout android:theme="@2132083609" android:id="@2131427554" android:layout_width="-1" android:layout_height="-1" app:aplTheme="light" app:defaultBackground="?16842801" app:isRound="false" app:mode="mobile" />
+    <RelativeLayout android:layout_gravity="0x00000035" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168138" android:layout_marginRight="@2131168137">
+        <View android:id="@2131427896" android:background="@2131231384" android:layout_width="30.0dip" android:layout_height="30.0dip" />
+        <ImageView android:id="@2131427555" android:padding="@2131168136" android:layout_width="-2" android:layout_height="-2" android:src="@2131231383" android:layout_centerInParent="true" android:contentDescription="@2132018159" />
+    </RelativeLayout>
+</FrameLayout>

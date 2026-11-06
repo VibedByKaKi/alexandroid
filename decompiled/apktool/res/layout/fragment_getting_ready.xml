@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@2131428412" android:background="@2131099737" android:layout_width="-1" android:layout_height="-1" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.handsfree.ui.views.ActivityIndicator android:id="@2131428411" android:layout_width="-2" android:layout_height="-2" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/getting_ready_guideline" />
+    <TextView android:gravity="0x00000011" android:id="@2131428414" android:layout_width="@2131167996" android:layout_height="-2" android:layout_marginTop="@2131167997" android:text="@2132020818" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/getting_ready_activity_indicator" app:layout_constraintWidth_default="percent" app:layout_constraintWidth_percent="@dimen/uvr_primer_getting_ready_main_width_percentage" style="@style/SetupTitleText" />
+    <android.support.constraint.Guideline android:orientation="0" android:id="@2131428413" android:layout_width="-2" android:layout_height="-2" app:layout_constraintGuide_percent="@dimen/uvr_primer_getting_ready_top_height_margin_percentage" />
+</android.support.constraint.ConstraintLayout>

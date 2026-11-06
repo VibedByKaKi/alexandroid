@@ -1,0 +1,90 @@
+package com.amazonaws.services.iot.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import org.apache.commons.text.StringSubstitutor;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+public class ListThingsInBillingGroupResult implements Serializable {
+    private String nextToken;
+    private List<String> things;
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof ListThingsInBillingGroupResult)) {
+            return false;
+        }
+        ListThingsInBillingGroupResult listThingsInBillingGroupResult = (ListThingsInBillingGroupResult) obj;
+        if ((listThingsInBillingGroupResult.getThings() == null) ^ (getThings() == null)) {
+            return false;
+        }
+        if (listThingsInBillingGroupResult.getThings() != null && !listThingsInBillingGroupResult.getThings().equals(getThings())) {
+            return false;
+        }
+        if ((listThingsInBillingGroupResult.getNextToken() == null) ^ (getNextToken() == null)) {
+            return false;
+        }
+        return listThingsInBillingGroupResult.getNextToken() == null || listThingsInBillingGroupResult.getNextToken().equals(getNextToken());
+    }
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public List<String> getThings() {
+        return this.things;
+    }
+
+    public int hashCode() {
+        return (((getThings() == null ? 0 : getThings().hashCode()) + 31) * 31) + (getNextToken() != null ? getNextToken().hashCode() : 0);
+    }
+
+    public void setNextToken(String str) {
+        this.nextToken = str;
+    }
+
+    public void setThings(Collection<String> collection) {
+        if (collection == null) {
+            this.things = null;
+        } else {
+            this.things = new ArrayList(collection);
+        }
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{");
+        if (getThings() != null) {
+            sb.append("things: " + getThings() + ",");
+        }
+        if (getNextToken() != null) {
+            sb.append("nextToken: " + getNextToken());
+        }
+        sb.append(StringSubstitutor.DEFAULT_VAR_END);
+        return sb.toString();
+    }
+
+    public ListThingsInBillingGroupResult withNextToken(String str) {
+        this.nextToken = str;
+        return this;
+    }
+
+    public ListThingsInBillingGroupResult withThings(String... strArr) {
+        if (getThings() == null) {
+            this.things = new ArrayList(strArr.length);
+        }
+        for (String str : strArr) {
+            this.things.add(str);
+        }
+        return this;
+    }
+
+    public ListThingsInBillingGroupResult withThings(Collection<String> collection) {
+        setThings(collection);
+        return this;
+    }
+}

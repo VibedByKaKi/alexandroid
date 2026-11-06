@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout style="@style/ReactionMenuButtonWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/ReactionsWrapper">
+        <LinearLayout android:orientation="0" android:id="@2131429286" android:visibility="2" android:layout_width="-1" android:layout_height="56.0dip">
+            <RelativeLayout android:layout_width="72.0dip" android:layout_height="56.0dip">
+                <com.airbnb.lottie.LottieAnimationView android:id="@2131429281" android:layout_width="-1" android:layout_height="-1" android:contentDescription="@2132020363" app:lottie_autoPlay="true" app:lottie_loop="false" app:lottie_rawRes="@raw/reaction_icon_out" />
+                <ImageView android:id="@2131427906" android:background="@2131231311" android:visibility="2" style="@style/CancelBackgroundAnimation" />
+                <com.airbnb.lottie.LottieAnimationView android:id="@2131429914" android:visibility="2" android:contentDescription="@2132020362" app:lottie_autoPlay="true" app:lottie_loop="false" app:lottie_rawRes="@raw/x_btn_in" style="@style/CancelAnimation" />
+                <com.airbnb.lottie.LottieAnimationView android:id="@2131429280" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:contentDescription="@2132020362" app:lottie_autoPlay="true" app:lottie_loop="false" app:lottie_rawRes="@raw/reaction_icon_in" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="-1" android:layout_height="-1">
+                <androidx.recyclerview.widget.RecyclerView android:id="@2131429289" android:visibility="2" style="@style/ReactionsMenuWrapper" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

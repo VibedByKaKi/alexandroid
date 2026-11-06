@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131103292" android:layout_width="-1" android:layout_height="-1" android:layoutDirection="0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131428287" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131166228">
+        <ImageView android:id="@2131428288" android:layout_width="-2" android:layout_height="-2" android:src="@2131231084" android:paddingHorizontal="@2131167429" />
+        <TextView android:textSize="@2131167430" android:textStyle="0x00000001" android:textColor="@2131103716" android:id="@2131428289" android:layout_width="-2" android:layout_height="-2" android:includeFontPadding="false" />
+    </LinearLayout>
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000050" android:orientation="0" android:paddingTop="@2131165766" android:layout_width="-1" android:layout_height="-2">
+        <ImageButton android:id="@2131428303" style="@style/ExoMediaButton.Previous" />
+        <ImageButton android:id="@2131428307" style="@style/ExoMediaButton.Rewind" />
+        <FrameLayout android:layout_gravity="0x00000011" android:id="@2131428300" android:layout_width="-2" android:layout_height="-2">
+            <ImageButton android:id="@2131428298" style="@style/ExoMediaButton.Play" />
+            <ImageButton android:id="@2131428297" style="@style/ExoMediaButton.Pause" />
+        </FrameLayout>
+        <ImageButton android:id="@2131428282" style="@style/ExoMediaButton.FastForward" />
+        <ImageButton android:id="@2131428293" style="@style/ExoMediaButton.Next" />
+    </LinearLayout>
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167638">
+        <TextView android:textSize="@2131167430" android:textStyle="0x00000001" android:textColor="@2131103459" android:id="@2131428302" android:layout_width="@2131167431" android:layout_height="-2" android:includeFontPadding="false" android:paddingHorizontal="@2131167429" />
+        <androidx.media3.ui.DefaultTimeBar android:id="@2131428304" android:layout_width="0.0dip" android:layout_height="@2131167637" android:layout_weight="1.0" />
+        <TextView android:textSize="@2131167430" android:textStyle="0x00000001" android:textColor="@2131103459" android:id="@2131428278" android:layout_width="@2131167431" android:layout_height="-2" android:includeFontPadding="false" android:paddingHorizontal="@2131167429" />
+        <ImageButton android:id="@2131428309" android:layout_width="-2" android:layout_height="-2" style="@style/ExoStyledControls.Button.Bottom.Settings" />
+        <ImageButton android:id="@2131428284" android:layout_width="@2131166025" android:layout_height="@2131166025" android:layout_margin="@2131166023" android:scaleType="3" style="@style/ExoMediaButton.FullScreen" />
+    </LinearLayout>
+</LinearLayout>

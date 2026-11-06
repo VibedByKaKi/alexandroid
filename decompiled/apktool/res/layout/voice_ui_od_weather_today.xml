@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="0x00000001" android:id="@2131428524" android:focusable="true" android:layout_width="-1" android:layout_height="@2131168100" android:scaleType="3" />
+    <include android:layout_width="-1" android:layout_height="-2" layout="@layout/voice_ui_od_current_weather" />
+</LinearLayout>

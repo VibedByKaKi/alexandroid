@@ -1,0 +1,66 @@
+package org.greenrobot.eventbus;
+
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.os.SystemClock;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes11.dex */
+public class HandlerPoster extends Handler implements Poster {
+    private final EventBus eventBus;
+    private boolean handlerActive;
+    private final int maxMillisInsideHandleMessage;
+    private final PendingPostQueue queue;
+
+    public HandlerPoster(EventBus eventBus, Looper looper, int i) {
+        super(looper);
+        this.eventBus = eventBus;
+        this.maxMillisInsideHandleMessage = i;
+        this.queue = new PendingPostQueue();
+    }
+
+    @Override // org.greenrobot.eventbus.Poster
+    public void enqueue(Subscription subscription, Object obj) {
+        PendingPost obtainPendingPost = PendingPost.obtainPendingPost(subscription, obj);
+        synchronized (this) {
+            try {
+                this.queue.enqueue(obtainPendingPost);
+                if (!this.handlerActive) {
+                    this.handlerActive = true;
+                    if (!sendMessage(obtainMessage())) {
+                        throw new EventBusException("Could not send handler message");
+                    }
+                }
+            } finally {
+            }
+        }
+    }
+
+    @Override // android.os.Handler
+    public void handleMessage(Message message) {
+        try {
+            long uptimeMillis = SystemClock.uptimeMillis();
+            do {
+                PendingPost poll = this.queue.poll();
+                if (poll == null) {
+                    synchronized (this) {
+                        poll = this.queue.poll();
+                        if (poll == null) {
+                            this.handlerActive = false;
+                            return;
+                        }
+                    }
+                }
+                this.eventBus.invokeSubscriber(poll);
+            } while (SystemClock.uptimeMillis() - uptimeMillis < this.maxMillisInsideHandleMessage);
+            if (!sendMessage(obtainMessage())) {
+                throw new EventBusException("Could not send handler message");
+            }
+            this.handlerActive = true;
+        } catch (Throwable th) {
+            this.handlerActive = false;
+            throw th;
+        }
+    }
+}

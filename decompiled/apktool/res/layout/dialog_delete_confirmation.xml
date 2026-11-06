@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131231139" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:padding="@2131167403" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167781" android:textColor="@2131099815" android:gravity="0x00000011" android:id="@2131428119" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131166877" android:text="@2132018363" app:fontName="app_text_bold" />
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167773" android:textColor="@2131099815" android:gravity="0x00000011" android:id="@2131428116" android:layout_width="-1" android:layout_height="-2" android:text="@2132018362" android:lineSpacingExtra="4.0dip" app:fontName="app_text_regular" />
+    </LinearLayout>
+    <View android:background="@2131103221" android:layout_width="-1" android:layout_height="0.5dip" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131167779" android:textColor="@2131099821" android:gravity="0x00000011" android:id="@2131428115" android:background="?2130972137" android:paddingTop="@2131167401" android:paddingBottom="@2131167401" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:text="@2132018361" app:fontName="app_text_bold" />
+    <View android:background="@2131103221" android:layout_width="-1" android:layout_height="0.5dip" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131167779" android:textColor="@2131099818" android:gravity="0x00000011" android:id="@2131428114" android:background="?2130972137" android:paddingTop="@2131167401" android:paddingBottom="@2131167401" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:text="@2132018360" app:fontName="app_text_medium" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@2131427818" android:layout_width="-1" android:layout_height="-2">
+        <View android:id="@2131429765" android:layout_width="@2131165439" android:layout_height="@2131165381" android:layout_alignParentTop="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <View android:id="@2131427666" android:layout_width="@2131165439" android:layout_height="@2131165381" android:layout_alignParentBottom="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165435" android:gravity="0x00000011" android:id="@2131429345" android:visibility="1" android:layout_width="@2131165448" android:layout_height="0.0dip" android:text="@2132017505" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:fontName="app_text_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout android:orientation="0" android:id="@2131427822" android:layout_width="-1" android:layout_height="-2">
+                <android.widget.Space android:id="@2131429145" android:visibility="2" android:layout_width="@2131165415" android:layout_height="@2131165415" />
+                <FrameLayout android:id="@2131427821" android:layout_width="-1" android:layout_height="-2" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

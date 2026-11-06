@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@2131427688" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.mosaic.view.ListItemBasic android:id="@2131427689" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:primaryText="@string/bottom_sheet_dismiss" />
+    <RelativeLayout android:orientation="0" android:id="@2131427675" android:background="@2131103590" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167661" android:contentDescription="@2132018161" app:layout_constraintBottom_toTopOf="@id/bottom_sheet_menu_dismiss" app:layout_constraintEnd_toEndOf="parent">
+        <RelativeLayout android:id="@2131429542" android:focusable="false" android:layout_width="-1" android:layout_height="-2" />
+        <ImageView android:background="@2131231470" android:focusable="false" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignEnd="@2131429542" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+package com.google.common.collect;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.google.errorprone.annotations.CompatibleWith;
+import com.google.errorprone.annotations.DoNotMock;
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@DoNotMock("Use ImmutableTable, HashBasedTable, or another implementation")
+@GwtCompatible
+/* loaded from: classes8.dex */
+public interface Table<R, C, V> {
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public interface Cell<R, C, V> {
+        boolean equals(Object obj);
+
+        @ParametricNullness
+        C getColumnKey();
+
+        @ParametricNullness
+        R getRowKey();
+
+        @ParametricNullness
+        V getValue();
+
+        int hashCode();
+    }
+
+    Set<Cell<R, C, V>> cellSet();
+
+    void clear();
+
+    Map<R, V> column(@ParametricNullness C c);
+
+    Set<C> columnKeySet();
+
+    Map<C, Map<R, V>> columnMap();
+
+    boolean contains(@CompatibleWith("R") Object obj, @CompatibleWith("C") Object obj2);
+
+    boolean containsColumn(@CompatibleWith("C") Object obj);
+
+    boolean containsRow(@CompatibleWith("R") Object obj);
+
+    boolean containsValue(@CompatibleWith("V") Object obj);
+
+    boolean equals(Object obj);
+
+    V get(@CompatibleWith("R") Object obj, @CompatibleWith("C") Object obj2);
+
+    int hashCode();
+
+    boolean isEmpty();
+
+    @CanIgnoreReturnValue
+    V put(@ParametricNullness R r, @ParametricNullness C c, @ParametricNullness V v);
+
+    void putAll(Table<? extends R, ? extends C, ? extends V> table);
+
+    @CanIgnoreReturnValue
+    V remove(@CompatibleWith("R") Object obj, @CompatibleWith("C") Object obj2);
+
+    Map<C, V> row(@ParametricNullness R r);
+
+    Set<R> rowKeySet();
+
+    Map<R, Map<C, V>> rowMap();
+
+    int size();
+
+    Collection<V> values();
+}

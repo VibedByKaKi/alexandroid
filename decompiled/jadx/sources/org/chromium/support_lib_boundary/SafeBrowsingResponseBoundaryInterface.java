@@ -1,0 +1,14 @@
+package org.chromium.support_lib_boundary;
+
+import org.jspecify.annotations.NullMarked;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@NullMarked
+/* loaded from: classes11.dex */
+public interface SafeBrowsingResponseBoundaryInterface {
+    void backToSafety(boolean z);
+
+    void proceed(boolean z);
+
+    void showInterstitial(boolean z);
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.widget.Space android:id="@2131429771" android:layout_width="@2131165442" android:layout_height="@2131165420" />
+    <android.widget.Space android:id="@2131429362" android:layout_width="@2131165414" android:layout_height="@2131165385" android:layout_alignParentEnd="true" />
+    <android.widget.Space android:id="@2131428633" android:layout_width="@2131165414" android:layout_height="@2131165385" />
+    <RelativeLayout android:id="@2131429525" android:layout_width="-2" android:layout_height="@2131165393" android:layout_below="@2131429771" android:layout_toStartOf="@2131429362" android:layout_toEndOf="@2131428633">
+        <LinearLayout android:orientation="1" android:id="@2131429520" android:paddingTop="@2131165423" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:layout_above="@2131429102" android:layout_alignParentTop="true" android:paddingStart="@2131165415" android:paddingEnd="@2131165415">
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:ellipsize="3" android:orientation="1" android:id="@2131429736" android:paddingBottom="@2131165413" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492892" android:singleLine="false" app:fontName="app_text_medium" />
+        </LinearLayout>
+        <LinearLayout android:orientation="0" android:id="@2131429102" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165423" android:baselineAligned="false" android:layout_alignParentBottom="true" android:layout_marginStart="@2131165415" android:layout_marginEnd="@2131165415">
+            <android.widget.ImageView android:id="@2131428511" android:layout_width="@2131165407" android:layout_height="@2131165407" android:scaleType="3" />
+            <LinearLayout android:orientation="0" android:id="@2131429522" android:focusable="true" android:clickable="true" android:layout_width="-2" android:layout_height="-2" />
+            <LinearLayout android:orientation="0" android:id="@2131429523" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="0" android:id="@2131429524" android:focusable="true" android:clickable="true" android:layout_width="-2" android:layout_height="-2" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131428530" android:layout_height="-2" style="@style/comms_button_linear_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@2131429382" android:src="@2131231751" style="@style/comms_image_button" />
+    <com.amazon.alexa.font.FontTextView android:id="@2131429383" android:text="" style="@style/comms_button_text" />
+</LinearLayout>

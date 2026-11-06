@@ -1,0 +1,104 @@
+package com.amazon.alexa.api.compat.alerts;
+
+import io.ktor.util.PathKt$$ExternalSyntheticBUOutline0;
+import kotlin.Metadata;
+import kotlin.enums.EnumEntries;
+import kotlin.enums.EnumEntriesKt;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import org.jetbrains.annotations.NotNull;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0007\b\u0086\u0081\u0002\u0018\u0000 \u00072\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\u0007B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006¨\u0006\b"}, d2 = {"Lcom/amazon/alexa/api/compat/alerts/AlertType;", "", "<init>", "(Ljava/lang/String;I)V", "ALARM", "TIMER", "REMINDER", "Companion", "AlexaMobileAndroidVoiceSDKApiCompat_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes16.dex */
+public final class AlertType {
+    private static final /* synthetic */ EnumEntries $ENTRIES;
+    private static final /* synthetic */ AlertType[] $VALUES;
+
+    /* renamed from: Companion, reason: from kotlin metadata */
+    @NotNull
+    public static final Companion INSTANCE;
+    public static final AlertType ALARM = new AlertType("ALARM", 0);
+    public static final AlertType TIMER = new AlertType("TIMER", 1);
+    public static final AlertType REMINDER = new AlertType("REMINDER", 2);
+
+    private static final /* synthetic */ AlertType[] $values() {
+        return new AlertType[]{ALARM, TIMER, REMINDER};
+    }
+
+    static {
+        AlertType[] $values = $values();
+        $VALUES = $values;
+        $ENTRIES = EnumEntriesKt.enumEntries($values);
+        INSTANCE = new Companion(null);
+    }
+
+    private AlertType(String str, int i) {
+    }
+
+    @NotNull
+    public static EnumEntries<AlertType> getEntries() {
+        return $ENTRIES;
+    }
+
+    public static AlertType valueOf(String str) {
+        return (AlertType) Enum.valueOf(AlertType.class, str);
+    }
+
+    public static AlertType[] values() {
+        return (AlertType[]) $VALUES.clone();
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0080\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000e\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007¨\u0006\b"}, d2 = {"Lcom/amazon/alexa/api/compat/alerts/AlertType$Companion;", "", "<init>", "()V", "convertToCompat", "Lcom/amazon/alexa/api/compat/alerts/AlertType;", "type", "Lcom/amazon/alexa/api/AlertType;", "AlexaMobileAndroidVoiceSDKApiCompat_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class Companion {
+
+        /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+        @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+        public /* synthetic */ class WhenMappings {
+            public static final /* synthetic */ int[] $EnumSwitchMapping$0;
+
+            static {
+                int[] iArr = new int[com.amazon.alexa.api.AlertType.values().length];
+                try {
+                    iArr[com.amazon.alexa.api.AlertType.REMINDER.ordinal()] = 1;
+                } catch (NoSuchFieldError unused) {
+                }
+                try {
+                    iArr[com.amazon.alexa.api.AlertType.ALARM.ordinal()] = 2;
+                } catch (NoSuchFieldError unused2) {
+                }
+                try {
+                    iArr[com.amazon.alexa.api.AlertType.TIMER.ordinal()] = 3;
+                } catch (NoSuchFieldError unused3) {
+                }
+                $EnumSwitchMapping$0 = iArr;
+            }
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        @NotNull
+        public final AlertType convertToCompat(@NotNull com.amazon.alexa.api.AlertType type) {
+            type.getClass();
+            int i = WhenMappings.$EnumSwitchMapping$0[type.ordinal()];
+            if (i == 1) {
+                return AlertType.REMINDER;
+            }
+            if (i == 2) {
+                return AlertType.ALARM;
+            }
+            if (i == 3) {
+                return AlertType.TIMER;
+            }
+            PathKt$$ExternalSyntheticBUOutline0.m();
+            return null;
+        }
+
+        private Companion() {
+        }
+    }
+}

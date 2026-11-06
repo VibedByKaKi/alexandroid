@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@2131428737" android:background="@17170444" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="0x00800053" android:id="@2131427603" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131166874" android:src="@2131231475" android:tint="@17170443" android:contentDescription="@2132017883" android:layout_marginStart="@2131166874" />
+    <include android:layout_gravity="0x00000011" android:id="@2131429854" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:translationZ="10.0dip" android:elevation="10.0dip" layout="@layout/video_controls_overlay" />
+</FrameLayout>

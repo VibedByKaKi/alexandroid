@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131103288" android:paddingBottom="@2131165782" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@2131429535" android:background="@2131103213" android:layout_width="-1" android:layout_height="@2131167267" />
+    <com.amazon.alexa.font.FontTextView android:id="@2131427987" android:paddingBottom="@2131165782" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165741" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736" app:fontName="app_text_regular" style="@style/AlexaComms" />
+    <LinearLayout android:orientation="1" android:id="@2131428378" android:paddingBottom="@2131165782" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:id="@2131428379" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165741" android:text="@2132018283" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736" app:fontName="app_text_regular" style="@style/AlexaComms" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131100167" android:id="@2131428380" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165741" android:text="@2132018284" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736" app:fontName="app_text_regular" style="@style/AlexaComms.medium" />
+    </LinearLayout>
+    <LinearLayout android:orientation="1" android:id="@2131427986" android:paddingBottom="@2131165782" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:id="@2131428381" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165741" android:text="@2132018288" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736" app:fontName="app_text_regular" style="@style/AlexaComms" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131100167" android:id="@2131429461" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165741" android:text="@2132020516" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736" app:fontName="app_text_regular" style="@style/AlexaComms.medium" />
+    </LinearLayout>
+</LinearLayout>

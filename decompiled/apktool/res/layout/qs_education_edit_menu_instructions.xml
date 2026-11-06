@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131099737" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@2131429022" android:layout_width="-2" android:layout_height="-2" android:text="" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SetupBodyText" />
+    <TextView android:id="@2131429240" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020152" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/number1" app:layout_constraintTop_toTopOf="parent" style="@style/SetupBodyText" />
+    <TextView android:id="@2131429023" android:layout_width="-2" android:layout_height="-2" android:text="" app:layout_constraintEnd_toStartOf="@id/qs_edit_menu_instruction2" app:layout_constraintTop_toBottomOf="@id/qs_edit_menu_instruction1" style="@style/SetupBodyText" />
+    <TextView android:id="@2131429241" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020153" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/number1" app:layout_constraintTop_toBottomOf="@id/qs_edit_menu_instruction1" style="@style/SetupBodyText" />
+    <TextView android:id="@2131429024" android:layout_width="-2" android:layout_height="-2" android:text="" app:layout_constraintEnd_toStartOf="@id/instruction3" app:layout_constraintTop_toBottomOf="@id/qs_edit_menu_instruction2" style="@style/SetupBodyText" />
+    <TextView android:id="@2131428569" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020154" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/number1" app:layout_constraintTop_toBottomOf="@id/qs_edit_menu_instruction2" style="@style/SetupBodyText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

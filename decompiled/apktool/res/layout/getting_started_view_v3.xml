@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="0x00000001" android:id="@2131428417" android:tag="" android:layout_width="-1" android:layout_height="-1" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:id="@2131428052" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+        <ImageView android:id="@2131428416" android:layout_width="-1" android:layout_height="-2" android:scaleType="3" android:adjustViewBounds="true" android:maxWidth="@2131167054" android:contentDescription="@2132018953" />
+        <com.amazon.alexa.biloba.view.gettingStartedV3.SimpleBannerView android:id="@2131428053" android:layout_width="-1" android:layout_height="-2" app:primaryText="@string/getting_started_deprecation_body" />
+    </LinearLayout>
+    <Button android:gravity="0x00000011" android:id="@2131428415" android:tag="" android:layout_width="-1" android:layout_height="-2" android:text="@2132018740" android:layout_weight="1.0" app:layout_constraintTop_toBottomOf="@id/deprecation_info" style="@style/purchase_button" />
+    <include layout="@layout/status_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

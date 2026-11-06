@@ -1,0 +1,295 @@
+package androidx.compose.ui.graphics.shadow;
+
+import androidx.collection.DoubleList$$ExternalSyntheticOutline0;
+import androidx.collection.MutableScatterMap;
+import androidx.compose.ui.geometry.Size;
+import androidx.compose.ui.graphics.RectangleShapeKt;
+import androidx.compose.ui.graphics.Shape;
+import androidx.compose.ui.unit.Density;
+import androidx.compose.ui.unit.LayoutDirection;
+import com.amazon.alexa.redesign.view.container.CardStudioAgentSpaceMetrics;
+import com.facebook.react.uimanager.ViewProps;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.SourceDebugExtension;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Metadata(d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\b\u0002\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003:\u0001(B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u0018\u0010\u000f\u001a\u0012\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\t0\u0007j\u0002`\nH\u0002J\u0018\u0010\u0010\u001a\u0012\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\f0\u0007j\u0002`\rH\u0002J\b\u0010\u0011\u001a\u00020\bH\u0002J7\u0010\u0012\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ7\u0010\u001f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0016¢\u0006\u0004\b \u0010!J\u0018\u0010\"\u001a\u00020#2\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u001b\u001a\u00020\u001cH\u0016J\u0018\u0010$\u001a\u00020%2\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u001b\u001a\u00020\u001cH\u0016J\b\u0010&\u001a\u00020'H\u0016R\"\u0010\u0006\u001a\u0016\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\t\u0018\u00010\u0007j\u0004\u0018\u0001`\nX\u0082\u000e¢\u0006\u0002\n\u0000R\"\u0010\u000b\u001a\u0016\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\f\u0018\u00010\u0007j\u0004\u0018\u0001`\rX\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006)"}, d2 = {"Landroidx/compose/ui/graphics/shadow/AndroidShadowContext;", "Landroidx/compose/ui/graphics/shadow/PlatformShadowContext;", "Landroidx/compose/ui/graphics/shadow/DropShadowRendererProvider;", "Landroidx/compose/ui/graphics/shadow/InnerShadowRendererProvider;", "<init>", "()V", "dropShadowCache", "Landroidx/collection/MutableScatterMap;", "Landroidx/compose/ui/graphics/shadow/AndroidShadowContext$ShadowKey;", "Landroidx/compose/ui/graphics/shadow/DropShadowRenderer;", "Landroidx/compose/ui/graphics/shadow/DropShadowCache;", "innerShadowCache", "Landroidx/compose/ui/graphics/shadow/InnerShadowRenderer;", "Landroidx/compose/ui/graphics/shadow/InnerShadowCache;", "shadowKey", "obtainDropShadowCache", "obtainInnerShadowCache", "obtainShadowKey", "obtainDropShadowRenderer", "shape", "Landroidx/compose/ui/graphics/Shape;", "size", "Landroidx/compose/ui/geometry/Size;", ViewProps.LAYOUT_DIRECTION, "Landroidx/compose/ui/unit/LayoutDirection;", "density", "Landroidx/compose/ui/unit/Density;", "shadow", "Landroidx/compose/ui/graphics/shadow/Shadow;", "obtainDropShadowRenderer-eZhPAX0", "(Landroidx/compose/ui/graphics/Shape;JLandroidx/compose/ui/unit/LayoutDirection;Landroidx/compose/ui/unit/Density;Landroidx/compose/ui/graphics/shadow/Shadow;)Landroidx/compose/ui/graphics/shadow/DropShadowRenderer;", "obtainInnerShadowRenderer", "obtainInnerShadowRenderer-eZhPAX0", "(Landroidx/compose/ui/graphics/Shape;JLandroidx/compose/ui/unit/LayoutDirection;Landroidx/compose/ui/unit/Density;Landroidx/compose/ui/graphics/shadow/Shadow;)Landroidx/compose/ui/graphics/shadow/InnerShadowRenderer;", "createDropShadowPainter", "Landroidx/compose/ui/graphics/shadow/DropShadowPainter;", "createInnerShadowPainter", "Landroidx/compose/ui/graphics/shadow/InnerShadowPainter;", "clearCache", "", "ShadowKey", "ui-graphics_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@SourceDebugExtension({"SMAP\nAndroidShadowContext.android.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AndroidShadowContext.android.kt\nandroidx/compose/ui/graphics/shadow/AndroidShadowContext\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,128:1\n1#2:129\n*E\n"})
+/* loaded from: classes13.dex */
+final class AndroidShadowContext implements PlatformShadowContext, DropShadowRendererProvider, InnerShadowRendererProvider {
+
+    @Nullable
+    private MutableScatterMap<ShadowKey, DropShadowRenderer> dropShadowCache;
+
+    @Nullable
+    private MutableScatterMap<ShadowKey, InnerShadowRenderer> innerShadowCache;
+
+    @Nullable
+    private ShadowKey shadowKey;
+
+    private final MutableScatterMap<ShadowKey, DropShadowRenderer> obtainDropShadowCache() {
+        MutableScatterMap<ShadowKey, DropShadowRenderer> mutableScatterMap = this.dropShadowCache;
+        if (mutableScatterMap != null) {
+            return mutableScatterMap;
+        }
+        MutableScatterMap<ShadowKey, DropShadowRenderer> mutableScatterMap2 = new MutableScatterMap<>(0, 1, null);
+        this.dropShadowCache = mutableScatterMap2;
+        return mutableScatterMap2;
+    }
+
+    private final MutableScatterMap<ShadowKey, InnerShadowRenderer> obtainInnerShadowCache() {
+        MutableScatterMap<ShadowKey, InnerShadowRenderer> mutableScatterMap = this.innerShadowCache;
+        if (mutableScatterMap != null) {
+            return mutableScatterMap;
+        }
+        MutableScatterMap<ShadowKey, InnerShadowRenderer> mutableScatterMap2 = new MutableScatterMap<>(0, 1, null);
+        this.innerShadowCache = mutableScatterMap2;
+        return mutableScatterMap2;
+    }
+
+    private final ShadowKey obtainShadowKey() {
+        ShadowKey shadowKey = this.shadowKey;
+        if (shadowKey != null) {
+            return shadowKey;
+        }
+        ShadowKey shadowKey2 = new ShadowKey(null, 0L, null, 0.0f, null, 31, null);
+        this.shadowKey = shadowKey2;
+        return shadowKey2;
+    }
+
+    @Override // androidx.compose.ui.graphics.shadow.ShadowContext
+    public void clearCache() {
+        synchronized (this) {
+            try {
+                MutableScatterMap<ShadowKey, DropShadowRenderer> mutableScatterMap = this.dropShadowCache;
+                if (mutableScatterMap != null) {
+                    mutableScatterMap.clear();
+                }
+                MutableScatterMap<ShadowKey, InnerShadowRenderer> mutableScatterMap2 = this.innerShadowCache;
+                if (mutableScatterMap2 != null) {
+                    mutableScatterMap2.clear();
+                }
+                this.shadowKey = null;
+                Unit unit = Unit.INSTANCE;
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+    }
+
+    @Override // androidx.compose.ui.graphics.shadow.ShadowContext
+    @NotNull
+    public DropShadowPainter createDropShadowPainter(@NotNull Shape shape, @NotNull Shadow shadow) {
+        return new DropShadowPainter(shape, shadow, this);
+    }
+
+    @Override // androidx.compose.ui.graphics.shadow.ShadowContext
+    @NotNull
+    public InnerShadowPainter createInnerShadowPainter(@NotNull Shape shape, @NotNull Shadow shadow) {
+        return new InnerShadowPainter(shape, shadow, this);
+    }
+
+    @Override // androidx.compose.ui.graphics.shadow.DropShadowRendererProvider
+    @NotNull
+    /* renamed from: obtainDropShadowRenderer-eZhPAX0, reason: not valid java name */
+    public DropShadowRenderer mo5359obtainDropShadowRenderereZhPAX0(@NotNull Shape shape, long size, @NotNull LayoutDirection layoutDirection, @NotNull Density density, @NotNull Shadow shadow) {
+        DropShadowRenderer dropShadowRenderer;
+        synchronized (this) {
+            ShadowKey obtainShadowKey = obtainShadowKey();
+            obtainShadowKey.setShape(shape);
+            obtainShadowKey.m5365setSizeuvyYCjk(size);
+            obtainShadowKey.setLayoutDirection(layoutDirection);
+            obtainShadowKey.setDensity(density.getDensity());
+            obtainShadowKey.setShadow(shadow.copyWithoutOffset$ui_graphics_release());
+            dropShadowRenderer = obtainDropShadowCache().get(obtainShadowKey);
+            if (dropShadowRenderer == null) {
+                DropShadowRenderer dropShadowRenderer2 = new DropShadowRenderer(shadow, shape.mo468createOutlinePq9zytI(size, layoutDirection, density));
+                obtainDropShadowCache().set(ShadowKey.m5361copyeZhPAX0$default(obtainShadowKey, null, 0L, null, 0.0f, null, 31, null), dropShadowRenderer2);
+                dropShadowRenderer = dropShadowRenderer2;
+            }
+        }
+        return dropShadowRenderer;
+    }
+
+    @Override // androidx.compose.ui.graphics.shadow.InnerShadowRendererProvider
+    @NotNull
+    /* renamed from: obtainInnerShadowRenderer-eZhPAX0, reason: not valid java name */
+    public InnerShadowRenderer mo5360obtainInnerShadowRenderereZhPAX0(@NotNull Shape shape, long size, @NotNull LayoutDirection layoutDirection, @NotNull Density density, @NotNull Shadow shadow) {
+        InnerShadowRenderer innerShadowRenderer;
+        synchronized (this) {
+            ShadowKey obtainShadowKey = obtainShadowKey();
+            obtainShadowKey.setShape(shape);
+            obtainShadowKey.m5365setSizeuvyYCjk(size);
+            obtainShadowKey.setLayoutDirection(layoutDirection);
+            obtainShadowKey.setDensity(density.getDensity());
+            obtainShadowKey.setShadow(shadow);
+            innerShadowRenderer = obtainInnerShadowCache().get(obtainShadowKey);
+            if (innerShadowRenderer == null) {
+                InnerShadowRenderer innerShadowRenderer2 = new InnerShadowRenderer(shadow, shape.mo468createOutlinePq9zytI(size, layoutDirection, density));
+                obtainInnerShadowCache().set(ShadowKey.m5361copyeZhPAX0$default(obtainShadowKey, null, 0L, null, 0.0f, null, 31, null), innerShadowRenderer2);
+                innerShadowRenderer = innerShadowRenderer2;
+            }
+        }
+        return innerShadowRenderer;
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0002\b!\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0086\b\u0018\u00002\u00020\u0001B;\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007\u0012\b\b\u0002\u0010\b\u001a\u00020\t\u0012\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u000b¢\u0006\u0004\b\f\u0010\rJ\t\u0010#\u001a\u00020\u0003HÆ\u0003J\u0010\u0010$\u001a\u00020\u0005HÆ\u0003¢\u0006\u0004\b%\u0010\u0013J\t\u0010&\u001a\u00020\u0007HÆ\u0003J\t\u0010'\u001a\u00020\tHÆ\u0003J\u000b\u0010(\u001a\u0004\u0018\u00010\u000bHÆ\u0003JD\u0010)\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u00072\b\b\u0002\u0010\b\u001a\u00020\t2\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u000bHÆ\u0001¢\u0006\u0004\b*\u0010+J\u0013\u0010,\u001a\u00020-2\b\u0010.\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010/\u001a\u000200HÖ\u0001J\t\u00101\u001a\u000202HÖ\u0001R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u001c\u0010\u0004\u001a\u00020\u0005X\u0086\u000e¢\u0006\u0010\n\u0002\u0010\u0016\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R\u001a\u0010\u0006\u001a\u00020\u0007X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0017\u0010\u0018\"\u0004\b\u0019\u0010\u001aR\u001a\u0010\b\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u001c\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"¨\u00063"}, d2 = {"Landroidx/compose/ui/graphics/shadow/AndroidShadowContext$ShadowKey;", "", "shape", "Landroidx/compose/ui/graphics/Shape;", "size", "Landroidx/compose/ui/geometry/Size;", ViewProps.LAYOUT_DIRECTION, "Landroidx/compose/ui/unit/LayoutDirection;", "density", "", "shadow", "Landroidx/compose/ui/graphics/shadow/Shadow;", "<init>", "(Landroidx/compose/ui/graphics/Shape;JLandroidx/compose/ui/unit/LayoutDirection;FLandroidx/compose/ui/graphics/shadow/Shadow;Lkotlin/jvm/internal/DefaultConstructorMarker;)V", "getShape", "()Landroidx/compose/ui/graphics/Shape;", "setShape", "(Landroidx/compose/ui/graphics/Shape;)V", "getSize-NH-jbRc", "()J", "setSize-uvyYCjk", "(J)V", "J", "getLayoutDirection", "()Landroidx/compose/ui/unit/LayoutDirection;", "setLayoutDirection", "(Landroidx/compose/ui/unit/LayoutDirection;)V", "getDensity", "()F", "setDensity", "(F)V", "getShadow", "()Landroidx/compose/ui/graphics/shadow/Shadow;", "setShadow", "(Landroidx/compose/ui/graphics/shadow/Shadow;)V", "component1", "component2", "component2-NH-jbRc", "component3", "component4", "component5", "copy", "copy-eZhPAX0", "(Landroidx/compose/ui/graphics/Shape;JLandroidx/compose/ui/unit/LayoutDirection;FLandroidx/compose/ui/graphics/shadow/Shadow;)Landroidx/compose/ui/graphics/shadow/AndroidShadowContext$ShadowKey;", "equals", "", CardStudioAgentSpaceMetrics.DimensionValue.SCHEME_OTHER, "hashCode", "", "toString", "", "ui-graphics_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final /* data */ class ShadowKey {
+        private float density;
+
+        @NotNull
+        private LayoutDirection layoutDirection;
+
+        @Nullable
+        private Shadow shadow;
+
+        @NotNull
+        private Shape shape;
+        private long size;
+
+        public /* synthetic */ ShadowKey(Shape shape, long j, LayoutDirection layoutDirection, float f, Shadow shadow, int i, DefaultConstructorMarker defaultConstructorMarker) {
+            this((i & 1) != 0 ? RectangleShapeKt.getRectangleShape() : shape, (i & 2) != 0 ? Size.INSTANCE.m4478getZeroNHjbRc() : j, (i & 4) != 0 ? LayoutDirection.Ltr : layoutDirection, (i & 8) != 0 ? 1.0f : f, (i & 16) != 0 ? null : shadow, null);
+        }
+
+        /* renamed from: copy-eZhPAX0$default, reason: not valid java name */
+        public static /* synthetic */ ShadowKey m5361copyeZhPAX0$default(ShadowKey shadowKey, Shape shape, long j, LayoutDirection layoutDirection, float f, Shadow shadow, int i, Object obj) {
+            if ((i & 1) != 0) {
+                shape = shadowKey.shape;
+            }
+            if ((i & 2) != 0) {
+                j = shadowKey.size;
+            }
+            if ((i & 4) != 0) {
+                layoutDirection = shadowKey.layoutDirection;
+            }
+            if ((i & 8) != 0) {
+                f = shadowKey.density;
+            }
+            if ((i & 16) != 0) {
+                shadow = shadowKey.shadow;
+            }
+            Shadow shadow2 = shadow;
+            LayoutDirection layoutDirection2 = layoutDirection;
+            return shadowKey.m5363copyeZhPAX0(shape, j, layoutDirection2, f, shadow2);
+        }
+
+        @NotNull
+        /* renamed from: component1, reason: from getter */
+        public final Shape getShape() {
+            return this.shape;
+        }
+
+        /* renamed from: component2-NH-jbRc, reason: not valid java name and from getter */
+        public final long getSize() {
+            return this.size;
+        }
+
+        @NotNull
+        /* renamed from: component3, reason: from getter */
+        public final LayoutDirection getLayoutDirection() {
+            return this.layoutDirection;
+        }
+
+        /* renamed from: component4, reason: from getter */
+        public final float getDensity() {
+            return this.density;
+        }
+
+        @Nullable
+        /* renamed from: component5, reason: from getter */
+        public final Shadow getShadow() {
+            return this.shadow;
+        }
+
+        @NotNull
+        /* renamed from: copy-eZhPAX0, reason: not valid java name */
+        public final ShadowKey m5363copyeZhPAX0(@NotNull Shape shape, long size, @NotNull LayoutDirection layoutDirection, float density, @Nullable Shadow shadow) {
+            return new ShadowKey(shape, size, layoutDirection, density, shadow, null);
+        }
+
+        public boolean equals(@Nullable Object other) {
+            if (this == other) {
+                return true;
+            }
+            if (!(other instanceof ShadowKey)) {
+                return false;
+            }
+            ShadowKey shadowKey = (ShadowKey) other;
+            return Intrinsics.areEqual(this.shape, shadowKey.shape) && Size.m4465equalsimpl0(this.size, shadowKey.size) && this.layoutDirection == shadowKey.layoutDirection && Float.compare(this.density, shadowKey.density) == 0 && Intrinsics.areEqual(this.shadow, shadowKey.shadow);
+        }
+
+        public final float getDensity() {
+            return this.density;
+        }
+
+        @NotNull
+        public final LayoutDirection getLayoutDirection() {
+            return this.layoutDirection;
+        }
+
+        @Nullable
+        public final Shadow getShadow() {
+            return this.shadow;
+        }
+
+        @NotNull
+        public final Shape getShape() {
+            return this.shape;
+        }
+
+        /* renamed from: getSize-NH-jbRc, reason: not valid java name */
+        public final long m5364getSizeNHjbRc() {
+            return this.size;
+        }
+
+        public int hashCode() {
+            int m = DoubleList$$ExternalSyntheticOutline0.m(this.density, (this.layoutDirection.hashCode() + ((Size.m4470hashCodeimpl(this.size) + (this.shape.hashCode() * 31)) * 31)) * 31, 31);
+            Shadow shadow = this.shadow;
+            return m + (shadow == null ? 0 : shadow.hashCode());
+        }
+
+        public final void setDensity(float f) {
+            this.density = f;
+        }
+
+        public final void setLayoutDirection(@NotNull LayoutDirection layoutDirection) {
+            this.layoutDirection = layoutDirection;
+        }
+
+        public final void setShadow(@Nullable Shadow shadow) {
+            this.shadow = shadow;
+        }
+
+        public final void setShape(@NotNull Shape shape) {
+            this.shape = shape;
+        }
+
+        /* renamed from: setSize-uvyYCjk, reason: not valid java name */
+        public final void m5365setSizeuvyYCjk(long j) {
+            this.size = j;
+        }
+
+        @NotNull
+        public String toString() {
+            return "ShadowKey(shape=" + this.shape + ", size=" + ((Object) Size.m4473toStringimpl(this.size)) + ", layoutDirection=" + this.layoutDirection + ", density=" + this.density + ", shadow=" + this.shadow + ')';
+        }
+
+        private ShadowKey(Shape shape, long j, LayoutDirection layoutDirection, float f, Shadow shadow) {
+            this.shape = shape;
+            this.size = j;
+            this.layoutDirection = layoutDirection;
+            this.density = f;
+            this.shadow = shadow;
+        }
+
+        public /* synthetic */ ShadowKey(Shape shape, long j, LayoutDirection layoutDirection, float f, Shadow shadow, DefaultConstructorMarker defaultConstructorMarker) {
+            this(shape, j, layoutDirection, f, shadow);
+        }
+    }
+}

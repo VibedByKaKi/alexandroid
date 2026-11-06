@@ -1,0 +1,14 @@
+package com.google.android.gms.fido.fido2;
+
+import android.app.Activity;
+import android.content.IntentSender;
+import androidx.annotation.NonNull;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Deprecated
+/* loaded from: classes7.dex */
+public interface Fido2PendingIntent {
+    boolean hasPendingIntent();
+
+    void launchPendingIntent(@NonNull Activity activity, int i) throws IntentSender.SendIntentException;
+}

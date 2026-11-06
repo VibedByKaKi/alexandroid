@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@2131103654" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:paddingTop="32.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="-1" android:layout_height="-1" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="?voiceOdContentStyle">
+        <ScrollView android:scrollbarStyle="0x02000000" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0">
+            <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                    <TextView android:textSize="24.0sp" android:textColor="?16842806" android:gravity="0x00000011" android:id="@2131429736" android:layout_width="-1" android:layout_height="-2" />
+                    <ImageView android:id="@2131429892" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="52.0dip" android:src="@2131232052" android:contentDescription="@2132020913" />
+                    <TextView android:textSize="16.0sp" android:textColor="?16842806" android:gravity="0x00000011" android:id="@2131429893" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                    <View android:id="@2131429490" android:background="?2130972561" android:layout_width="-1" android:layout_height="1.0dip" android:layout_marginTop="36.0dip" />
+                    <ImageView android:id="@2131429489" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="36.0dip" android:src="@2131232050" android:contentDescription="@2132020913" />
+                    <TextView android:textSize="16.0sp" android:textColor="?16842806" android:gravity="0x00000011" android:id="@2131429491" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                    <View android:id="@2131429600" android:background="?2130972561" android:layout_width="-1" android:layout_height="1.0dip" android:layout_marginTop="36.0dip" />
+                    <ImageView android:id="@2131429599" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="36.0dip" android:src="@2131232051" android:contentDescription="@2132020913" />
+                    <TextView android:textSize="16.0sp" android:textColor="?16842806" android:gravity="0x00000011" android:id="@2131429601" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <TextView android:textSize="15.0sp" android:textColor="@2131103666" android:gravity="0x00000011" android:id="@2131428138" android:background="@2131232725" android:layout_width="-1" android:layout_height="42.0dip" android:text="@2132020934" android:layout_weight="0.0" android:textAllCaps="true" />
+    </LinearLayout>
+</LinearLayout>

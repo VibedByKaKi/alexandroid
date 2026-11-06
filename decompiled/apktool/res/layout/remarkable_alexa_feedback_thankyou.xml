@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@2131232600" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167048">
+        <LinearLayout android:id="@2131429736" android:layout_width="-1" android:layout_height="-2" app:layout_constraintTop_toTopOf="parent">
+            <include android:id="@2131428452" android:layout_width="-1" android:layout_height="-2" layout="@layout/bottom_sheet_assistant_header" />
+        </LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView android:id="@2131427866" android:layout_width="@2131167532" android:layout_height="@2131167532" android:layout_marginBottom="@2131165532" android:src="@2131232606" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textStyle="0x00000001" android:textColor="@2131101582" android:gravity="0x00000011" android:id="@2131429707" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165532" android:layout_marginBottom="@2131165532" android:text="@2132020403" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/checkbox" style="@style/mosaic_font_heading_01" />
+        <TextView android:textStyle="0x00000001" android:textColor="@2131101582" android:gravity="0x00000011" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167556" android:layout_marginBottom="@2131165532" android:text="@2132020404" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/thanks_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="0x00800015" android:id="@2131429690" android:clickable="false" android:duplicateParentState="true" android:layout_width="-2" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@2131427664" android:clickable="false" android:duplicateParentState="true" android:layout_width="-1" android:layout_height="-1" app:cardBackgroundColor="@17170445" app:cardCornerRadius="@dimen/amahc_corner_radius_small" app:cardElevation="@dimen/amahc_elevation_none">
+        <Button android:gravity="0x00800015" android:id="@2131429689" android:background="?2130969747" android:clickable="false" android:duplicateParentState="true" android:layout_width="-1" android:layout_height="-1" android:textAllCaps="false" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

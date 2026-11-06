@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@2131429810" android:layout_width="640.0dip" android:layout_height="640.0dip" android:layout_marginLeft="-320.0dip" android:layout_marginTop="-320.0dip" android:layout_marginRight="-320.0dip" android:layout_marginBottom="-320.0dip" android:src="@2131232701" android:layout_alignParentBottom="true" android:rotation="45.0" android:importantForAccessibility="2" android:layout_alignParentEnd="true" />
+    <RelativeLayout android:id="@2131429811" android:layout_width="-2" android:layout_height="-2" android:layout_margin="24.0dip" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <FrameLayout android:id="@2131429876" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_centerHorizontal="true">
+            <ImageView android:id="@2131429877" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:adjustViewBounds="true" android:maxWidth="150.0dip" android:maxHeight="150.0dip" android:alpha="0.9" android:importantForAccessibility="2" />
+        </FrameLayout>
+        <LinearLayout android:orientation="0" android:id="@2131428472" android:layout_width="-2" android:layout_height="-2" android:layout_below="@2131429876" android:layout_centerHorizontal="true">
+            <TextView android:textAppearance="@2132083404" android:textSize="12.0sp" android:layout_gravity="0x00000010" android:layout_width="-2" android:layout_height="-2" android:text="@2132019150" />
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:src="@2131230955" android:scaleType="7" android:adjustViewBounds="true" />
+            <TextView android:textAppearance="@2132083404" android:textSize="12.0sp" android:layout_gravity="0x00000010" android:layout_width="-2" android:layout_height="-2" android:text="@2132019149" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

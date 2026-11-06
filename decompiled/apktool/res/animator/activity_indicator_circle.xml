@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <set android:ordering="0">
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:valueFrom="0" android:valueTo="1" android:propertyName="" />
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:valueFrom="0.5" android:valueTo="1" android:propertyName="" />
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:valueFrom="0.5" android:valueTo="1" android:propertyName="" />
+    </set>
+    <set android:ordering="0">
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:startOffset="@2131492870" android:valueFrom="1" android:valueTo="0" android:propertyName="" />
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:startOffset="@2131492870" android:valueFrom="1" android:valueTo="0.5" android:propertyName="" />
+        <objectAnimator android:interpolator="@17432587" android:duration="@2131492870" android:startOffset="@2131492870" android:valueFrom="1" android:valueTo="0.5" android:propertyName="" />
+    </set>
+</set>

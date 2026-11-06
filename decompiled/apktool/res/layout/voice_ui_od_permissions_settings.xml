@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?2130969391" android:paddingTop="32.0dip" android:paddingBottom="32.0dip" android:clickable="true" android:layout_width="-1" android:layout_height="-1" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@2131427905" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="14.0dip" android:layout_alignParentTop="true" android:contentDescription="@2132020912" android:layout_marginStart="6.0dip" android:layout_alignParentStart="true" style="?voiceOdCloseStyle" />
+    <RelativeLayout android:layout_width="-1" android:layout_height="-2" android:layout_centerInParent="true" style="?voiceOdContentStyle">
+        <ImageView android:id="@2131428524" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="32.0dip" android:src="@2131232053" android:scaleType="2" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@2132020913" />
+        <TextView android:textSize="24.0sp" android:textColor="?16842806" android:id="@2131429736" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="32.0dip" android:layout_below="@2131428524" android:textAlignment="5" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="?16842806" android:id="@2131427991" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="24.0dip" android:layout_below="@2131429736" android:textAlignment="5" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="?16842907" android:gravity="0x00000011" android:id="@2131428643" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="16.0dip" android:layout_below="@2131427991" android:textAllCaps="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

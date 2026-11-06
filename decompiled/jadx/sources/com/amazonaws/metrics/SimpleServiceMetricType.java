@@ -1,0 +1,23 @@
+package com.amazonaws.metrics;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes13.dex */
+public class SimpleServiceMetricType extends SimpleMetricType implements ServiceMetricType {
+    private final String name;
+    private final String serviceName;
+
+    public SimpleServiceMetricType(String str, String str2) {
+        this.name = str;
+        this.serviceName = str2;
+    }
+
+    @Override // com.amazonaws.metrics.ServiceMetricType
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    @Override // com.amazonaws.metrics.SimpleMetricType, com.amazonaws.metrics.MetricType
+    public String name() {
+        return this.name;
+    }
+}

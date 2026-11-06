@@ -1,0 +1,15 @@
+package com.amazon.alexa.voice.ui.onedesign.widget.gradient;
+
+import android.graphics.drawable.Drawable;
+import androidx.annotation.ColorInt;
+import com.amazon.alexa.voice.ui.annotation.UiModel;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@UiModel(builder = true)
+/* loaded from: classes20.dex */
+public interface GradientBackgroundModel {
+    @ColorInt
+    int getColor();
+
+    Drawable getDrawable();
+}

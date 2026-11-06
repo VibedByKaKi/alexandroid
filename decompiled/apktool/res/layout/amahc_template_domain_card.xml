@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131427507" android:layout_width="-1" android:layout_height="-2" android:minHeight="@2131165391" android:elevation="@2131165378" android:outlineProvider="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_gravity="0x00000011" android:id="@2131428137" android:layout_width="-1" android:layout_height="-2" app:cardCornerRadius="@dimen/amahc_corner_radius_small" app:cardElevation="0.0dip" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@2131429510" android:visibility="2" android:layout_width="-1" android:layout_height="-2" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.deecomms.calling.ui.DialPad android:orientation="1" android:background="@2131100090" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:id="@2131428095" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165882" android:layout_marginBottom="@2131165882" android:layout_marginStart="@2131165882" android:layout_marginEnd="@2131165882" bind:fontName="app_text_regular" style="@style/AlexaComms.dialpad.display" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428102" bind:letters="" bind:numberName="@string/dial_pad_digits_one" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428108" bind:letters="@string/dial_pad_letters_ABC" bind:numberName="@string/dial_pad_digits_two" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428107" bind:letters="@string/dial_pad_letters_DEF" bind:numberName="@string/dial_pad_digits_three" style="@style/fiestaDialPadButton" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428098" bind:letters="@string/dial_pad_letters_GHI" bind:numberName="@string/dial_pad_digits_four" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428097" bind:letters="@string/dial_pad_letters_JKL" bind:numberName="@string/dial_pad_digits_five" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428105" bind:letters="@string/dial_pad_letters_MNO" bind:numberName="@string/dial_pad_digits_six" style="@style/fiestaDialPadButton" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428104" bind:letters="@string/dial_pad_letters_PQRS" bind:numberName="@string/dial_pad_digits_seven" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428096" bind:letters="@string/dial_pad_letters_TUV" bind:numberName="@string/dial_pad_digits_eight" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428101" bind:letters="@string/dial_pad_letters_WXYZ" bind:numberName="@string/dial_pad_digits_nine" style="@style/fiestaDialPadButton" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428106" bind:letters="" bind:numberName="@string/dial_pad_digits_star" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428110" bind:letters="@string/dial_pad_letters_plus_sign" bind:numberName="@string/dial_pad_digits_zero" style="@style/fiestaDialPadButton" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428103" bind:letters="" bind:numberName="@string/dial_pad_digits_hash" style="@style/fiestaDialPadButton" />
+            </LinearLayout>
+            <com.amazon.deecomms.common.ui.CommsButton android:textSize="@2131165756" android:textColor="@2131100102" android:id="@2131428099" android:background="@2131100094" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165882" android:layout_marginBottom="@2131165882" android:text="@2132019145" android:textAllCaps="true" android:layout_marginStart="@2131165882" android:layout_marginEnd="@2131165882" />
+        </LinearLayout>
+    </ScrollView>
+</com.amazon.deecomms.calling.ui.DialPad>

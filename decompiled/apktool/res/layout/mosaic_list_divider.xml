@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amazon.alexa.font.FontTextView android:id="@2131428134" style="@style/mosaic_list_divider" />
+</merge>

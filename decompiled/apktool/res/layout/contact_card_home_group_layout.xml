@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165794" android:textColor="@2131099974" android:id="@2131428482" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:text="@2132019151" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165651" android:textColor="@2131099933" android:id="@2131428481" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165650" android:layout_below="@2131428482" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_light" />
+    <ImageView android:id="@2131428483" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="@2131231146" android:layout_centerVertical="true" android:layout_marginEnd="@2131165724" android:layout_alignParentEnd="true" />
+    <View android:id="@2131428484" android:layout_below="@2131428481" style="@style/contactCardDividerStyle" />
+</RelativeLayout>

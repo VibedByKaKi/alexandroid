@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131428071" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/voice_ui_od_header" />
+    <androidx.core.widget.NestedScrollView android:id="@2131429414" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131168097" android:paddingEnd="@2131168097">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1">
+            <include layout="@layout/voice_ui_od_local_image_big" />
+            <androidx.legacy.widget.Space android:layout_width="-1" android:layout_height="@2131168172" />
+            <include layout="@layout/voice_ui_od_local_detail_info" />
+            <include layout="@layout/voice_ui_od_padding_to_handle_vi_overlay" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

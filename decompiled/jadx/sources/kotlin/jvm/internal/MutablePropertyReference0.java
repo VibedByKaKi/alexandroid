@@ -1,0 +1,49 @@
+package kotlin.jvm.internal;
+
+import kotlin.SinceKotlin;
+import kotlin.reflect.KCallable;
+import kotlin.reflect.KMutableProperty0;
+import kotlin.reflect.KProperty0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes10.dex */
+public abstract class MutablePropertyReference0 extends MutablePropertyReference implements KMutableProperty0 {
+    public MutablePropertyReference0() {
+    }
+
+    @Override // kotlin.jvm.internal.CallableReference
+    public KCallable computeReflected() {
+        return Reflection.mutableProperty0(this);
+    }
+
+    @Override // kotlin.reflect.KProperty0
+    @SinceKotlin(version = "1.1")
+    public Object getDelegate() {
+        return ((KMutableProperty0) getReflected()).getDelegate();
+    }
+
+    @Override // kotlin.reflect.KProperty
+    public KProperty0.Getter getGetter() {
+        return ((KMutableProperty0) getReflected()).getGetter();
+    }
+
+    @Override // kotlin.reflect.KMutableProperty
+    public KMutableProperty0.Setter getSetter() {
+        return ((KMutableProperty0) getReflected()).getSetter();
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public Object invoke() {
+        return get();
+    }
+
+    @SinceKotlin(version = "1.1")
+    public MutablePropertyReference0(Object obj) {
+        super(obj);
+    }
+
+    @SinceKotlin(version = "1.4")
+    public MutablePropertyReference0(Object obj, Class cls, String str, String str2, int i) {
+        super(obj, cls, str, str2, i);
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:clickable="false" android:duplicateParentState="true" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_weight="1.0">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165434" android:ellipsize="3" android:orientation="1" android:id="@2131429736" android:paddingBottom="@2131165413" android:focusable="true" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492892" android:singleLine="false" app:fontName="app_text_bold" />
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165434" android:ellipsize="3" android:orientation="1" android:id="@2131429593" android:focusable="true" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492891" android:singleLine="false" app:fontName="app_text_regular" />
+    </LinearLayout>
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131429441" android:layout_width="-2" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131429440" android:layout_width="-2" android:layout_height="-2" app:fontName="app_text_regular" />
+        <android.widget.Space android:id="@2131427838" android:layout_width="@2131165395" android:layout_height="@2131165395" />
+        <android.widget.ImageView android:id="@2131427837" android:layout_width="@2131165449" android:layout_height="@2131165394" android:tint="?2130969747" />
+    </LinearLayout>
+</LinearLayout>

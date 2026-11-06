@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:tag="" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="0x00000010" android:tag="" android:layout_width="@2131168264" android:layout_height="@2131168264" android:src="@2131232078" android:tint="@2131103479" android:layout_marginStart="@2131166137" />
+    <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131427460" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:linkText="@string/custom_alert_edit" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryTextColor="?mosaicAction10" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131427635" android:visibility="2" layout="@layout/cantilever_banner_notification" />
+    <include android:id="@2131427808" android:visibility="2" layout="@layout/cantilever_load_error_page" />
+    <WebView android:id="@2131427810" android:visibility="1" android:layout_width="-1" android:layout_height="-1" />
+</LinearLayout>

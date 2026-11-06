@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector android:height="20.0dip" android:width="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_checked="true" android:id="@2131427867" android:drawable="@2131231570" app:iconPadding="0.0dip" app:iconSize="20.0dip" />
+    <item android:state_checked="false" android:id="@2131429818" android:drawable="@2131231571" app:iconPadding="0.0dip" app:iconSize="20.0dip" />
+    <transition android:drawable="@2130837507" android:toId="@2131429818" android:fromId="@2131427867" />
+    <transition android:drawable="@2130837508" android:toId="@2131427867" android:fromId="@2131429818" />
+</animated-selector>

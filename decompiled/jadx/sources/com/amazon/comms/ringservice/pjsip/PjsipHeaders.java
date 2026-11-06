@@ -1,0 +1,34 @@
+package com.amazon.comms.ringservice.pjsip;
+
+import com.amazon.comms.calling.sipclient.SipHeaders;
+import java.util.Iterator;
+import java.util.Map;
+import org.pjsip.pjsua2.SipHeader;
+import org.pjsip.pjsua2.SipHeaderVector;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public final class PjsipHeaders {
+    public static SipHeaderVector transform(SipHeaders sipHeaders) {
+        SipHeaderVector sipHeaderVector = new SipHeaderVector();
+        Iterator<Map.Entry<String, String>> it2 = sipHeaders.iterator();
+        while (it2.hasNext()) {
+            Map.Entry<String, String> next = it2.next();
+            SipHeader sipHeader = new SipHeader();
+            sipHeader.setHName(next.getKey());
+            sipHeader.setHValue(next.getValue());
+            sipHeaderVector.add(sipHeader);
+        }
+        return sipHeaderVector;
+    }
+
+    public static SipHeaders transform(SipHeaderVector sipHeaderVector) {
+        SipHeaders sipHeaders = new SipHeaders();
+        int size = (int) sipHeaderVector.size();
+        for (int i = 0; i < size; i++) {
+            SipHeader sipHeader = sipHeaderVector.get(i);
+            sipHeaders.put(sipHeader.getHName(), sipHeader.getHValue());
+        }
+        return sipHeaders;
+    }
+}

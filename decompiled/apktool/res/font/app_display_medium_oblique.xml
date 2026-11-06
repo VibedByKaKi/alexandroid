@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:font="@2131296261" android:fontWeight="500" android:fontStyle="1" app:font="@font/alexa_sans_display_medium_oblique" app:fontStyle="italic" app:fontWeight="500" />
+</font-family>

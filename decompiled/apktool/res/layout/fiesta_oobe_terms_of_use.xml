@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131100090" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="-2" android:layout_height="0.0dip" android:layout_marginTop="@2131167339" android:layout_marginBottom="@2131167345" android:layout_weight="1.0">
+        <include layout="@layout/terms_of_use_list" />
+    </ScrollView>
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131100107" android:id="@2131429641" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167337" android:text="@2132020742" custom:fontName="app_text_regular" style="@style/AlexaComms.xsmall" />
+    <com.amazon.deecomms.common.ui.CommsButton android:textStyle="0x00000001" android:id="@2131429772" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167337" android:text="@2132017233" android:textAllCaps="true" custom:typeface="@string/amazon_ember_bold" style="@style/AlexaCommsButtonFiesta.Primary" />
+</LinearLayout>

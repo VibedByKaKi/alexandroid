@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="1" android:layout_width="-1" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:gravity="0x00000001" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:gravity="0x00000001" android:paddingBottom="@2131167334" android:layout_height="-2" android:layout_marginTop="@2131167331" android:text="@2132019969" app:fontName="app_text_light" style="@style/AlexaComms.title_with_width" />
+            <com.amazon.alexa.font.FontTextView android:gravity="0x00000001" android:id="@2131429044" android:layout_height="0.0dip" android:text="@2132019968" android:layout_weight="1.0" app:fontName="app_text_regular" style="@style/AlexaComms.intro_subtext" />
+        </LinearLayout>
+    </ScrollView>
+    <com.amazon.deecomms.common.ui.CommsButton android:layout_gravity="0x00000001" android:id="@2131429043" android:layout_height="-2" android:layout_marginTop="@2131167336" android:text="@2132019967" android:textAllCaps="true" style="@style/AlexaCommsButton.Primary.Right" />
+</LinearLayout>

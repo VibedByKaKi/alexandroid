@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131427912" android:background="@2131231092" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="-2" android:layout_height="-2" android:maxWidth="472.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="0" android:layout_width="-2" android:layout_height="-2">
+        <LinearLayout android:orientation="1" android:id="@2131427923" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167021" android:layout_marginBottom="@2131167026" android:layout_marginStart="@2131167013" android:layout_marginEnd="@2131167013" app:layout_constrainedWidth="true" app:layout_constraintEnd_toStartOf="@id/coach_mark_btn_dismiss" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="@2131167003" android:textColor="@2131101523" android:id="@2131427914" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167051" android:text="@2132018177" android:maxLines="1" android:minLines="1" android:fontFamily="@2131296284" />
+            <TextView android:textSize="@2131166998" android:textColor="@2131101524" android:id="@2131427915" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167050" android:fontFamily="@2131296284" />
+        </LinearLayout>
+        <Button android:layout_gravity="0x00800005" android:id="@2131427909" android:background="@2131231473" android:focusable="true" android:clickable="true" android:layout_width="@2131167010" android:layout_height="@2131167010" android:layout_marginTop="@2131167025" android:layout_marginEnd="@2131167013" android:backgroundTint="@2131101519" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/coachmark_tour_text_container" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+        <TextView android:textSize="@2131167002" android:textColor="@2131101521" android:layout_gravity="0x00800053" android:id="@2131427913" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167021" android:text="" android:maxLines="1" android:fontFamily="@2131296288" android:layout_marginStart="@2131167013" />
+        <LinearLayout android:layout_gravity="0x00800055" android:id="@2131427911" android:paddingTop="@2131167026" android:paddingBottom="@2131167026" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167025" android:layout_marginEnd="@2131167013">
+            <Button android:textColor="@2131101580" android:id="@2131427910" android:background="@2131231090" android:focusable="true" android:clickable="true" android:layout_width="-2" android:layout_height="-2" android:minWidth="0.0dip" android:minHeight="32.0dip" android:text="@2132018173" android:maxLines="1" android:textAllCaps="false" android:fontFamily="@2131296284" android:paddingStart="@2131167013" android:paddingEnd="@2131167013" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

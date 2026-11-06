@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?2130972395" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@2131427484" android:paddingTop="@2131167832" android:paddingBottom="@2131167815" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="0.0dip" android:paddingStart="@2131167816" android:paddingEnd="@2131167816" app:layout_constraintBottom_toTopOf="@id/app_search_pills_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@2131427573" android:visibility="2" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131167836" android:paddingEnd="@2131167836" app:layout_constraintBottom_toTopOf="@id/user_input_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <include android:layout_width="-1" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/user_input_container" app:layout_constraintTop_toBottomOf="@id/navigation_bar" layout="@layout/text_ui_od_tta_suggestions" />
+    <include android:id="@2131428964" android:layout_width="-1" android:layout_height="@2131167832" app:layout_constraintTop_toTopOf="parent" layout="@layout/text_ui_od_navigation_header" />
+    <com.amazon.alexa.voice.ui.onedesign.tta.V2UserInputView android:id="@2131429844" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

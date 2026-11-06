@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layoutDirection="3"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amazon.alexa.font.FontTextView android:textSize="16.0sp" android:id="@2131428333" android:background="@2131232634" android:visibility="1" android:maxLines="2" style="@style/RTTText" />
+    <com.amazon.deecomms.calling.ui.RTTEditTExt android:textSize="16.0sp" android:textColorHint="@2131101023" android:id="@2131428979" android:background="@2131232634" android:paddingBottom="15.0dip" android:visibility="1" android:hint="@2132019147" android:cursorVisible="true" android:maxLines="2" android:inputType="0x00020001" android:imeOptions="0x10000000" android:textCursorDrawable="@2131232635" android:layoutDirection="3" android:importantForAutofill="0x00000002" style="@style/RTTText" />
+</LinearLayout>

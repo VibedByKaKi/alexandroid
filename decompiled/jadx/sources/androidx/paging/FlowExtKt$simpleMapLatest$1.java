@@ -1,0 +1,127 @@
+package androidx.paging;
+
+import androidx.exifinterface.media.ExifInterface;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function3;
+import kotlin.jvm.internal.InlineMarker;
+import kotlin.jvm.internal.SourceDebugExtension;
+import kotlinx.coroutines.flow.FlowCollector;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* JADX INFO: Add missing generic type declarations: [R, T] */
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Metadata(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002\"\u0004\b\u0001\u0010\u0003*\b\u0012\u0004\u0012\u0002H\u00030\u00042\u0006\u0010\u0005\u001a\u0002H\u0002H\u008a@"}, d2 = {"<anonymous>", "", ExifInterface.GPS_DIRECTION_TRUE, "R", "Lkotlinx/coroutines/flow/FlowCollector;", "it"}, k = 3, mv = {1, 8, 0}, xi = 176)
+@DebugMetadata(c = "androidx.paging.FlowExtKt$simpleMapLatest$1", f = "FlowExt.kt", i = {}, l = {106, 106}, m = "invokeSuspend", n = {}, s = {})
+@SourceDebugExtension({"SMAP\nFlowExt.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FlowExt.kt\nandroidx/paging/FlowExtKt$simpleMapLatest$1\n*L\n1#1,224:1\n*E\n"})
+/* loaded from: classes14.dex */
+public final class FlowExtKt$simpleMapLatest$1<R, T> extends SuspendLambda implements Function3<FlowCollector<? super R>, T, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Function2<T, Continuation<? super R>, Object> $transform;
+    private /* synthetic */ Object L$0;
+    /* synthetic */ Object L$1;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /* JADX WARN: Multi-variable type inference failed */
+    public FlowExtKt$simpleMapLatest$1(Function2<? super T, ? super Continuation<? super R>, ? extends Object> function2, Continuation<? super FlowExtKt$simpleMapLatest$1> continuation) {
+        super(3, continuation);
+        this.$transform = function2;
+    }
+
+    @Nullable
+    public final Object invoke(@NotNull FlowCollector<? super R> flowCollector, T t, @Nullable Continuation<? super Unit> continuation) {
+        FlowExtKt$simpleMapLatest$1 flowExtKt$simpleMapLatest$1 = new FlowExtKt$simpleMapLatest$1(this.$transform, continuation);
+        flowExtKt$simpleMapLatest$1.L$0 = flowCollector;
+        flowExtKt$simpleMapLatest$1.L$1 = t;
+        return flowExtKt$simpleMapLatest$1.invokeSuspend(Unit.INSTANCE);
+    }
+
+    /* JADX WARN: Code restructure failed: missing block: B:13:0x0041, code lost:
+    
+        if (r1.emit(r6, r5) == r0) goto L15;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:14:0x0043, code lost:
+    
+        return r0;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:16:0x0035, code lost:
+    
+        if (r6 == r0) goto L15;
+     */
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    @org.jetbrains.annotations.Nullable
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r6) {
+        /*
+            r5 = this;
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.IntrinsicsKt.getCOROUTINE_SUSPENDED()
+            int r1 = r5.label
+            r2 = 2
+            r3 = 1
+            if (r1 == 0) goto L21
+            if (r1 == r3) goto L19
+            if (r1 != r2) goto L12
+            kotlin.ResultKt.throwOnFailure(r6)
+            goto L44
+        L12:
+            java.lang.String r5 = "call to 'resume' before 'invoke' with coroutine"
+            rx.Single$$ExternalSyntheticBUOutline0.m$2(r5)
+            r5 = 0
+            return r5
+        L19:
+            java.lang.Object r1 = r5.L$0
+            kotlinx.coroutines.flow.FlowCollector r1 = (kotlinx.coroutines.flow.FlowCollector) r1
+            kotlin.ResultKt.throwOnFailure(r6)
+            goto L38
+        L21:
+            kotlin.ResultKt.throwOnFailure(r6)
+            java.lang.Object r6 = r5.L$0
+            r1 = r6
+            kotlinx.coroutines.flow.FlowCollector r1 = (kotlinx.coroutines.flow.FlowCollector) r1
+            java.lang.Object r6 = r5.L$1
+            kotlin.jvm.functions.Function2<T, kotlin.coroutines.Continuation<? super R>, java.lang.Object> r4 = r5.$transform
+            r5.L$0 = r1
+            r5.label = r3
+            java.lang.Object r6 = r4.invoke(r6, r5)
+            if (r6 != r0) goto L38
+            goto L43
+        L38:
+            r3 = 0
+            r5.L$0 = r3
+            r5.label = r2
+            java.lang.Object r5 = r1.emit(r6, r5)
+            if (r5 != r0) goto L44
+        L43:
+            return r0
+        L44:
+            kotlin.Unit r5 = kotlin.Unit.INSTANCE
+            return r5
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.paging.FlowExtKt$simpleMapLatest$1.invokeSuspend(java.lang.Object):java.lang.Object");
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Nullable
+    public final Object invokeSuspend$$forInline(@NotNull Object obj) {
+        FlowCollector flowCollector = (FlowCollector) this.L$0;
+        Object invoke = this.$transform.invoke(this.L$1, this);
+        InlineMarker.mark(0);
+        flowCollector.emit(invoke, this);
+        InlineMarker.mark(1);
+        return Unit.INSTANCE;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // kotlin.jvm.functions.Function3
+    public /* bridge */ /* synthetic */ Object invoke(Object obj, Object obj2, Continuation<? super Unit> continuation) {
+        return invoke((FlowCollector) obj, (FlowCollector<? super R>) obj2, continuation);
+    }
+}

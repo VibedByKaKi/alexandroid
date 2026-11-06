@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131230995" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="0x00000001" android:id="@2131428152" android:background="@2131230996" android:layout_width="@2131165535" android:layout_height="@2131165533" android:layout_marginTop="@2131165534" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout android:id="@2131428973" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" app:layout_constraintTop_toBottomOf="@id/drag_handle">
+        <ImageView android:id="@2131427700" android:layout_width="@2131165537" android:layout_height="@2131165536" android:layout_marginTop="@2131165532" android:layout_marginBottom="@2131165532" android:src="@2131231477" android:tint="?2130970344" android:contentDescription="@2132017961" android:layout_marginStart="@2131165532" android:layout_marginEnd="@2131165532" android:layout_alignParentStart="true" />
+        <ImageView android:id="@2131427571" android:layout_width="@2131165538" android:layout_height="@2131165536" android:layout_margin="@2131165532" android:src="@2131230893" android:layout_centerInParent="true" android:contentDescription="@2132017960" />
+    </RelativeLayout>
+    <FrameLayout android:id="@2131427996" android:layout_width="-1" android:layout_height="0.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/navigation_header_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

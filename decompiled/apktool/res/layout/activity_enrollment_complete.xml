@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@2131103589" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@2131429475" android:layout_width="-1" android:layout_height="0.0dip" />
+    <RelativeLayout android:id="@2131427991" android:layout_width="-1" android:layout_height="-2" android:layout_above="@2131427667" android:layout_below="@2131429475">
+        <RelativeLayout android:layout_width="-1" android:layout_height="-2" android:layout_centerInParent="true">
+            <ImageView android:id="@2131427499" android:layout_width="-2" android:layout_height="-2" android:minWidth="48.0dip" android:minHeight="48.0dip" android:layout_centerHorizontal="true" />
+            <LinearLayout android:orientation="1" android:id="@2131427504" android:layout_width="-1" android:layout_height="-2" android:layout_below="@2131427499">
+                <com.amazon.alexa.font.FontTextView android:textSize="24.0sp" android:textColor="@2131103595" android:gravity="0x00000011" android:id="@2131427502" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="24.0dip" android:text="@2132017455" android:layout_below="@2131427499" app:fontName="app_text_regular" />
+                <com.amazon.alexa.font.FontTextView android:textSize="16.0sp" android:textColor="@2131103595" android:gravity="0x00000011" android:id="@2131427503" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:visibility="1" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="12.0dip" android:text="@2132018791" android:singleLine="false" android:layout_below="@2131427502" app:fontName="app_display_regular" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@2131427667" android:layout_width="-1" android:layout_height="-2" android:layout_margin="16.0dip" android:layout_alignParentBottom="true">
+        <Button android:textColor="@2131232556" android:id="@2131428139" android:background="@2131232553" android:layout_width="-1" android:layout_height="40.0dip" android:text="@2132018235" />
+    </RelativeLayout>
+</RelativeLayout>

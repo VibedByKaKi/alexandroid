@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@17170443" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:gravity="0x00000011" android:orientation="1" android:paddingTop="@2131165916" android:paddingBottom="@2131166019" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:id="@2131427492" android:layout_width="84.0dip" android:layout_height="-2" android:src="@2131231888" android:tint="@2131099712" android:contentDescription="@2132017397" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00000011" android:orientation="1" android:background="#b3e0f2" android:paddingTop="@2131166019" android:paddingBottom="@2131166019" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:padding="@2131165916" android:layout_width="-1" android:layout_height="240.0dip" android:src="@2131230883" android:scaleType="3" android:adjustViewBounds="true" android:contentDescription="@2132017248" />
+        </LinearLayout>
+        <LinearLayout android:orientation="1" android:paddingTop="@2131165916" android:paddingBottom="@2131167658" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131167658" android:paddingEnd="@2131167658">
+            <TextView android:textSize="@2131167784" android:textStyle="0x00000001" android:textColor="@17170444" android:gravity="0x00800003" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131166019" android:text="@2132017248" />
+            <TextView android:textSize="@2131165484" android:textColor="#333333" android:gravity="0x00800003" android:layout_width="-1" android:layout_height="-2" android:text="@2132017247" android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

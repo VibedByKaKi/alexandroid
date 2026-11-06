@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="150.0dip" android:viewportWidth="570.0" android:viewportHeight="128.2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:pivotY="65.0" android:scaleX="0.65" android:scaleY="0.43">
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="@2131099737" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+        <path android:fillColor="#ffffff" android:pathData="" />
+    </group>
+</vector>

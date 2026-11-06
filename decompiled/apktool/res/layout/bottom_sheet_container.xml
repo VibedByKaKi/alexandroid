@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131230995" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="0x00000001" android:id="@2131428152" android:background="@2131230996" android:layout_width="@2131165535" android:layout_height="@2131165533" android:layout_marginTop="@2131165534" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout android:id="@2131427819" android:layout_width="-1" android:layout_height="-1" />
+    <com.amazon.alexa.voice.ui.widget.ChromeView android:id="@2131427680" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165549" android:layout_alignParentBottom="true" app:layout_constraintBottom_toBottomOf="parent" app:voiceChrome="@drawable/voice_ui_chrome_glow" app:voiceColor="?mosaic_voice_chrome_background_listening" app:voiceShadow="@drawable/voice_ui_chrome_shadow" app:voiceShadowHeight="@dimen/bottom_sheet_ui_voice_shadow_height" />
+</androidx.constraintlayout.widget.ConstraintLayout>

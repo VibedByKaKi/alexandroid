@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" android:importantForAccessibility="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@2131428028" android:tag="" android:layout_width="-1" android:layout_height="-1">
+        <androidx.core.widget.NestedScrollView android:layout_width="-1" android:layout_height="-1" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1">
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:gravity="0x00000011" android:id="@2131427835" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" app:fontName="amazon_ember_bold" style="@style/TextAppearance.Mosaic.Title_04" />
+                <LinearLayout android:gravity="0x00000001" android:id="@2131427940" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" android:layout_marginBottom="@2131166137">
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_drop_in_request" app:primaryText="@string/drop_in" />
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_call" app:primaryText="@string/call" />
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@drawable/ic_mosaic_chat" app:primaryText="@string/biloba_message" />
+                    <com.amazon.alexa.mosaic.view.RoundImageButtonView android:id="@2131429163" android:tag="" android:layout_width="-2" android:layout_height="-2" app:iconSrc="@null" app:primaryText="@string/photo_share" />
+                </LinearLayout>
+                <LinearLayout android:gravity="0x00000011" android:id="@2131427833" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131166137">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@2131428027" android:layout_width="-1" android:layout_height="-1" android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+                <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131427898" android:tag="" android:layout_width="-1" android:layout_height="-2" app:text="@string/your_circle_of_support" />
+                <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131427861" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:linkText="@string/view" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryText="@string/circle_host" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+                <View style="@style/mosaic_list_item_divider" />
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131429873" android:tag="" android:padding="@2131167661" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131167661" android:text="@2132020879" style="@style/TextAppearance.Mosaic.Body" />
+                <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131429297" android:tag="" android:layout_width="-1" android:layout_height="-2" />
+                <RelativeLayout android:id="@2131427432" android:layout_width="-1" android:layout_height="-2">
+                    <ViewSwitcher android:id="@2131429607" android:layout_width="-1" android:layout_height="-2">
+                        <androidx.recyclerview.widget.RecyclerView android:id="@2131428026" android:background="?2130969753" android:scrollbars="0x00000200" android:layout_width="-1" android:layout_height="-2" android:overScrollMode="2" android:nestedScrollingEnabled="false" />
+                    </ViewSwitcher>
+                </RelativeLayout>
+                <View style="@style/mosaic_list_item_divider" />
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131427501" android:tag="" android:padding="@2131167661" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131167661" android:text="@2132020372" style="@style/TextAppearance.Mosaic.Body" />
+                <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131428705" android:layout_width="-1" android:layout_height="-2" app:text="@string/alexa_together_section" />
+                <LinearLayout android:gravity="0x00000011" android:id="@2131428564" android:layout_width="-1" android:layout_height="-2">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@2131428563" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131166937" android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+                <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131166137">
+                    <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:gravity="0x00000011" android:id="@2131429722" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/TextAppearance.Mosaic.Secondary" />
+                    <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:gravity="0x00000011" android:id="@2131427865" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/TextAppearance.Mosaic.Secondary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.amazon.alexa.mosaic.view.ErrorView android:id="@2131428261" android:tag="" android:layout_width="-1" android:layout_height="-1" app:bodyText="@string/error_care_hub_body" app:headlineText="@string/error_care_hub_headline" app:iconSrc="@null" app:iconTint="?mosaicNeutral10" app:linkText="@string/error_tap_to_retry" />
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+    <include layout="@layout/status_banner" />
+</FrameLayout>

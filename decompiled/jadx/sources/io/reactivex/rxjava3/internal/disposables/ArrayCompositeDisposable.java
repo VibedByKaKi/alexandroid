@@ -1,0 +1,62 @@
+package io.reactivex.rxjava3.internal.disposables;
+
+import io.reactivex.rxjava3.disposables.Disposable;
+import java.util.concurrent.atomic.AtomicReferenceArray;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes10.dex */
+public final class ArrayCompositeDisposable extends AtomicReferenceArray<Disposable> implements Disposable {
+    private static final long serialVersionUID = 2746389416410565408L;
+
+    public ArrayCompositeDisposable(int i) {
+        super(i);
+    }
+
+    @Override // io.reactivex.rxjava3.disposables.Disposable
+    public void dispose() {
+        Disposable andSet;
+        if (get(0) != DisposableHelper.DISPOSED) {
+            int length = length();
+            for (int i = 0; i < length; i++) {
+                Disposable disposable = get(i);
+                DisposableHelper disposableHelper = DisposableHelper.DISPOSED;
+                if (disposable != disposableHelper && (andSet = getAndSet(i, disposableHelper)) != disposableHelper && andSet != null) {
+                    andSet.dispose();
+                }
+            }
+        }
+    }
+
+    @Override // io.reactivex.rxjava3.disposables.Disposable
+    public boolean isDisposed() {
+        return get(0) == DisposableHelper.DISPOSED;
+    }
+
+    public Disposable replaceResource(int i, Disposable disposable) {
+        Disposable disposable2;
+        do {
+            disposable2 = get(i);
+            if (disposable2 == DisposableHelper.DISPOSED) {
+                disposable.dispose();
+                return null;
+            }
+        } while (!compareAndSet(i, disposable2, disposable));
+        return disposable2;
+    }
+
+    public boolean setResource(int i, Disposable disposable) {
+        Disposable disposable2;
+        do {
+            disposable2 = get(i);
+            if (disposable2 == DisposableHelper.DISPOSED) {
+                disposable.dispose();
+                return false;
+            }
+        } while (!compareAndSet(i, disposable2, disposable));
+        if (disposable2 == null) {
+            return true;
+        }
+        disposable2.dispose();
+        return true;
+    }
+}

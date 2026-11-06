@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.mosaic.view.AlertBannerButtonView android:layout_gravity="0x00000010" android:id="@2131429769" android:tag="" android:layout_width="-1" style="@style/Button.Mosaic.Card.Alert"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

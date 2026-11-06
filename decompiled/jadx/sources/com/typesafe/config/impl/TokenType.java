@@ -1,0 +1,23 @@
+package com.typesafe.config.impl;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes9.dex */
+enum TokenType {
+    START,
+    END,
+    COMMA,
+    EQUALS,
+    COLON,
+    OPEN_CURLY,
+    CLOSE_CURLY,
+    OPEN_SQUARE,
+    CLOSE_SQUARE,
+    VALUE,
+    NEWLINE,
+    UNQUOTED_TEXT,
+    IGNORED_WHITESPACE,
+    SUBSTITUTION,
+    PROBLEM,
+    COMMENT,
+    PLUS_EQUALS
+}

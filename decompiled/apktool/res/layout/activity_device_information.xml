@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131429465" layout="@layout/settings_toolbar" />
+    <LinearLayout android:gravity="0x00000011" android:orientation="1" android:background="@17170443" android:layout_width="-1" android:layout_height="-1">
+        <TextView android:textColor="@17170444" android:id="@2131428076" android:layout_width="-2" android:layout_height="-2" android:text="@2132017412" />
+        <TextView android:textColor="@17170444" android:id="@2131429099" android:layout_width="-2" android:layout_height="-2" android:text="@2132017414" />
+        <TextView android:textColor="@17170444" android:id="@2131428079" android:layout_width="-2" android:layout_height="-2" android:text="@2132017413" android:textIsSelectable="true" />
+    </LinearLayout>
+</LinearLayout>

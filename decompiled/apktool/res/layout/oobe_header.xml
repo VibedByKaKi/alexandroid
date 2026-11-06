@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429041" android:background="@2131103488" android:layout_width="-1" android:layout_height="@2131167326" android:layout_marginBottom="@2131167327"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="@2131167328" android:layout_height="-1" />
+    <ImageView android:layout_gravity="0x00000010" android:id="@2131429034" android:background="@2131103590" android:visibility="2" android:layout_width="24.0dip" android:layout_height="-2" android:src="@2131231419" android:cropToPadding="true" android:contentDescription="@2132017909" android:layout_marginEnd="@2131167336" />
+    <com.amazon.alexa.font.FontTextView android:layout_gravity="0x00000010" android:id="@2131429042" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" app:fontName="app_text_regular" style="@style/AlexaHeader" />
+    <Button android:textColor="@2131103277" android:layout_gravity="0x00000010" android:id="@2131429072" android:background="@2131103590" android:padding="0.0dip" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_margin="0.0dip" android:text="@2132020573" />
+</LinearLayout>

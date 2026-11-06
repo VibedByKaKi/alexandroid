@@ -1,0 +1,152 @@
+package org.webrtc;
+
+import android.graphics.ImageFormat;
+import androidx.core.app.AppLaunchChecker$$ExternalSyntheticOutline0;
+import com.amazon.alexa.assistant.capability.legacyflags.LegacyFlags;
+import com.amazon.alexa.client.alexaservice.audio.core.VolumeCalculatingInputStream;
+import com.amazon.alexa.ra.core.ui.markdown.parser.formatter.MarkdownConstants;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import okio.Buffer$$ExternalSyntheticBUOutline0;
+import org.joda.time.DateTimeConstants;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes12.dex */
+public class CameraEnumerationAndroid {
+    static final ArrayList<Size> COMMON_RESOLUTIONS = new ArrayList<>(Arrays.asList(new Size(160, 120), new Size(240, 160), new Size(320, 240), new Size(400, 240), new Size(480, 320), new Size(640, 360), new Size(640, 480), new Size(768, 480), new Size(854, 480), new Size(800, 600), new Size(VolumeCalculatingInputStream.BUFFER_SIZE_IN_BYTES, 540), new Size(VolumeCalculatingInputStream.BUFFER_SIZE_IN_BYTES, 640), new Size(1024, 576), new Size(1024, 600), new Size(1280, 720), new Size(1280, 1024), new Size(1920, LegacyFlags.DEFAULT_SCREEN_WIDTH), new Size(1920, DateTimeConstants.MINUTES_PER_DAY), new Size(2560, DateTimeConstants.MINUTES_PER_DAY), new Size(3840, 2160)));
+    private static final String TAG = "CameraEnumerationAndroid";
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public static abstract class ClosestComparator<T> implements Comparator<T> {
+        private ClosestComparator() {
+        }
+
+        @Override // java.util.Comparator
+        public int compare(T t, T t2) {
+            return diff(t) - diff(t2);
+        }
+
+        public abstract int diff(T t);
+    }
+
+    public static CaptureFormat.FramerateRange getClosestSupportedFramerateRange(List<CaptureFormat.FramerateRange> list, final int i) {
+        return (CaptureFormat.FramerateRange) Collections.min(list, new ClosestComparator<CaptureFormat.FramerateRange>() { // from class: org.webrtc.CameraEnumerationAndroid.1
+            private static final int MAX_FPS_DIFF_THRESHOLD = 5000;
+            private static final int MAX_FPS_HIGH_DIFF_WEIGHT = 3;
+            private static final int MAX_FPS_LOW_DIFF_WEIGHT = 1;
+            private static final int MIN_FPS_HIGH_VALUE_WEIGHT = 4;
+            private static final int MIN_FPS_LOW_VALUE_WEIGHT = 1;
+            private static final int MIN_FPS_THRESHOLD = 8000;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            {
+                super();
+            }
+
+            private int progressivePenalty(int i2, int i3, int i4, int i5) {
+                return i2 < i3 ? i2 * i4 : AppLaunchChecker$$ExternalSyntheticOutline0.m(i2, i3, i5, i4 * i3);
+            }
+
+            @Override // org.webrtc.CameraEnumerationAndroid.ClosestComparator
+            public int diff(CaptureFormat.FramerateRange framerateRange) {
+                return progressivePenalty(framerateRange.min, 8000, 1, 4) + progressivePenalty(Math.abs((i * 1000) - framerateRange.max), 5000, 1, 3);
+            }
+        });
+    }
+
+    public static Size getClosestSupportedSize(List<Size> list, final int i, final int i2) {
+        return (Size) Collections.min(list, new ClosestComparator<Size>() { // from class: org.webrtc.CameraEnumerationAndroid.2
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            {
+                super();
+            }
+
+            @Override // org.webrtc.CameraEnumerationAndroid.ClosestComparator
+            public int diff(Size size) {
+                return Math.abs(i2 - size.height) + Math.abs(i - size.width);
+            }
+        });
+    }
+
+    public static void reportCameraResolution(Histogram histogram, Size size) {
+        histogram.addSample(COMMON_RESOLUTIONS.indexOf(size) + 1);
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public static class CaptureFormat {
+        public final FramerateRange framerate;
+        public final int height;
+        public final int imageFormat = 17;
+        public final int width;
+
+        /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+        public static class FramerateRange {
+            public int max;
+            public int min;
+
+            public FramerateRange(int i, int i2) {
+                this.min = i;
+                this.max = i2;
+            }
+
+            public boolean equals(Object obj) {
+                if (!(obj instanceof FramerateRange)) {
+                    return false;
+                }
+                FramerateRange framerateRange = (FramerateRange) obj;
+                return this.min == framerateRange.min && this.max == framerateRange.max;
+            }
+
+            public int hashCode() {
+                return (this.min * 65537) + 1 + this.max;
+            }
+
+            public String toString() {
+                return MarkdownConstants.LEFT_BRACKET + (this.min / 1000.0f) + ":" + (this.max / 1000.0f) + MarkdownConstants.RIGHT_BRACKET;
+            }
+        }
+
+        public CaptureFormat(int i, int i2, int i3, int i4) {
+            this.width = i;
+            this.height = i2;
+            this.framerate = new FramerateRange(i3, i4);
+        }
+
+        public static int frameSize(int i, int i2, int i3) {
+            if (i3 == 17) {
+                return (ImageFormat.getBitsPerPixel(i3) * (i * i2)) / 8;
+            }
+            Buffer$$ExternalSyntheticBUOutline0.m$1("Don't know how to calculate the frame size of non-NV21 image formats.");
+            return 0;
+        }
+
+        public boolean equals(Object obj) {
+            if (!(obj instanceof CaptureFormat)) {
+                return false;
+            }
+            CaptureFormat captureFormat = (CaptureFormat) obj;
+            return this.width == captureFormat.width && this.height == captureFormat.height && this.framerate.equals(captureFormat.framerate);
+        }
+
+        public int hashCode() {
+            return this.framerate.hashCode() + (((this.width * 65497) + this.height) * 251) + 1;
+        }
+
+        public String toString() {
+            return this.width + "x" + this.height + "@" + this.framerate;
+        }
+
+        public CaptureFormat(int i, int i2, FramerateRange framerateRange) {
+            this.width = i;
+            this.height = i2;
+            this.framerate = framerateRange;
+        }
+
+        public int frameSize() {
+            return frameSize(this.width, this.height, 17);
+        }
+    }
+}

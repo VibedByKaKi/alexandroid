@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="@2131493107" android:drawable="@2131231245" />
+    <item android:duration="@2131493107" android:drawable="@2131231246" />
+    <item android:duration="@2131493107" android:drawable="@2131231247" />
+    <item android:duration="@2131493107" android:drawable="@2131231248" />
+    <item android:duration="@2131493107" android:drawable="@2131231249" />
+    <item android:duration="@2131493107" android:drawable="@2131231250" />
+    <item android:duration="@2131493107" android:drawable="@2131231251" />
+    <item android:duration="@2131493107" android:drawable="@2131231252" />
+    <item android:duration="@2131493107" android:drawable="@2131231253" />
+    <item android:duration="@2131493107" android:drawable="@2131231254" />
+    <item android:duration="@2131493107" android:drawable="@2131231255" />
+    <item android:duration="@2131493107" android:drawable="@2131231256" />
+    <item android:duration="@2131493107" android:drawable="@2131231257" />
+    <item android:duration="@2131493107" android:drawable="@2131231258" />
+    <item android:duration="@2131493107" android:drawable="@2131231259" />
+    <item android:duration="@2131493107" android:drawable="@2131231260" />
+    <item android:duration="@2131493107" android:drawable="@2131231261" />
+    <item android:duration="@2131493107" android:drawable="@2131231262" />
+    <item android:duration="@2131493107" android:drawable="@2131231263" />
+    <item android:duration="@2131493107" android:drawable="@2131231264" />
+    <item android:duration="@2131493107" android:drawable="@2131231265" />
+    <item android:duration="@2131493107" android:drawable="@2131231266" />
+    <item android:duration="@2131493107" android:drawable="@2131231267" />
+    <item android:duration="@2131493107" android:drawable="@2131231268" />
+    <item android:duration="@2131493107" android:drawable="@2131231269" />
+    <item android:duration="@2131493107" android:drawable="@2131231270" />
+</animation-list>

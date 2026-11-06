@@ -1,0 +1,58 @@
+package com.google.common.util.concurrent;
+
+import com.google.common.annotations.GwtIncompatible;
+import com.google.common.annotations.J2ktIncompatible;
+import com.google.common.collect.ForwardingQueue;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import java.util.Collection;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@J2ktIncompatible
+@GwtIncompatible
+/* loaded from: classes8.dex */
+public abstract class ForwardingBlockingQueue<E> extends ForwardingQueue<E> implements BlockingQueue<E> {
+    @Override // com.google.common.collect.ForwardingQueue, com.google.common.collect.ForwardingCollection, com.google.common.collect.ForwardingObject
+    public abstract BlockingQueue<E> delegate();
+
+    @Override // java.util.concurrent.BlockingQueue
+    @CanIgnoreReturnValue
+    public int drainTo(Collection<? super E> collection, int i) {
+        return delegate().drainTo(collection, i);
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    @CanIgnoreReturnValue
+    public boolean offer(E e, long j, TimeUnit timeUnit) throws InterruptedException {
+        return delegate().offer(e, j, timeUnit);
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    @CanIgnoreReturnValue
+    public E poll(long j, TimeUnit timeUnit) throws InterruptedException {
+        return delegate().poll(j, timeUnit);
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    public void put(E e) throws InterruptedException {
+        delegate().put(e);
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    public int remainingCapacity() {
+        return delegate().remainingCapacity();
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    @CanIgnoreReturnValue
+    public E take() throws InterruptedException {
+        return delegate().take();
+    }
+
+    @Override // java.util.concurrent.BlockingQueue
+    @CanIgnoreReturnValue
+    public int drainTo(Collection<? super E> collection) {
+        return delegate().drainTo(collection);
+    }
+}

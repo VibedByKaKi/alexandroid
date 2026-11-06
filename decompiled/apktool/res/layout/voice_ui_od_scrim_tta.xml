@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131427991" android:layout_width="-1" android:layout_height="-1" android:soundEffectsEnabled="false" style="?voiceOdContentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.voice.ui.widget.AlexaChromeView android:id="@2131427891" android:layout_width="-1" android:layout_height="@2131168090" android:layout_alignParentBottom="true" app:voiceChrome="@drawable/ctr_voice_chrome_glow" app:voiceColor="#ff1d53f6" app:voiceShadow="@drawable/voice_ui_chrome_shadow" app:voiceShadowHeight="6.0dip" />
+    <ImageView android:id="@2131427800" android:padding="@2131167833" android:focusable="true" android:visibility="2" android:clickable="true" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentTop="true" android:soundEffectsEnabled="false" android:contentDescription="@2132020995" android:layout_alignParentEnd="true" style="?voiceOdCloseStyle" />
+    <ImageView android:id="@2131429804" android:focusable="true" android:clickable="true" android:layout_width="@2131168146" android:layout_height="@2131168140" android:layout_marginBottom="@2131168141" android:scaleType="5" android:layout_above="@2131427891" android:layout_centerHorizontal="true" android:soundEffectsEnabled="false" android:contentDescription="@2132020996" style="?voiceOdTtaIngressStyle" />
+    <LinearLayout android:gravity="0x00000001" android:orientation="1" android:id="@2131428468" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131168235" android:layout_above="@2131429804" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@2131168195" android:textColor="@2131103686" android:id="@2131428471" android:padding="@2131168094" android:layout_width="-2" android:layout_height="-2" android:textAllCaps="true" android:importantForAccessibility="2" />
+        <TextView android:textSize="@2131168193" android:textColor="?16842806" android:id="@2131428470" android:padding="@2131168094" android:layout_width="-2" android:layout_height="-2" android:importantForAccessibility="2" />
+    </LinearLayout>
+</RelativeLayout>

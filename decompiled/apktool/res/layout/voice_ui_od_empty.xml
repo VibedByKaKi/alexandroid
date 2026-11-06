@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1" style="?voiceOdContentWindowStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="-1" android:layout_height="-1">
+        <com.amazon.alexa.voice.ui.onedesign.widget.background.CardLayout android:id="@2131427817" app:gradientBottomColor="@color/voice_ui_od_gradient_background_mask_bottom" app:gradientTopColor="@color/voice_ui_od_gradient_background_mask_top" style="?voiceOdCardStyle">
+            <androidx.core.widget.NestedScrollView android:scrollbarStyle="0x02000000" android:id="@2131429414" android:layout_width="-1" android:layout_height="-1" android:fillViewport="true">
+                <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1">
+                    <include layout="@layout/voice_ui_od_header" />
+                    <LinearLayout android:gravity="0x00000011" android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131168096" android:paddingEnd="@2131168096">
+                        <ImageView android:id="@2131428511" android:layout_width="@2131168086" android:layout_height="@2131168086" android:layout_marginTop="@2131168085" android:layout_marginBottom="@2131168091" android:scaleType="2" android:contentDescription="@2132020913" />
+                        <TextView android:textSize="@2131168120" android:textColor="?16842806" android:gravity="0x00000001" android:id="@2131427991" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168094" android:layout_marginBottom="@2131168094" />
+                        <TextView android:textSize="@2131168118" android:textColor="?16842806" android:gravity="0x00000011" android:id="@2131429841" android:padding="@2131168094" android:layout_width="-2" android:layout_height="-2" />
+                        <include android:visibility="2" layout="@layout/voice_ui_od_list_manage_button" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.amazon.alexa.voice.ui.onedesign.widget.background.CardLayout>
+    </FrameLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

@@ -1,0 +1,216 @@
+package com.dee.app.contacts.interfaces.models.data;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import androidx.annotation.NonNull;
+import com.amazon.deecomms.contacts.database.provider.ContactProviderContract;
+import com.dee.app.contacts.interfaces.models.data.enums.ContactSourceType;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+import java.util.Collections;
+import java.util.List;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+public class ContactPhoneNumber implements Parcelable {
+    public static final Parcelable.Creator<ContactPhoneNumber> CREATOR = new Parcelable.Creator<ContactPhoneNumber>() { // from class: com.dee.app.contacts.interfaces.models.data.ContactPhoneNumber.1
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public ContactPhoneNumber createFromParcel(Parcel parcel) {
+            return new ContactPhoneNumber(parcel, 0);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public ContactPhoneNumber[] newArray(int i) {
+            return new ContactPhoneNumber[i];
+        }
+    };
+
+    @JsonProperty("contactSource")
+    private String contactSource;
+
+    @JsonProperty("displayTypeName")
+    private String displayTypeName;
+
+    @JsonProperty("eligibilityStatusList")
+    private List<String> eligibilityStatusList;
+
+    @JsonProperty("isCOBOEnabled")
+    private boolean isCOBOEnabled;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("obfuscatedPhoneNumber")
+    private String obfuscatedPhoneNumber;
+
+    @JsonProperty("number")
+    private String phoneNumber;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty(ContactProviderContract.AddressEntry.COLUMN_ADDRESS_RAW_TYPE)
+    private String rawType;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("type")
+    private PhoneNumberType type;
+
+    private ContactPhoneNumber(Parcel parcel) {
+        this.isCOBOEnabled = false;
+        this.eligibilityStatusList = Collections.EMPTY_LIST;
+        this.contactSource = "";
+        this.phoneNumber = parcel.readString();
+        this.rawType = parcel.readString();
+        this.type = (PhoneNumberType) parcel.readParcelable(PhoneNumberType.class.getClassLoader());
+        this.obfuscatedPhoneNumber = parcel.readString();
+        this.isCOBOEnabled = parcel.readInt() != 0;
+        this.contactSource = parcel.readString();
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && getClass() == obj.getClass()) {
+            ContactPhoneNumber contactPhoneNumber = (ContactPhoneNumber) obj;
+            if (Objects.equal(this.type, contactPhoneNumber.type) && Objects.equal(this.rawType, contactPhoneNumber.rawType) && Objects.equal(this.phoneNumber, contactPhoneNumber.phoneNumber) && Objects.equal(this.obfuscatedPhoneNumber, contactPhoneNumber.obfuscatedPhoneNumber) && Objects.equal(Boolean.valueOf(this.isCOBOEnabled), Boolean.valueOf(contactPhoneNumber.isCOBOEnabled)) && Objects.equal(this.contactSource, contactPhoneNumber.contactSource)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String getContactSource() {
+        return this.contactSource;
+    }
+
+    public String getDisplayTypeName() {
+        return this.displayTypeName;
+    }
+
+    public List<String> getEligibilityStatusList() {
+        return this.eligibilityStatusList;
+    }
+
+    public String getObfuscatedPhoneNumber() {
+        return this.obfuscatedPhoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public String getRawType() {
+        return this.rawType;
+    }
+
+    public PhoneNumberType getType() {
+        return this.type;
+    }
+
+    public int hashCode() {
+        return Objects.hashCode(this.type, this.rawType, this.phoneNumber, this.obfuscatedPhoneNumber, Boolean.valueOf(this.isCOBOEnabled), this.contactSource);
+    }
+
+    public boolean isCOBOEnabled() {
+        return this.isCOBOEnabled;
+    }
+
+    public void setCoboEnabled(boolean z) {
+        this.isCOBOEnabled = z;
+    }
+
+    public void setContactSource(String str) {
+        this.contactSource = str;
+    }
+
+    public void setDisplayTypeName(String str) {
+        this.displayTypeName = str;
+    }
+
+    public void setEligibilityStatusList(List<String> list) {
+        this.eligibilityStatusList = list;
+    }
+
+    public void setObfuscatedPhoneNumber(String str) {
+        this.obfuscatedPhoneNumber = str;
+    }
+
+    public void setPhoneNumber(String str) {
+        this.phoneNumber = str;
+    }
+
+    public void setRawType(String str) {
+        this.rawType = str;
+    }
+
+    public void setType(PhoneNumberType phoneNumberType) {
+        this.type = phoneNumberType;
+    }
+
+    public String toString() {
+        return MoreObjects.toStringHelper(this).add("type", this.type).add(ContactProviderContract.AddressEntry.COLUMN_ADDRESS_RAW_TYPE, this.rawType).add("phoneNumber", this.phoneNumber).add("obfuscatedPhoneNumber", this.obfuscatedPhoneNumber).add("isCOBOEnabled", this.isCOBOEnabled).add("contactSource", this.contactSource).toString();
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.phoneNumber);
+        String str = this.rawType;
+        if (str == null) {
+            str = "";
+        }
+        parcel.writeString(str);
+        parcel.writeParcelable(this.type, i);
+        parcel.writeString(this.obfuscatedPhoneNumber);
+        parcel.writeInt(this.isCOBOEnabled ? 1 : 0);
+        parcel.writeString(this.contactSource);
+    }
+
+    public ContactPhoneNumber() {
+        this.isCOBOEnabled = false;
+        this.eligibilityStatusList = Collections.EMPTY_LIST;
+        this.contactSource = "";
+    }
+
+    public ContactPhoneNumber(@NonNull ContactPhoneNumber contactPhoneNumber) {
+        this.isCOBOEnabled = false;
+        this.eligibilityStatusList = Collections.EMPTY_LIST;
+        this.contactSource = "";
+        this.type = contactPhoneNumber.getType();
+        this.rawType = contactPhoneNumber.getRawType();
+        this.phoneNumber = contactPhoneNumber.getPhoneNumber();
+        this.obfuscatedPhoneNumber = contactPhoneNumber.getObfuscatedPhoneNumber();
+        this.isCOBOEnabled = contactPhoneNumber.isCOBOEnabled();
+        this.contactSource = contactPhoneNumber.getContactSource();
+    }
+
+    public ContactPhoneNumber(PhoneNumberType phoneNumberType, String str) {
+        this.isCOBOEnabled = false;
+        this.eligibilityStatusList = Collections.EMPTY_LIST;
+        this.contactSource = "";
+        this.type = phoneNumberType;
+        this.rawType = null;
+        this.phoneNumber = str;
+        this.contactSource = ContactSourceType.UnsetContact.getName();
+    }
+
+    public ContactPhoneNumber(String str, String str2) {
+        this.isCOBOEnabled = false;
+        this.eligibilityStatusList = Collections.EMPTY_LIST;
+        this.contactSource = "";
+        this.type = null;
+        this.rawType = str;
+        this.phoneNumber = str2;
+        this.contactSource = ContactSourceType.UnsetContact.getName();
+    }
+
+    public /* synthetic */ ContactPhoneNumber(Parcel parcel, int i) {
+        this(parcel);
+    }
+}

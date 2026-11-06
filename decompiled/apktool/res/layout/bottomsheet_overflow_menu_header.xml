@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131230995" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="0x00000001" android:id="@2131429111" android:background="@2131230996" android:layout_width="@2131165535" android:layout_height="@2131165533" android:layout_marginTop="@2131165534" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout android:id="@2131429105" android:layout_width="-1" android:layout_height="-2" android:layout_marginVertical="10.0dip" app:layout_constraintTop_toBottomOf="@id/overflow_drag_handle">
+        <ImageView android:id="@2131429108" android:layout_width="@2131165537" android:layout_height="@2131165536" android:layout_margin="@2131165532" android:src="@2131231424" android:tint="?2130970344" android:contentDescription="@2132017954" android:layout_alignParentStart="true" />
+        <ImageView android:id="@2131427571" android:layout_width="@2131165538" android:layout_height="@2131165536" android:layout_margin="@2131165532" android:src="@2131230893" android:layout_centerInParent="true" android:contentDescription="@2132017960" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

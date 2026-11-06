@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165437" android:ellipsize="3" android:orientation="1" android:id="@2131429736" android:paddingBottom="@2131165413" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492892" android:singleLine="false" app:fontName="app_text_bold" />
+    <RelativeLayout android:layout_width="-2" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165434" android:ellipsize="3" android:orientation="1" android:id="@2131429593" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492891" android:singleLine="false" app:fontName="app_text_regular" />
+        <com.airbnb.lottie.LottieAnimationView android:id="@2131428675" android:visibility="2" android:layout_width="40.0dip" android:layout_height="20.0dip" android:scaleType="7" android:importantForAccessibility="2" app:lottie_autoPlay="false" app:lottie_loop="true" />
+    </RelativeLayout>
+</merge>

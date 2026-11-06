@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="@2131166030" android:layout_marginEnd="@2131166030"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="0x00000031" android:id="@2131427814" android:focusable="true" android:clickable="true" android:contentDescription="@2132018522" style="@style/CallingFloatingActionButton.effects" />
+    <com.amazon.alexa.font.FontTextView android:textColor="@17170443" android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131427816" android:layout_width="-2" android:layout_height="-2" android:importantForAccessibility="2" android:textAlignment="1" />
+</LinearLayout>

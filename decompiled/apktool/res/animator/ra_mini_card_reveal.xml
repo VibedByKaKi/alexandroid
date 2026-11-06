@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:shareInterpolator="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="@2130772093" android:duration="@2131493022" android:valueFrom="" android:valueTo="" android:valueType="0" android:propertyName="" />
+    <objectAnimator android:interpolator="@2130772049" android:duration="@2131493027" android:valueFrom="@2131165529" android:valueTo="0" android:valueType="0" android:propertyName="" />
+</set>

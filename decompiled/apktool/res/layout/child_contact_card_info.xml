@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131427969" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="0" android:id="@2131427875" android:background="@2131103570" android:layout_width="-1" android:layout_height="@2131165726" android:baselineAligned="false">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131167915" android:textColor="@2131099974" android:layout_gravity="0x00000010" android:id="@2131427881" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132019182" android:layout_weight="1.0" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" app:fontName="app_text_regular" />
+    </LinearLayout>
+    <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131427885" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:baselineAligned="false" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724">
+        <LinearLayout android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="@2131493099">
+            <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165728" android:textColor="@2131099972" android:id="@2131427887" android:layout_width="-2" android:layout_height="-2" android:text="@2132019880" app:fontName="app_text_regular" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165727" android:textColor="@2131099974" android:id="@2131427886" android:layout_width="-2" android:layout_height="-2" android:text="@2132019881" app:fontName="app_text_regular" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492902">
+            <ImageView android:id="@2131428186" android:visibility="2" android:clickable="false" android:layout_width="-2" android:layout_height="-2" android:src="@2131231348" android:tint="@2131099726" android:contentDescription="@2132018520" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165652" android:textColor="@2131099973" android:id="@2131428187" android:visibility="2" android:clickable="false" android:layout_width="-2" android:layout_height="-2" android:text="@2132018145" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:id="@2131427981" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724" style="@style/contactInfoDividerStyle" />
+    <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131427888" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:baselineAligned="false" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724">
+        <LinearLayout android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="@2131493099">
+            <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165728" android:textColor="@2131099972" android:id="@2131427890" android:layout_width="-2" android:layout_height="-2" android:text="@2132020378" app:fontName="app_text_regular" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165727" android:textColor="@2131099974" android:id="@2131427889" android:layout_width="-2" android:layout_height="-2" android:text="@2132020379" app:fontName="app_text_regular" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492902">
+            <ImageView android:id="@2131428189" android:visibility="2" android:clickable="false" android:layout_width="-2" android:layout_height="-2" android:src="@2131231348" android:tint="@2131099726" android:contentDescription="@2132018521" />
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165652" android:textColor="@2131099973" android:id="@2131428190" android:visibility="2" android:clickable="false" android:layout_width="-2" android:layout_height="-2" android:text="@2132018145" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

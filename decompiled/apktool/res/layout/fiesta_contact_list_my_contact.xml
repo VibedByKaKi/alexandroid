@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131428956" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="@2131165917"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:id="@2131428957" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165742" android:layout_marginStart="@2131166019" android:layout_alignParentStart="true" app:fontName="app_text_regular" style="@style/fiestaContactNameStyle" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165794" android:id="@2131428955" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131166019" android:text="@2132019869" android:layout_below="@2131428957" android:layout_marginStart="@2131166019" android:layout_alignParentStart="true" app:fontName="app_text_medium" style="@style/fiestaMyProfileStyle" />
+</RelativeLayout>

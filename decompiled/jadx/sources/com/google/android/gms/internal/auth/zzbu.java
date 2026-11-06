@@ -1,0 +1,31 @@
+package com.google.android.gms.internal.auth;
+
+import com.google.android.gms.auth.api.proxy.ProxyApi;
+import com.google.android.gms.auth.api.proxy.ProxyResponse;
+import com.google.android.gms.common.api.Status;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes7.dex */
+final class zzbu implements ProxyApi.ProxyResult {
+    private final Status zza;
+    private ProxyResponse zzb;
+
+    public zzbu(ProxyResponse proxyResponse) {
+        this.zzb = proxyResponse;
+        this.zza = Status.RESULT_SUCCESS;
+    }
+
+    @Override // com.google.android.gms.auth.api.proxy.ProxyApi.ProxyResult
+    public final ProxyResponse getResponse() {
+        return this.zzb;
+    }
+
+    @Override // com.google.android.gms.common.api.Result
+    public final Status getStatus() {
+        return this.zza;
+    }
+
+    public zzbu(Status status) {
+        this.zza = status;
+    }
+}

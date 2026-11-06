@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131103278" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/oobe_header" />
+    <FrameLayout android:id="@2131429040" android:paddingBottom="@2131167344" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131167343" android:paddingEnd="@2131167343" />
+</LinearLayout>

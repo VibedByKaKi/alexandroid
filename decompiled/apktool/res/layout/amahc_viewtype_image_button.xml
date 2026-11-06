@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:gravity="0x00800015" android:id="@2131428528" android:background="@17170445" android:clickable="false" android:duplicateParentState="true" android:layout_width="@2131165449" android:layout_height="@2131165394" android:scaleType="3" android:contentDescription="@2132017467" />
+</merge>

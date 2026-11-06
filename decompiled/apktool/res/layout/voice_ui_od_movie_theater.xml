@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429709" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/voice_ui_od_header" />
+    <LinearLayout android:orientation="1" android:id="@2131429708" android:layout_width="-1" android:layout_height="-2">
+        <TextView android:textSize="@2131168120" android:textColor="?16842806" android:ellipsize="3" android:id="@2131428960" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168189" android:layout_marginBottom="@2131168188" android:maxLines="2" android:layout_marginStart="@2131168214" android:layout_marginEnd="@2131168214" />
+        <TextView android:textSize="@2131168119" android:textColor="?16842808" android:ellipsize="3" android:id="@2131428683" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131168187" android:maxLines="1" android:layout_marginStart="@2131168214" android:layout_marginEnd="@2131168214" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="0x02000000" android:id="@2131429710" android:paddingBottom="@2131168098" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-1" android:importantForAccessibility="2" android:paddingStart="@2131168214" android:paddingEnd="@2131168214" app:layoutManager="LinearLayoutManager" />
+</LinearLayout>

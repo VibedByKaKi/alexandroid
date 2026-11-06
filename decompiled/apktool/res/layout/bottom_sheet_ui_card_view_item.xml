@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131427677" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167051"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="0x00000010" android:orientation="0" android:id="@2131427679" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="?2130968738" android:paddingHorizontal="@2131167029" android:paddingVertical="@2131167049">
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130970174" android:layout_gravity="0x00800003" android:id="@2131427678" android:layout_width="-2" android:layout_height="-2" android:layout_marginEnd="@2131167017" style="@style/mosaic_font_body_01" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130970172" android:id="@2131427676" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167052" android:layout_below="@2131427678" style="@style/mosaic_font_body_03" />
+        <ImageView android:id="@2131427673" android:layout_width="-2" android:layout_height="-2" android:src="@2131231479" android:tint="?2130970170" android:layout_centerVertical="true" android:layout_marginStart="@2131167017" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:layout_gravity="0x00800005" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+</LinearLayout>

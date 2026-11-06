@@ -1,0 +1,52 @@
+package com.bumptech.glide;
+
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import androidx.annotation.CheckResult;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RawRes;
+import java.io.File;
+import java.net.URL;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+interface ModelTypes<T> {
+    @NonNull
+    @CheckResult
+    T load(@Nullable Bitmap bitmap);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable Drawable drawable);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable Uri uri);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable File file);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable @DrawableRes @RawRes Integer num);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable Object obj);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable String str);
+
+    @CheckResult
+    @Deprecated
+    T load(@Nullable URL url);
+
+    @NonNull
+    @CheckResult
+    T load(@Nullable byte[] bArr);
+}

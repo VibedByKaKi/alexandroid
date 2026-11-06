@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131099794" android:layout_width="-1" android:layout_height="-1" style="@style/viewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165601" android:textColor="@2131099909" android:ellipsize="3" android:id="@2131427766" android:visibility="2" android:text="@2132017999" android:maxLines="1" app:fontName="app_text_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/CallInformation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

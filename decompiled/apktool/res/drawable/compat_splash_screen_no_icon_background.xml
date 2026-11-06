@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="0x00000077">
+        <color android:color="?2130972610" />
+    </item>
+    <item android:gravity="0x00000011" android:height="@2131167704" android:width="@2131167704" android:drawable="?2130972608" />
+    <item android:gravity="0x00000011" android:height="@2131167699" android:width="@2131167699">
+        <shape android:shape="1">
+            <solid android:color="@17170445" />
+            <stroke android:width="@2131167701" android:color="?2130972610" />
+        </shape>
+    </item>
+</layer-list>

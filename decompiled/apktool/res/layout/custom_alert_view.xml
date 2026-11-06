@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_gravity="0x00000030" android:id="@2131429829" android:background="@17170445" android:layout_width="-1" android:layout_height="-2" android:layout_alignParentTop="true" android:rotation="180.0" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@2131427470" android:tag="" android:layout_width="-1" android:layout_height="-1">
+        <androidx.core.widget.NestedScrollView android:layout_width="-1" android:layout_height="-1" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1">
+                <include layout="@layout/status_banner" />
+                <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428078" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" app:primaryText="@string/device_deregistered" />
+                <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428736" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="true" app:iconSrc="@null" app:iconTint="?mosaicAction10" />
+                <com.amazon.alexa.mosaic.view.ListItemIconLink android:id="@2131428016" android:tag="" android:layout_width="-1" android:layout_height="-2" app:active="true" app:clickable="true" app:iconLink="@null" app:iconLinkTint="?mosaicAction10" app:primaryText="@string/custom_alert_create" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" />
+                <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131428229" android:layout_width="-1" android:layout_height="-2" app:text="@string/custom_alert_enabled" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@2131428228" android:layout_width="-1" android:layout_height="-2" android:nestedScrollingEnabled="false" />
+                <com.amazon.alexa.font.FontTextView android:gravity="0x00000010" android:id="@2131428224" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:text="@2132019890" android:layout_marginStart="@2131166137" style="@style/mosaic_list_item_primary_text" />
+                <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131428128" android:layout_width="-1" android:layout_height="-2" app:text="@string/custom_alert_disabled" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@2131428127" android:layout_width="-1" android:layout_height="-2" android:nestedScrollingEnabled="false" />
+                <com.amazon.alexa.font.FontTextView android:gravity="0x00000010" android:id="@2131428223" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:text="@2132019889" android:layout_marginStart="@2131166137" style="@style/mosaic_list_item_primary_text" />
+                <View style="@style/mosaic_list_item_divider" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.amazon.alexa.mosaic.view.ErrorView android:id="@2131428261" android:tag="" android:layout_width="-1" android:layout_height="-1" app:bodyText="@string/error_all_alerts_body" app:headlineText="@string/error_all_alerts_headline" app:iconSrc="@null" app:iconTint="?mosaicNeutral10" app:linkText="@string/error_tap_to_retry" />
+</FrameLayout>

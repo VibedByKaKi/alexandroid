@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="?2130969819" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165410">
+        <com.amazon.alexa.font.FontTextView android:textSize="@2131165435" android:textColor="?2130969815" android:ellipsize="3" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165413" android:layout_marginBottom="@2131165413" android:text="@2132017500" android:maxLines="1" android:layout_centerInParent="true" android:layout_marginStart="@2131165415" android:layout_marginEnd="@2131165415" app:fontName="app_text_regular" />
+    </RelativeLayout>
+    <android.widget.ImageView android:id="@2131428256" android:layout_width="@2131165404" android:layout_height="@2131165404" android:layout_marginTop="@2131165412" android:src="@2131232122" android:scaleType="3" android:tint="?2130969816" android:importantForAccessibility="2" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165436" android:textColor="?2130969815" android:ellipsize="3" android:id="@2131428258" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165415" android:layout_marginBottom="@2131165422" android:maxWidth="@2131165426" android:text="@2132017493" android:maxLines="1" app:fontName="app_display_bold" />
+    <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:ellipsize="3" android:id="@2131428257" android:layout_width="-2" android:layout_height="-2" android:maxWidth="@2131165426" android:text="@2132017492" app:fontName="app_text_bold" />
+</merge>

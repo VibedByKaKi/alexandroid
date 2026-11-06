@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:baselineAligned="false" style="@style/viewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131427793" layout="@layout/fiesta_audio_call_header_layout" />
+    <LinearLayout android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="@2131492900">
+        <include android:layout_gravity="0x00000011" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_call_participant_information" />
+    </LinearLayout>
+    <LinearLayout android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+        <include android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/mosaic_end_call_button" />
+        <include android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/mosaic_ans_call_button" />
+    </LinearLayout>
+</LinearLayout>

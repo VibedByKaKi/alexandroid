@@ -1,0 +1,20 @@
+package com.amazon.alexa.wakeword.davs;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public enum ArtifactDownloadFailure {
+    ARTIFACT_MANIFEST_PARSE_FAILURE,
+    ARTIFACT_MANIFEST_DOWNLOAD_FAILURE,
+    ARTIFACT_FILE_NOT_FOUND,
+    READ_ARTIFACT_FILE_FAILURE,
+    CONNECTION_FAILED,
+    CONNECTION_TIMED_OUT,
+    CHECKSUM_MISMATCH,
+    NO_SPACE_AVAILABLE,
+    INVALID_URL,
+    INVALID_CONTENT_LENGTH,
+    ARTIFACT_FILE_WRITE_FAILURE,
+    HTTP_RESPONSE_ERROR,
+    ILLEGAL_ARGUMENT,
+    OTHER
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="@2131165917"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:ellipsize="3" android:id="@2131427772" android:layout_width="-2" android:layout_height="-2" android:maxLines="1" app:fontName="app_text_regular" style="@style/fiestaDeviceTargetingName" />
+    <com.amazon.alexa.font.FontTextView android:textColor="?2130969816" android:ellipsize="3" android:id="@2131427771" android:layout_width="-2" android:layout_height="-2" android:maxLines="1" app:fontName="app_text_regular" style="@style/fiestaDeviceTargetingStatus" />
+</LinearLayout>

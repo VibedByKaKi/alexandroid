@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:id="@2131428497" android:paddingTop="@2131168094" android:paddingBottom="@2131168094" android:layout_width="-2" android:layout_height="-2">
+        <LinearLayout android:orientation="0" android:id="@2131428502" android:layout_width="-2" android:layout_height="-2" />
+    </HorizontalScrollView>
+</LinearLayout>

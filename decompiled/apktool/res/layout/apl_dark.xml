@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.apl.android.APLLayout android:theme="@2132083609" android:id="@2131427556" android:layout_width="-1" android:layout_height="-1" app:aplTheme="dark" app:defaultBackground="#00000000" app:isRound="false" app:mode="mobile"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

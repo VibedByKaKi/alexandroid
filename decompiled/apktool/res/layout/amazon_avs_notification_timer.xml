@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000003" android:orientation="1" android:layout_width="-1" android:layout_height="@2131165458"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="0x00000001" android:id="@2131427519" android:layout_width="-1" android:layout_height="18.0dip" android:text="@2132017719" style="@style/AlexaTheme.Notification.AlertBody" />
+    <Chronometer android:id="@2131427518" android:layout_width="-1" android:layout_height="-2" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@2131428337" android:background="@2131232601" android:visibility="2" android:layout_width="@2131167547" android:layout_height="@2131167547"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@2131428339" android:layout_width="@2131167549" android:layout_height="@2131167549" android:layout_margin="@2131167548" android:src="@2131231524" android:scaleType="3" />
+</LinearLayout>

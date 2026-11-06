@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="1" android:id="@2131428617" android:background="?2130969391" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@2131428447" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131168091" layout="@layout/voice_ui_od_header" />
+    <TextView android:textSize="@2131168127" android:textStyle="0x00000001" android:textColor="?16842806" android:id="@2131428455" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131168091" app:layout_constraintBottom_toTopOf="@id/listContainer" app:layout_constraintTop_toBottomOf="@id/headerContainer" />
+    <androidx.core.widget.NestedScrollView android:scrollbarStyle="0x02000000" android:id="@2131428663" android:layout_width="@2131168147" android:layout_height="@2131168147" android:fillViewport="true" app:layout_constraintBottom_toTopOf="@id/continueContainer" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headingText">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168156">
+            <LinearLayout android:orientation="1" android:id="@2131429300" android:layout_width="-1" android:layout_height="-2">
+                <include android:id="@2131429299" layout="@layout/voice_ui_od_list_section_header" />
+                <include android:id="@2131429298" layout="@layout/voice_ui_od_languages_list" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:id="@2131427617" android:layout_width="-1" android:layout_height="-2">
+                <include android:id="@2131427616" layout="@layout/voice_ui_od_list_section_header" />
+                <include android:id="@2131429005" layout="@layout/voice_ui_od_list_section_description" />
+                <include android:id="@2131427615" layout="@layout/voice_ui_od_languages_list" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout android:id="@2131428000" android:layout_width="-1" android:layout_height="-2" android:layout_marginStart="@2131168091" android:layout_marginEnd="@2131168091" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <Button android:enabled="true" android:textSize="@2131168149" android:textColor="@2131103667" android:gravity="0x00000011" android:id="@2131427999" android:background="@2131232726" android:layout_width="-1" android:layout_height="@2131168122" android:layout_marginTop="@2131168126" android:layout_marginBottom="@2131168123" android:textAllCaps="true" style="?16843563" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

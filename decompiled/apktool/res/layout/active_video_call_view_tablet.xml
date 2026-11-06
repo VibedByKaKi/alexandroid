@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:fitsSystemWindows="true" android:baselineAligned="false" android:contentDescription="@2132020867" style="@style/viewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131427793" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168042" layout="@layout/fiesta_video_calling_toolbar" />
+    <LinearLayout android:layout_width="-1" android:layout_height="-1">
+        <include android:layout_gravity="0x00000011" android:id="@2131427790" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_call_participant_information" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="0x00000050" android:orientation="1" android:id="@2131427779" android:visibility="0" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:orientation="1" android:id="@2131429387" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+            <include android:id="@2131429389" layout="@layout/rtt_section" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00000001" android:orientation="1" android:id="@2131427774" android:layout_marginBottom="@2131165588" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166132" android:layout_marginBottom="@2131166130">
+                <include android:id="@2131428197" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_effect_menu_button" />
+                <include android:id="@2131427778" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_on" />
+                <include android:id="@2131427777" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_off" />
+                <include android:id="@2131428923" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_camera_button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+                <include android:id="@2131429758" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492898" android:layout_marginStart="@2131165587" android:layout_marginEnd="@2131165587" layout="@layout/fiesta_toggle_video_button" />
+                <include android:id="@2131428235" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492898" android:layout_marginStart="@2131165587" android:layout_marginEnd="@2131165587" layout="@layout/fiesta_end_call_button" />
+                <include android:id="@2131428773" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492898" android:layout_marginStart="@2131165587" android:layout_marginEnd="@2131165587" layout="@layout/fiesta_microphone_call_button" />
+                <include android:id="@2131429579" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_weight="@2131492898" android:layout_marginStart="@2131165587" android:layout_marginEnd="@2131165587" layout="@layout/fiesta_storytime_button" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00000050" android:orientation="1" android:id="@2131429285" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+            <include layout="@layout/fiesta_reactions_menu_button" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

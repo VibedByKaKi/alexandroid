@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="@2132017409"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="@2132019567" />
+    <Preference android:title="@2132017416" android:selectable="false" android:key="@2132017417" android:singleLineTitle="false" />
+    <SwitchPreference android:title="@2132017343" android:key="@2132017342" android:defaultValue="true" />
+    <Preference android:title="@2132018594" android:key="@2132018595" android:summary="@2132018596" />
+    <SwitchPreference android:title="@2132017389" android:key="@2132017388" android:summary="@2132017382" android:defaultValue="true" android:singleLineTitle="false" />
+    <Preference android:title="@2132018459" android:key="@2132018460" android:summary="@2132018461" />
+    <PreferenceCategory android:title="@2132017432" android:key="@2132020018">
+        <Preference android:title="@2132017433" android:key="@2132019248">
+            <intent android:action="" />
+        </Preference>
+        <Preference android:key="@2132017440" android:singleLineTitle="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

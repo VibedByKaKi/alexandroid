@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00800005" android:orientation="0" android:id="@2131428033" android:paddingRight="@2131167108" android:layout_width="-1" android:layout_height="@2131167107" android:paddingEnd="@2131167108"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:layout_gravity="0x00000010" android:id="@2131427803" android:layout_width="-2" android:layout_height="-2" android:text="@2132019819" style="?buttonBarNegativeButtonStyle" />
+    <Button android:layout_gravity="0x00000010" android:id="@2131427954" android:layout_width="-2" android:layout_height="-2" android:minWidth="@2131167106" android:text="@2132019820" style="?buttonBarPositiveButtonStyle" />
+</LinearLayout>

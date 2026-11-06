@@ -1,0 +1,90 @@
+package com.amazonaws.services.iot.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import org.apache.commons.text.StringSubstitutor;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+public class ListSecurityProfilesForTargetResult implements Serializable {
+    private String nextToken;
+    private List<SecurityProfileTargetMapping> securityProfileTargetMappings;
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof ListSecurityProfilesForTargetResult)) {
+            return false;
+        }
+        ListSecurityProfilesForTargetResult listSecurityProfilesForTargetResult = (ListSecurityProfilesForTargetResult) obj;
+        if ((listSecurityProfilesForTargetResult.getSecurityProfileTargetMappings() == null) ^ (getSecurityProfileTargetMappings() == null)) {
+            return false;
+        }
+        if (listSecurityProfilesForTargetResult.getSecurityProfileTargetMappings() != null && !listSecurityProfilesForTargetResult.getSecurityProfileTargetMappings().equals(getSecurityProfileTargetMappings())) {
+            return false;
+        }
+        if ((listSecurityProfilesForTargetResult.getNextToken() == null) ^ (getNextToken() == null)) {
+            return false;
+        }
+        return listSecurityProfilesForTargetResult.getNextToken() == null || listSecurityProfilesForTargetResult.getNextToken().equals(getNextToken());
+    }
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public List<SecurityProfileTargetMapping> getSecurityProfileTargetMappings() {
+        return this.securityProfileTargetMappings;
+    }
+
+    public int hashCode() {
+        return (((getSecurityProfileTargetMappings() == null ? 0 : getSecurityProfileTargetMappings().hashCode()) + 31) * 31) + (getNextToken() != null ? getNextToken().hashCode() : 0);
+    }
+
+    public void setNextToken(String str) {
+        this.nextToken = str;
+    }
+
+    public void setSecurityProfileTargetMappings(Collection<SecurityProfileTargetMapping> collection) {
+        if (collection == null) {
+            this.securityProfileTargetMappings = null;
+        } else {
+            this.securityProfileTargetMappings = new ArrayList(collection);
+        }
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{");
+        if (getSecurityProfileTargetMappings() != null) {
+            sb.append("securityProfileTargetMappings: " + getSecurityProfileTargetMappings() + ",");
+        }
+        if (getNextToken() != null) {
+            sb.append("nextToken: " + getNextToken());
+        }
+        sb.append(StringSubstitutor.DEFAULT_VAR_END);
+        return sb.toString();
+    }
+
+    public ListSecurityProfilesForTargetResult withNextToken(String str) {
+        this.nextToken = str;
+        return this;
+    }
+
+    public ListSecurityProfilesForTargetResult withSecurityProfileTargetMappings(SecurityProfileTargetMapping... securityProfileTargetMappingArr) {
+        if (getSecurityProfileTargetMappings() == null) {
+            this.securityProfileTargetMappings = new ArrayList(securityProfileTargetMappingArr.length);
+        }
+        for (SecurityProfileTargetMapping securityProfileTargetMapping : securityProfileTargetMappingArr) {
+            this.securityProfileTargetMappings.add(securityProfileTargetMapping);
+        }
+        return this;
+    }
+
+    public ListSecurityProfilesForTargetResult withSecurityProfileTargetMappings(Collection<SecurityProfileTargetMapping> collection) {
+        setSecurityProfileTargetMappings(collection);
+        return this;
+    }
+}

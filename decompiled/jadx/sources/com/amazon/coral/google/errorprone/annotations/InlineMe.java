@@ -1,0 +1,17 @@
+package com.amazon.coral.google.errorprone.annotations;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
+@Documented
+/* loaded from: classes19.dex */
+public @interface InlineMe {
+    String[] imports() default {};
+
+    String replacement();
+
+    String[] staticImports() default {};
+}

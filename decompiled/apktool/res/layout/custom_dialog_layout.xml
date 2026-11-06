@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:paddingBottom="@2131165790" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131165790" android:paddingEnd="@2131165790"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:id="@2131428119" android:paddingBottom="@2131165790" android:layout_width="-1" android:layout_height="-2" app:fontName="app_text_light" style="@style/AlexaComms.large" />
+    <ScrollView android:orientation="1" android:id="@2131428112" android:layout_width="-1" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.amazon.alexa.font.FontTextView android:id="@2131428111" android:layout_width="-1" android:layout_height="-2" app:fontName="app_text_regular" style="@style/AlexaComms.xsmall" />
+    </ScrollView>
+    <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428118" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165788" android:text="@2132018447" android:textAllCaps="true" style="@style/AlexaCommsButton.Primary" />
+    <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428117" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165791" android:text="@2132018429" android:textAllCaps="true" style="@style/AlexaCommsButton.Tertiary" />
+</LinearLayout>

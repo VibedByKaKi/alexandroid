@@ -1,0 +1,31 @@
+package com.google.android.gms.internal.fido;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes7.dex */
+final class zzgz extends zzhb {
+    private final byte[] zzb;
+    private int zzc;
+    private int zzd;
+    private int zze;
+
+    public /* synthetic */ zzgz(byte[] bArr, int i, int i2, boolean z, zzgy zzgyVar) {
+        super(null);
+        this.zze = Integer.MAX_VALUE;
+        this.zzb = bArr;
+        this.zzc = 0;
+    }
+
+    public final int zza(int i) throws zzhd {
+        int i2 = this.zze;
+        this.zze = 0;
+        int i3 = this.zzc + this.zzd;
+        this.zzc = i3;
+        if (i3 <= 0) {
+            this.zzd = 0;
+            return i2;
+        }
+        this.zzd = i3;
+        this.zzc = 0;
+        return i2;
+    }
+}

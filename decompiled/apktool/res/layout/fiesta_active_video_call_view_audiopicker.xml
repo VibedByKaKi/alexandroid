@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:fitsSystemWindows="true" android:baselineAligned="false" android:contentDescription="@2132020867" style="@style/viewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131427793" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168041" layout="@layout/fiesta_video_calling_toolbar" />
+    <include android:id="@2131427794" android:visibility="1" android:layout_width="-2" android:layout_height="-1" android:layout_marginStart="@2131168040" layout="@layout/fiesta_video_calling_toolbar" />
+    <include android:layout_gravity="0x00800005" android:id="@2131427795" android:visibility="1" android:layout_width="-2" android:layout_height="-1" android:layout_marginEnd="@2131168039" layout="@layout/fiesta_video_calling_toolbar" />
+    <LinearLayout android:layout_width="-1" android:layout_height="-1">
+        <include android:layout_gravity="0x00000011" android:id="@2131427790" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_call_participant_information" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="0x00000050" android:orientation="1" android:id="@2131427779" android:visibility="0" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:orientation="1" android:id="@2131429387" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+            <include android:id="@2131429389" layout="@layout/rtt_section" />
+        </LinearLayout>
+        <LinearLayout android:id="@2131427774" android:baselineAligned="false" style="@style/TwoRowFloatingActionButtonGroup">
+            <LinearLayout android:visibility="0" android:layout_marginBottom="@2131167658" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428197" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_effect_menu_button" />
+                <include android:id="@2131427778" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_on" />
+                <include android:id="@2131427777" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_off" />
+                <include android:id="@2131428923" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_camera_button" />
+                <include android:id="@2131429579" android:visibility="2" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_storytime_button" />
+            </LinearLayout>
+            <LinearLayout android:layout_marginBottom="@2131167658" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131429758" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_video_button" />
+                <include android:id="@2131429546" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_speaker_call_button" />
+                <include android:id="@2131428773" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_microphone_call_button" />
+            </LinearLayout>
+            <include android:id="@2131428235" android:layout_width="-1" android:layout_height="-2" layout="@layout/fiesta_end_call_button" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00800053" android:orientation="1" android:id="@2131429285" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+            <include layout="@layout/fiesta_reactions_menu_button" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="0" android:id="@2131427780" android:visibility="1" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="25.0" />
+        <LinearLayout android:gravity="0x00000050" android:orientation="1" android:id="@2131429386" android:layout_width="-2" android:layout_height="-1" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="55.0">
+            <include android:id="@2131429389" layout="@layout/rtt_section" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00800005" android:orientation="0" android:id="@2131427775" android:visibility="0" android:layout_width="-2" android:layout_height="-1" android:layout_weight="15.0">
+            <LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166132" android:layout_marginBottom="@2131166130" android:layout_marginStart="0.0dip" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428197" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_effect_menu_button" />
+                <include android:id="@2131427778" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_on" />
+                <include android:id="@2131427777" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_off" />
+                <include android:id="@2131428923" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_camera_button" />
+                <include android:id="@2131429579" android:visibility="2" android:layout_width="-2" android:layout_height="0.0dip" android:layout_weight="@2131492898" layout="@layout/fiesta_storytime_button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:paddingTop="@2131166132" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166132" android:layout_marginBottom="@2131166130" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428773" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_microphone_call_button" />
+                <include android:id="@2131429546" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_speaker_call_button" />
+                <include android:id="@2131429758" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_video_button" />
+            </LinearLayout>
+            <LinearLayout android:gravity="0x00000011" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166132" android:layout_marginBottom="@2131166130" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428235" android:layout_width="-2" android:layout_height="-2" layout="@layout/fiesta_end_call_button" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00800055" android:layout_gravity="0x00000050" android:orientation="1" android:id="@2131429287" android:visibility="2" android:layout_width="-2" android:layout_height="-1">
+            <include layout="@layout/fiesta_reactions_menu_button" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="0x00800053" android:id="@2131427781" android:visibility="1" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1">
+        <LinearLayout android:gravity="0x00800033" android:orientation="1" android:id="@2131429288" android:visibility="2" android:layout_width="-2" android:layout_height="-1">
+            <include layout="@layout/fiesta_reactions_menu_button" />
+        </LinearLayout>
+        <LinearLayout android:id="@2131427776" android:layout_width="-2" android:layout_height="-1" android:layout_weight="15.0">
+            <LinearLayout android:gravity="0x00000011" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166135" android:layout_marginBottom="@2131166133" android:baselineAligned="false" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428235" android:layout_width="-2" android:layout_height="-2" layout="@layout/fiesta_end_call_button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:paddingTop="@2131166132" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166132" android:layout_marginBottom="@2131166130" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip">
+                <include android:id="@2131429758" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_video_button" />
+                <include android:id="@2131429546" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_speaker_call_button" />
+                <include android:id="@2131428773" android:layout_width="-2" android:layout_height="-1" android:layout_weight="@2131492898" layout="@layout/fiesta_microphone_call_button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="1" android:visibility="0" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131166135" android:layout_marginBottom="@2131166133" style="@style/FloatingActionButtonGroup">
+                <include android:id="@2131428197" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_effect_menu_button" />
+                <include android:id="@2131427778" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_on" />
+                <include android:id="@2131427777" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" layout="@layout/fiesta_call_captioning_toggle_off" />
+                <include android:id="@2131428923" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_weight="@2131492898" layout="@layout/fiesta_toggle_camera_button" />
+                <include android:id="@2131429579" android:visibility="2" android:layout_width="-2" android:layout_height="0.0dip" android:layout_weight="@2131492898" layout="@layout/fiesta_storytime_button" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00000050" android:orientation="1" android:id="@2131429388" android:layout_width="-2" android:layout_height="-1" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="40.0">
+            <include android:id="@2131429389" layout="@layout/rtt_section" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="25.0" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

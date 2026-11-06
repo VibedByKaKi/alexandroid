@@ -1,0 +1,42 @@
+package com.amazon.alexa.presence.service.guardrails;
+
+import android.content.Context;
+import android.util.Log;
+import com.amazon.alexa.presence.library.MetricsRecorder;
+import com.amazon.alexa.presence.library.storage.PersistentLocalStorage;
+import com.amazon.alexa.presence.metrics.MetricsId;
+import com.amazon.alexa.presence.metrics.MetricsMethod;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes18.dex */
+public class PresenceFeatureEnabledGuardrail implements PresenceFeatureGuardrailInterface {
+    private static final String TAG = "com.amazon.alexa.presence.service.guardrails.PresenceFeatureEnabledGuardrail";
+    private final Context ctx;
+    private final String featureDomain;
+    private MetricsRecorder metrics;
+    private final PersistentLocalStorage.PresenceDataStore presenceDataStore;
+
+    public PresenceFeatureEnabledGuardrail(String str, PersistentLocalStorage.PresenceDataStore presenceDataStore, Context context) {
+        this.featureDomain = str;
+        this.presenceDataStore = presenceDataStore;
+        this.ctx = context;
+        try {
+            this.metrics = MetricsRecorder.getMetricsUtil();
+        } catch (Throwable unused) {
+            Log.w(TAG, "Unable to setup metrics service.");
+        }
+    }
+
+    @Override // com.amazon.alexa.presence.service.guardrails.PresenceFeatureGuardrailInterface
+    public boolean checkGuardrail() {
+        boolean contains = this.presenceDataStore.getDomains(this.ctx).contains(this.featureDomain);
+        boolean z = !contains;
+        MetricsRecorder metricsRecorder = this.metrics;
+        if (contains) {
+            metricsRecorder.recordCount(MetricsId.FAILED_GUARDRAIL, MetricsMethod.PRESENCE_FEATURE_ENABLED_GUARDRAIL);
+            return z;
+        }
+        metricsRecorder.recordCount(MetricsId.PASSED_GUARDRAIL, MetricsMethod.PRESENCE_FEATURE_ENABLED_GUARDRAIL);
+        return z;
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="?2130971936" android:duration="?2130971926" android:startOffset="0" android:propertyName="" />
+    <objectAnimator android:interpolator="?2130971936" android:duration="?2130971926" android:startOffset="0" android:propertyName="" />
+    <objectAnimator android:interpolator="?2130971936" android:duration="?2130971926" android:startOffset="0" android:propertyName="" />
+    <objectAnimator android:interpolator="?2130971936" android:duration="?2130971926" android:startOffset="0" android:propertyName="" />
+    <objectAnimator android:interpolator="?2130971936" android:duration="?2130971928" android:startOffset="?2130971927" android:propertyName="" />
+</set>

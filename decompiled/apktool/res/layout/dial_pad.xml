@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.deecomms.calling.ui.DialPad android:orientation="1" android:background="@2131099990" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:id="@2131428095" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165882" android:layout_marginBottom="@2131165882" android:layout_marginStart="@2131165882" android:layout_marginEnd="@2131165882" bind:fontName="app_text_regular" style="@style/AlexaComms.dialpad.display" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428102" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="" bind:numberName="@string/dial_pad_digits_one" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428108" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_ABC" bind:numberName="@string/dial_pad_digits_two" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428107" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_DEF" bind:numberName="@string/dial_pad_digits_three" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428098" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_GHI" bind:numberName="@string/dial_pad_digits_four" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428097" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_JKL" bind:numberName="@string/dial_pad_digits_five" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428105" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_MNO" bind:numberName="@string/dial_pad_digits_six" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428104" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_PQRS" bind:numberName="@string/dial_pad_digits_seven" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428096" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_TUV" bind:numberName="@string/dial_pad_digits_eight" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428101" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_WXYZ" bind:numberName="@string/dial_pad_digits_nine" />
+            </LinearLayout>
+            <include layout="@layout/light_divider" />
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428106" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="" bind:numberName="@string/dial_pad_digits_star" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428110" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="@string/dial_pad_letters_plus_sign" bind:numberName="@string/dial_pad_digits_zero" />
+                <com.amazon.deecomms.calling.ui.DialPadButton android:id="@2131428103" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" bind:letters="" bind:numberName="@string/dial_pad_digits_hash" />
+            </LinearLayout>
+            <com.amazon.deecomms.common.ui.CommsButton android:id="@2131428099" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165882" android:layout_marginBottom="@2131165882" android:text="@2132019145" android:textAllCaps="true" android:layout_marginStart="@2131165882" android:layout_marginEnd="@2131165882" style="@style/AlexaCommsButton.Normal" />
+        </LinearLayout>
+    </ScrollView>
+</com.amazon.deecomms.calling.ui.DialPad>

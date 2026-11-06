@@ -1,0 +1,45 @@
+package com.amazon.deecomms.common.network.acmsrecipes;
+
+import com.amazon.comms.log.CommsLogger;
+import com.amazon.deecomms.calling.model.TargetDeviceModel;
+import com.amazon.deecomms.common.Constants;
+import com.amazon.deecomms.common.metrics.MetricKeys;
+import com.amazon.deecomms.common.network.ACMSClient;
+import com.amazon.deecomms.common.network.AppUrl;
+import com.amazon.deecomms.common.network.IHttpClient;
+import com.amazon.deecomms.common.network.ServiceException;
+import java.io.IOException;
+import java.text.MessageFormat;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes5.dex */
+public class GetTargetDevice {
+    private static final CommsLogger LOG = CommsLogger.getLogger(Constants.LOG_TAG, GetTargetDevice.class);
+    private final ACMSClient client = new ACMSClient(MetricKeys.OP_GET_TARGET_DEVICE);
+    private String mRequestId;
+
+    public TargetDeviceModel execute(String str) throws ServiceException {
+        if (str == null) {
+            return null;
+        }
+        LOG.i("Attempting to retrieve target device");
+        IHttpClient.Request request = this.client.request(MessageFormat.format(AppUrl.GET_TARGET_DEVICE, str));
+        this.mRequestId = request.getRequestId();
+        try {
+            IHttpClient.Response execute = request.authenticatedAsCurrentCommsUser().get().execute();
+            try {
+                TargetDeviceModel targetDeviceModel = (TargetDeviceModel) execute.convert(TargetDeviceModel.class);
+                execute.close();
+                return targetDeviceModel;
+            } finally {
+            }
+        } catch (IOException e) {
+            LOG.e(" IO Exception while retrieving targetDevice", e);
+            return null;
+        }
+    }
+
+    public String getRequestId() {
+        return this.mRequestId;
+    }
+}

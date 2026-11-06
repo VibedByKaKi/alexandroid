@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="1" android:id="@2131428479" android:background="@2131230921" android:padding="@2131165432" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165415" android:importantForAccessibility="1" android:elevation="100.0dip" android:accessibilityTraversalAfter="@2131428492" android:layout_marginHorizontal="@2131165415">
+        <TextView android:textSize="@2131165438" android:textColor="@2131103051" android:id="@2131428478" android:layout_width="-2" android:layout_height="-2" android:text="" android:fontFamily="@2131296300" />
+    </RelativeLayout>
+</RelativeLayout>

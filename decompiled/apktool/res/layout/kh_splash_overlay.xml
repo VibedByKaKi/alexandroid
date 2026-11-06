@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@2131428602" android:background="@2131100189" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-1" android:elevation="@2131166125" android:outlineProvider="1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@2131428600" android:layout_width="-1" android:layout_height="-1" android:src="@2131232192" android:scaleType="6" android:contentDescription="@0" android:importantForAccessibility="2" />
+    <ImageView android:layout_gravity="0x00000011" android:id="@2131428601" android:layout_width="-2" android:layout_height="-2" android:contentDescription="@0" android:importantForAccessibility="2" />
+</FrameLayout>

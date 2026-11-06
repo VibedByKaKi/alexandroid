@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131165354" android:paddingEnd="@2131165353"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@2131428440" android:layout_width="-2" android:layout_height="-2" />
+    <TextView android:id="@2131429573" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168012" android:text="@2132020832" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/handsfree_logo_container" style="@style/MosaicSetupTitleText" />
+    <TextView android:id="@2131429572" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168012" android:text="@2132020826" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/start_uvr_title_text" style="@style/MosaicSetupBodyText" />
+    <TextView android:textSize="@2131165337" android:id="@2131427653" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168012" android:text="@2132020829" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/start_uvr_description_text" style="@style/MosaicSetupBodyText" />
+    <ScrollView android:id="@2131429415" android:layout_width="@2131165481" android:layout_height="@2131165481" android:layout_marginTop="@2131168010" app:layout_constraintBottom_toTopOf="@id/uvr_start_disclaimer_text" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/best_results_text">
+        <LinearLayout android:gravity="0x00000010" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+                <TextView android:layout_width="-2" android:layout_height="-2" android:text="@2132020790" android:layout_marginEnd="@2131165338" style="@style/MosaicSetupBodyText" />
+                <TextView android:id="@2131428953" android:layout_width="-2" android:layout_height="-2" android:text="@2132020830" style="@style/MosaicSetupBodyText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="0x00000010" android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+                <TextView android:layout_width="-2" android:layout_height="-2" android:text="@2132020790" android:layout_marginEnd="@2131165338" style="@style/MosaicSetupBodyText" />
+                <TextView android:id="@2131429637" android:layout_width="-2" android:layout_height="-2" android:text="@2132020831" style="@style/MosaicSetupBodyText" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <android.support.constraint.ConstraintLayout android:id="@2131427732" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165345" android:layout_marginBottom="@2131165341" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/uvr_start_disclaimer_text">
+        <Button android:id="@2131428623" android:layout_width="@2131165481" android:text="@2132020820" android:layout_marginEnd="@2131165343" app:layout_constraintEnd_toStartOf="@id/continue_button" app:layout_constraintStart_toStartOf="parent" style="@style/MosaicSetupSecondaryButton" />
+        <Button android:id="@2131428003" android:layout_width="@2131165481" android:text="@2132020819" android:layout_marginStart="@2131165344" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/later_button" style="@style/MosaicSetupPrimaryButton" />
+    </android.support.constraint.ConstraintLayout>
+    <TextView android:textSize="@2131165350" android:textColor="?2130969815" android:id="@2131429849" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168012" android:text="@2132020827" app:layout_constraintBottom_toTopOf="@id/button_container" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/scroll_view" />
+</android.support.constraint.ConstraintLayout>

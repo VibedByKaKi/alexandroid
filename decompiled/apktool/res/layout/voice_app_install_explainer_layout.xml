@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@2131427958" android:background="@2131099737" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131165354" android:paddingEnd="@2131165353"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="0x00000011" android:id="@2131428434" android:padding="30.0dip" android:layout_width="-1" android:layout_height="-2" android:text="@2132017345" android:textAllCaps="true" style="@style/HeaderText" />
+    <RelativeLayout android:id="@2131428440" android:layout_width="-2" android:layout_height="-2" />
+    <TextView android:id="@2131429750" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165325" android:text="@2132017380" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/handsfree_logo_container" style="@style/SetupTitleText" />
+    <TextView android:id="@2131428433" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165306" android:text="@2132017340" app:layout_constraintTop_toBottomOf="@id/title_text" style="@style/SetupBodyText" />
+    <TextView android:id="@2131427485" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165305" android:text="@2132017341" app:layout_constraintTop_toBottomOf="@id/handsfree_available_message" style="@style/SetupBodyText" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@2131427732" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165345" android:layout_marginBottom="@2131165341" app:layout_constraintBottom_toBottomOf="parent">
+        <Button android:id="@2131428623" android:layout_width="@2131165481" android:text="@2132017369" android:layout_marginEnd="@2131165343" app:layout_constraintEnd_toStartOf="@id/get_app_button" app:layout_constraintStart_toStartOf="parent" style="@style/SetupSecondaryButton" />
+        <Button android:id="@2131428407" android:layout_width="@2131165481" android:text="@2132017344" android:layout_marginStart="@2131165344" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/later_button" style="@style/SetupPrimaryButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

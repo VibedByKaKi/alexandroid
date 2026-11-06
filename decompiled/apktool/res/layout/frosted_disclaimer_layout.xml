@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="1" android:layout_width="-1" android:layout_height="-1" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@2131428396" android:visibility="2" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132018831" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" style="@style/frosted_dismiss_title" />
+    <TextView android:id="@2131428394" android:visibility="2" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132018830" android:layout_below="@2131428396" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/frosted_disclaimer_title" style="@style/frosted_dismiss_body" />
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000011" android:orientation="1" android:id="@2131429227" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="12.0sp" android:textColor="@2131103597" android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131429228" android:layout_width="-1" android:layout_height="-2" android:text="@2132020144" app:fontName="app_display_regular" />
+    <ProgressBar android:id="@2131429226" android:layout_width="-1" android:layout_height="-2" android:progressTint="@2131099706" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+</LinearLayout>

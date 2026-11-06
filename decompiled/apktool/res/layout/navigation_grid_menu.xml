@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429130" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131428761" layout="@layout/navigation_redesigned_header" />
+    <RelativeLayout android:id="@2131429027" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+        <TextView android:textSize="@2131167003" android:gravity="0x00000011" android:id="@2131427635" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167027" android:layout_marginBottom="@2131167027" android:text="@2132019885" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="0x02000000" android:layout_gravity="0x00000001" android:id="@2131428759" android:scrollbars="0x00000200" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-1" />
+    <LinearLayout android:orientation="1" android:id="@2131429278" android:layout_width="@2131168280" android:layout_height="@2131168280" android:elevation="@2131167277" />
+</LinearLayout>

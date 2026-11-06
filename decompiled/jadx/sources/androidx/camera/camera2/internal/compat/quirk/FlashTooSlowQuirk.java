@@ -1,0 +1,30 @@
+package androidx.camera.camera2.internal.compat.quirk;
+
+import android.hardware.camera2.CameraCharacteristics;
+import android.os.Build;
+import androidx.annotation.NonNull;
+import androidx.camera.camera2.internal.compat.CameraCharacteristicsCompat;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes.dex */
+public class FlashTooSlowQuirk implements UseTorchAsFlashQuirk {
+    private static final List<String> AFFECTED_MODEL_PREFIXES = Arrays.asList("PIXEL 3A", "PIXEL 3A XL", "PIXEL 4", "PIXEL 5", "SM-A320", "MOTO G(20)", "ITEL L6006", "RMX3231");
+
+    private static boolean isAffectedModel() {
+        Iterator<String> it2 = AFFECTED_MODEL_PREFIXES.iterator();
+        while (it2.hasNext()) {
+            if (Build.MODEL.toUpperCase(Locale.US).startsWith(it2.next())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean load(@NonNull CameraCharacteristicsCompat cameraCharacteristicsCompat) {
+        return isAffectedModel() && ((Integer) cameraCharacteristicsCompat.get(CameraCharacteristics.LENS_FACING)).intValue() == 1;
+    }
+}

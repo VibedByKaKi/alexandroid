@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131428920" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/voice_ui_od_header" />
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1">
+        <android.widget.Space android:visibility="1" android:layout_width="-2" android:layout_height="@2131168097" />
+        <include android:layout_width="-1" android:layout_height="-1" layout="@layout/voice_ui_od_movies_list_content" />
+    </LinearLayout>
+</LinearLayout>

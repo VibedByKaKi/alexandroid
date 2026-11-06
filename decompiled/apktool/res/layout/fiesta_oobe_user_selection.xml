@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429076" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131100107" android:id="@2131429079" android:paddingTop="@2131167359" android:paddingBottom="@2131167358" android:layout_width="-2" android:layout_height="-2" android:text="@2132019997" app:fontName="app_text_bold" style="@style/AlexaCommsFiesta.large" />
+    <com.amazon.alexa.font.FontTextView android:id="@2131429078" android:paddingBottom="@2131167343" android:layout_width="-2" android:layout_height="-2" android:text="@2132019996" app:fontName="app_text_regular" style="@style/AlexaCommsFiesta.medium" />
+    <ProgressBar android:id="@2131429836" style="@style/oobeUserSelectionProgressBar" />
+    <ListView android:id="@2131429077" android:layout_width="-2" android:layout_height="-2" />
+</LinearLayout>

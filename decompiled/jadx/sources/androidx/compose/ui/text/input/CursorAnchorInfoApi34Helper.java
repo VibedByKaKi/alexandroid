@@ -1,0 +1,39 @@
+package androidx.compose.ui.text.input;
+
+import android.view.inputmethod.CursorAnchorInfo;
+import androidx.annotation.RequiresApi;
+import androidx.compose.ui.geometry.Rect;
+import androidx.compose.ui.text.TextLayoutResult;
+import kotlin.Metadata;
+import kotlin.jvm.JvmStatic;
+import org.jetbrains.annotations.NotNull;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@RequiresApi(34)
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bÃ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J \u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0007¨\u0006\u000b"}, d2 = {"Landroidx/compose/ui/text/input/CursorAnchorInfoApi34Helper;", "", "<init>", "()V", "addVisibleLineBounds", "Landroid/view/inputmethod/CursorAnchorInfo$Builder;", "builder", "textLayoutResult", "Landroidx/compose/ui/text/TextLayoutResult;", "innerTextFieldBounds", "Landroidx/compose/ui/geometry/Rect;", "ui_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes13.dex */
+final class CursorAnchorInfoApi34Helper {
+
+    @NotNull
+    public static final CursorAnchorInfoApi34Helper INSTANCE = new CursorAnchorInfoApi34Helper();
+
+    private CursorAnchorInfoApi34Helper() {
+    }
+
+    @JvmStatic
+    @NotNull
+    public static final CursorAnchorInfo.Builder addVisibleLineBounds(@NotNull CursorAnchorInfo.Builder builder, @NotNull TextLayoutResult textLayoutResult, @NotNull Rect innerTextFieldBounds) {
+        int lineForVerticalPosition;
+        int lineForVerticalPosition2;
+        if (!innerTextFieldBounds.isEmpty() && (lineForVerticalPosition = textLayoutResult.getLineForVerticalPosition(innerTextFieldBounds.getTop())) <= (lineForVerticalPosition2 = textLayoutResult.getLineForVerticalPosition(innerTextFieldBounds.getBottom()))) {
+            while (true) {
+                builder.addVisibleLineBounds(textLayoutResult.getLineLeft(lineForVerticalPosition), textLayoutResult.getLineTop(lineForVerticalPosition), textLayoutResult.getLineRight(lineForVerticalPosition), textLayoutResult.getLineBottom(lineForVerticalPosition));
+                if (lineForVerticalPosition == lineForVerticalPosition2) {
+                    break;
+                }
+                lineForVerticalPosition++;
+            }
+        }
+        return builder;
+    }
+}

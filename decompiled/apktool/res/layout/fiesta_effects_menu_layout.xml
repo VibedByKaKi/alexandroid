@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="0" android:focusable="true" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:backgroundDimEnabled="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:focusable="true" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:id="@2131427627" android:clickable="true" android:layout_width="-1" android:layout_height="-1">
+            <ImageButton android:id="@2131428200" android:background="@2131103590" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="10.0dip" android:src="@2131231419" android:contentDescription="@2132018530" app:layout_anchorGravity="bottom|center" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <com.amazon.alexa.font.FontTextView android:textColor="@2131103716" android:layout_gravity="0x00000010" android:id="@2131428205" android:layout_width="-2" android:layout_height="-2" android:text="@2132018522" android:textAlignment="4" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:orientation="0" android:id="@2131428204" android:focusable="true" android:clickable="true" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131165873" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

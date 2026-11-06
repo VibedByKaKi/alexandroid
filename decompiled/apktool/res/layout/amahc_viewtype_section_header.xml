@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165437" android:ellipsize="3" android:orientation="1" android:id="@2131429736" android:paddingBottom="@2131165413" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492892" android:singleLine="false" app:fontName="app_text_bold" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165434" android:ellipsize="3" android:orientation="1" android:id="@2131429593" android:layout_width="-2" android:layout_height="-2" android:maxLines="@2131492891" android:singleLine="false" app:fontName="app_text_regular" />
+</merge>

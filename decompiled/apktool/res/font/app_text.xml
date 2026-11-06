@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:font="@2131296266" android:fontWeight="300" android:fontStyle="0" app:font="@font/alexa_sans_text_light" app:fontStyle="normal" app:fontWeight="300" />
+    <font android:font="@2131296267" android:fontWeight="300" android:fontStyle="1" app:font="@font/alexa_sans_text_light_oblique" app:fontStyle="italic" app:fontWeight="300" />
+    <font android:font="@2131296270" android:fontWeight="400" android:fontStyle="0" app:font="@font/alexa_sans_text_regular" app:fontStyle="normal" app:fontWeight="400" />
+    <font android:font="@2131296271" android:fontWeight="400" android:fontStyle="1" app:font="@font/alexa_sans_text_regular_oblique" app:fontStyle="italic" app:fontWeight="400" />
+    <font android:font="@2131296268" android:fontWeight="500" android:fontStyle="0" app:font="@font/alexa_sans_text_medium" app:fontStyle="normal" app:fontWeight="500" />
+    <font android:font="@2131296269" android:fontWeight="500" android:fontStyle="1" app:font="@font/alexa_sans_text_medium_oblique" app:fontStyle="italic" app:fontWeight="500" />
+    <font android:font="@2131296264" android:fontWeight="700" android:fontStyle="0" app:font="@font/alexa_sans_text_bold" app:fontStyle="normal" app:fontWeight="700" />
+    <font android:font="@2131296265" android:fontWeight="700" android:fontStyle="1" app:font="@font/alexa_sans_text_bold_oblique" app:fontStyle="italic" app:fontWeight="700" />
+</font-family>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector>
+        <item android:state_enabled="true" android:state_pressed="true">
+            <set>
+                <objectAnimator android:duration="@2131493034" android:valueTo="@2131166704" android:valueType="0" android:propertyName="" />
+                <objectAnimator android:duration="0" android:valueTo="@2131166422" android:valueType="0" android:propertyName="" />
+            </set>
+        </item>
+        <item android:state_enabled="true" android:state_hovered="true">
+            <set>
+                <objectAnimator android:duration="@2131493034" android:valueTo="@2131166703" android:valueType="0" android:propertyName="" />
+                <objectAnimator android:duration="0" android:valueTo="@2131166422" android:valueType="0" android:propertyName="" />
+            </set>
+        </item>
+        <item android:state_focused="true" android:state_enabled="true">
+            <set>
+                <objectAnimator android:duration="@2131493034" android:valueTo="@2131166702" android:valueType="0" android:propertyName="" />
+                <objectAnimator android:duration="0" android:valueTo="@2131166422" android:valueType="0" android:propertyName="" />
+            </set>
+        </item>
+        <item android:state_enabled="true">
+            <set>
+                <objectAnimator android:duration="@2131493034" android:valueTo="@2131166701" android:valueType="0" android:propertyName="" android:startDelay="@2131493033" />
+                <objectAnimator android:duration="0" android:valueTo="@2131166422" android:valueType="0" android:propertyName="" />
+            </set>
+        </item>
+        <item>
+            <set>
+                <objectAnimator android:duration="0" android:valueTo="@2131166700" android:valueType="0" android:propertyName="" />
+                <objectAnimator android:duration="0" android:valueTo="@2131166699" android:valueType="0" android:propertyName="" />
+            </set>
+        </item>
+    </selector>
+</set>

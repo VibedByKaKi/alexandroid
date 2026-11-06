@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131103288" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SearchView android:id="@2131429902" android:background="@2131624524" android:layout_width="-1" android:layout_height="-2" android:iconifiedByDefault="false" android:queryHint="@2132020482" android:closeIcon="@2131231495" android:searchIcon="@2131231947" />
+    <ListView android:id="@16908298" android:layout_width="-1" android:layout_height="-2" android:divider="@0" android:dividerHeight="@2131165919" android:choiceMode="2" android:footerDividersEnabled="false" />
+</LinearLayout>

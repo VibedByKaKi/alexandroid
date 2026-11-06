@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131429013" android:tag="" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@2131429010" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131165654" app:cardCornerRadius="8.0dip">
+        <RelativeLayout android:padding="@2131165655" android:layout_width="-1" android:layout_height="-2">
+            <LinearLayout android:id="@2131429015" android:layout_width="-1" android:layout_height="-2">
+                <LinearLayout android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="0.95" android:layout_marginEnd="@2131165654">
+                    <com.amazon.alexa.font.FontTextView android:textSize="@2131165984" android:textColor="@2131103716" android:layout_gravity="0x00000011" android:id="@2131429012" android:tag="" android:layout_width="-1" android:layout_height="-2" />
+                    <com.amazon.alexa.font.FontTextView android:textColor="@2131103716" android:ellipsize="3" android:id="@2131429014" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="3.0dip" android:maxLines="@2131492981" app:fontName="amazon_ember_bold" style="@style/TextAppearance.Mosaic.Body_04" />
+                    <com.amazon.alexa.font.FontTextView android:textColor="@2131103716" android:ellipsize="3" android:id="@2131429011" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="5.0dip" android:maxLines="2" style="@style/TextAppearance.Mosaic.Body" />
+                </LinearLayout>
+                <LinearLayout android:id="@2131429020" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="0.05">
+                    <ImageView android:id="@2131427654" android:tag="" android:background="@2131231841" android:padding="@2131166975" android:layout_width="@2131167365" android:layout_height="@2131167365" android:tint="?2130969815" android:contentDescription="@2132017953" android:alpha="0.6" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:textStyle="0x00000001" android:id="@2131429009" android:tag="" android:layout_width="-2" android:layout_height="@2131167423" android:layout_marginTop="@2131167424" android:layout_below="@2131429015" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" style="@style/PillButton.Mosaic.Card" />
+            <Button android:textStyle="0x00000001" android:id="@2131429016" android:tag="" android:layout_width="-2" android:layout_height="@2131167423" android:layout_marginTop="@2131167424" android:layout_below="@2131429015" android:layout_alignParentBottom="true" android:layout_toEndOf="@2131429009" style="@style/PillButtonBorderless.Mosaic.Card" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

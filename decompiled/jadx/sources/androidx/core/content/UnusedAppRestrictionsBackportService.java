@@ -1,0 +1,33 @@
+package androidx.core.content;
+
+import android.annotation.SuppressLint;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.os.RemoteException;
+import androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportCallback;
+import androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportService;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes13.dex */
+public abstract class UnusedAppRestrictionsBackportService extends Service {
+
+    @SuppressLint({"ActionValue"})
+    public static final String ACTION_UNUSED_APP_RESTRICTIONS_BACKPORT_CONNECTION = "android.support.unusedapprestrictions.action.CustomUnusedAppRestrictionsBackportService";
+    private IUnusedAppRestrictionsBackportService.Stub mBinder = new IUnusedAppRestrictionsBackportService.Stub() { // from class: androidx.core.content.UnusedAppRestrictionsBackportService.1
+        @Override // androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportService
+        public void isPermissionRevocationEnabledForApp(IUnusedAppRestrictionsBackportCallback iUnusedAppRestrictionsBackportCallback) throws RemoteException {
+            if (iUnusedAppRestrictionsBackportCallback == null) {
+                return;
+            }
+            UnusedAppRestrictionsBackportService.this.isPermissionRevocationEnabled(new UnusedAppRestrictionsBackportCallback(iUnusedAppRestrictionsBackportCallback));
+        }
+    };
+
+    public abstract void isPermissionRevocationEnabled(UnusedAppRestrictionsBackportCallback unusedAppRestrictionsBackportCallback);
+
+    @Override // android.app.Service
+    public IBinder onBind(Intent intent) {
+        return this.mBinder;
+    }
+}

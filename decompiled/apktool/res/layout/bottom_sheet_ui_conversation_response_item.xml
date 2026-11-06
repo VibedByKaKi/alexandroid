@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131427694" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167021"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="0x00800003" android:id="@2131427671" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="?2130968738">
+        <LinearLayout android:orientation="1" android:id="@2131427672" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2">
+            <RelativeLayout android:orientation="1" android:id="@2131429350" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2">
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130970164" android:layout_gravity="0x00800003" android:id="@2131427670" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167049" android:layout_marginEnd="@2131167025" android:paddingHorizontal="@2131167029" android:paddingVertical="@2131167049" style="@style/mosaic_font_body_01" />
+                <include android:layout_gravity="0x00800035" android:visibility="2" android:layout_width="@2131167010" android:layout_height="@2131167010" android:layout_marginBottom="@2131167530" android:layout_alignParentTop="true" android:layout_marginStart="@2131167531" android:layout_toEndOf="@2131427670" layout="@layout/remarkable_alexa_feedback_badge" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <View android:layout_gravity="0x00800005" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+</LinearLayout>

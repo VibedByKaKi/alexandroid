@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:background="@2131103223" android:clickable="false" android:layout_width="-1" android:layout_height="-2" android:paddingStart="@2131165415" android:paddingEnd="@2131165415"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@2131165397" android:layout_height="@2131165397">
+        <android.widget.ImageView android:id="@2131427683" android:layout_width="-1" android:layout_height="-1" android:scaleType="3" android:layout_centerInParent="true" android:paddingStart="@2131165415" android:paddingEnd="@2131165415" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131165415" android:paddingEnd="@2131165415">
+        <TextView android:textSize="@2131165436" android:id="@2131428446" android:layout_width="-2" android:layout_height="-2" />
+        <android.widget.Space android:layout_width="-1" android:layout_height="@2131165415" />
+        <TextView android:textSize="@2131165434" android:id="@2131429586" android:layout_width="-2" android:layout_height="-2" />
+        <android.widget.Space android:layout_width="-1" android:layout_height="@2131165411" />
+        <TextView android:id="@2131427660" android:layout_width="-2" android:layout_height="-2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:baselineAligned="false">
+        <LinearLayout android:orientation="0" android:id="@2131427728" android:paddingTop="@2131165415" android:paddingBottom="@2131165415" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" android:paddingStart="@2131165415" android:paddingEnd="@2131165415" />
+        <LinearLayout android:orientation="0" android:id="@2131427729" android:paddingTop="@2131165415" android:paddingBottom="@2131165415" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="1.0" android:paddingStart="@2131165415" android:paddingEnd="@2131165415" />
+    </LinearLayout>
+</LinearLayout>

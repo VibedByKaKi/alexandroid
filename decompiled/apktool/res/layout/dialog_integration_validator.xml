@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="#96ffffff" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="0" android:id="@2131428642" android:background="#ffffff" android:layout_width="-1" android:layout_height="60.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <Space android:layout_width="30.0dip" android:layout_height="-1" android:layout_weight="0.1" />
+        <ImageView android:id="@2131428527" android:layout_width="100.0dip" android:layout_height="-2" android:src="@2131231007" android:layout_weight="0.3" />
+        <Space android:layout_width="30.0dip" android:layout_height="-1" android:layout_weight="0.1" />
+        <TextView android:textSize="24.0sp" android:gravity="0x00000011" android:id="@2131429686" android:layout_width="-1" android:layout_height="-1" android:text="" android:layout_weight="0.4" />
+        <Space android:layout_width="30.0dip" android:layout_height="-1" android:layout_weight="0.1" />
+    </LinearLayout>
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="0.0dip" android:weightSum="1.0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linearLayout">
+        <TextView android:textSize="20.0sp" android:gravity="0x00000011" android:id="@2131429419" android:layout_width="-1" android:layout_height="0.0dip" android:text="" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429666" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429667" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429668" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429669" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429670" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429671" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429672" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <io.branch.referral.validators.IntegrationValidatorDialogRowItem android:gravity="0x00800003" android:id="@2131429673" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1" />
+        <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="0.1">
+            <Button android:textColor="#ffffff" android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131428323" android:layout_width="0.0dip" android:layout_height="-1" android:text="" android:layout_weight="0.5" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" android:backgroundTint="#2a97ff" />
+            <Button android:textColor="#ffffff" android:gravity="0x00000011" android:layout_gravity="0x00000011" android:id="@2131429674" android:layout_width="0.0dip" android:layout_height="-1" android:text="" android:layout_weight="0.5" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" android:backgroundTint="#2a97ff" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

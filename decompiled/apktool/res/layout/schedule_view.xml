@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="0x00000001" android:id="@2131427464" android:layout_width="-1" android:layout_height="-1">
+        <ScrollView android:background="?2130969753" android:layout_width="-1" android:layout_height="-1">
+            <LinearLayout android:orientation="1" android:tag="" android:layout_width="-1" android:layout_height="-2">
+                <include layout="@layout/status_banner" />
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131429406" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167287" android:text="@2132020456" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.InstructionalTemplate.Headline" />
+                <RadioGroup android:layout_gravity="0x00000005" android:orientation="1" android:id="@2131429263" android:layout_width="-1" android:layout_height="-2" android:layout_alignParentLeft="true" android:inputType="0x00000001">
+                    <RadioButton android:id="@2131427498" android:text="@2132017838" style="@style/list_item_radio" />
+                    <View style="@style/get_started_item_divider" />
+                    <RadioButton android:id="@2131427427" android:text="@2132017917" style="@style/list_item_radio" />
+                    <View style="@style/get_started_item_divider" />
+                </RadioGroup>
+                <LinearLayout android:orientation="1" android:tag="" android:layout_width="-1" android:layout_height="-1">
+                    <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429571" android:tag="" android:layout_width="-1" android:layout_height="-2" app:linkText="@string/custom_alert_edit" app:primaryText="@string/not_set" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryText="@string/start_time" app:secondaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_secondaryText" />
+                    <TimePicker android:theme="@2132084394" android:id="@2131429570" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" android:timePickerMode="1" app:layout_constraintStart_toStartOf="parent" />
+                    <View style="@style/mosaic_list_item_divider" />
+                    <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131428239" android:tag="" android:layout_width="-1" android:layout_height="-2" app:linkText="@string/custom_alert_edit" app:primaryText="@string/not_set" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" app:secondaryText="@string/end_time" />
+                    <TimePicker android:theme="@2132084394" android:id="@2131428238" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" android:timePickerMode="1" app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131429405" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+            <Button android:enabled="true" android:id="@2131429404" android:tag="" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020453" android:layout_weight="1.0" style="@style/mosaic_button" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

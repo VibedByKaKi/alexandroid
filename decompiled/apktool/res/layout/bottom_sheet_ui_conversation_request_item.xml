@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131427693" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167045"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="0x00800003" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+    <FrameLayout android:layout_gravity="0x00800003" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="?2130968738">
+        <LinearLayout android:layout_gravity="0x00800005" android:orientation="1" android:id="@2131427669" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2" android:layoutDirection="1">
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130970165" android:layout_gravity="0x00800005" android:id="@2131427699" android:background="@2131230990" android:layout_width="-2" android:layout_height="-2" android:textDirection="3" android:paddingHorizontal="@2131167029" android:paddingVertical="@2131167049" style="@style/mosaic_font_body_01" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@2131428377" android:background="@2131101020" android:paddingTop="@2131167401" android:paddingBottom="@2131167403" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131428376" android:layout_width="-2" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageButton android:id="@2131429466" android:background="@2131231086" android:padding="10.0dip" android:visibility="0" android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@2131231962" android:scaleType="3" android:tint="@2131101019" android:contentDescription="@2132020521" android:layout_marginEnd="24.0dip" />
+        <ImageButton android:id="@2131427607" android:background="@2131231086" android:padding="10.0dip" android:visibility="2" android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@2131231512" android:scaleType="3" android:tint="@2131101019" android:contentDescription="@2132017886" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+        <ImageButton android:id="@2131428046" android:background="@2131231086" android:padding="10.0dip" android:visibility="0" android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@2131231515" android:scaleType="3" android:tint="@2131101019" android:contentDescription="@2132018354" android:layout_marginStart="24.0dip" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

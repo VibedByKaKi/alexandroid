@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="0x00000001" android:id="@2131428180" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="-1" android:layout_height="-1">
+        <LinearLayout android:orientation="1" android:tag="" android:layout_width="-1" android:layout_height="-2">
+            <include layout="@layout/status_banner" />
+            <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428054" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" app:primaryText="@string/device_deregistered_edit" />
+            <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131429826" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" app:primaryText="@string/device_not_supported" />
+            <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428252" android:visibility="2" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" />
+            <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428042" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="true" app:iconSrc="@null" app:iconTint="?mosaicAction10" app:primaryText="@string/default_alert_edit_banner" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131428183" android:tag="" android:layout_width="-1" android:layout_height="-2" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.InstructionalTemplate.Headline" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131428185" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131167661" android:text="@2132018519" android:paddingHorizontal="@2131167661" android:paddingVertical="@2131168025" style="@style/TextAppearance.Mosaic.Caption" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:tag="" android:layout_width="-1" android:layout_height="-2">
+                <EditText android:id="@2131427462" android:tag="" android:background="@0" android:layout_width="@2131168025" android:layout_height="-2" android:layout_marginTop="@2131168025" android:hint="@2132017271" android:maxLines="2" android:lines="1" android:singleLine="true" android:inputType="0x000800B1" android:textCursorDrawable="@2131232323" android:importantForAutofill="0x00000002" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/clear_text" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Mosaic.View.InstructionalTemplate.Headline" />
+                <ImageView android:id="@2131427901" android:tag="" android:visibility="0" android:layout_width="@2131165674" android:layout_height="@2131165674" android:src="@2131231468" android:tint="@2131103215" android:layout_marginEnd="@2131166137" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/alert_name_edit_text" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+                <ImageView android:layout_gravity="0x00000010" android:tag="" android:layout_width="@2131168264" android:layout_height="@2131168264" android:src="@2131232078" android:tint="@2131103479" android:layout_marginStart="16.0dip" />
+                <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131428179" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" />
+            </LinearLayout>
+            <View style="@style/get_started_item_divider" />
+            <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131428181" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:linkText="@string/edit_link" app:primaryTextMaxLines="@integer/max_lines_mosaic_list_item_link_primaryText" />
+            <View style="@style/get_started_item_divider" />
+            <com.amazon.alexa.mosaic.view.ListItemToggleButton android:id="@2131428182" android:tag="" android:layout_width="-1" android:layout_height="-2" app:checkedText="@string/alert_on" app:primaryText="@string/alert_status" app:toggleBackground="@drawable/mosaic_single_toggle" app:toggleHorizontalPadding="@dimen/toggle_horizontal_padding" app:uncheckedText="@string/alert_off" />
+            <View style="@style/get_started_item_divider" />
+        </LinearLayout>
+        <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131428985" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+            <Button android:id="@2131428984" android:tag="" android:layout_width="@2131168025" android:layout_height="-2" android:text="@2132020453" android:layout_weight="1.0" style="@style/mosaic_button" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+</FrameLayout>

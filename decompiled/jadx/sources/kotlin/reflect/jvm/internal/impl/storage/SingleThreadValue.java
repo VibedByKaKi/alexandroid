@@ -1,0 +1,26 @@
+package kotlin.reflect.jvm.internal.impl.storage;
+
+import rx.Single$$ExternalSyntheticBUOutline0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes10.dex */
+class SingleThreadValue<T> {
+    private final Thread thread = Thread.currentThread();
+    private final T value;
+
+    public SingleThreadValue(T t) {
+        this.value = t;
+    }
+
+    public T getValue() {
+        if (hasValue()) {
+            return this.value;
+        }
+        Single$$ExternalSyntheticBUOutline0.m$2("No value in this thread (hasValue should be checked before)");
+        return null;
+    }
+
+    public boolean hasValue() {
+        return this.thread == Thread.currentThread();
+    }
+}

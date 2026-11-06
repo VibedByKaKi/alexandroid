@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="0x00000001" android:id="@2131427454" android:layout_width="-1" android:layout_height="-1">
+        <ScrollView android:background="?2130969753" android:layout_width="-1" android:layout_height="-1">
+            <LinearLayout android:orientation="1" android:tag="" android:layout_width="-1" android:layout_height="-2">
+                <include layout="@layout/status_banner" />
+                <com.amazon.alexa.mosaic.view.NoticeBannerView android:id="@2131428996" android:tag="" android:layout_width="-1" android:layout_height="-2" app:canClose="false" app:iconSrc="@null" app:iconTint="@color/status30" app:linkText="@string/try_again_link" app:primaryText="@string/activity_choice_error" />
+                <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131427456" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167287" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.InstructionalTemplate.Headline" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@2131427455" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:gravity="0x00000011" android:orientation="0" android:id="@2131427453" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+            <Button android:enabled="true" android:id="@2131427452" android:tag="" android:layout_width="0.0dip" android:layout_height="-2" android:text="@2132020453" android:layout_weight="1.0" style="@style/mosaic_button" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.amazon.alexa.mosaic.view.ErrorView android:id="@2131428261" android:tag="" android:layout_width="-1" android:layout_height="-1" app:bodyText="@string/error_care_hub_body" app:headlineText="@string/error_care_hub_headline" app:iconSrc="@null" app:iconTint="?mosaicNeutral10" app:linkText="@string/error_tap_to_retry" />
+    <include android:id="@2131428679" layout="@layout/loading_view" />
+</FrameLayout>

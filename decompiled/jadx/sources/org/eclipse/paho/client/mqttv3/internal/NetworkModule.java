@@ -1,0 +1,20 @@
+package org.eclipse.paho.client.mqttv3.internal;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import org.eclipse.paho.client.mqttv3.MqttException;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes11.dex */
+public interface NetworkModule {
+    InputStream getInputStream() throws IOException;
+
+    OutputStream getOutputStream() throws IOException;
+
+    String getServerURI();
+
+    void start() throws IOException, MqttException;
+
+    void stop() throws IOException;
+}

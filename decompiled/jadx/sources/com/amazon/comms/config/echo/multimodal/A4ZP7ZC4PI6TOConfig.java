@@ -1,0 +1,169 @@
+package com.amazon.comms.config.echo.multimodal;
+
+import android.content.Context;
+import com.amazon.comms.calling.service.AudioConfig;
+import com.amazon.comms.calling.service.DynamicAcousticParams;
+import com.amazon.comms.calling.service.VideoCodecConfigInfo;
+import com.amazon.comms.calling.service.VideoConstraints;
+import com.amazon.comms.calling.service.VideoEncoderBitrateAdjustmentType;
+import com.amazon.comms.config.base.MultiModalConfig;
+import com.amazon.comms.config.util.DeviceConfigConstants;
+import com.amazon.comms.config.util.SimJobScheduler;
+import com.amazon.comms.config.util.VideoCodecConfigInfoUtil;
+import java.util.ArrayList;
+import java.util.List;
+import okio.Buffer$$ExternalSyntheticBUOutline0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public class A4ZP7ZC4PI6TOConfig extends MultiModalConfig {
+    private static final int RENDER_TRACK_BUFFER_SIZE_BYTES = 4608;
+    private static final String WEBRTC_FIELD_TRIALS = "WebRTC-AVSync-AudioDelayEstimateMs/Enabled-160/WebRTC-Rfc5389StunRetransmissions/Enabled/WebRTC-LegacyTlsProtocols/Enabled/";
+    private static A4ZP7ZC4PI6TOConfig a4ZP7ZC4PI6TOConfig = new A4ZP7ZC4PI6TOConfig();
+
+    public static A4ZP7ZC4PI6TOConfig getDeviceConfigInstance() {
+        return a4ZP7ZC4PI6TOConfig;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getAudioRenderBufferSizeBytes() {
+        return RENDER_TRACK_BUFFER_SIZE_BYTES;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public DynamicAcousticParams.ConfigPath getDynamicAcousticParamsConfigPath() {
+        return DeviceConfigConstants.DYNAMIC_ACOUSTIC_PARAMS_CONFIG_PATH_LIBASP;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public AudioConfig.FastRenderPath getFastAudioRenderPath() {
+        return DeviceConfigConstants.FAST_RENDER_PATH_AUDIOTRACK;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public SimJobScheduler getJobScheduler(Context context) {
+        try {
+            return (SimJobScheduler) Class.forName(DeviceConfigConstants.DEVICE_JOBSCHEDULER_IMPL_MULTIMODALTACHYONARM).newInstance();
+        } catch (Exception e) {
+            Buffer$$ExternalSyntheticBUOutline0.m((Throwable) e);
+            return null;
+        }
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public VideoConstraints getMaxVideoConstraintsToRequestFromRemote() {
+        return new VideoConstraints(640, 480, 30);
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getNonH264VideoFps() {
+        return 24;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getNonH264VideoHeight() {
+        return 180;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getNonH264VideoWidth() {
+        return 320;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public List<VideoCodecConfigInfo> getVideoCodecConfigInfoList() {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(VideoCodecConfigInfoUtil.buildMTKH264VideoCodecConfigInfo(VideoEncoderBitrateAdjustmentType.FRAMERATE_ADJUSTMENT));
+        return arrayList;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getVideoFps() {
+        return 30;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getVideoHeight() {
+        return 720;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getVideoMaxBitrate() {
+        return 2000;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getVideoStartBitrate() {
+        return 600;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getVideoWidth() {
+        return 1280;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public String getWebRTCFieldTrials() {
+        return WEBRTC_FIELD_TRIALS;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public int getWebRTCStatsPollingFrequency() {
+        return 5000;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean ignoreCameraEvictionError() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean isCameraMetricsReportingEnabled() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean isCameraShutterPresent() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean isRealTimeTextCapable() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean loadWeblabCommsFeaturesThroughSubProcess() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean preferCamera1API() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean provideCallingServiceHalParameter() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean simulateFirstFrameReceived() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean supportsHints() {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean supportsInsights(Context context) {
+        return true;
+    }
+
+    @Override // com.amazon.comms.config.DeviceConfig
+    public boolean updateCameraHalFramerateAllowed() {
+        return true;
+    }
+}

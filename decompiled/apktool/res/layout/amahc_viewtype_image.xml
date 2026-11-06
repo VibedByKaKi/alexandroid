@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@2131429168" android:visibility="1" android:layout_width="-1" android:layout_height="-1">
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="0.0dip" app:cardCornerRadius="@dimen/amahc_corner_radius_extra_small" app:layout_constraintDimensionRatio="H,16:9" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <android.widget.ImageView android:id="@2131428524" android:layout_width="-1" android:layout_height="-1" android:scaleType="6" android:adjustViewBounds="true" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

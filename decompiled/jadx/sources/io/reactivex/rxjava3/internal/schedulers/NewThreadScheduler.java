@@ -1,0 +1,28 @@
+package io.reactivex.rxjava3.internal.schedulers;
+
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Scheduler;
+import java.util.concurrent.ThreadFactory;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes10.dex */
+public final class NewThreadScheduler extends Scheduler {
+    final ThreadFactory threadFactory;
+    private static final String THREAD_NAME_PREFIX = "RxNewThreadScheduler";
+    private static final String KEY_NEWTHREAD_PRIORITY = "rx3.newthread-priority";
+    private static final RxThreadFactory THREAD_FACTORY = new RxThreadFactory(THREAD_NAME_PREFIX, Math.max(1, Math.min(10, Integer.getInteger(KEY_NEWTHREAD_PRIORITY, 5).intValue())));
+
+    public NewThreadScheduler() {
+        this(THREAD_FACTORY);
+    }
+
+    @Override // io.reactivex.rxjava3.core.Scheduler
+    @NonNull
+    public Scheduler.Worker createWorker() {
+        return new NewThreadWorker(this.threadFactory);
+    }
+
+    public NewThreadScheduler(ThreadFactory threadFactory) {
+        this.threadFactory = threadFactory;
+    }
+}

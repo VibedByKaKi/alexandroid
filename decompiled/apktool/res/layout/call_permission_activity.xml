@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@2131428387" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include layout="@layout/enhanced_processing_button_group" />
+</LinearLayout>

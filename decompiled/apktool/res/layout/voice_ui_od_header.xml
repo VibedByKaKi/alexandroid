@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131427823" android:focusable="true" android:layout_width="-1" android:layout_height="@2131168129" android:paddingStart="@2131168131" android:paddingEnd="@2131168131"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="-2" android:layout_height="-1" android:layout_marginEnd="@2131168131" layout="@layout/voice_ui_od_header_navigation" />
+    <include android:layout_width="0.0dip" android:layout_height="-2" android:layout_marginTop="@2131168131" android:layout_weight="1.0" layout="@layout/voice_ui_od_header_text" />
+    <android.widget.Space android:visibility="1" android:layout_width="40.0dip" android:layout_height="-1" />
+</LinearLayout>

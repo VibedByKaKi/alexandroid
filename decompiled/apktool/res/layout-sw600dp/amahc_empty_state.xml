@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.widget.Space android:layout_width="-1" android:layout_height="24.0dip" />
+    <TextView android:textSize="24.0sp" android:ellipsize="3" android:gravity="0x00000001" android:id="@2131428639" android:layout_width="-1" android:layout_height="-2" android:maxWidth="600.0dip" android:maxLines="3" />
+    <android.widget.Space android:layout_width="-1" android:layout_height="24.0dip" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@2131429168" android:layout_width="-1" android:layout_height="-2">
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="0.0dip" android:maxWidth="600.0dip" app:cardBackgroundColor="@17170445" app:cardCornerRadius="@dimen/amahc_corner_radius_extra_small" app:cardElevation="0.0dip" app:layout_constraintDimensionRatio="H,16:11" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.airbnb.lottie.LottieAnimationView android:id="@2131429177" android:visibility="0" android:layout_width="-1" android:layout_height="-1" android:scaleType="7" android:importantForAccessibility="2" app:lottie_autoPlay="true" app:lottie_fileName="amahc_anim_empty_state_island.json" app:lottie_loop="true" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+package com.amazon.alexa.enrollment.unified.speakerid.api.model;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes17.dex */
+public enum EnrollmentStates {
+    NOT_STARTED,
+    STARTED,
+    WAITING,
+    QC_FAILURE_NON_TERMINAL,
+    QC_FAILURE_TERMINAL,
+    SILENCE_NON_TERMINAL,
+    SILENCE_TERMINAL,
+    COMPLETED,
+    INELIGIBLE,
+    RETRIABLE,
+    CANCELLED,
+    NON_RETRIABLE,
+    INELIGIBLE_CONSENT_NOT_PRESENT,
+    INELIGIBLE_UNSUPPORTED_LOCALE,
+    INELIGIBLE_UNSUPPORTED_DEVICE,
+    INELIGIBLE_ENROLLMENT_TYPE_NOT_SUPPORTED,
+    INELIGIBLE_PERSON_ALREADY_ENROLLED,
+    DEVICE_NOT_AVAILABLE
+}

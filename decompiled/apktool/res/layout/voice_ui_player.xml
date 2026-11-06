@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.internal.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="?2130972551" android:layout_width="-1" android:layout_height="-1">
+        <androidx.core.widget.NestedScrollView android:scrollbarStyle="0x02000000" android:id="@2131429414" android:layout_width="-1" android:layout_height="-1">
+            <RelativeLayout android:gravity="0x00000001" android:layout_width="-1" android:layout_height="-2">
+                <RelativeLayout android:id="@2131428446" android:paddingBottom="0.0dip" android:layout_width="-1" android:layout_height="-2">
+                    <ImageView android:id="@2131428142" android:padding="16.0dip" android:layout_width="-2" android:layout_height="-2" android:src="@2131232040" android:contentDescription="@2132021013" android:layout_alignParentStart="true" />
+                    <ImageView android:id="@2131428131" android:layout_width="-2" android:layout_height="-2" android:src="@2131231468" android:tint="?2130968593" android:contentDescription="@2132021014" android:layout_alignParentEnd="true" style="@style/Alexa.Voice.Widget.Button.Close" />
+                </RelativeLayout>
+                <ImageView android:id="@2131429776" android:layout_width="280.0dip" android:layout_height="280.0dip" android:scaleType="3" android:layout_below="@2131428446" android:layout_centerHorizontal="true" android:contentDescription="@2132020897" />
+                <TextView android:textSize="18.0sp" android:textColor="?16842806" android:ellipsize="4" android:id="@2131429779" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="8.0dip" android:singleLine="true" android:layout_below="@2131429776" android:layout_centerHorizontal="true" android:textAlignment="5" />
+                <TextView android:textSize="14.0sp" android:textColor="?16842808" android:ellipsize="4" android:id="@2131429777" android:layout_width="-2" android:layout_height="-2" android:singleLine="true" android:layout_below="@2131429779" android:layout_centerHorizontal="true" android:textAlignment="5" android:layout_marginEnd="16.0dip" />
+                <LinearLayout android:orientation="0" android:id="@2131428008" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="16.0dip" android:layout_below="@2131429777" android:layout_centerHorizontal="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                    <ImageView android:id="@2131429186" android:background="?2130972138" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@2131231880" android:tint="?2130968593" android:contentDescription="@2132021019" />
+                    <ImageView android:id="@2131429169" android:background="?2130972138" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@2131231865" android:tint="?2130968593" android:contentDescription="@2132020897" android:layout_marginStart="48.0dip" />
+                    <ImageView android:id="@2131428988" android:background="?2130972138" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@2131231778" android:tint="?2130968593" android:contentDescription="@2132021016" android:layout_marginStart="48.0dip" />
+                </LinearLayout>
+                <ImageView android:id="@2131429778" android:layout_width="-2" android:layout_height="32.0dip" android:layout_marginTop="20.0dip" android:src="@2131231638" android:scaleType="3" android:adjustViewBounds="true" android:layout_below="@2131428008" android:layout_centerHorizontal="true" android:contentDescription="@2132020897" />
+                <TextView android:textSize="12.0sp" android:textColor="?16842808" android:ellipsize="3" android:id="@2131429179" android:layout_width="50.0dip" android:layout_height="-2" android:layout_marginTop="16.0dip" android:maxLines="1" android:layout_below="@2131428008" android:textAlignment="5" android:layout_marginStart="16.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="?16842808" android:ellipsize="3" android:gravity="0x00800005" android:id="@2131428169" android:layout_width="50.0dip" android:layout_height="-2" android:maxLines="1" android:layout_alignTop="@2131429179" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                <SeekBar android:id="@2131429443" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10.0dip" android:layout_below="@2131429179" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout android:id="@2131427931" android:visibility="1" android:layout_width="-1" android:layout_height="-2" android:alpha="0.0">
+            <ImageView android:id="@2131429828" android:padding="16.0dip" android:layout_width="-2" android:layout_height="-2" android:src="@2131232039" android:layout_centerVertical="true" android:contentDescription="@2132021015" />
+            <RelativeLayout android:id="@2131427935" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="-2" android:layout_height="-2" android:layout_toStartOf="@2131427932" android:layout_toEndOf="@2131429828">
+                <TextView android:textSize="16.0sp" android:textColor="?16842806" android:ellipsize="4" android:id="@2131427934" android:layout_width="-2" android:layout_height="-2" android:singleLine="true" android:textAlignment="5" />
+                <TextView android:textSize="14.0sp" android:textColor="?16842808" android:ellipsize="4" android:id="@2131427933" android:layout_width="-2" android:layout_height="-2" android:singleLine="true" android:layout_below="@2131427934" android:textAlignment="5" />
+            </RelativeLayout>
+            <ImageView android:id="@2131427932" android:background="?2130972138" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@2131231865" android:tint="?2130968593" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@2132020897" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</com.amazon.alexa.voice.ui.internal.widget.ContentLayout>

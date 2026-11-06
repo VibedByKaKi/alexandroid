@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector android:height="@2131167241" android:width="@2131167241"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true" android:id="@2131429183" android:drawable="@2131232384" />
+    <item android:state_checked="true" android:id="@2131427867" android:drawable="@2131232381" />
+    <item android:id="@2131429908" android:drawable="@2131232381" app:state_with_icon="true" />
+    <item android:id="@2131429818" android:drawable="@2131232387" />
+    <transition android:drawable="@2131232385" android:toId="@2131427867" android:fromId="@2131429183" />
+    <transition android:drawable="@2131232385" android:toId="@2131429908" android:fromId="@2131429183" />
+    <transition android:drawable="@2131232386" android:toId="@2131429818" android:fromId="@2131429183" />
+    <transition android:drawable="@2131232382" android:toId="@2131429183" android:fromId="@2131427867" />
+    <transition android:drawable="@2131232383" android:toId="@2131429818" android:fromId="@2131427867" />
+    <transition android:drawable="@2131232382" android:toId="@2131429183" android:fromId="@2131429908" />
+    <transition android:drawable="@2131232389" android:toId="@2131429183" android:fromId="@2131429818" />
+    <transition android:drawable="@2131232388" android:toId="@2131427867" android:fromId="@2131429818" />
+</animated-selector>

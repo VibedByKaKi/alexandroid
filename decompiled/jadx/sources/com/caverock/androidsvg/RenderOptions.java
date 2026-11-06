@@ -1,0 +1,100 @@
+package com.caverock.androidsvg;
+
+import com.caverock.androidsvg.CSSParser;
+import com.caverock.androidsvg.SVG;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes6.dex */
+public class RenderOptions {
+    CSSParser.Ruleset css;
+    PreserveAspectRatio preserveAspectRatio;
+    String targetId;
+    SVG.Box viewBox;
+    String viewId;
+    SVG.Box viewPort;
+
+    public RenderOptions(RenderOptions renderOptions) {
+        this.css = null;
+        this.preserveAspectRatio = null;
+        this.targetId = null;
+        this.viewBox = null;
+        this.viewId = null;
+        this.viewPort = null;
+        if (renderOptions == null) {
+            return;
+        }
+        this.css = renderOptions.css;
+        this.preserveAspectRatio = renderOptions.preserveAspectRatio;
+        this.viewBox = renderOptions.viewBox;
+        this.viewId = renderOptions.viewId;
+        this.viewPort = renderOptions.viewPort;
+    }
+
+    public static RenderOptions create() {
+        return new RenderOptions();
+    }
+
+    public RenderOptions css(String str) {
+        this.css = new CSSParser(CSSParser.Source.RenderOptions).parse(str);
+        return this;
+    }
+
+    public boolean hasCss() {
+        CSSParser.Ruleset ruleset = this.css;
+        return ruleset != null && ruleset.ruleCount() > 0;
+    }
+
+    public boolean hasPreserveAspectRatio() {
+        return this.preserveAspectRatio != null;
+    }
+
+    public boolean hasTarget() {
+        return this.targetId != null;
+    }
+
+    public boolean hasView() {
+        return this.viewId != null;
+    }
+
+    public boolean hasViewBox() {
+        return this.viewBox != null;
+    }
+
+    public boolean hasViewPort() {
+        return this.viewPort != null;
+    }
+
+    public RenderOptions preserveAspectRatio(PreserveAspectRatio preserveAspectRatio) {
+        this.preserveAspectRatio = preserveAspectRatio;
+        return this;
+    }
+
+    public RenderOptions target(String str) {
+        this.targetId = str;
+        return this;
+    }
+
+    public RenderOptions view(String str) {
+        this.viewId = str;
+        return this;
+    }
+
+    public RenderOptions viewBox(float f, float f2, float f3, float f4) {
+        this.viewBox = new SVG.Box(f, f2, f3, f4);
+        return this;
+    }
+
+    public RenderOptions viewPort(float f, float f2, float f3, float f4) {
+        this.viewPort = new SVG.Box(f, f2, f3, f4);
+        return this;
+    }
+
+    public RenderOptions() {
+        this.css = null;
+        this.preserveAspectRatio = null;
+        this.targetId = null;
+        this.viewBox = null;
+        this.viewId = null;
+        this.viewPort = null;
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:tag="" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0">
+        <LinearLayout android:orientation="1" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:textColorLink="?2130969817" android:id="@2131427942" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/Mosaic.View.InstructionalTemplate.Body" />
+            <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:textColorLink="?2130969817" android:id="@2131427947" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/Mosaic.View.InstructionalTemplate.Body" />
+            <com.amazon.alexa.mosaic.view.NumberedListText android:id="@2131427943" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" app:numberText="1" app:primaryText="@string/comms_setup_instruct_step1" />
+            <com.amazon.alexa.mosaic.view.NumberedListText android:id="@2131427944" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" app:numberText="2" app:primaryText="@string/comms_setup_instruct_step2" />
+            <com.amazon.alexa.mosaic.view.NumberedListText android:id="@2131427945" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" app:numberText="3" app:primaryText="@string/comms_setup_instruct_step3" />
+            <com.amazon.alexa.mosaic.view.NumberedListText android:id="@2131427946" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" app:numberText="4" app:primaryText="@string/comms_setup_instruct_step4" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@2131429028" android:tag="" android:layout_width="-1" android:layout_height="-2" android:text="@2132018464" android:layout_weight="0.0" style="@style/mosaic_button" />
+</LinearLayout>

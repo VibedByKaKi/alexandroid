@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/FloatingActionButtonWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@2131428091" android:background="@2131232646" android:layout_width="@2131165594" android:layout_height="@2131165594" android:src="@2131232651" android:layout_centerHorizontal="true" android:contentDescription="@2132018455" />
+</RelativeLayout>

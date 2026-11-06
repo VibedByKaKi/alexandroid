@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@2131428401" android:tag="" android:layout_width="-1" android:layout_height="-1" android:layout_marginStart="@2131166143" android:layout_marginEnd="@2131166143"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@2131429874" android:layout_width="@2131168046" android:layout_height="@2131168045" android:layout_marginTop="@2131166143" android:layout_marginBottom="@2131166143" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <com.amazon.dee.app.ui.clouddrive.ViewBoxImageView android:gravity="0x00000011" android:id="@2131428524" android:background="@2131099989" android:layout_width="-1" android:layout_height="-1" android:scaleType="5" android:contentDescription="@2132017328" />
+        <com.amazon.dee.app.ui.clouddrive.ViewBoxOverlayView android:id="@2131429124" android:layout_width="-1" android:layout_height="-1" app:cropHeight="@dimen/viewbox_crop_height" app:cropWidth="@dimen/viewbox_crop_width" app:marginLeft="@dimen/layout_margin_medium" app:marginTop="@dimen/layout_margin_medium" app:overlayColor="@color/white_overlay" />
+    </FrameLayout>
+    <TextView android:textSize="@2131167516" android:textColor="@2131103410" android:id="@2131428056" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166143" android:layout_marginBottom="@2131166142" android:text="@2132017329" android:layout_below="@2131429874" />
+    <TextView android:textSize="@2131166010" android:textColor="@2131103410" android:id="@2131429195" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_below="@2131428056" />
+    <TextView android:textSize="@2131166010" android:textColor="@2131103410" android:id="@2131429619" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="2.0dip" android:layout_marginBottom="@2131166140" android:layout_below="@2131429195" />
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166143" android:layout_marginBottom="@2131166142" android:layout_alignParentBottom="true">
+        <Button android:id="@2131427714" android:tag="" android:layout_width="-1" android:text="@2132017326" android:layout_weight="1.0" android:contentDescription="@2132018745" android:layout_marginEnd="@2131166144" style="@style/AlexaButton.Secondary" />
+        <Button android:id="@2131427718" android:tag="" android:layout_width="-1" android:text="@2132017338" android:layout_weight="1.0" android:contentDescription="@2132017339" android:layout_marginStart="@2131166144" style="@style/AlexaButton.Primary" />
+    </LinearLayout>
+</RelativeLayout>

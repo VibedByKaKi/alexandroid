@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@2131427574" android:background="?2130972418" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:paddingStart="@2131167847" android:paddingEnd="@2131167847"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="0" android:id="@2131429396" android:layout_width="-2" android:layout_height="-2" app:layout_constraintGuide_percent="@dimen/text_ui_od_suggestion_safe_area_percent" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="-1" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/safe_area_guideline">
+        <androidx.recyclerview.widget.RecyclerView android:id="@2131427575" android:layout_width="-1" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

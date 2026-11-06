@@ -1,0 +1,52 @@
+package dagger.producers.monitoring;
+
+import com.google.common.util.concurrent.FutureCallback;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.common.util.concurrent.MoreExecutors;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes9.dex */
+public abstract class ProducerMonitor {
+    private static final ProducerMonitor NO_OP = new ProducerMonitor() { // from class: dagger.producers.monitoring.ProducerMonitor.2
+        @Override // dagger.producers.monitoring.ProducerMonitor
+        public <T> void addCallbackTo(ListenableFuture<T> listenableFuture) {
+        }
+    };
+
+    public static ProducerMonitor noOp() {
+        return NO_OP;
+    }
+
+    public <T> void addCallbackTo(ListenableFuture<T> listenableFuture) {
+        Futures.addCallback(listenableFuture, new FutureCallback<T>() { // from class: dagger.producers.monitoring.ProducerMonitor.1
+            @Override // com.google.common.util.concurrent.FutureCallback
+            public void onFailure(Throwable th) {
+                ProducerMonitor.this.failed(th);
+            }
+
+            @Override // com.google.common.util.concurrent.FutureCallback
+            public void onSuccess(T t) {
+                ProducerMonitor.this.succeeded(t);
+            }
+        }, MoreExecutors.directExecutor());
+    }
+
+    public void methodFinished() {
+    }
+
+    public void methodStarting() {
+    }
+
+    public void ready() {
+    }
+
+    public void requested() {
+    }
+
+    public void failed(Throwable th) {
+    }
+
+    public void succeeded(Object obj) {
+    }
+}

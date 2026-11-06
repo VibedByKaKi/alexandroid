@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="">
+        <group android:name="" android:pivotX="-33.0" android:pivotY="-34.0" android:scaleX="0.738" android:scaleY="0.738" android:rotation="0.0" android:translateX="45.0" android:translateY="46.4">
+            <path android:name="" android:pathData="" android:strokeColor="#ff008577" android:strokeWidth="1.45" android:trimPathStart="0.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="1" android:strokeLineJoin="1" android:strokeAlpha="1.0" />
+            <path android:name="" android:pathData="" android:strokeColor="#ff008577" android:strokeWidth="1.45" android:trimPathStart="0.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="1" android:strokeLineJoin="1" android:strokeAlpha="1.0" />
+            <path android:name="" android:pathData="" android:strokeColor="#ff008577" android:strokeWidth="1.45" android:trimPathStart="0.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="1" android:strokeLineJoin="1" android:strokeAlpha="1.0" />
+            <path android:name="" android:pathData="" android:strokeColor="#ff008577" android:strokeWidth="1.45" android:trimPathStart="0.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="1" android:strokeLineJoin="1" android:strokeAlpha="1.0" />
+            <path android:name="" android:pathData="" android:strokeColor="#ff008577" android:strokeWidth="1.45" android:trimPathStart="0.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="1" android:strokeLineJoin="1" android:strokeAlpha="1.0" />
+        </group>
+    </group>
+</vector>

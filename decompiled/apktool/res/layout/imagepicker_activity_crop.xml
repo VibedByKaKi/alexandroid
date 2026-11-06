@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@2131429759" android:background="@2131103575" android:layout_width="-1" android:layout_height="?2130968585">
+        <ImageView android:layout_gravity="0x00800005" android:id="@2131427716" android:background="?2130972138" android:padding="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@17301562" android:contentDescription="@2132019169" app:tint="@17170443" />
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout android:id="@2131428017" android:layout_width="-1" android:layout_height="-1" android:layout_below="@2131429759">
+        <com.amazon.alexa.hho.imagepicker.cropping.ViewBoxImageView android:id="@2131428529" android:background="@2131099989" android:layout_width="-1" android:layout_height="-1" android:scaleType="5" android:contentDescription="@2132019173" />
+        <com.amazon.alexa.hho.imagepicker.cropping.ViewBoxOverlayView android:id="@2131429125" android:layout_width="-1" android:layout_height="-1" app:cropHeight="@dimen/viewbox_crop_height" app:cropWidth="@dimen/viewbox_crop_width" app:marginLeft="@dimen/layout_margin_medium" app:marginTop="@dimen/layout_margin_medium" app:overlayColor="@color/white_overlay" />
+    </FrameLayout>
+</RelativeLayout>

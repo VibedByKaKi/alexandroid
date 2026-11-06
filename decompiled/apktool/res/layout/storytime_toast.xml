@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@2131429580" style="@style/storytime_toast_linear_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amazon.alexa.font.FontTextView android:id="@2131429581" android:text="@2132020639" style="@style/storytime_toast_text" />
+</LinearLayout>

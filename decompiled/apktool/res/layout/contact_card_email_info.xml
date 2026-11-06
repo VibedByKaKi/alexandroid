@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:layout_marginStart="@2131165725" android:layout_marginEnd="@2131165724"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165714" android:textColor="@2131100053" android:id="@2131428208" android:layout_width="-1" android:layout_height="-2" android:text="@2132018538" app:fontName="app_text_regular" />
+    <com.amazon.alexa.font.FontTextView android:textAppearance="?16842816" android:textSize="@2131165715" android:textColor="@2131100053" android:id="@2131428209" android:layout_width="-1" android:layout_height="-2" android:text="@2132018537" app:fontName="app_text_regular" />
+    <View android:id="@2131427968" style="@style/contactInfoDividerStyle" />
+</LinearLayout>

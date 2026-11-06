@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429463" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131429465" layout="@layout/settings_toolbar" />
+    <ScrollView android:orientation="1" android:padding="@2131165333" android:layout_width="-1" android:layout_height="-1" android:fillViewport="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:layout_width="-1" android:layout_height="-2">
+            <TextView android:layout_width="-1" android:layout_height="-1" android:text="@2132017358" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

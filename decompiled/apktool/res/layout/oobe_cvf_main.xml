@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167339"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@2131428024" android:focusable="true" android:layout_width="-1" android:layout_height="-1" />
+</RelativeLayout>

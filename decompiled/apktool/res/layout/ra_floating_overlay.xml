@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@2131232447" android:padding="@2131167372" android:layout_width="@2131167494" android:layout_height="@2131167491"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@2131427486" android:layout_width="@2131166059" android:layout_height="@2131166059" android:src="@2131230892" android:contentDescription="@2132020279" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:gravity="0x00800013" android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" android:layout_margin="@2131167396" android:layout_marginStart="@2131167375" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/mute_button" app:layout_constraintStart_toEndOf="@id/alexa_icon" app:layout_constraintTop_toTopOf="parent">
+        <Chronometer android:textSize="@2131167775" android:textColor="@2131103286" android:id="@2131429719" android:layout_width="-2" android:layout_height="-2" />
+        <TextView android:textSize="@2131167775" android:textColor="@2131103287" android:id="@2131429576" android:layout_width="-2" android:layout_height="-2" android:text="@2132020285" />
+    </LinearLayout>
+    <ImageView android:id="@2131428952" android:focusable="true" android:clickable="true" android:layout_width="@2131166059" android:layout_height="@2131166059" android:src="@2131232731" android:contentDescription="@2132020276" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/end_bg_mode_button" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@2131428234" android:focusable="true" android:clickable="true" android:layout_width="@2131166059" android:layout_height="@2131166059" android:src="@2131230956" android:contentDescription="@2132020273" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

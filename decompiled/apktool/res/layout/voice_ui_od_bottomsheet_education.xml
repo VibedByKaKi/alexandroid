@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131429887" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarStyle="0x02000000" android:layout_width="-1" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+            <ImageView android:id="@2131429883" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167047" android:src="@2131232170" android:scaleType="6" android:adjustViewBounds="true" android:contentDescription="@2132020913" />
+            <TextView android:textAppearance="@2132084362" android:textColor="?2130970736" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167045" android:text="@2132020901" android:textAlignment="5" android:layout_marginStart="@2131167029" android:layout_marginEnd="@2131167029" />
+            <TextView android:textAppearance="@2132084350" android:textColor="?2130970729" android:layout_width="-1" android:layout_height="-2" android:text="@2132020902" android:textAlignment="5" android:layout_marginStart="@2131167029" android:layout_marginEnd="@2131167029" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:gravity="0x00000011" android:id="@2131427505" android:layout_width="-1" android:layout_height="@2131168122" android:layout_marginTop="@2131167045" android:layout_marginBottom="@2131167045" android:text="@2132020900" android:layout_marginStart="@2131167029" android:layout_marginEnd="@2131167029" style="@style/voice_ui_od_primary_button" />
+</LinearLayout>

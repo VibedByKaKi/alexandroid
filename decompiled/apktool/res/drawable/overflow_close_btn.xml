@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@2131231324" />
+    <item>
+        <inset android:drawable="@2131231569" android:inset="6.0sp" />
+    </item>
+</layer-list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@2131232600" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167048">
+        <ImageView android:id="@2131427630" android:layout_width="-1" android:layout_height="-1" android:src="@2131232618" android:scaleType="0" android:alpha="@2131167466" />
+        <include android:id="@2131428452" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/bottom_sheet_assistant_header" />
+        <View android:id="@2131429125" android:background="@2131100086" android:visibility="2" android:layout_width="-1" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/pills_view" app:layout_constraintTop_toBottomOf="@id/header_view" />
+        <LinearLayout android:orientation="1" android:id="@2131427990" android:layout_width="-1" android:layout_height="0.0dip" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/pills_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/header_view">
+            <androidx.recyclerview.widget.RecyclerView android:id="@2131428010" android:paddingTop="@2131167816" android:paddingBottom="@2131167815" android:visibility="2" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2" />
+            <include android:id="@2131428193" android:paddingTop="@2131167816" android:paddingBottom="@2131167815" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131167816" android:paddingEnd="@2131167816" layout="@layout/remarkable_alexa_landing_education" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@2131429166" android:visibility="2" android:clipToPadding="false" android:layout_width="-1" android:layout_height="@2131165545" android:paddingStart="@2131165544" android:paddingEnd="@2131165544" app:layout_constraintBottom_toTopOf="@id/content_barrier" />
+        <androidx.constraintlayout.widget.Barrier android:id="@2131427995" android:layout_width="-2" android:layout_height="-2" app:barrierDirection="bottom" app:constraint_referenced_ids="pills_view,container_view, overlay_view" />
+        <com.amazon.alexa.voice.ui.onedesign.bottomsheet.items.BottomSheetUserInput android:id="@2131429844" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toTopOf="@id/bottom_sheet_chrome" app:layout_constraintTop_toBottomOf="@id/content_barrier" />
+        <com.amazon.alexa.voice.ui.widget.AlexaChromeView android:id="@2131427680" android:visibility="1" android:layout_width="-1" android:layout_height="@2131165549" android:layout_alignParentBottom="true" app:layout_constraintBottom_toBottomOf="parent" />
+        <include android:id="@2131429335" android:visibility="2" app:layout_constraintBottom_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/remarkable_alexa_update_request" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

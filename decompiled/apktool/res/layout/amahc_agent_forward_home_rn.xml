@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@2131099799" android:layout_width="-1" android:layout_height="-1" android:importantForAccessibility="1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:id="@2131429277" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:elevation="@2131165377" />
+    <androidx.compose.ui.platform.ComposeView android:id="@2131427951" android:visibility="2" android:layout_width="-1" android:layout_height="-1" />
+    <com.amazon.alexa.redesign.view.errorPage.ErrorPage android:gravity="0x00000001" android:orientation="1" android:id="@2131428255" android:background="@2131099799" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:elevation="@2131165377" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:id="@2131429696" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167812"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="-2" android:layout_weight="?2130972409">
+        <LinearLayout android:layout_gravity="0x00800003" android:orientation="0" android:id="@2131428538" android:paddingTop="@2131167794" android:paddingBottom="@2131167794" android:layout_width="-2" android:layout_height="-2" android:paddingStart="@2131167793">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131167791" android:textColor="?2130972388" android:ellipsize="3" android:layout_gravity="0x00000010" android:id="@2131428536" android:layout_width="0.0dip" android:layout_height="-2" android:maxLines="2" android:scrollHorizontally="false" android:layout_weight="1.0" app:fontName="?textUiRegularItalicFont" />
+            <ImageView android:layout_gravity="0x00000010" android:id="@2131428537" android:layout_width="@2131167786" android:layout_height="@2131167786" android:src="@2131232053" android:layout_marginStart="@2131167792" android:layout_marginEnd="@2131167792" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:layout_gravity="0x00800005" android:visibility="1" android:layout_width="0.0dip" android:layout_height="-1" android:layout_weight="100.0" />
+</LinearLayout>

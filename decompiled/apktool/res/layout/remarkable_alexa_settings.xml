@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout android:id="@2131428624" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:background="@2131232600" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="@2131167048">
+        <include android:id="@2131428452" android:layout_width="-1" android:layout_height="-2" layout="@layout/bottom_sheet_assistant_header" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@2131429462" android:visibility="0" android:layout_width="-1" android:layout_height="-2" />
+    </LinearLayout>
+</com.amazon.alexa.voice.ui.onedesign.widget.ContentLayout>

@@ -1,0 +1,49 @@
+package org.junit.rules;
+
+import org.junit.internal.AssumptionViolatedException;
+import org.junit.runners.model.FrameworkMethod;
+import org.junit.runners.model.Statement;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@Deprecated
+/* loaded from: classes11.dex */
+public class TestWatchman implements MethodRule {
+    @Override // org.junit.rules.MethodRule
+    public Statement apply(final Statement statement, final FrameworkMethod frameworkMethod, Object obj) {
+        return new Statement() { // from class: org.junit.rules.TestWatchman.1
+            @Override // org.junit.runners.model.Statement
+            public void evaluate() throws Throwable {
+                TestWatchman.this.starting(frameworkMethod);
+                try {
+                    try {
+                        try {
+                            statement.evaluate();
+                            TestWatchman.this.succeeded(frameworkMethod);
+                            TestWatchman.this.finished(frameworkMethod);
+                        } catch (AssumptionViolatedException e) {
+                            throw e;
+                        }
+                    } catch (Throwable th) {
+                        TestWatchman.this.failed(th, frameworkMethod);
+                        throw th;
+                    }
+                } catch (Throwable th2) {
+                    TestWatchman.this.finished(frameworkMethod);
+                    throw th2;
+                }
+            }
+        };
+    }
+
+    public void finished(FrameworkMethod frameworkMethod) {
+    }
+
+    public void starting(FrameworkMethod frameworkMethod) {
+    }
+
+    public void succeeded(FrameworkMethod frameworkMethod) {
+    }
+
+    public void failed(Throwable th, FrameworkMethod frameworkMethod) {
+    }
+}

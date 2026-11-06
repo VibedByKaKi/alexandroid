@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/status_banner" />
+    <com.amazon.alexa.mosaic.view.ListItemLink android:id="@2131429724" android:tag="" android:layout_width="-1" android:layout_height="-2" app:clickable="true" app:linkText="@string/time_zone_region_picker_change" />
+    <com.amazon.alexa.mosaic.view.SectionHeader android:id="@2131427834" android:layout_width="-1" android:layout_height="-2" app:text="@string/time_zone_list_header" />
+    <androidx.recyclerview.widget.RecyclerView android:orientation="1" android:id="@2131429723" android:layout_width="-1" android:layout_height="-1" />
+</LinearLayout>

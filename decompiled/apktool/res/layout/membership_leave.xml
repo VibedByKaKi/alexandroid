@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="1" android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/status_banner" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131428749" android:tag="" android:padding="@2131166988" android:layout_width="-1" android:layout_height="-2" style="@style/TextAppearance.Mosaic.Body_04" />
+        <com.amazon.alexa.mosaic.view.BulletListText android:id="@2131428745" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" />
+        <com.amazon.alexa.mosaic.view.BulletListText android:id="@2131428746" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" />
+        <com.amazon.alexa.mosaic.view.BulletListText android:id="@2131428747" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" />
+        <com.amazon.alexa.mosaic.view.BulletListText android:id="@2131428748" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166137" />
+    </LinearLayout>
+    <LinearLayout android:orientation="1" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout android:orientation="0" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+            <Button android:id="@2131429028" android:tag="" android:layout_width="-2" android:layout_height="-2" android:text="@2132018349" android:layout_weight="1.0" style="@style/mosaic_button" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+package androidx.webkit;
+
+import androidx.annotation.RestrictTo;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes14.dex */
+public class TracingConfig {
+    public static final int CATEGORIES_ALL = 1;
+    public static final int CATEGORIES_ANDROID_WEBVIEW = 2;
+    public static final int CATEGORIES_FRAME_VIEWER = 64;
+    public static final int CATEGORIES_INPUT_LATENCY = 8;
+    public static final int CATEGORIES_JAVASCRIPT_AND_RENDERING = 32;
+    public static final int CATEGORIES_NONE = 0;
+    public static final int CATEGORIES_RENDERING = 16;
+    public static final int CATEGORIES_WEB_DEVELOPER = 4;
+    public static final int RECORD_CONTINUOUSLY = 1;
+    public static final int RECORD_UNTIL_FULL = 0;
+    private final List<String> mCustomIncludedCategories;
+    private final int mPredefinedCategories;
+    private final int mTracingMode;
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public @interface PredefinedCategories {
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public @interface TracingMode {
+    }
+
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public TracingConfig(int i, List<String> list, int i2) {
+        ArrayList arrayList = new ArrayList();
+        this.mCustomIncludedCategories = arrayList;
+        this.mPredefinedCategories = i;
+        arrayList.addAll(list);
+        this.mTracingMode = i2;
+    }
+
+    public List<String> getCustomIncludedCategories() {
+        return this.mCustomIncludedCategories;
+    }
+
+    public int getPredefinedCategories() {
+        return this.mPredefinedCategories;
+    }
+
+    public int getTracingMode() {
+        return this.mTracingMode;
+    }
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public static class Builder {
+        private int mPredefinedCategories = 0;
+        private final List<String> mCustomIncludedCategories = new ArrayList();
+        private int mTracingMode = 1;
+
+        public Builder addCategories(int... iArr) {
+            for (int i : iArr) {
+                this.mPredefinedCategories = i | this.mPredefinedCategories;
+            }
+            return this;
+        }
+
+        public TracingConfig build() {
+            return new TracingConfig(this.mPredefinedCategories, this.mCustomIncludedCategories, this.mTracingMode);
+        }
+
+        public Builder setTracingMode(int i) {
+            this.mTracingMode = i;
+            return this;
+        }
+
+        public Builder addCategories(String... strArr) {
+            this.mCustomIncludedCategories.addAll(Arrays.asList(strArr));
+            return this;
+        }
+
+        public Builder addCategories(Collection<String> collection) {
+            this.mCustomIncludedCategories.addAll(collection);
+            return this;
+        }
+    }
+}

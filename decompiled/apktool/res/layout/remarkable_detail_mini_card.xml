@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:id="@2131428067" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168136" android:paddingHorizontal="@2131167793"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@2131428791" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@2131167598" android:layout_height="-2">
+        <androidx.cardview.widget.CardView android:id="@2131428069" android:layout_width="@2131167598" android:layout_height="-2" android:layout_marginTop="@2131167012" android:layout_marginEnd="@2131167012" app:cardCornerRadius="@dimen/mosaic_border_radius_large" app:cardElevation="@dimen/remarkable_alexa_conversation_bubble_elevation" style="?voiceOdCardStyle">
+            <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                <RelativeLayout android:layout_width="-1" android:layout_height="-2">
+                    <ImageView android:id="@2131428787" android:background="@2131232319" android:paddingTop="@2131167012" android:visibility="2" android:layout_width="@2131167589" android:layout_height="@2131167589" android:src="@2131101027" android:scaleType="6" android:layout_centerVertical="true" android:paddingEnd="@2131167012" android:layout_alignParentStart="true" />
+                    <TextView android:textStyle="0x00000001" android:textColor="@2131101032" android:id="@2131428789" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167593" android:layout_toEndOf="@2131428787" android:layout_marginHorizontal="@2131167013" style="@style/mosaic_font_body_01" />
+                    <TextView android:textColor="@2131101032" android:id="@2131428788" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131167593" android:maxLines="1" android:layout_below="@2131428789" android:layout_toEndOf="@2131428787" android:layout_marginHorizontal="@2131167013" style="@style/mosaic_font_body_03" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="1" android:id="@2131428792" android:layout_width="-1" android:layout_height="-2" />
+                <LinearLayout android:layout_gravity="0x00000050" android:id="@2131428786" android:background="@2131103512" android:visibility="2" android:layout_width="-1" android:layout_height="@2131167587">
+                    <TextView android:textSize="@2131167588" android:textColor="@2131101032" android:id="@2131428785" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:text="@2132019724" android:fontFamily="@2131296278" android:layout_marginHorizontal="@2131167013" android:layout_marginVertical="@2131167018" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout android:id="@2131428066" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165483" android:layout_alignTop="@2131428069" android:layout_marginEnd="@2131165483" android:layout_alignEnd="@2131428069">
+            <include layout="@layout/alexa_feedback_badge" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

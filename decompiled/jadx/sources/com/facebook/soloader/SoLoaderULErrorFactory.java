@@ -1,0 +1,33 @@
+package com.facebook.soloader;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@DoNotStripAny
+/* loaded from: classes7.dex */
+public class SoLoaderULErrorFactory {
+    private static boolean corruptedLibName(String str) {
+        Matcher matcher = Pattern.compile("\\P{ASCII}+").matcher(str);
+        if (!matcher.find()) {
+            return false;
+        }
+        LogUtil.w(SoLoader.TAG, "Library name is corrupted, contains non-ASCII characters " + matcher.group());
+        return true;
+    }
+
+    public static SoLoaderULError create(String str, UnsatisfiedLinkError unsatisfiedLinkError) {
+        SoLoaderULError soLoaderULError;
+        if (unsatisfiedLinkError.getMessage() != null && unsatisfiedLinkError.getMessage().contains("ELF")) {
+            LogUtil.d(SoLoader.TAG, "Corrupted lib file detected");
+            soLoaderULError = new SoLoaderCorruptedLibFileError(str, unsatisfiedLinkError.toString());
+        } else if (corruptedLibName(str)) {
+            LogUtil.d(SoLoader.TAG, "Corrupted lib name detected");
+            soLoaderULError = new SoLoaderCorruptedLibNameError(str, "corrupted lib name: " + unsatisfiedLinkError.toString());
+        } else {
+            soLoaderULError = new SoLoaderULError(str, unsatisfiedLinkError.toString());
+        }
+        soLoaderULError.initCause(unsatisfiedLinkError);
+        return soLoaderULError;
+    }
+}

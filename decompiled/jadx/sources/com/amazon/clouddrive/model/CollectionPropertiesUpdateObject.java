@@ -1,0 +1,67 @@
+package com.amazon.clouddrive.model;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public class CollectionPropertiesUpdateObject implements Comparable<CollectionPropertiesUpdateObject> {
+    private CollectionProperties collectionProperties;
+    private String op;
+    private String path;
+
+    @Override // java.lang.Comparable
+    public int compareTo(CollectionPropertiesUpdateObject collectionPropertiesUpdateObject) {
+        if (collectionPropertiesUpdateObject == null) {
+            return -1;
+        }
+        if (collectionPropertiesUpdateObject == this) {
+            return 0;
+        }
+        int compare = ObjectComparator.compare(getCollectionProperties(), collectionPropertiesUpdateObject.getCollectionProperties());
+        if (compare != 0) {
+            return compare;
+        }
+        int compare2 = ObjectComparator.compare(getOp(), collectionPropertiesUpdateObject.getOp());
+        if (compare2 != 0) {
+            return compare2;
+        }
+        int compare3 = ObjectComparator.compare(getPath(), collectionPropertiesUpdateObject.getPath());
+        if (compare3 != 0) {
+            return compare3;
+        }
+        return 0;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        return (obj instanceof CollectionPropertiesUpdateObject) && compareTo((CollectionPropertiesUpdateObject) obj) == 0;
+    }
+
+    public CollectionProperties getCollectionProperties() {
+        return this.collectionProperties;
+    }
+
+    public String getOp() {
+        return this.op;
+    }
+
+    public String getPath() {
+        return this.path;
+    }
+
+    public int hashCode() {
+        return (getCollectionProperties() == null ? 0 : getCollectionProperties().hashCode()) + 1 + (getOp() == null ? 0 : getOp().hashCode()) + (getPath() != null ? getPath().hashCode() : 0);
+    }
+
+    public void setCollectionProperties(CollectionProperties collectionProperties) {
+        this.collectionProperties = collectionProperties;
+    }
+
+    public void setOp(String str) {
+        this.op = str;
+    }
+
+    public void setPath(String str) {
+        this.path = str;
+    }
+}

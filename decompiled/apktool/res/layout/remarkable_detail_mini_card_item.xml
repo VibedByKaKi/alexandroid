@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@2131428068" android:layout_width="-1" android:layout_height="-2" android:layout_marginVertical="@2131166983">
+        <ImageView android:id="@2131428793" android:background="@2131232157" android:visibility="2" android:layout_width="@2131167009" android:layout_height="@2131167009" android:scaleType="6" android:layout_centerVertical="true" android:layout_marginStart="@2131166981" android:layout_alignParentStart="true" android:backgroundTint="@2131101027" />
+        <TextView android:textColor="@2131101032" android:id="@2131428796" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131167594" android:maxLines="1" android:layout_alignParentTop="true" android:layout_toEndOf="@2131428793" android:layout_marginHorizontal="@2131167013" style="@style/mosaic_font_body_01" />
+        <TextView android:textColor="@2131101031" android:id="@2131428795" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131167593" android:maxLines="1" android:layout_below="@2131428796" android:layout_toEndOf="@2131428793" android:layout_marginHorizontal="@2131167013" style="@style/mosaic_font_body_03" />
+        <TextView android:textColor="@2131101032" android:id="@2131428794" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:maxLength="4" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:layout_marginHorizontal="@2131167013" style="@style/mosaic_font_heading_02" />
+    </RelativeLayout>
+    <View android:id="@2131428790" android:background="@2131101030" android:visibility="2" android:layout_width="-1" android:layout_height="@2131167591" android:layout_marginHorizontal="@2131167029" />
+</LinearLayout>

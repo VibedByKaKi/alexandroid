@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="-1" android:layout_height="38.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@2131427517" android:layout_width="38.0dip" android:layout_height="38.0dip" android:src="@2131230936" android:contentDescription="@2132017715" android:layout_alignParentEnd="true" />
+    <TextView android:id="@2131427513" android:layout_width="-1" android:layout_height="-1" android:layout_toStartOf="@2131427517" android:layout_alignParentStart="true" style="@style/AlexaTheme.Notification.Body" />
+</RelativeLayout>

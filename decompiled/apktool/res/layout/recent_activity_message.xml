@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@2131429294" android:tag="" android:layout_width="-1" android:layout_height="-2" android:importantForAccessibility="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:id="@2131429296" android:tag="" android:padding="@2131167661" android:layout_width="-1" android:layout_height="-2" android:layout_margin="@2131167661" style="@style/TextAppearance.Mosaic.Body" />
+</LinearLayout>

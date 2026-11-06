@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="0x00000011" android:id="@2131429343" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" />
+    <RelativeLayout android:gravity="0x00000011" android:id="@2131429449" android:layout_width="-1" android:layout_height="-1" android:animateLayoutChanges="true">
+        <ImageView android:id="@2131429757" android:background="@17170445" android:visibility="1" android:layout_width="-2" android:layout_height="-2" android:src="@2131231306" android:contentDescription="@2132020733" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="0" android:id="@2131429410" android:background="@17170444" android:visibility="1" android:layout_width="-1" android:layout_height="-1" android:alpha="0.6" />
+    <FrameLayout android:id="@2131427796" android:layout_width="-1" android:layout_height="-1" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

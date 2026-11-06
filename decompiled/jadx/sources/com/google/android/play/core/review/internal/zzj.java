@@ -1,0 +1,43 @@
+package com.google.android.play.core.review.internal;
+
+import androidx.annotation.Nullable;
+import com.google.android.gms.tasks.TaskCompletionSource;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes7.dex */
+public abstract class zzj implements Runnable {
+
+    @Nullable
+    private final TaskCompletionSource zza;
+
+    public zzj() {
+        this.zza = null;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        try {
+            zza();
+        } catch (Exception e) {
+            zzc(e);
+        }
+    }
+
+    public abstract void zza();
+
+    @Nullable
+    public final TaskCompletionSource zzb() {
+        return this.zza;
+    }
+
+    public final void zzc(Exception exc) {
+        TaskCompletionSource taskCompletionSource = this.zza;
+        if (taskCompletionSource != null) {
+            taskCompletionSource.trySetException(exc);
+        }
+    }
+
+    public zzj(@Nullable TaskCompletionSource taskCompletionSource) {
+        this.zza = taskCompletionSource;
+    }
+}

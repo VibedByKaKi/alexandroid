@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000011" android:orientation="1" android:id="@2131428678" android:tag="" android:padding="@2131166142" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@2131103720" android:gravity="0x00000011" android:id="@2131428766" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="@2131166144" />
+    <com.amazon.dee.app.ui.view.LoadingView android:id="@2131428524" android:layout_width="-1" android:layout_height="40.0dip" android:layout_centerInParent="true" app:animDuration="35" app:dotPadding="10.0dip" app:fillColor="#ff02cbfc" app:maxRadius="8.0dip" app:minRadius="2.0dip" />
+</LinearLayout>

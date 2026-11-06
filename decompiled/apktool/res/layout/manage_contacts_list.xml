@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@2131103288" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+        <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131427655" android:focusable="true" android:clickable="true" android:descendantFocusability="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:layout_marginBottom="@2131165723" android:layout_marginStart="@2131165725">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165651" android:textColor="@2131099933" android:id="@2131427657" android:layout_width="-2" android:layout_height="-2" android:text="@2132018250" android:layout_weight="@2131492967" app:fontName="app_text_regular" />
+            <ImageView android:id="@2131427656" android:layout_width="-2" android:layout_height="-2" android:src="@2131231480" android:layout_weight="@2131492966" android:contentDescription="@2132018250" android:layout_marginEnd="@2131165724" />
+        </LinearLayout>
+        <include android:id="@2131428133" layout="@layout/divider" />
+        <LinearLayout android:gravity="0x00000010" android:orientation="0" android:id="@2131427437" android:focusable="true" android:clickable="true" android:descendantFocusability="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165722" android:layout_marginBottom="@2131165723" android:layout_marginStart="@2131165725">
+            <com.amazon.alexa.font.FontTextView android:textSize="@2131165651" android:textColor="@2131099933" android:id="@2131427441" android:layout_width="-2" android:layout_height="-2" android:text="@2132017242" android:layout_weight="@2131492967" app:fontName="app_text_regular" />
+            <ImageView android:id="@2131427438" android:layout_width="-2" android:layout_height="-2" android:src="@2131231480" android:layout_weight="@2131492966" android:contentDescription="@2132018250" android:layout_marginEnd="@2131165724" />
+        </LinearLayout>
+        <include android:id="@2131428133" layout="@layout/divider" />
+    </LinearLayout>
+</ScrollView>

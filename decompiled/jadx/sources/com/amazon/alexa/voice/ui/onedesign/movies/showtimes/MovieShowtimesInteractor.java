@@ -1,0 +1,43 @@
+package com.amazon.alexa.voice.ui.onedesign.movies.showtimes;
+
+import com.amazon.alexa.voice.ui.onedesign.movies.MoviesCard;
+import com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public final class MovieShowtimesInteractor implements MovieShowtimesContract.Interactor {
+    private final CharSequence date;
+    private final MovieShowtimesContract.Mediator mediator;
+    private final MoviesCard.Movie movie;
+
+    public MovieShowtimesInteractor(CharSequence charSequence, MoviesCard.Movie movie, MovieShowtimesContract.Mediator mediator) {
+        this.date = charSequence;
+        this.movie = movie;
+        this.mediator = mediator;
+    }
+
+    @Override // com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract.Interactor
+    public void close() {
+        this.mediator.close();
+    }
+
+    @Override // com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract.Interactor
+    public CharSequence getDate() {
+        return this.date;
+    }
+
+    @Override // com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract.Interactor
+    public MoviesCard.Movie getMovie() {
+        return this.movie;
+    }
+
+    @Override // com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract.Interactor
+    public void openLink() {
+        this.mediator.openLinkUrl(this.movie.getLinkUrl());
+    }
+
+    @Override // com.amazon.alexa.voice.ui.onedesign.movies.showtimes.MovieShowtimesContract.Interactor
+    public void openTheater(MoviesCard.Theater theater) {
+        this.mediator.openTheater(this.movie.getName(), this.date, theater);
+    }
+}

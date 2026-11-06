@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="0x00800003" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="0x00000001" android:id="@2131427511" android:layout_width="-1" android:layout_height="-2" android:textAlignment="5" />
+    <TextView android:id="@2131427512" android:layout_width="-1" android:layout_height="-2" android:layout_below="@2131427511" android:textAlignment="5" />
+</RelativeLayout>

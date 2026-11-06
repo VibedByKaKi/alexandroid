@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="" android:background="?2130969753" android:layout_width="-1" android:layout_height="-1" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/status_banner" />
+    <LinearLayout android:gravity="0x00000011" android:layout_gravity="0x00000010" android:orientation="1" android:layout_width="0.0dip" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.85">
+        <ImageView android:id="@2131428007" android:tag="" android:layout_width="@2131167061" android:layout_height="@2131167060" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428457" android:tag="" app:fontName="amazon_ember_bold" style="@style/Mosaic.View.Confirmation.Headline" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131427660" android:tag="" style="@style/Mosaic.View.Confirmation.Body" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428645" android:tag="" style="@style/Mosaic.View.Confirmation.Link" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:textColorLink="?2130969817" android:id="@2131428510" android:tag="" android:layout_width="-1" android:layout_height="-2" style="@style/Mosaic.View.Confirmation.Body" />
+        <com.amazon.alexa.font.FontTextView android:id="@2131428470" android:tag="" style="@style/Mosaic.View.Confirmation.Hint" />
+    </LinearLayout>
+    <Button android:id="@2131429028" android:tag="" android:layout_width="-1" android:layout_height="-2" android:layout_weight="1.0" app:layout_constraintBottom_toBottomOf="parent" style="@style/mosaic_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

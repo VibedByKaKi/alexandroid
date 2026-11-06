@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_checked="true">
+        <shape android:dither="true" android:visible="true" android:shape="0" android:useLevel="false">
+            <solid android:color="?2130969748" />
+            <corners android:radius="@2131165291" />
+            <size android:height="@2131165295" android:width="@2131165296" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_checked="false">
+        <shape android:dither="true" android:visible="true" android:shape="0" android:useLevel="false">
+            <solid android:color="?2130969817" />
+            <corners android:radius="@2131165291" />
+            <size android:height="@2131165295" android:width="@2131165296" />
+        </shape>
+    </item>
+    <item android:state_enabled="false" android:state_checked="true">
+        <shape android:dither="true" android:visible="true" android:shape="0" android:useLevel="false">
+            <solid android:color="@2131103588" />
+            <corners android:radius="@2131165291" />
+            <size android:height="@2131165295" android:width="@2131165296" />
+        </shape>
+    </item>
+    <item android:state_enabled="false" android:state_checked="false">
+        <shape android:dither="true" android:visible="true" android:shape="0" android:useLevel="false">
+            <solid android:color="@2131103588" />
+            <corners android:radius="@2131165291" />
+            <size android:height="@2131165295" android:width="@2131165296" />
+        </shape>
+    </item>
+</selector>

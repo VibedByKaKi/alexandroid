@@ -1,0 +1,191 @@
+{
+  "devices": [
+    {
+      "name": "Bob's 40th Echo dot",
+      "deviceIdentifier": {
+        "@type": "AlexaDeviceIdentifier",
+        "dsn": "A000168732FJ0FLU20LV2",
+        "encryptedDeviceType": "AB72C64C86AW2"
+      },
+      "actions": [
+        {
+          "actionType": "FIRST_ACTIVITY",
+          "displayName": "Detects a person for the first time",
+          "triggerString": "When Bob's 40th Echo dot first detects a person"
+        },
+        {
+          "actionType": "ANY_ACTIVITY",
+          "displayName": "Detects a person",
+          "triggerString": "When Bob's 40th Echo dot detects activity"
+        },
+        {
+          "actionType": "NO_ACTIVITY",
+          "displayName": "Hasn't detected anyone",
+          "triggerString": "When Bob's 40th Echo dot has not detected a person"
+        }
+      ],
+      "category": "ECHO_ALEXA_DEVICE",
+      "icon": "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_echo_smart_speaker-36.png"
+    },
+    {
+      "name": "Backyard motion detector",
+      "deviceIdentifier": {
+        "@type": "SHDeviceIdentifier",
+        "endpointId": "endpointId1"
+      },
+      "actions": [
+        {
+          "actionType": "DETECTS_MOTION_FIRST_TIME",
+          "displayName": "Detects activity for the first time",
+          "triggerString": "First time Backyard motion detector detects activity"
+        },
+        {
+          "actionType": "DETECTS_MOTION_EACH_TIME",
+          "displayName": "Detects activity",
+          "triggerString": "When Backyard motion detector detects activity"
+        },
+        {
+          "actionType": "DETECTS_NO_MOTION",
+          "displayName": "Hasn't detected any activity",
+          "triggerString": "Backyard motion detector hasn't detected any activity"
+        }
+      ],
+      "category": "MOTION_SENSOR",
+      "nameSpace": "V3.Alexa.MotionSensor.detectionState",
+      "icon": "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_smart_sensor_motion-36.png"
+    },
+    {
+      "name": "Kitchen Medicine Cabinet",
+      "deviceIdentifier": {
+        "@type": "SHDeviceIdentifier",
+        "endpointId": "endpointId2"
+      },
+      "actions": [
+        {
+          "actionType": "OPENS",
+          "displayName": "Is opened",
+          "triggerString": "When Kitchen Medicine Cabinet is opened"
+        },
+        {
+          "actionType": "CLOSES",
+          "displayName": "Is closed",
+          "triggerString": "When Kitchen Medicine Cabinet is closed"
+        },
+        {
+          "actionType": "ANY_ACTIVITY",
+          "displayName": "Is used in general (any action)",
+          "triggerString": "When Kitchen Medicine Cabinet opens or closes"
+        },
+        {
+          "actionType": "FIRST_ACTIVITY",
+          "displayName": "Is used for the first time",
+          "triggerString": "The first time Kitchen Medicine Cabinet is interacted with"
+        },
+        {
+          "actionType": "NO_ACTIVITY",
+          "displayName": "Hasn't been used",
+          "triggerString": "When Kitchen Medicine Cabinet hasn't been interacted with"
+        }
+      ],
+      "category": "CONTACT_SENSOR",
+      "nameSpace": "V3.Alexa.ContactSensor.detectionState",
+      "icon" : "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_smart_sensor-36.png"
+    },
+    {
+      "name": "Garage Light",
+      "deviceIdentifier": {
+        "@type": "SHDeviceIdentifier",
+        "endpointId": "endpointId3"
+      },
+      "actions": [
+        {
+          "actionType": "TURNS_ON",
+          "displayName": "Is turned on",
+          "triggerString": "When Garage Light is turned on"
+        },
+        {
+          "actionType": "TURNS_OFF",
+          "displayName": "Is turned off",
+          "triggerString": "When Garage Light is turned off"
+        },
+        {
+          "actionType": "ANY_ACTIVITY",
+          "displayName": "Is used in general (any action)",
+          "triggerString": "When Garage Light is turned on or off"
+        },
+        {
+          "actionType": "FIRST_ACTIVITY",
+          "displayName": "Is used for the first time",
+          "triggerString": "First time Garage Light is used"
+        },
+        {
+          "actionType": "NO_ACTIVITY",
+          "displayName": "Hasn't been used",
+          "triggerString": "When Garage Light hasn't been used"
+        }
+      ],
+      "category": "LIGHT",
+      "nameSpace": "V3.Alexa.PowerController.powerState",
+      "icon" : "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_light-36.png"
+    },
+    {
+      "name": "George's lock",
+      "deviceIdentifier": {
+        "@type": "SHDeviceIdentifier",
+        "endpointId": "endpointId4"
+      },
+      "actions": [
+        {
+          "actionType": "LOCKS",
+          "displayName": "Is locked",
+          "triggerString": "When George's lock is locked"
+        },
+        {
+          "actionType": "UNLOCKS",
+          "displayName": "Is unlocked",
+          "triggerString": "When George's lock is unlocked"
+        },
+        {
+          "actionType": "ANY_ACTIVITY",
+          "displayName": "Is used in general (any action)",
+          "triggerString": "When George's lock is locked or unlocked"
+        },
+        {
+          "actionType": "FIRST_ACTIVITY",
+          "displayName": "Is first used",
+          "triggerString": "First time George's lock is used"
+        },
+        {
+          "actionType": "NO_ACTIVITY",
+          "displayName": "Hasn't been used",
+          "triggerString": "When George's lock hasn't been used"
+        }
+      ],
+      "category": "SMARTLOCK",
+      "nameSpace": "V3.Alexa.LockController.lockState",
+      "icon": "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_smart_lock_on-36.png"
+    },
+    {
+      "name": "Kitchen thermostat",
+      "deviceIdentifier": {
+        "@type": "SHDeviceIdentifier",
+        "endpointId": "endpointId5"
+      },
+      "actions": [
+        {
+          "actionType": "ABOVE",
+          "displayName": "Above",
+          "triggerString": "When Kitchen thermostat is above %f %s"
+        },
+        {
+          "actionType": "BELOW",
+          "displayName": "Below",
+          "triggerString": "When Kitchen thermostat is below %f %s"
+        }
+      ],
+      "category": "THERMOSTAT",
+      "nameSpace": "V3.Alexa.TemperatureSensor.temperature",
+      "icon": "https://m.media-amazon.com/images/G/01/ACH/AlertIcons/ic_smart_thermostat-36.png"
+    }
+  ]
+}

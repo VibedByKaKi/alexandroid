@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@2131429888" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:clickable="true" android:layout_width="-1" android:layout_height="-1" style="?voiceOdContentStyle">
+        <ScrollView android:scrollbarStyle="0x02000000" android:id="@2131429889" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168128" android:layout_weight="1.0" android:layout_marginStart="@2131168091" android:layout_marginEnd="@2131168091">
+            <LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+                <ImageView android:id="@2131429883" android:layout_width="-2" android:layout_height="-2" android:src="@2131232063" android:scaleType="3" android:contentDescription="@2132020913" />
+                <TextView android:textSize="@2131168127" android:textColor="?16842806" android:id="@2131429736" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095" android:textAlignment="5" />
+                <com.amazon.alexa.voice.ui.onedesign.widget.TextViewWithLink android:textSize="@2131168121" android:textColor="?16842806" android:id="@2131429837" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095" android:textAlignment="5" app:clickableSubTextColor="?accent_icon_color_light" />
+                <com.amazon.alexa.voice.ui.onedesign.widget.TextViewWithLink android:textSize="@2131168121" android:textColor="?16842806" android:id="@2131428442" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095" android:textAlignment="5" app:clickableSubTextColor="?accent_icon_color_light" />
+                <com.amazon.alexa.voice.ui.onedesign.widget.TextViewWithLink android:textSize="@2131168121" android:textColor="?16842806" android:id="@2131429276" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095" android:textAlignment="5" app:clickableSubTextColor="?accent_icon_color_light" />
+                <com.amazon.alexa.voice.ui.onedesign.widget.TextViewWithLink android:textSize="@2131168121" android:textColor="?16842806" android:id="@2131428403" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168095" android:textAlignment="5" app:clickableSubTextColor="?accent_icon_color_light" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_weight="0.0">
+            <Button android:textSize="@2131168121" android:textColor="?2130968579" android:gravity="0x00000011" android:id="@2131428622" android:background="@17170445" android:layout_width="0.0dip" android:layout_height="@2131168122" android:layout_marginTop="@2131168126" android:layout_marginBottom="@2131168123" android:layout_weight="1.0" android:textAllCaps="true" android:layout_marginStart="@2131168125" android:layout_marginEnd="@2131168124" style="?16843563" />
+            <Button android:textSize="@2131168121" android:textColor="@2131103667" android:gravity="0x00000011" android:id="@2131427505" android:background="@2131232717" android:layout_width="0.0dip" android:layout_height="@2131168122" android:layout_marginTop="@2131168126" android:layout_marginBottom="@2131168123" android:layout_weight="1.0" android:textAllCaps="true" android:layout_marginStart="@2131168125" android:layout_marginEnd="@2131168124" style="?16843563" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

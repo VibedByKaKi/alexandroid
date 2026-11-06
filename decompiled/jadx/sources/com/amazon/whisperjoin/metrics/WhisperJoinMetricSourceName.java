@@ -1,0 +1,102 @@
+package com.amazon.whisperjoin.metrics;
+
+import com.amazon.whisperjoin.deviceprovisioningservice.smarthome.AssociatedCredentialsSyncService;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public enum WhisperJoinMetricSourceName {
+    CONNECT_TO_DEVICE("ConnectingToDevice"),
+    GET_DEVICE_DETAILS("GetDeviceDetails"),
+    GET_VISIBLE_NETWORKS("GetVisibleNetworks"),
+    INITIATE_WIFI_SCAN("InitiateWifiScan"),
+    SAVE_WIFI_CONFIGURATION("SaveWifiConiguration"),
+    SET_REGISTRATION_TOKEN("SetRegistrationToken"),
+    START_PROVISIONING("StartProvisioning"),
+    COMPLETE_PROVISIONING("CompleteProvisioning"),
+    SAVE_CONFIGURATION_MAP("SaveConfigurationMap"),
+    GET_WIFI_CONNECTION_DETAIL("GetWifiConnectionDetail"),
+    GET_BLE_REGISTRATION_STATUS("GetBleRegistrationStatus"),
+    DISCONNECT_FROM_DEVICE("DisconnectFromDevice"),
+    GET_PROVISIONABLE_DEVICE_DETAILS("GetProvisionableDeviceDetails"),
+    GET_PERIPHERAL_DEVICE_DETAILS("GetPeripheralDeviceDetails"),
+    SAVE_LOCALE("SaveLocale"),
+    GET_DISCOVERED_DEVICES_LIST_OPERATION("GetDiscoveredDevicesListOperation"),
+    START_DISCOVERY_OPERATION("StartDiscoveryOperation"),
+    STOP_DISCOVERY_OPERATION("StopDiscoveryOperation"),
+    VERIFY_PROVISIONING_OPERATION("VerifyProvisioningOperation"),
+    CONNECT_TO_DEVICE_OPERATION("ConnectToDeviceOperation"),
+    PROVISION_DEVICE_OPERATION("ProvisionDeviceOperation"),
+    DSS_DISCOVERED_PROVISIONABLE_DEVICE("DssDiscoveredProvisionableDevice"),
+    DSS_START_ECDHE_AUTHENTICATION_SESSION("DssStartEcdheAuthenticationSession"),
+    DSS_FINALIZE_ECDHE_AUTHENTICATION_SESSION("DssFinalizeEcdheAuthenticationSession"),
+    DSS_VALIDATE_WIFI_SYNC_AUTH_TOKEN("ValidateWifiSyncAuthToken"),
+    DSS_GENERATE_PROVISIONING_SESSION("DssGenerateProvisioningSession"),
+    BLE_START_DISCVOERY("BleStartDiscovery"),
+    BLE_STOP_DISCOVERY("BleStopDiscovery"),
+    BLE_START_ATTEMPTS_RETRY_HANDLER("BleStartAttemptsRetryHandler"),
+    FFS_PROVISIONING_SERVICE("FFSProvisioningService"),
+    DEVICE_POWER_MONITOR("DevicePowerMonitor"),
+    DSHS(AssociatedCredentialsSyncService.INTENT_EXTRA_SOURCE_VAL_DSHS),
+    PROVISIONING_SESSION("ProvisioningSession"),
+    BEACONING_TO_CONNECTED_TO_PROVISIONER("BeaconingToConnectedToProvisioner"),
+    SET_CONFIGURATION_IN_DATA_MAP("SetConfigurationInDataMap"),
+    CONNECT_TO_WIFI("ConnectToWifi"),
+    REGISTER_DEVICE("RegisterDevice"),
+    CBL_REGISTRATION_ACCOUNT_BASED("CblRegistrationAccountBased"),
+    CBL_REGISTRATION_PROFILE_BASED("CblRegistrationProfileBased"),
+    CONNECT_TO_DEVICE_SCHEMA_ID("fsut/2/02330400"),
+    GET_DEVICE_DETAILS_SCHEMA_ID("duly/2/03330400"),
+    GET_VISIBLE_NETWORKS_SCHEMA_ID("emsj/2/08330400"),
+    INITIATE_WIFI_SCAN_SCHEMA_ID("vgdo/2/05330400"),
+    SAVE_WIFI_CONFIGURATION_SCHEMA_ID("5tqr/2/03330400"),
+    SET_REGISTRATION_TOKEN_SCHEMA_ID("1wfp/2/06330400"),
+    START_PROVISIONING_SCHEMA_ID("wcmz/2/02330400"),
+    COMPLETE_PROVISIONING_SCHEMA_ID("pv9h/2/06330400"),
+    SAVE_CONFIGURATION_MAP_SCHEMA_ID("3r2r/2/06330400"),
+    GET_WIFI_CONNECTION_DETAIL_SCHEMA_ID("ktzi/2/04330400"),
+    GET_BLE_REGISTRATION_STATUS_SCHEMA_ID("mcq0/2/04330400"),
+    DISCONNECT_FROM_DEVICE_SCHEMA_ID("NotInUse"),
+    GET_PROVISIONABLE_DEVICE_DETAILS_SCHEMA_ID("b6cg/2/04330400"),
+    GET_PERIPHERAL_DEVICE_DETAILS_SCHEMA_ID("NotInUse"),
+    SAVE_LOCALE_SCHEMA_ID("NotInUse"),
+    GET_DISCOVERED_DEVICES_LIST_OPERATION_SCHEMA_ID("NotInUse"),
+    START_DISCOVERY_OPERATION_SCHEMA_ID("6u2y/2/02330400"),
+    STOP_DISCOVERY_OPERATION_SCHEMA_ID("NotInUse"),
+    VERIFY_PROVISIONING_OPERATION_SCHEMA_ID("mxed/2/05330400"),
+    CONNECT_TO_DEVICE_OPERATION_SCHEMA_ID("lq7s/2/06330400"),
+    PROVISION_DEVICE_OPERATION_SCHEMA_ID("x09e/2/05330400"),
+    DSS_DISCOVERED_PROVISIONABLE_DEVICE_SCHEMA_ID("NotInUse"),
+    DSS_START_ECDHE_AUTHENTICATION_SESSION_SCHEMA_ID("NotInUse"),
+    DSS_FINALIZE_ECDHE_AUTHENTICATION_SESSION_SCHEMA_ID("NotInUse"),
+    DSS_VALIDATE_WIFI_SYNC_AUTH_TOKEN_SCHEMA_ID("NotInUse"),
+    DSS_GENERATE_PROVISIONING_SESSION_SCHEMA_ID("NotInUse"),
+    BLE_START_DISCVOERY_SCHEMA_ID("NotInUse"),
+    BLE_STOP_DISCOVERY_SCHEMA_ID("NotInUse"),
+    BLE_START_ATTEMPTS_RETRY_HANDLER_SCHEMA_ID("NotInUse"),
+    FFS_PROVISIONING_SERVICE_SCHEMA_ID("t91d/2/02330400"),
+    DEVICE_POWER_MONITOR_SCHEMA_ID("fjqu/2/02330400"),
+    DSHS_SCHEMA_ID("36ut/2/04330400"),
+    PROVISIONING_SESSION_SCHEMA_ID("lxpc/2/04330400"),
+    BEACONING_TO_CONNECTED_TO_PROVISIONER_SCHEMA_ID("fifj/2/04330400"),
+    SET_CONFIGURATION_IN_DATA_MAP_SCHEMA_ID("6dy2/2/04330400"),
+    CONNECT_TO_WIFI_SCHEMA_ID("jhm0/2/04330400"),
+    REGISTER_DEVICE_SCHEMA_ID("72n3/2/04330400"),
+    CBL_REGISTRATION_ACCOUNT_BASED_SCHEMA_ID("jdkr/2/04330400"),
+    CBL_REGISTRATION_PROFILE_BASED_SCHEMA_ID("q0or/2/04330400"),
+    TEST_SCHEMA_ID("test/0/00000000");
+
+    private final String mMetricName;
+
+    WhisperJoinMetricSourceName(String str) {
+        this.mMetricName = str;
+    }
+
+    public String getMetricName() {
+        return this.mMetricName;
+    }
+
+    @Override // java.lang.Enum
+    public String toString() {
+        return this.mMetricName;
+    }
+}

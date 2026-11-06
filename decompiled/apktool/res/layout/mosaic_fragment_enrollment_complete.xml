@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="?2130969753" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@2131427949" android:background="@2131230943" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167986" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:gravity="0x00000011" android:id="@2131429750" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167988" android:text="@2132020807" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165353" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/complete_icon" style="@style/MosaicSetupTitleText" />
+    <TextView android:id="@2131429846" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131167983" android:text="@2132020810" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165353" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title_text" style="@style/MosaicSetupSecondaryHintText" />
+    <android.support.constraint.ConstraintLayout android:id="@2131429519" android:layout_width="-1" android:layout_height="@2131165481" android:layout_marginTop="@2131167981" android:alpha="0.0" app:layout_constraintBottom_toTopOf="@id/done_button" app:layout_constraintTop_toBottomOf="@id/title_text">
+        <LinearLayout android:id="@2131428135" app:layout_constraintTop_toTopOf="parent" style="@style/MosaicDivider">
+            <TextView android:id="@2131428322" android:layout_width="-2" android:layout_height="-2" android:text="@2132020806" android:textAllCaps="true" style="@style/MosaicDividerText" />
+        </LinearLayout>
+        <RadioGroup android:id="@2131429347" app:layout_constraintTop_toBottomOf="@id/divider_container" style="@style/UVRRadioGroup">
+            <RadioButton android:id="@2131429349" android:text="@2132020443" style="@style/MosaicUVRRadioButton" />
+            <RadioButton android:id="@2131429348" android:text="@2132020442" style="@style/MosaicUVRRadioButton" />
+        </RadioGroup>
+        <com.amazon.alexa.handsfree.ui.views.URLTextView android:textSize="@2131167980" android:textColor="?2130969816" android:gravity="0x00000050" android:id="@2131428129" android:layout_width="@2131165481" android:layout_height="@2131165481" android:text="@2132020804" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165353" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/respond_while_locked_radiogroup" />
+    </android.support.constraint.ConstraintLayout>
+    <Button android:id="@2131428140" android:layout_width="-1" android:layout_marginTop="@2131165345" android:layout_marginBottom="@2131167985" android:text="@2132020805" android:alpha="0.0" android:layout_marginStart="@2131165354" android:layout_marginEnd="@2131165343" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/sliding_container" style="@style/MosaicSetupPrimaryButton" />
+</android.support.constraint.ConstraintLayout>

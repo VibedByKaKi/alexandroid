@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@2131429493" android:layout_width="-1" android:layout_height="-1" layout="@layout/shopping_list_error_item" />
+    <ImageView android:id="@2131427866" android:paddingTop="@2131165669" android:layout_width="@2131165670" android:layout_height="@2131165667" android:src="@2131232597" android:paddingEnd="@2131165668" />
+    <LinearLayout android:orientation="1" android:id="@2131429698" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166165">
+        <TextView android:textSize="@2131166166" android:id="@2131429496" android:layout_width="-2" android:layout_height="-2" />
+        <TextView android:textSize="@2131166163" android:textStyle="0x00000002" android:id="@2131429495" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="@2131166162" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?2130972395" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@2131427484" android:paddingTop="@2131167832" android:paddingBottom="@2131167815" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="0.0dip" android:paddingStart="@2131167816" android:paddingEnd="@2131167816" app:layout_constraintBottom_toTopOf="@id/divider" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <include android:id="@2131428964" android:layout_width="-1" android:layout_height="@2131167832" app:layout_constraintTop_toTopOf="parent" layout="@layout/text_ui_od_navigation_header" />
+    <com.amazon.alexa.voice.ui.onedesign.tta.V1UserInputView android:id="@2131429844" android:layout_width="-1" android:layout_height="-2" app:layout_constraintBottom_toBottomOf="parent" />
+    <View android:id="@2131428133" android:background="?2130972396" android:layout_width="-1" android:layout_height="@2131167797" android:alpha="0.2" app:layout_constraintBottom_toTopOf="@id/user_input_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

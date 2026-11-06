@@ -1,0 +1,17 @@
+package com.amazon.commscore.commsbridge;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.amazon.commscore.commsbridge.BridgeMessage;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+class EventMessage extends BridgeMessage {
+    public EventMessage(String str, String str2, Object obj) {
+        super(str, str2, BridgeMessage.MessageType.EVENT, obj);
+    }
+
+    public static EventMessage create(@NonNull String str, @NonNull String str2, @Nullable Object obj) {
+        return new EventMessage(str, str2, obj);
+    }
+}

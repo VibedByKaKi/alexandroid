@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@2131168120" android:textColor="?2130972572" android:ellipsize="3" android:id="@2131429214" android:layout_width="-1" android:layout_height="-2" android:maxLines="3" />
+    <LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131168211">
+        <RatingBar android:gravity="0x00000010" android:id="@2131429272" android:layout_width="-2" android:layout_height="@2131168210" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" android:layout_marginEnd="@2131168209" style="?voiceOdShoppingAmazonRatingStyle" />
+        <TextView android:textSize="@2131168113" android:textColor="?2130972569" android:ellipsize="3" android:gravity="0x00000010" android:id="@2131429355" android:layout_width="-2" android:layout_height="@2131168210" android:maxLines="1" />
+    </LinearLayout>
+    <LinearLayout android:orientation="0" android:id="@2131429188" android:layout_width="-1" android:layout_height="-2">
+        <TextView android:textSize="@2131168120" android:textColor="?2130972567" android:id="@2131429187" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168202" />
+        <TextView android:textSize="@2131168113" android:textColor="?2130972573" android:id="@2131429821" android:layout_width="-2" android:layout_height="-1" android:layout_marginTop="@2131168212" android:layout_marginStart="@2131168201" />
+        <ImageView android:id="@2131429194" android:layout_width="-2" android:layout_height="@2131168203" android:layout_marginTop="@2131168204" android:src="@2131231827" android:contentDescription="@2132021000" android:layout_marginStart="@2131168201" android:layout_marginEnd="@2131168201" />
+    </LinearLayout>
+    <TextView android:textSize="@2131168113" android:textColor="?2130972568" android:id="@2131429189" android:layout_width="-2" android:layout_height="-2" />
+    <TextView android:textSize="@2131168119" android:textColor="?2130972566" android:id="@2131428049" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168197" />
+    <TextView android:textSize="@2131168119" android:textColor="?2130972570" android:id="@2131429485" android:layout_width="-2" android:layout_height="-2" />
+    <TextView android:textSize="@2131168119" android:textColor="?2130972570" android:id="@2131428636" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168196" />
+    <LinearLayout android:orientation="0" android:id="@2131429486" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131168207">
+        <TextView android:textSize="@2131168118" android:textColor="?2130972571" android:gravity="0x00800013" android:id="@2131429488" android:background="?16843534" android:layout_width="-2" android:layout_height="-2" android:textAllCaps="true" />
+        <ImageView android:layout_gravity="0x00000010" android:id="@2131429487" android:layout_width="@2131168205" android:layout_height="@2131168205" android:src="@2131231812" android:tint="?2130972571" android:contentDescription="@0" android:layout_marginStart="@2131168206" />
+    </LinearLayout>
+</LinearLayout>

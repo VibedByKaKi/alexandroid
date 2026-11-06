@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@2131231293" android:layout_width="-1" android:layout_height="-1" android:minWidth="@2131165752" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2">
+        <ImageView android:layout_gravity="0x00000001" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165755" android:src="@2131232156" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131100090" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165755" android:text="@2132018289" android:layout_marginStart="@2131165754" android:layout_marginEnd="@2131165753" app:fontName="app_text_regular" style="@style/AlexaComms.large" />
+        <com.amazon.alexa.font.FontTextView android:textColor="@2131100090" android:background="@2131231293" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165755" android:text="@2132018290" android:layout_marginStart="@2131165754" android:layout_marginEnd="@2131165753" app:fontName="app_text_regular" style="@style/AlexaComms.subtitle" />
+    </LinearLayout>
+</ScrollView>

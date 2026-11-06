@@ -1,0 +1,13 @@
+package autovalue.shaded.com.squareup.javapoet;
+
+import autovalue.shaded.com.squareup.javapoet.CodeBlock;
+import java.util.function.BiConsumer;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes15.dex */
+public final /* synthetic */ class CodeBlock$$ExternalSyntheticLambda1 implements BiConsumer {
+    @Override // java.util.function.BiConsumer
+    public final void accept(Object obj, Object obj2) {
+        ((CodeBlock.CodeBlockJoiner) obj).add((CodeBlock) obj2);
+    }
+}

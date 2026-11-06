@@ -1,0 +1,84 @@
+package com.amazon.alexa.ra.core.features.fragments;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import androidx.core.app.AppLaunchChecker$$ExternalSyntheticOutline0;
+import com.amazon.alexa.ra.core.ui.markdown.parser.formatter.MarkdownConstants;
+import com.amazon.alexa.redesign.view.container.CardStudioAgentSpaceMetrics;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@StabilityInferred(parameters = 1)
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u0010\u0007J\t\u0010\u000b\u001a\u00020\u0003HÆ\u0003J\t\u0010\f\u001a\u00020\u0005HÆ\u0003J\u001d\u0010\r\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u0005HÆ\u0001J\u0013\u0010\u000e\u001a\u00020\u00052\b\u0010\u000f\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0010\u001a\u00020\u0011HÖ\u0001J\t\u0010\u0012\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0004\u0010\n¨\u0006\u0013"}, d2 = {"Lcom/amazon/alexa/ra/core/features/fragments/FragmentRenderingPauseEvent;", "", "dialogRequestId", "", "isPaused", "", "<init>", "(Ljava/lang/String;Z)V", "getDialogRequestId", "()Ljava/lang/String;", "()Z", "component1", "component2", "copy", "equals", CardStudioAgentSpaceMetrics.DimensionValue.SCHEME_OTHER, "hashCode", "", "toString", "ui-core_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes18.dex */
+public final /* data */ class FragmentRenderingPauseEvent {
+    public static final int $stable = 0;
+
+    @NotNull
+    private final String dialogRequestId;
+    private final boolean isPaused;
+
+    public FragmentRenderingPauseEvent(@NotNull String str, boolean z) {
+        str.getClass();
+        this.dialogRequestId = str;
+        this.isPaused = z;
+    }
+
+    public static /* synthetic */ FragmentRenderingPauseEvent copy$default(FragmentRenderingPauseEvent fragmentRenderingPauseEvent, String str, boolean z, int i, Object obj) {
+        if ((i & 1) != 0) {
+            str = fragmentRenderingPauseEvent.dialogRequestId;
+        }
+        if ((i & 2) != 0) {
+            z = fragmentRenderingPauseEvent.isPaused;
+        }
+        return fragmentRenderingPauseEvent.copy(str, z);
+    }
+
+    @NotNull
+    /* renamed from: component1, reason: from getter */
+    public final String getDialogRequestId() {
+        return this.dialogRequestId;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final boolean getIsPaused() {
+        return this.isPaused;
+    }
+
+    @NotNull
+    public final FragmentRenderingPauseEvent copy(@NotNull String dialogRequestId, boolean isPaused) {
+        dialogRequestId.getClass();
+        return new FragmentRenderingPauseEvent(dialogRequestId, isPaused);
+    }
+
+    public boolean equals(@Nullable Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof FragmentRenderingPauseEvent)) {
+            return false;
+        }
+        FragmentRenderingPauseEvent fragmentRenderingPauseEvent = (FragmentRenderingPauseEvent) other;
+        return Intrinsics.areEqual(this.dialogRequestId, fragmentRenderingPauseEvent.dialogRequestId) && this.isPaused == fragmentRenderingPauseEvent.isPaused;
+    }
+
+    @NotNull
+    public final String getDialogRequestId() {
+        return this.dialogRequestId;
+    }
+
+    public int hashCode() {
+        return Boolean.hashCode(this.isPaused) + (this.dialogRequestId.hashCode() * 31);
+    }
+
+    public final boolean isPaused() {
+        return this.isPaused;
+    }
+
+    @NotNull
+    public String toString() {
+        return AppLaunchChecker$$ExternalSyntheticOutline0.m("FragmentRenderingPauseEvent(dialogRequestId=", this.dialogRequestId, ", isPaused=", this.isPaused, MarkdownConstants.RIGHT_PARENTHESIS);
+    }
+}

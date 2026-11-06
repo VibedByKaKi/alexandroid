@@ -1,0 +1,89 @@
+package com.amazon.alexa.ra.apl.fragments.data;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import com.amazon.alexa.ra.core.ui.markdown.parser.formatter.MarkdownConstants;
+import com.amazon.alexa.redesign.view.container.CardStudioAgentSpaceMetrics;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+@StabilityInferred(parameters = 0)
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u0010\u0007J\t\u0010\f\u001a\u00020\u0003HÆ\u0003J\t\u0010\r\u001a\u00020\u0005HÆ\u0003J\u001d\u0010\u000e\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u0005HÆ\u0001J\u0013\u0010\u000f\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012HÖ\u0003J\t\u0010\u0013\u001a\u00020\u0014HÖ\u0001J\t\u0010\u0015\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0016"}, d2 = {"Lcom/amazon/alexa/ra/apl/fragments/data/APLFragmentTextEvent;", "Lcom/amazon/alexa/ra/apl/fragments/data/APLFragmentEvent;", "text", "", "fragment", "Lcom/amazon/alexa/ra/apl/fragments/data/APLFragmentData;", "<init>", "(Ljava/lang/String;Lcom/amazon/alexa/ra/apl/fragments/data/APLFragmentData;)V", "getText", "()Ljava/lang/String;", "getFragment", "()Lcom/amazon/alexa/ra/apl/fragments/data/APLFragmentData;", "component1", "component2", "copy", "equals", "", CardStudioAgentSpaceMetrics.DimensionValue.SCHEME_OTHER, "", "hashCode", "", "toString", "AVSMobileFramework-ra-apl-fragment-runtime_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes18.dex */
+public final /* data */ class APLFragmentTextEvent implements APLFragmentEvent {
+    public static final int $stable = 8;
+
+    @NotNull
+    private final APLFragmentData fragment;
+
+    @NotNull
+    private final String text;
+
+    public APLFragmentTextEvent(@NotNull String str, @NotNull APLFragmentData aPLFragmentData) {
+        str.getClass();
+        aPLFragmentData.getClass();
+        this.text = str;
+        this.fragment = aPLFragmentData;
+    }
+
+    public static /* synthetic */ APLFragmentTextEvent copy$default(APLFragmentTextEvent aPLFragmentTextEvent, String str, APLFragmentData aPLFragmentData, int i, Object obj) {
+        if ((i & 1) != 0) {
+            str = aPLFragmentTextEvent.text;
+        }
+        if ((i & 2) != 0) {
+            aPLFragmentData = aPLFragmentTextEvent.fragment;
+        }
+        return aPLFragmentTextEvent.copy(str, aPLFragmentData);
+    }
+
+    @NotNull
+    /* renamed from: component1, reason: from getter */
+    public final String getText() {
+        return this.text;
+    }
+
+    @NotNull
+    /* renamed from: component2, reason: from getter */
+    public final APLFragmentData getFragment() {
+        return this.fragment;
+    }
+
+    @NotNull
+    public final APLFragmentTextEvent copy(@NotNull String text, @NotNull APLFragmentData fragment) {
+        text.getClass();
+        fragment.getClass();
+        return new APLFragmentTextEvent(text, fragment);
+    }
+
+    public boolean equals(@Nullable Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof APLFragmentTextEvent)) {
+            return false;
+        }
+        APLFragmentTextEvent aPLFragmentTextEvent = (APLFragmentTextEvent) other;
+        return Intrinsics.areEqual(this.text, aPLFragmentTextEvent.text) && Intrinsics.areEqual(this.fragment, aPLFragmentTextEvent.fragment);
+    }
+
+    @NotNull
+    public final APLFragmentData getFragment() {
+        return this.fragment;
+    }
+
+    @NotNull
+    public final String getText() {
+        return this.text;
+    }
+
+    public int hashCode() {
+        return this.fragment.hashCode() + (this.text.hashCode() * 31);
+    }
+
+    @NotNull
+    public String toString() {
+        return "APLFragmentTextEvent(text=" + this.text + ", fragment=" + this.fragment + MarkdownConstants.RIGHT_PARENTHESIS;
+    }
+}

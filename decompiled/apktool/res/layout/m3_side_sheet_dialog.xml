@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@2131427989" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@2131428011" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="-1">
+        <View android:id="@2131429773" android:focusable="false" android:layout_width="-1" android:layout_height="-1" android:soundEffectsEnabled="false" android:importantForAccessibility="2" />
+        <FrameLayout android:id="@2131428698" app:layout_behavior="@string/side_sheet_behavior" style="?sideSheetModalStyle" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

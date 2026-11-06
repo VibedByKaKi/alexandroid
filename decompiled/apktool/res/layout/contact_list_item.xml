@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000010" android:orientation="1" android:descendantFocusability="2" android:layout_width="@2131165738" android:layout_height="-2" android:layout_margin="@2131165268"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:textColor="@2131099977" android:ellipsize="3" android:gravity="0x00000010" android:id="@2131429439" android:background="@2131100058" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165743" android:textAllCaps="true" android:paddingStart="@2131165737" android:paddingEnd="@2131165737" app:fontName="app_text_regular" />
+    <com.amazon.alexa.font.FontTextView android:gravity="0x00000010" android:id="@2131428561" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165734" android:layout_marginBottom="@2131165732" android:text="@2132018272" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165733" app:fontName="app_text_regular" style="@style/contactListInfoStyle" />
+    <View android:id="@2131428550" android:background="@2131231141" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165893" />
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:layout_width="-1" android:layout_height="@2131165735" android:layout_marginStart="@2131165737" android:layout_marginEnd="@2131165736">
+        <com.amazon.alexa.font.FontTextView android:ellipsize="3" android:id="@2131428357" android:layout_width="0.0dip" android:layout_height="-2" android:maxLines="1" android:layout_weight="0.8" app:fontName="app_text_regular" style="@style/contactNameStyle" />
+        <ImageView android:gravity="0x00800035" android:id="@2131427983" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="@2131232730" android:contentDescription="@2132017853" />
+    </LinearLayout>
+    <View android:id="@2131428133" android:background="@2131231141" android:layout_width="-1" android:layout_height="@2131165893" />
+</LinearLayout>

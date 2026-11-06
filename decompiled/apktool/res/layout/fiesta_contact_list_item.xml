@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="0x00000010" android:orientation="1" android:descendantFocusability="2" android:layout_width="@2131165738" android:layout_height="-2" android:layout_margin="@2131166019" android:importantForAccessibility="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amazon.alexa.font.FontTextView android:id="@2131429439" android:visibility="2" android:layout_height="@2131165743" android:textAllCaps="true" android:textAlignment="5" android:paddingStart="@2131166019" android:paddingEnd="@2131166019" app:fontName="app_text_regular" style="@style/fiestaSectionHeaderStyle" />
+    <com.amazon.alexa.font.FontTextView android:textSize="@2131165730" android:textColor="@2131100109" android:gravity="0x00000010" android:id="@2131428561" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131166019" android:layout_marginBottom="@2131167658" android:text="@2132018272" android:alpha="0.6" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131165916" app:fontName="app_text_regular" />
+    <View android:id="@2131428550" android:background="@2131231294" android:visibility="2" android:layout_width="-1" android:layout_height="@2131165893" />
+    <LinearLayout android:gravity="0x00000010" android:orientation="0" android:layout_width="-1" android:layout_height="@2131165917" android:layout_marginStart="@2131166019" android:layout_marginEnd="@2131166019">
+        <com.amazon.alexa.font.FontTextView android:id="@2131428357" android:layout_width="0.0dip" android:layout_height="-2" android:maxLines="1" android:layout_weight="0.8" android:textAlignment="5" app:fontName="app_text_regular" style="@style/fiestaContactNameStyle" />
+        <ImageView android:gravity="0x00800035" android:id="@2131427983" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="@2131231317" android:contentDescription="@2132017853" />
+    </LinearLayout>
+    <View android:id="@2131428133" android:background="@2131231294" android:layout_width="-1" android:layout_height="@2131165893" />
+</LinearLayout>

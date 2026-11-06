@@ -1,0 +1,160 @@
+package com.amazon.clouddrive.extended.model;
+
+import com.amazon.alexa.ra.core.ui.markdown.parser.formatter.MarkdownConstants;
+import com.amazon.clouddrive.model.CloudDriveRequest;
+import com.amazon.clouddrive.model.ObjectComparator;
+import defpackage.a$$ExternalSyntheticOutline0;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes20.dex */
+public final class CreateMemberRequest implements CloudDriveRequest {
+    private final String groupId;
+    private final String inviteTag;
+    private final String inviteToken;
+    private final String shareToken;
+
+    /* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+    public static class CreateMemberRequestBuilder {
+        private String groupId;
+        private String inviteTag;
+        private String inviteToken;
+        private String shareToken;
+
+        public CreateMemberRequest build() {
+            return new CreateMemberRequest(this.groupId, this.shareToken, this.inviteToken, this.inviteTag);
+        }
+
+        public CreateMemberRequestBuilder groupId(String str) {
+            this.groupId = str;
+            return this;
+        }
+
+        public CreateMemberRequestBuilder inviteTag(String str) {
+            this.inviteTag = str;
+            return this;
+        }
+
+        public CreateMemberRequestBuilder inviteToken(String str) {
+            this.inviteToken = str;
+            return this;
+        }
+
+        public CreateMemberRequestBuilder shareToken(String str) {
+            this.shareToken = str;
+            return this;
+        }
+
+        public String toString() {
+            StringBuilder sb = new StringBuilder("CreateMemberRequest.CreateMemberRequestBuilder(groupId=");
+            sb.append(this.groupId);
+            sb.append(", shareToken=");
+            sb.append(this.shareToken);
+            sb.append(", inviteToken=");
+            sb.append(this.inviteToken);
+            sb.append(", inviteTag=");
+            return a$$ExternalSyntheticOutline0.m(sb, this.inviteTag, MarkdownConstants.RIGHT_PARENTHESIS);
+        }
+    }
+
+    public CreateMemberRequest(String str, String str2, String str3, String str4) {
+        this.groupId = str;
+        this.shareToken = str2;
+        this.inviteToken = str3;
+        this.inviteTag = str4;
+    }
+
+    public static CreateMemberRequestBuilder builder() {
+        return new CreateMemberRequestBuilder();
+    }
+
+    @Override // java.lang.Comparable
+    public int compareTo(CloudDriveRequest cloudDriveRequest) {
+        if (cloudDriveRequest == null) {
+            return -1;
+        }
+        if (cloudDriveRequest == this) {
+            return 0;
+        }
+        if (!(cloudDriveRequest instanceof CreateMemberRequest)) {
+            return CreateMemberRequest.class.getName().compareTo(cloudDriveRequest.getClass().getName());
+        }
+        CreateMemberRequest createMemberRequest = (CreateMemberRequest) cloudDriveRequest;
+        int compare = ObjectComparator.compare(getGroupId(), createMemberRequest.getGroupId());
+        if (compare != 0) {
+            return compare;
+        }
+        int compare2 = ObjectComparator.compare(getShareToken(), createMemberRequest.getShareToken());
+        if (compare2 != 0) {
+            return compare2;
+        }
+        int compare3 = ObjectComparator.compare(getInviteToken(), createMemberRequest.getInviteToken());
+        if (compare3 != 0) {
+            return compare3;
+        }
+        int compare4 = ObjectComparator.compare(getInviteTag(), createMemberRequest.getInviteTag());
+        if (compare4 != 0) {
+            return compare4;
+        }
+        return 0;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof CreateMemberRequest)) {
+            return false;
+        }
+        CreateMemberRequest createMemberRequest = (CreateMemberRequest) obj;
+        String groupId = getGroupId();
+        String groupId2 = createMemberRequest.getGroupId();
+        if (groupId != null ? !groupId.equals(groupId2) : groupId2 != null) {
+            return false;
+        }
+        String shareToken = getShareToken();
+        String shareToken2 = createMemberRequest.getShareToken();
+        if (shareToken != null ? !shareToken.equals(shareToken2) : shareToken2 != null) {
+            return false;
+        }
+        String inviteToken = getInviteToken();
+        String inviteToken2 = createMemberRequest.getInviteToken();
+        if (inviteToken != null ? !inviteToken.equals(inviteToken2) : inviteToken2 != null) {
+            return false;
+        }
+        String inviteTag = getInviteTag();
+        String inviteTag2 = createMemberRequest.getInviteTag();
+        return inviteTag != null ? inviteTag.equals(inviteTag2) : inviteTag2 == null;
+    }
+
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public String getInviteTag() {
+        return this.inviteTag;
+    }
+
+    public String getInviteToken() {
+        return this.inviteToken;
+    }
+
+    public String getShareToken() {
+        return this.shareToken;
+    }
+
+    public int hashCode() {
+        String groupId = getGroupId();
+        int hashCode = groupId == null ? 43 : groupId.hashCode();
+        String shareToken = getShareToken();
+        int hashCode2 = ((hashCode + 59) * 59) + (shareToken == null ? 43 : shareToken.hashCode());
+        String inviteToken = getInviteToken();
+        int i = hashCode2 * 59;
+        int hashCode3 = inviteToken == null ? 43 : inviteToken.hashCode();
+        String inviteTag = getInviteTag();
+        return ((i + hashCode3) * 59) + (inviteTag != null ? inviteTag.hashCode() : 43);
+    }
+
+    public String toString() {
+        return "CreateMemberRequest(groupId=" + getGroupId() + ", shareToken=" + getShareToken() + ", inviteToken=" + getInviteToken() + ", inviteTag=" + getInviteTag() + MarkdownConstants.RIGHT_PARENTHESIS;
+    }
+}

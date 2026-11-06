@@ -1,0 +1,14 @@
+package com.amazon.alexa.api;
+
+import com.amazon.alexa.client.annotations.NonNull;
+import com.amazon.alexa.client.annotations.UiThread;
+
+/* compiled from: r8-map-id-b9432e0f623b4a4bff4ba50a8a24c4aafad2c1e11092747b9fb5e6a22af5a940 */
+/* loaded from: classes16.dex */
+public interface AlexaPlayerInfoCardListener {
+    @UiThread
+    void onAudioItemStateChanged(@NonNull AlexaPlayerInfoState alexaPlayerInfoState, @NonNull String str, long j);
+
+    @UiThread
+    void onReceivedPlayerInfoCard(@NonNull String str, boolean z);
+}

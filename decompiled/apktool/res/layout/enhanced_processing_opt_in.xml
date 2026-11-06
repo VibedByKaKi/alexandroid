@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="-1" android:layout_height="-1" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="1" android:background="?2130969753" android:layout_width="-1" android:layout_height="-2">
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165605" android:text="@2132019102" android:layout_marginStart="@2131165605" android:layout_marginEnd="@2131165605" app:fontName="app_text_bold" style="@style/Callui.Headline1" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969815" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="@2131165605" android:text="@2132019098" android:layout_marginStart="@2131165605" android:layout_marginEnd="@2131165605" app:fontName="app_text_regular" style="@style/Callui.BodyText" />
+        <com.amazon.alexa.font.FontTextView android:textColor="?2130969747" android:id="@2131428627" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="@2131165605" android:text="@2132019101" android:layout_marginStart="@2131165605" android:layout_marginEnd="@2131165605" app:fontName="app_text_regular" style="@style/Callui.BodyText" />
+    </LinearLayout>
+</ScrollView>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Alexandroid</string>
+    <string name="widget_list_label">Alexandroid devices list</string>
+    <string name="widget_toggle_label">Alexandroid single device</string>
     <string name="widget_list_desc">All smart home devices with current state</string>
     <string name="widget_toggle_desc">Toggle one smart home device</string>
 </resources>

@@ -24,13 +24,13 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".ListWidgetProvider" android:exported="false">
+        <receiver android:name=".ListWidgetProvider" android:exported="false" android:label="@string/widget_list_label">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_list" />
         </receiver>
-        <receiver android:name=".ToggleWidgetProvider" android:exported="false">
+        <receiver android:name=".ToggleWidgetProvider" android:exported="false" android:label="@string/widget_toggle_label">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

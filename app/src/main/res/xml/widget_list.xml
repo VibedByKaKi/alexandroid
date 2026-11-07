@@ -2,6 +2,7 @@
     android:description="@string/widget_list_desc"
     android:minWidth="180dp"
     android:minHeight="180dp"
+    android:previewLayout="@layout/widget_preview_list"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="1800000"
     android:widgetCategory="home_screen"

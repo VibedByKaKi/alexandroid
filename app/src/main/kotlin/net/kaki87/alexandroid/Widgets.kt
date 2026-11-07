@@ -89,19 +89,29 @@ class ToggleWidgetProvider : AppWidgetProvider() {
             for (id in ids) {
                 val entity = store.widgetDevice(id)
                 val d = entity?.let { devices[it] }
-                val rv = RemoteViews(context.packageName, R.layout.widget_toggle)
-                if (d == null) {
-                    rv.setTextViewText(R.id.name, "Alexandroid"); rv.setTextViewText(R.id.state, "Tap to open")
-                    rv.setOnClickPendingIntent(R.id.root, PendingIntent.getActivity(context, 2, Intent(context, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE))
-                } else {
-                    rv.setTextViewText(R.id.name, d.name)
-                    rv.setTextViewText(R.id.state, stateLabel(d))
-                    rv.setTextColor(R.id.state, stateColor(d))
-                    rv.setOnClickPendingIntent(R.id.root, toggleIntent(context, d.entityId, d.on, id))
-                }
+                val rv = toggleViews(context, id, d)
                 mgr.updateAppWidget(id, rv)
             }
         }
+    }
+
+    /** Name above state when the widget is tall, side by side when it is one row high (Android 12+; older versions always use one row). */
+    private fun toggleViews(context: Context, id: Int, d: Device?): RemoteViews {
+        fun fill(layout: Int) = RemoteViews(context.packageName, layout).also { rv ->
+            if (d == null) {
+                rv.setTextViewText(R.id.name, "Alexandroid"); rv.setTextViewText(R.id.state, "Tap to open")
+                rv.setOnClickPendingIntent(R.id.root, PendingIntent.getActivity(context, 2, Intent(context, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE))
+            } else {
+                rv.setTextViewText(R.id.name, d.name)
+                rv.setTextViewText(R.id.state, stateLabel(d))
+                rv.setTextColor(R.id.state, stateColor(d))
+                rv.setOnClickPendingIntent(R.id.root, toggleIntent(context, d.entityId, d.on, id))
+            }
+        }
+        if (android.os.Build.VERSION.SDK_INT < 31) return fill(R.layout.widget_toggle_row)
+        return RemoteViews(mapOf(
+            android.util.SizeF(40f, 40f) to fill(R.layout.widget_toggle_row),
+            android.util.SizeF(40f, 100f) to fill(R.layout.widget_toggle)))
     }
 
     companion object {

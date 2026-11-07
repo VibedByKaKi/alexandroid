@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/widget_bg" android:orientation="vertical" android:padding="8dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/app_name" android:textColor="#FFFFFF" android:textStyle="bold" android:padding="4dp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="4dp"
+        android:text="Salon lamp   ON" android:textColor="#4DC3FF" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="4dp"
+        android:text="Kitchen light   OFF" android:textColor="#B0B0B0" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="4dp"
+        android:text="Fan   OFF" android:textColor="#B0B0B0" />
+</LinearLayout>

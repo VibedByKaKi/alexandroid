@@ -310,10 +310,10 @@ class MainActivity : Activity() {
                     val paused = n.status == "PAUSED"
                     val title = TextView(this).apply { textSize = 22f; setTextColor(pal.text); typeface = Typeface.DEFAULT_BOLD }
                     val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
+                    buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
                     buttons.addView(icon(if (paused) R.drawable.ic_play else R.drawable.ic_pause, pal.accent, if (paused) "Resume" else "Pause") {
                         run({ api.setStatus(n, if (paused) "ON" else "PAUSED") }) { reload() }
-                    })
-                    buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
+                    }.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = dp(3) } })
                     val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons, R.drawable.ic_type_timer)
                     val col = (r as ViewGroup).getChildAt(1) as ViewGroup
                     col.removeViewAt(0); col.addView(title, 0)

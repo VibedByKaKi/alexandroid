@@ -197,7 +197,8 @@ class MainActivity : Activity() {
         var pill = pill(d.on, d.reachable)
         val holder = FrameLayout(this)
         holder.addView(pill)
-        val r = row(d.name, null, holder)
+        val r = row(d.name, if (d.adjustable) "Tap to adjust light" else null, holder)
+        if (d.adjustable && d.reachable) r.setOnClickListener { lightDialog(d) }
         if (d.reachable) holder.setOnClickListener {
             val target = d.on != true
             holder.isEnabled = false
@@ -215,6 +216,47 @@ class MainActivity : Activity() {
             }
         }
         return r
+    }
+
+    private fun lightDialog(d: Device) {
+        val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(24), dp(8), dp(24), 0) }
+        fun label(t: String) = TextView(this).apply { text = t; setTextColor(pal.sub); textSize = 13f; setPadding(0, dp(12), 0, 0) }
+        fun slider(max: Int, start: Int, onDone: (Int) -> Unit) = SeekBar(this).apply {
+            this.max = max; progress = start.coerceIn(0, max)
+            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(s: SeekBar?, p: Int, user: Boolean) {}
+                override fun onStartTrackingTouch(s: SeekBar?) {}
+                override fun onStopTrackingTouch(s: SeekBar) = onDone(s.progress)
+            })
+        }
+        fun apply(action: () -> Unit) = io.execute {
+            try { action(); ui.post { ListWidgetProvider.refreshAll(this) } }
+            catch (e: Exception) { android.util.Log.e("Alexandroid", "light control failed", e); ui.post { toast(e.message ?: "Control failed") } }
+        }
+        if (d.hasBrightness) {
+            col.addView(label("Brightness"))
+            col.addView(slider(99, (d.brightness ?: 100) - 1) { v -> apply { api.setBrightness(d, v + 1) } })
+        }
+        if (d.hasTemperature) {
+            col.addView(label("White temperature (warm to cool)"))
+            col.addView(slider(43, ((d.kelvin ?: 2700) - 2200) / 100) { v -> apply { api.setColorTemperature(d, 2200 + v * 100) } })
+        }
+        if (d.hasColor) {
+            col.addView(label("Color"))
+            val swatches = LinearLayout(this).apply { gravity = Gravity.CENTER }
+            listOf(0 to 1.0, 30 to 1.0, 55 to 1.0, 120 to 1.0, 180 to 1.0, 240 to 1.0, 280 to 1.0, 320 to 1.0).forEach { (h, sat) ->
+                swatches.addView(View(this).apply {
+                    background = android.graphics.drawable.GradientDrawable().apply { shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(android.graphics.Color.HSVToColor(floatArrayOf(h.toFloat(), sat.toFloat(), 1f))) }
+                    setOnClickListener { apply { api.setColor(d, h.toDouble(), sat) } }
+                }, LinearLayout.LayoutParams(dp(30), dp(30)).apply { setMargins(dp(2), dp(6), dp(2), dp(6)) })
+            }
+            col.addView(swatches)
+            col.addView(label("Hue"))
+            col.addView(slider(359, (d.hue ?: 0.0).toInt()) { v -> apply { api.setColor(d, v.toDouble(), d.saturation ?: 1.0) } })
+            col.addView(label("Saturation"))
+            col.addView(slider(100, ((d.saturation ?: 1.0) * 100).toInt()) { v -> apply { api.setColor(d, d.hue ?: 0.0, v / 100.0) } })
+        }
+        dialog().setTitle(d.name).setView(col).setPositiveButton("Close", null).setOnDismissListener { show(0) }.show()
     }
 
     // ---- Alarms & timers ------------------------------------------------------------------------

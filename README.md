@@ -36,6 +36,7 @@ against a live account.
 |---|---|
 | Device list and state | `POST https://alexa.amazon.<tld>/nexus/v1/graphql`, query `listEndpoints` with `features { ... on Power { powerStateValue } }` |
 | Toggle | same endpoint, mutation `setEndpointFeatures` with `featureName: power` and `featureOperationName: turnOn` or `turnOff` |
+| Brightness and color | `setEndpointFeatures` with `featureName: brightness` / `setBrightness` (payload `{"brightness": 1..100}`), `color` / `setColor` (payload `{"color": {"hue", "saturation", "brightness"}}`), `colorTemperature` / `setColorTemperature` (payload `{"colorTemperatureInKelvin"}`). The payload is passed as a GraphQL variable of type `JSON!`. Current values come from `... on Brightness`, `... on Color`, `... on ColorTemperature` |
 | Alarms | `GET`, `PUT` and `DELETE https://alexa.amazon.<tld>/api/notifications[/{id}]`; creation is `PUT /api/notifications/createReminder` with `status: ON` |
 | Alarm repeat and date | `recurringPattern`: `P1D` daily, `XXXX-WD` weekdays, `XXXX-WE` weekends, `XXXX-WXX-1` to `XXXX-WXX-7` for single days (comma-separated for several), `""` for once, and `YYYY-MM-DD` for a one-time alarm on that date. Setting `originalDate` alone is ignored by the server |
 | Timers | listed, paused (`PUT` with `status: PAUSED`), resumed and deleted through `/api/notifications`. Creating one through that endpoint returns HTTP 500, so the app sends the text command "set a timer for N minutes" (in the device's language) to `POST /api/behaviors/preview` |

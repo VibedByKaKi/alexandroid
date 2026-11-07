@@ -1,6 +1,13 @@
 package net.kaki87.alexandroid
 
-data class Device(val entityId: String, val applianceId: String, val name: String, val type: String, var on: Boolean?, val reachable: Boolean = true)
+data class Device(
+    val entityId: String, val applianceId: String, val name: String, val type: String, var on: Boolean?, val reachable: Boolean = true,
+    var brightness: Int? = null, val hasBrightness: Boolean = false,
+    val hasColor: Boolean = false, var hue: Double? = null, var saturation: Double? = null,
+    val hasTemperature: Boolean = false, var kelvin: Int? = null,
+) {
+    val adjustable get() = hasBrightness || hasColor || hasTemperature
+}
 
 data class EchoDevice(val serial: String, val type: String, val name: String, val accountId: String?)
 

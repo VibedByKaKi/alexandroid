@@ -83,8 +83,10 @@ class AlexaApi(private val store: Store) {
 
     // ---- Smart home (GraphQL, same queries as the official app) -------------------------------
 
-    private fun graphql(query: String): JSONObject {
-        val resp = JSONObject(request("POST", "/nexus/v1/graphql", JSONObject().put("query", query).toString()))
+    private fun graphql(query: String, variables: JSONObject? = null): JSONObject {
+        val body = JSONObject().put("query", query)
+        if (variables != null) body.put("variables", variables)
+        val resp = JSONObject(request("POST", "/nexus/v1/graphql", body.toString()))
         resp.optJSONArray("errors")?.let { if (it.length() > 0) throw RuntimeException(it.getJSONObject(0).optString("message")) }
         return resp.getJSONObject("data")
     }
@@ -94,7 +96,7 @@ class AlexaApi(private val store: Store) {
         val data = graphql(
             "query ListEndpoints { listEndpoints(listEndpointsInput: { enablement: ENABLED, includeHouseholdDevices: true, latencyTolerance: LOW }) {" +
                 " endpoints { id friendlyNameObject { value { text } } displayCategories { primary { value } }" +
-                " features(latencyToleranceValue: LOW) { name properties { name ... on Power { powerStateValue } ... on Reachability { reachabilityStatusValue } } } } } }",
+                " features(latencyToleranceValue: LOW) { name properties { name ... on Power { powerStateValue } ... on Reachability { reachabilityStatusValue } ... on Brightness { brightnessStateValue } ... on Color { colorStateValue { hue saturation } } ... on ColorTemperature { colorTemperatureInKelvinStateValue } } } } } }",
         )
         val endpoints = data.getJSONObject("listEndpoints").getJSONArray("endpoints")
         val out = ArrayList<Device>()
@@ -104,6 +106,9 @@ class AlexaApi(private val store: Store) {
             var power: Boolean? = null
             var hasPower = false
             var reachable = true
+            var brightness: Int? = null; var hasBrightness = false
+            var hasColor = false; var hue: Double? = null; var sat: Double? = null
+            var hasTemp = false; var kelvin: Int? = null
             for (j in 0 until features.length()) {
                 val f = features.getJSONObject(j)
                 val props = f.optJSONArray("properties") ?: continue
@@ -113,6 +118,11 @@ class AlexaApi(private val store: Store) {
                         hasPower = true
                         if (p.has("powerStateValue") && !p.isNull("powerStateValue")) power = p.getString("powerStateValue") == "ON"
                     }
+                    when (p.optString("name")) {
+                        "brightness" -> { hasBrightness = true; if (!p.isNull("brightnessStateValue") && p.has("brightnessStateValue")) brightness = p.getInt("brightnessStateValue") }
+                        "color" -> { hasColor = true; p.optJSONObject("colorStateValue")?.let { hue = it.optDouble("hue"); sat = it.optDouble("saturation") } }
+                        "colorTemperature" -> { hasTemp = true; if (!p.isNull("colorTemperatureInKelvinStateValue") && p.has("colorTemperatureInKelvinStateValue")) kelvin = p.getInt("colorTemperatureInKelvinStateValue") }
+                    }
                     if (p.has("reachabilityStatusValue") && !p.isNull("reachabilityStatusValue")) reachable = p.getString("reachabilityStatusValue") == "OK"
                 }
                 if (f.optString("name") == "power") hasPower = true
@@ -120,9 +130,39 @@ class AlexaApi(private val store: Store) {
             if (!hasPower) continue
             val name = e.getJSONObject("friendlyNameObject").getJSONObject("value").getString("text")
             val type = e.optJSONObject("displayCategories")?.optJSONObject("primary")?.optString("value").orEmpty()
-            out += Device(e.getString("id"), e.getString("id"), name, type, power, reachable)
+            out += Device(e.getString("id"), e.getString("id"), name, type, power, reachable, brightness, hasBrightness, hasColor, hue, sat, hasTemp, kelvin)
         }
         return out.sortedBy { it.name.lowercase() }
+    }
+
+    private fun control(entityId: String, feature: String, operation: String, payload: JSONObject) {
+        ensureCsrf()
+        val data = graphql(
+            "mutation SetFeature(\$endpointId: String!, \$payload: JSON!) { setEndpointFeatures(setEndpointFeaturesInput: { featureControlRequests: [ { endpointId: \$endpointId," +
+                " featureName: $feature, featureOperationName: $operation, payload: \$payload } ]" +
+                " }) { featureControlResponses { endpointId code } errors { endpointId code message } } }",
+            JSONObject().put("endpointId", entityId).put("payload", payload),
+        )
+        val errors = data.getJSONObject("setEndpointFeatures").optJSONArray("errors")
+        if (errors != null && errors.length() > 0) throw RuntimeException(errors.getJSONObject(0).let { it.optString("code", "control error") + " " + it.optString("message") })
+    }
+
+    fun setBrightness(device: Device, percent: Int) {
+        control(device.entityId, "brightness", "setBrightness", JSONObject().put("brightness", percent))
+        device.brightness = percent
+        device.on = percent > 0
+    }
+
+    /** hue 0..360, saturation 0..1; brightness stays at the current level. */
+    fun setColor(device: Device, hue: Double, saturation: Double) {
+        val color = JSONObject().put("hue", hue).put("saturation", saturation).put("brightness", (device.brightness ?: 100) / 100.0)
+        control(device.entityId, "color", "setColor", JSONObject().put("color", color))
+        device.hue = hue; device.saturation = saturation; device.on = true
+    }
+
+    fun setColorTemperature(device: Device, kelvin: Int) {
+        control(device.entityId, "colorTemperature", "setColorTemperature", JSONObject().put("colorTemperatureInKelvin", kelvin))
+        device.kelvin = kelvin; device.on = true
     }
 
     fun setPower(device: Device, on: Boolean) {

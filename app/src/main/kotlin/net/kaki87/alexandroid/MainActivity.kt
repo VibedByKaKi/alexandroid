@@ -2,6 +2,8 @@ package net.kaki87.alexandroid
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.app.DatePickerDialog
+import android.content.DialogInterface
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.graphics.Typeface
@@ -134,7 +136,7 @@ class MainActivity : Activity() {
     }
 
     private fun dialog(): AlertDialog.Builder = AlertDialog.Builder(this,
-        if (pal.bg == android.graphics.Color.WHITE) android.R.style.Theme_Material_Light_Dialog_Alert else android.R.style.Theme_Material_Dialog_Alert)
+        if (pal.bg == android.graphics.Color.WHITE) android.R.style.Theme_DeviceDefault_Light_Dialog_Alert else android.R.style.Theme_DeviceDefault_Dialog_Alert)
 
     private fun toast(m: String) = Toast.makeText(this, m, Toast.LENGTH_LONG).show()
 
@@ -269,7 +271,7 @@ class MainActivity : Activity() {
                     val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
                     buttons.addView(smallButton("Delete", pal.danger) { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
                     buttons.addView(sw)
-                    val r = row(n.clock, listOf(where, Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons) { editAlarm(n, days) }
+                    val r = row(n.clock, listOf(where, Recurrence.date(n.recurring)?.let { "On $it" } ?: Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons) { editAlarm(n, days) }
                     val title = ((r as ViewGroup).getChildAt(0) as ViewGroup).getChildAt(0) as TextView
                     title.textSize = 22f; title.typeface = Typeface.DEFAULT_BOLD
                     box.addView(r)
@@ -303,7 +305,7 @@ class MainActivity : Activity() {
 
     private fun clock(ms: Long): String {
         val s = (ms / 1000).coerceAtLeast(0)
-        return if (s >= 3600) String.format("%d:%02d:%02d", s / 3600, s % 3600 / 60, s % 60) else String.format("%d:%02d", s / 60, s % 60)
+        return String.format("%02d:%02d:%02d", s / 3600, s % 3600 / 60, s % 60)
     }
 
     private fun pickEcho(onPick: (EchoDevice) -> Unit) {
@@ -313,11 +315,27 @@ class MainActivity : Activity() {
         }
     }
 
-    private fun alarmDialog(title: String, hour: Int, minute: Int, days: Set<Int>, onSave: (Int, Int, Set<Int>) -> Unit) {
+    private fun alarmDialog(title: String, hour: Int, minute: Int, days: Set<Int>, date: String?, onSave: (Int, Int, Set<Int>, String?) -> Unit) {
         val light = pal.bg == android.graphics.Color.WHITE
         val holo = android.view.ContextThemeWrapper(this, if (light) android.R.style.Theme_Holo_Light_Dialog else android.R.style.Theme_Holo_Dialog)
         val picker = TimePicker(holo).apply { setIs24HourView(true); this.hour = hour; this.minute = minute }
         val chosen = days.toMutableSet()
+        var picked: String? = date
+        val dateRow = TextView(this).apply { textSize = 15f; setTextColor(pal.accent); gravity = Gravity.CENTER; setPadding(0, dp(8), 0, dp(8)) }
+        val refreshDate = {
+            dateRow.visibility = if (chosen.isEmpty()) View.VISIBLE else View.GONE
+            dateRow.text = "Date: " + (picked ?: "next occurrence") + "  (tap to change)"
+        }
+        dateRow.setOnClickListener {
+            val c = java.util.Calendar.getInstance()
+            picked?.split('-')?.takeIf { it.size == 3 }?.let { c.set(it[0].toInt(), it[1].toInt() - 1, it[2].toInt()) }
+            val themed = if (light) android.R.style.Theme_DeviceDefault_Light_Dialog_Alert else android.R.style.Theme_DeviceDefault_Dialog_Alert
+            DatePickerDialog(this, themed, { _, y, m, d -> picked = String.format("%04d-%02d-%02d", y, m + 1, d); refreshDate() },
+                c.get(java.util.Calendar.YEAR), c.get(java.util.Calendar.MONTH), c.get(java.util.Calendar.DAY_OF_MONTH)).apply {
+                datePicker.minDate = System.currentTimeMillis() - 1000
+                setButton(DialogInterface.BUTTON_NEUTRAL, "Next occurrence") { _, _ -> picked = null; refreshDate() }
+            }.show()
+        }
         val chips = LinearLayout(this).apply { gravity = Gravity.CENTER; setPadding(0, dp(8), 0, dp(8)) }
         for (d in 1..7) {
             val chip = TextView(this).apply {
@@ -327,29 +345,31 @@ class MainActivity : Activity() {
                 val on = d in chosen
                 chip.setTextColor(if (on) android.graphics.Color.WHITE else pal.sub)
                 chip.background = android.graphics.drawable.GradientDrawable().apply {
-                    shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(if (on) pal.accentFill else android.graphics.Color.argb(60, 128, 128, 128))
+                    shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(if (on) pal.accentFill else pal.surface)
                 }
             }
             paint()
-            chip.setOnClickListener { if (!chosen.add(d)) chosen.remove(d); paint() }
+            chip.setOnClickListener { if (!chosen.add(d)) chosen.remove(d); paint(); refreshDate() }
             chips.addView(chip, LinearLayout.LayoutParams(dp(38), dp(38)).apply { setMargins(dp(3), 0, dp(3), 0) })
         }
-        val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; addView(picker); addView(chips) }
+        refreshDate()
+        val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; addView(picker); addView(chips); addView(dateRow) }
         dialog().setTitle(title).setView(ScrollView(this).apply { addView(form) })
             .setPositiveButton("Save") { _, _ ->
                 picker.clearFocus()
-                onSave(picker.hour, picker.minute, chosen.toSet())
+                onSave(picker.hour, picker.minute, chosen.toSet(), if (chosen.isEmpty()) picked else null)
             }.setNegativeButton("Cancel", null).show()
     }
 
     private fun addAlarm() = pickEcho { echo ->
-        alarmDialog("New alarm", 7, 0, emptySet()) { h, m, days -> run({ api.createAlarm(echo, h, m, days) }) { show(1) } }
+        alarmDialog("New alarm", 7, 0, emptySet(), null) { h, m, days, date -> run({ api.createAlarm(echo, h, m, days, date) }) { show(1) } }
     }
 
     private fun editAlarm(n: Notification, days: Set<Int>) {
         val h = n.clock.substringBefore(':').toIntOrNull() ?: 7
         val m = n.clock.substringAfter(':').toIntOrNull() ?: 0
-        alarmDialog("Edit alarm", h, m, days) { nh, nm, nd -> run({ api.updateAlarm(n, nh, nm, nd) }) { show(1) } }
+        val date = Recurrence.date(n.recurring)
+        alarmDialog("Edit alarm", h, m, days, date) { nh, nm, nd, ndate -> run({ api.updateAlarm(n, nh, nm, nd, ndate) }) { show(1) } }
     }
 
     private fun addTimer() = pickEcho { echo ->

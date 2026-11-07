@@ -2,6 +2,11 @@ package net.kaki87.alexandroid
 
 /** Alarm repeat patterns as stored by Alexa. Days are ISO numbers, 1 = Monday through 7 = Sunday. */
 object Recurrence {
+    private val dateRegex = Regex("\\d{4}-\\d{2}-\\d{2}")
+
+    /** A one-time alarm on a chosen day is stored with the date itself as its pattern. */
+    fun date(pattern: String?): String? = pattern?.takeIf { dateRegex.matches(it) }
+
     private val names = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
 
     fun parse(pattern: String?): Set<Int> {

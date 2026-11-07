@@ -218,8 +218,9 @@ class AlexaApi(private val store: Store) {
         request("POST", "/api/behaviors/preview", JSONObject().put("behaviorId", "PREVIEW").put("sequenceJson", seq.toString()).put("status", "ENABLED").toString())
     }
 
-    private fun alarmFields(zone: String, hour: Int, minute: Int, days: Set<Int>): JSONObject {
+    private fun alarmFields(zone: String, hour: Int, minute: Int, days: Set<Int>, date: String?): JSONObject {
         val cal = java.util.Calendar.getInstance(TimeZone.getTimeZone(zone)).apply {
+            if (days.isEmpty() && date != null) date.split('-').takeIf { it.size == 3 }?.let { set(it[0].toInt(), it[1].toInt() - 1, it[2].toInt()) }
             set(java.util.Calendar.HOUR_OF_DAY, hour); set(java.util.Calendar.MINUTE, minute)
             set(java.util.Calendar.SECOND, 0); set(java.util.Calendar.MILLISECOND, 0)
             while (timeInMillis <= System.currentTimeMillis() || (days.isNotEmpty() && isoDay(this) !in days)) add(java.util.Calendar.DAY_OF_YEAR, 1)
@@ -231,7 +232,7 @@ class AlexaApi(private val store: Store) {
             .put("originalDate", date)
             .put("originalTime", String.format(java.util.Locale.US, "%02d:%02d:00.000", hour, minute))
             .put("isRecurring", days.isNotEmpty())
-            .put("recurringPattern", Recurrence.toPattern(days))
+            .put("recurringPattern", if (days.isEmpty() && date != null) date else Recurrence.toPattern(days))
             .put("status", "ON")
     }
 
@@ -240,18 +241,18 @@ class AlexaApi(private val store: Store) {
     private fun zoneOf(serial: String) =
         devicePrefs(serial)?.optString("timeZoneId")?.takeIf { it.isNotBlank() && it != "null" } ?: TimeZone.getDefault().id
 
-    fun createAlarm(device: EchoDevice, hour: Int, minute: Int, days: Set<Int>) {
+    fun createAlarm(device: EchoDevice, hour: Int, minute: Int, days: Set<Int>, date: String? = null) {
         ensureCsrf()
         val body = baseNotification(device, "Alarm", System.currentTimeMillis())
-        val fields = alarmFields(zoneOf(device.serial), hour, minute, days)
+        val fields = alarmFields(zoneOf(device.serial), hour, minute, days, date)
         fields.keys().forEach { body.put(it, fields.get(it)) }
         request("PUT", "/api/notifications/createReminder", body.toString())
     }
 
-    fun updateAlarm(n: Notification, hour: Int, minute: Int, days: Set<Int>) {
+    fun updateAlarm(n: Notification, hour: Int, minute: Int, days: Set<Int>, date: String? = null) {
         ensureCsrf()
         val body = JSONObject(n.raw.toString())
-        val fields = alarmFields(zoneOf(n.deviceSerial), hour, minute, days)
+        val fields = alarmFields(zoneOf(n.deviceSerial), hour, minute, days, date)
         fields.keys().forEach { body.put(it, fields.get(it)) }
         request("PUT", "/api/notifications/${n.id}", body.toString())
     }

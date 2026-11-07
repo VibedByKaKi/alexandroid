@@ -13,18 +13,18 @@ class AlexaApi(private val store: Store) {
     private val host get() = "https://alexa.amazon.${store.tld}"
     private var csrf: String? = null
 
-    private fun request(method: String, path: String, body: String? = null): String {
+    private fun request(method: String, path: String, body: String? = null, headers: Map<String, String> = emptyMap(), allowHtml: Boolean = false): String {
         try {
-            return rawRequest(method, path, body)
+            return rawRequest(method, path, body, headers, allowHtml)
         } catch (e: AuthException) {
             if (store.refreshToken == null) throw e
             csrf = null
             Auth.refreshCookies(store)
-            return rawRequest(method, path, body)
+            return rawRequest(method, path, body, headers, allowHtml)
         }
     }
 
-    private fun rawRequest(method: String, path: String, body: String? = null): String {
+    private fun rawRequest(method: String, path: String, body: String? = null, headers: Map<String, String> = emptyMap(), allowHtml: Boolean = false): String {
         val conn = URL(if (path.startsWith("http")) path else host + path).openConnection() as HttpURLConnection
         try {
             conn.requestMethod = method
@@ -34,9 +34,12 @@ class AlexaApi(private val store: Store) {
             conn.setRequestProperty("Cookie", store.cookies)
             conn.setRequestProperty("User-Agent", UA)
             conn.setRequestProperty("Accept", "application/json; charset=utf-8")
-            conn.setRequestProperty("Referer", "$host/spa/index.html")
-            conn.setRequestProperty("Origin", host)
-            csrf?.let { conn.setRequestProperty("csrf", it) }
+            if (!path.startsWith("http")) {
+                conn.setRequestProperty("Referer", "$host/spa/index.html")
+                conn.setRequestProperty("Origin", host)
+                csrf?.let { conn.setRequestProperty("csrf", it) }
+            }
+            headers.forEach { (k, v) -> conn.setRequestProperty(k, v) }
             if (body != null) {
                 conn.doOutput = true
                 conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8")
@@ -46,8 +49,8 @@ class AlexaApi(private val store: Store) {
             if (code in 300..399 || code == 401 || code == 403) throw AuthException("HTTP $code")
             val stream = if (code in 200..299) conn.inputStream else conn.errorStream
             val text = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            if (code !in 200..299) throw RuntimeException("HTTP $code $path ${text.take(200)}")
-            if (text.trimStart().startsWith("<")) throw AuthException("HTML response")
+            if (code !in 200..299) { android.util.Log.e("Alexandroid", "HTTP $code cookieLen=${store.cookies.length} urlLen=${path.length} body=${text.take(300)}"); throw RuntimeException("HTTP $code ${path.take(120)} ${text.take(200)}") }
+            if (!allowHtml && text.trimStart().startsWith("<")) throw AuthException("HTML response")
             conn.headerFields["Set-Cookie"]?.forEach { mergeCookie(it) }
             return text
         } finally {
@@ -244,12 +247,31 @@ class AlexaApi(private val store: Store) {
 
     // ---- Voice history (Alexa privacy dashboard) ----------------------------------------------
 
-    fun history(days: Int = 30): List<Activity> {
+    /** The dashboard returns 10 records per call. Its page token is rejected, so the end of the window moves back instead. */
+    fun history(days: Int = 30, pages: Int = 4): List<Activity> {
         val now = System.currentTimeMillis()
-        val url = "https://www.amazon.${store.tld}/alexa-privacy/apd/rvh/customer-history-records?startTime=${now - days * 86_400_000L}&endTime=${now + 86_400_000L}"
-        val root = JSONObject(request("GET", url))
-        val arr = root.optJSONArray("customerHistoryRecords") ?: return emptyList()
+        val start = now - days * 86_400_000L
+        var end = now + 86_400_000L
         val out = ArrayList<Activity>()
+        for (page in 1..pages) {
+            val url = "https://www.amazon.${store.tld}/alexa-privacy/apd/rvh/customer-history-records?startTime=$start&endTime=$end"
+            val root = if (page == 1) JSONObject(request("GET", url)) else {
+                Thread.sleep(1500)
+                try { JSONObject(request("GET", url)) } catch (e: AuthException) { throw e } catch (e: Exception) { break }
+            }
+            val records = root.optJSONArray("customerHistoryRecords") ?: break
+            if (records.length() == 0) break
+            parseHistory(root, out)
+            var oldest = Long.MAX_VALUE
+            for (i in 0 until records.length()) oldest = minOf(oldest, records.getJSONObject(i).optLong("timestamp", Long.MAX_VALUE))
+            if (oldest == Long.MAX_VALUE || oldest >= end || root.optString("encodedRequestToken").let { it.isBlank() || it == "null" }) break
+            end = oldest
+        }
+        return out.distinctBy { it.id }.sortedByDescending { it.time }
+    }
+
+    private fun parseHistory(root: JSONObject, out: MutableList<Activity>) {
+        val arr = root.optJSONArray("customerHistoryRecords") ?: return
         for (i in 0 until arr.length()) {
             val r = arr.getJSONObject(i)
             val items = r.optJSONArray("voiceHistoryRecordItems")
@@ -258,18 +280,18 @@ class AlexaApi(private val store: Store) {
             if (items != null) for (j in 0 until items.length()) {
                 val it = items.getJSONObject(j)
                 val text = it.optString("transcriptText").ifBlank { it.optString("utteranceText") }
+                val type = it.optString("recordItemType")
                 when {
-                    it.optString("recordItemType").contains("CUSTOMER") && heard.isEmpty() -> heard = text
-                    it.optString("recordItemType").contains("ALEXA_RESPONSE") && reply.isEmpty() -> reply = text
+                    (type.contains("CUSTOMER") || type == "ASR_REPLACEMENT_TEXT") && heard.isEmpty() -> heard = text
+                    (type.contains("ALEXA_RESPONSE") || type == "TTS_REPLACEMENT_TEXT") && reply.isEmpty() -> reply = text
                 }
             }
+            // Wake-word-only records carry just "alexa".
+            if (heard.isBlank() || heard.equals("alexa", ignoreCase = true)) continue
             val device = r.optJSONObject("device")?.optString("deviceName")
                 ?: r.optJSONObject("deviceInfo")?.optString("deviceName") ?: ""
-            val summary = heard.ifBlank { reply }
-            if (summary.isBlank()) continue
-            out += Activity(r.optString("recordKey"), r.optLong("timestamp"), summary, device, reply.takeIf { heard.isNotBlank() }.orEmpty())
+            out += Activity(r.optString("recordKey"), r.optLong("timestamp"), heard, device, reply)
         }
-        return out.sortedByDescending { it.time }
     }
 
     companion object {

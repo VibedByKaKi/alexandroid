@@ -134,6 +134,7 @@ class MainActivity : Activity() {
             } catch (e: AuthException) {
                 ui.post { store.logout(); login() }
             } catch (e: Exception) {
+                android.util.Log.e("Alexandroid", "request failed", e)
                 ui.post { toast(e.message ?: e.javaClass.simpleName) }
             }
         }

@@ -39,7 +39,7 @@ against a live account.
 | Alarms | `GET`, `PUT` and `DELETE https://alexa.amazon.<tld>/api/notifications[/{id}]`; creation is `PUT /api/notifications/createReminder` with `status: ON` |
 | Timers | listed, paused (`PUT` with `status: PAUSED`), resumed and deleted through `/api/notifications`. Creating one through that endpoint returns HTTP 500, so the app sends the text command "set a timer for N minutes" (in the device's language) to `POST /api/behaviors/preview` |
 | Echo devices | `GET /api/devices-v2/device?cached=false` |
-| Voice history | `GET https://www.amazon.<tld>/alexa-privacy/apd/rvh/customer-history-records?startTime=&endTime=` |
+| Voice history | `GET https://www.amazon.<tld>/alexa-privacy/apd/rvh/customer-history-records?startTime=&endTime=` (10 records per call; the page token is rejected, so the app moves `endTime` back to the oldest record and deduplicates) |
 
 The older `/api/phoenix` and `/api/activities` endpoints no longer answer, which is why the app does not use them.
 

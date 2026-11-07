@@ -18,9 +18,14 @@ class AlexaApi(private val store: Store) {
             return rawRequest(method, path, body, headers, allowHtml)
         } catch (e: AuthException) {
             if (store.refreshToken == null) throw e
+            android.util.Log.w("Alexandroid", "auth failure on $method ${path.take(80)}: ${e.message}")
             csrf = null
-            Auth.refreshCookies(store)
-            return rawRequest(method, path, body, headers, allowHtml)
+            Auth.refreshCookies(store) // throws AuthException only when the refresh token is rejected: a real sign-out
+            try {
+                return rawRequest(method, path, body, headers, allowHtml)
+            } catch (again: AuthException) {
+                throw RuntimeException("Amazon refused the request (${again.message})")
+            }
         }
     }
 

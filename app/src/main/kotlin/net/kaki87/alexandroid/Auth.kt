@@ -109,7 +109,8 @@ object Auth {
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded")
             conn.setRequestProperty("x-amzn-identity-auth-domain", "api.amazon.com")
             conn.outputStream.use { it.write(form.toByteArray()) }
-            if (conn.responseCode !in 200..299) throw AuthException("exchange HTTP ${conn.responseCode}")
+            if (conn.responseCode in setOf(400, 401, 403)) throw AuthException("exchange HTTP ${conn.responseCode}")
+            if (conn.responseCode !in 200..299) throw RuntimeException("cookie exchange failed: HTTP ${conn.responseCode}")
             val json = JSONObject(conn.inputStream.bufferedReader().readText())
             val list = json.getJSONObject("response").getJSONObject("tokens").getJSONObject("cookies")
                 .getJSONArray(".amazon.${store.tld}")

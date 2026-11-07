@@ -104,7 +104,7 @@ class MainActivity : Activity() {
     }
 
     private fun settings() {
-        AlertDialog.Builder(this).setTitle("Settings").setItems(arrayOf(
+        dialog().setTitle("Settings").setItems(arrayOf(
             "Theme: " + arrayOf("system", "light", "dark")[store.theme],
             if (store.loggedIn) "Sign out" else "Sign in",
         )) { _, which ->
@@ -132,6 +132,9 @@ class MainActivity : Activity() {
             }
         }
     }
+
+    private fun dialog(): AlertDialog.Builder = AlertDialog.Builder(this,
+        if (pal.bg == android.graphics.Color.WHITE) android.R.style.Theme_Material_Light_Dialog_Alert else android.R.style.Theme_Material_Dialog_Alert)
 
     private fun toast(m: String) = Toast.makeText(this, m, Toast.LENGTH_LONG).show()
 
@@ -295,7 +298,7 @@ class MainActivity : Activity() {
 
     private fun confirmDelete(n: Notification, go: () -> Unit) {
         val what = if (n.type == "Timer") "timer" else "${n.clock} alarm"
-        AlertDialog.Builder(this).setMessage("Delete this $what?").setPositiveButton("Delete") { _, _ -> go() }.setNegativeButton("Cancel", null).show()
+        dialog().setMessage("Delete this $what?").setPositiveButton("Delete") { _, _ -> go() }.setNegativeButton("Cancel", null).show()
     }
 
     private fun clock(ms: Long): String {
@@ -306,7 +309,7 @@ class MainActivity : Activity() {
     private fun pickEcho(onPick: (EchoDevice) -> Unit) {
         run({ api.echoDevices() }) { echos ->
             if (echos.isEmpty()) { toast("No Alexa device found"); return@run }
-            AlertDialog.Builder(this).setTitle("Device").setItems(echos.map { it.name }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
+            dialog().setTitle("Device").setItems(echos.map { it.name }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
         }
     }
 
@@ -324,7 +327,7 @@ class MainActivity : Activity() {
                 val on = d in chosen
                 chip.setTextColor(if (on) android.graphics.Color.WHITE else pal.sub)
                 chip.background = android.graphics.drawable.GradientDrawable().apply {
-                    shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(if (on) pal.accentFill else pal.surface)
+                    shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(if (on) pal.accentFill else android.graphics.Color.argb(60, 128, 128, 128))
                 }
             }
             paint()
@@ -332,7 +335,7 @@ class MainActivity : Activity() {
             chips.addView(chip, LinearLayout.LayoutParams(dp(38), dp(38)).apply { setMargins(dp(3), 0, dp(3), 0) })
         }
         val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; addView(picker); addView(chips) }
-        AlertDialog.Builder(this).setTitle(title).setView(ScrollView(this).apply { addView(form) })
+        dialog().setTitle(title).setView(ScrollView(this).apply { addView(form) })
             .setPositiveButton("Save") { _, _ ->
                 picker.clearFocus()
                 onSave(picker.hour, picker.minute, chosen.toSet())
@@ -352,9 +355,9 @@ class MainActivity : Activity() {
     private fun addTimer() = pickEcho { echo ->
         val minutes = EditText(this).apply { hint = "Minutes"; inputType = InputType.TYPE_CLASS_NUMBER }
         val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(20), dp(8), dp(20), 0); addView(minutes) }
-        AlertDialog.Builder(this).setTitle("New timer").setView(form).setPositiveButton("Start") { _, _ ->
+        dialog().setTitle("New timer").setView(form).setPositiveButton("Start") { _, _ ->
             val m = minutes.text.toString().toIntOrNull() ?: return@setPositiveButton
-            run({ api.createTimer(echo, m) }) { show(1) }
+            run({ api.createTimer(echo, m) }) { show(1); ui.postDelayed({ if (tab == 1) show(1) }, 4000) }
         }.setNegativeButton("Cancel", null).show()
     }
 

@@ -146,25 +146,22 @@ class MainActivity : Activity() {
         setOnClickListener { onClick() }
     }
 
-    private fun typeLabel(type: String) = when (type) {
-        "LIGHT" -> "Light"; "SMARTPLUG" -> "Plug"; "SWITCH" -> "Switch"; "SMARTLOCK" -> "Lock"; "THERMOSTAT" -> "Climate"
-        "AIR_CONDITIONER" -> "A/C"; "FAN" -> "Fan"; "TV" -> "TV"; "SPEAKER" -> "Speaker"; "DOOR" -> "Door"; "SCENE_TRIGGER" -> "Scene"
-        "" -> "Device"
-        else -> type.lowercase().replace('_', ' ').replaceFirstChar { it.uppercase() }
+    private fun typeIcon(type: String) = when (type) {
+        "LIGHT" -> R.drawable.ic_type_light; "SMARTPLUG" -> R.drawable.ic_type_plug; "SWITCH" -> R.drawable.ic_type_switch
+        "SMARTLOCK", "DOOR" -> R.drawable.ic_type_lock; "THERMOSTAT" -> R.drawable.ic_type_thermostat
+        "AIR_CONDITIONER", "FAN" -> R.drawable.ic_type_cooling; "TV" -> R.drawable.ic_type_tv; "SPEAKER" -> R.drawable.ic_type_speaker
+        else -> R.drawable.ic_type_device
     }
 
-    private fun row(title: String, subtitle: String?, right: View?, tag: String? = null, onClick: (() -> Unit)? = null): View {
+    private fun row(title: String, subtitle: String?, right: View?, tag: Int? = null, onClick: (() -> Unit)? = null): View {
         val r = LinearLayout(this).apply {
             gravity = Gravity.CENTER_VERTICAL
             setPadding(dp(16), dp(12), dp(16), dp(12))
             onClick?.let { c -> setOnClickListener { c() } }
         }
-        tag?.let { t ->
-            r.addView(TextView(this).apply {
-                text = t; textSize = 11f; gravity = Gravity.CENTER; setTextColor(pal.sub); maxLines = 1
-                setPadding(dp(6), dp(3), dp(6), dp(3))
-                background = android.graphics.drawable.GradientDrawable().apply { cornerRadius = dp(6).toFloat(); setColor(pal.surface) }
-            }, LinearLayout.LayoutParams(dp(64), ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = dp(12) })
+        tag?.let { res ->
+            r.addView(ImageView(this).apply { setImageResource(res); setColorFilter(pal.sub) },
+                LinearLayout.LayoutParams(dp(28), dp(28)).apply { marginEnd = dp(16) })
         }
         val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         col.addView(TextView(this).apply { text = title; textSize = 16f; setTextColor(pal.text) })
@@ -220,7 +217,7 @@ class MainActivity : Activity() {
         val right = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
         if (d.adjustable && d.reachable) right.addView(icon(R.drawable.ic_settings, pal.sub, "Adjust") { lightDialog(d) })
         right.addView(holder)
-        val r = row(d.name, null, right, typeLabel(d.type))
+        val r = row(d.name, null, right, typeIcon(d.type))
         if (d.reachable) holder.setOnClickListener {
             val target = d.on != true
             holder.isEnabled = false
@@ -317,7 +314,7 @@ class MainActivity : Activity() {
                         run({ api.setStatus(n, if (paused) "ON" else "PAUSED") }) { reload() }
                     })
                     buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
-                    val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons, "Timer")
+                    val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons, R.drawable.ic_type_timer)
                     val col = (r as ViewGroup).getChildAt(1) as ViewGroup
                     col.removeViewAt(0); col.addView(title, 0)
                     box.addView(r)
@@ -329,7 +326,7 @@ class MainActivity : Activity() {
                     val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
                     buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
                     buttons.addView(sw)
-                    val r = row(n.clock, listOf(where, Recurrence.date(n.recurring)?.let { "On $it" } ?: Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons, "Alarm") { editAlarm(n, days) }
+                    val r = row(n.clock, listOf(where, Recurrence.date(n.recurring)?.let { "On $it" } ?: Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons, R.drawable.ic_type_alarm) { editAlarm(n, days) }
                     val title = ((r as ViewGroup).getChildAt(1) as ViewGroup).getChildAt(0) as TextView
                     title.textSize = 22f; title.typeface = Typeface.DEFAULT_BOLD
                     box.addView(r)

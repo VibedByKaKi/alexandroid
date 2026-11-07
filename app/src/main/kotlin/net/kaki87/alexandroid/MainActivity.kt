@@ -104,20 +104,13 @@ class MainActivity : Activity() {
     }
 
     private fun settings() {
-        val regionNames = Store.regions.toTypedArray()
         AlertDialog.Builder(this).setTitle("Settings").setItems(arrayOf(
             "Theme: " + arrayOf("system", "light", "dark")[store.theme],
-            "Region: amazon.${store.tld}",
             if (store.loggedIn) "Sign out" else "Sign in",
         )) { _, which ->
             when (which) {
                 0 -> { store.theme = (store.theme + 1) % 3; build(); show(tab) }
-                1 -> AlertDialog.Builder(this).setTitle("Amazon region").setItems(regionNames) { _, r ->
-                    store.tld = regionNames[r]; store.logout()
-                    android.webkit.CookieManager.getInstance().removeAllCookies(null)
-                    login()
-                }.show()
-                2 -> if (store.loggedIn) {
+                1 -> if (store.loggedIn) {
                     store.logout(); android.webkit.CookieManager.getInstance().removeAllCookies(null); show(tab)
                 } else login()
             }
@@ -180,22 +173,48 @@ class MainActivity : Activity() {
         }
     }
 
+    private fun pill(on: Boolean?, enabled: Boolean): TextView = TextView(this).apply {
+        text = if (!enabled) "Offline" else when (on) { true -> "On"; false -> "Off"; null -> "?" }
+        textSize = 14f
+        typeface = Typeface.DEFAULT_BOLD
+        gravity = Gravity.CENTER
+        minWidth = dp(64)
+        setPadding(dp(16), dp(8), dp(16), dp(8))
+        val active = enabled && on == true
+        setTextColor(if (active) android.graphics.Color.WHITE else pal.sub)
+        background = android.graphics.drawable.GradientDrawable().apply {
+            cornerRadius = dp(20).toFloat()
+            setColor(if (active) pal.accentFill else pal.surface)
+        }
+    }
+
     private fun deviceRow(d: Device): View {
-        val sw = Switch(this).apply { isChecked = d.on == true; isEnabled = d.reachable }
-        var row: View? = null
-        val sub = { if (!d.reachable) "Unreachable" else when (d.on) { true -> "On"; false -> "Off"; null -> "Unknown" } }
-        row = row(d.name, sub(), sw)
-        sw.setOnClickListener {
-            val target = sw.isChecked
-            run({ api.setPower(d, target) }) {
-                (((row as ViewGroup).getChildAt(0) as ViewGroup).getChildAt(1) as TextView).text = sub()
-                ListWidgetProvider.refreshAll(this)
+        var pill = pill(d.on, d.reachable)
+        val holder = FrameLayout(this)
+        holder.addView(pill)
+        val r = row(d.name, null, holder)
+        if (d.reachable) holder.setOnClickListener {
+            val target = d.on != true
+            holder.isEnabled = false
+            holder.alpha = 0.5f
+            io.execute {
+                try {
+                    api.setPower(d, target)
+                    ui.post { holder.removeAllViews(); pill = pill(d.on, true); holder.addView(pill); holder.alpha = 1f; holder.isEnabled = true; ListWidgetProvider.refreshAll(this) }
+                } catch (e: AuthException) {
+                    ui.post { store.logout(); login() }
+                } catch (e: Exception) {
+                    android.util.Log.e("Alexandroid", "toggle failed", e)
+                    ui.post { holder.alpha = 1f; holder.isEnabled = true; toast(e.message ?: "Toggle failed") }
+                }
             }
         }
-        return row
+        return r
     }
 
     // ---- Alarms & timers ------------------------------------------------------------------------
+
+    private class TimerView(val n: Notification, val text: TextView, val label: String, val fetchedAt: Long)
 
     private fun alarmsTab() {
         val outer = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
@@ -210,38 +229,78 @@ class MainActivity : Activity() {
         loadNotifications(box)
     }
 
+    private fun smallButton(label: String, color: Int, onClick: () -> Unit) = TextView(this).apply {
+        text = label; textSize = 14f; setTextColor(color); typeface = Typeface.DEFAULT_BOLD
+        setPadding(dp(10), dp(8), dp(10), dp(8))
+        setOnClickListener { onClick() }
+    }
+
     private fun loadNotifications(box: LinearLayout) {
+        tick?.let { ui.removeCallbacks(it) }
         run({ api.notifications() to api.echoDevices() }) { (list, echos) ->
             val names = echos.associate { it.serial to it.name }
+            val fetchedAt = System.currentTimeMillis()
             box.removeAllViews()
             if (list.isEmpty()) box.addView(message("No alarms or timers."))
-            val fmt = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT)
+            val timers = ArrayList<TimerView>()
+            val reload = { loadNotifications(box) }
             list.forEach { n ->
-                val isTimer = n.type == "Timer"
-                val title = if (isTimer) (n.label.ifBlank { "Timer" } + " · " + remaining(n)) else n.clock
-                val sub = listOfNotNull(names[n.deviceSerial], n.recurring?.let { "repeats" }, if (n.status == "PAUSED") "paused" else null).joinToString(" · ")
-                val sw = Switch(this).apply { isChecked = n.status == "ON" }
-                sw.setOnClickListener {
-                    val target = if (isTimer) (if (sw.isChecked) "ON" else "PAUSED") else (if (sw.isChecked) "ON" else "OFF")
-                    run({ api.setStatus(n, target) }) { }
+                val where = names[n.deviceSerial].orEmpty()
+                if (n.type == "Timer") {
+                    val paused = n.status == "PAUSED"
+                    val title = TextView(this).apply { textSize = 22f; setTextColor(pal.text); typeface = Typeface.DEFAULT_BOLD }
+                    val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
+                    buttons.addView(smallButton(if (paused) "Resume" else "Pause", pal.accent) {
+                        run({ api.setStatus(n, if (paused) "ON" else "PAUSED") }) { reload() }
+                    })
+                    buttons.addView(smallButton("Delete", pal.danger) { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
+                    val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons)
+                    val col = (r as ViewGroup).getChildAt(0) as ViewGroup
+                    col.removeViewAt(0); col.addView(title, 0)
+                    box.addView(r)
+                    timers += TimerView(n, title, "", fetchedAt)
+                } else {
+                    val days = Recurrence.parse(n.recurring)
+                    val sw = Switch(this).apply { isChecked = n.status == "ON" }
+                    sw.setOnClickListener { run({ api.setStatus(n, if (sw.isChecked) "ON" else "OFF") }) { } }
+                    val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
+                    buttons.addView(smallButton("Delete", pal.danger) { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
+                    buttons.addView(sw)
+                    val r = row(n.clock, listOf(where, Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons) { editAlarm(n, days) }
+                    val title = ((r as ViewGroup).getChildAt(0) as ViewGroup).getChildAt(0) as TextView
+                    title.textSize = 22f; title.typeface = Typeface.DEFAULT_BOLD
+                    box.addView(r)
                 }
-                box.addView(row(title, sub, sw) {
-                    AlertDialog.Builder(this).setMessage("Delete this ${n.type.lowercase()}?")
-                        .setPositiveButton("Delete") { _, _ -> run({ api.delete(n) }) { loadNotifications(box) } }
-                        .setNegativeButton("Cancel", null).show()
-                })
             }
-            if (list.any { it.type == "Timer" && it.status == "ON" }) {
-                tick = Runnable { loadNotifications(box) }
-                ui.postDelayed(tick!!, 30000)
+            if (timers.isNotEmpty()) {
+                var ticks = 0
+                val t = object : Runnable {
+                    override fun run() {
+                        ticks++
+                        var expired = false
+                        val now = System.currentTimeMillis()
+                        timers.forEach { tv ->
+                            val ms = if (tv.n.status == "ON") tv.n.remainingMillis - (now - tv.fetchedAt) else tv.n.remainingMillis
+                            if (tv.n.status == "ON" && ms <= 0) expired = true
+                            tv.text.text = clock(ms)
+                        }
+                        if (expired || ticks % 30 == 0) loadNotifications(box) else ui.postDelayed(this, 1000)
+                    }
+                }
+                tick = t
+                t.run()
             }
         }
     }
 
-    private fun remaining(n: Notification): String {
-        val ms = if (n.status == "ON" && n.triggerMillis > 0) n.triggerMillis - System.currentTimeMillis() else n.remainingMillis
+    private fun confirmDelete(n: Notification, go: () -> Unit) {
+        val what = if (n.type == "Timer") "timer" else "${n.clock} alarm"
+        AlertDialog.Builder(this).setMessage("Delete this $what?").setPositiveButton("Delete") { _, _ -> go() }.setNegativeButton("Cancel", null).show()
+    }
+
+    private fun clock(ms: Long): String {
         val s = (ms / 1000).coerceAtLeast(0)
-        return String.format("%d:%02d:%02d", s / 3600, s % 3600 / 60, s % 60)
+        return if (s >= 3600) String.format("%d:%02d:%02d", s / 3600, s % 3600 / 60, s % 60) else String.format("%d:%02d", s / 60, s % 60)
     }
 
     private fun pickEcho(onPick: (EchoDevice) -> Unit) {
@@ -251,8 +310,43 @@ class MainActivity : Activity() {
         }
     }
 
+    private fun alarmDialog(title: String, hour: Int, minute: Int, days: Set<Int>, onSave: (Int, Int, Set<Int>) -> Unit) {
+        val light = pal.bg == android.graphics.Color.WHITE
+        val holo = android.view.ContextThemeWrapper(this, if (light) android.R.style.Theme_Holo_Light_Dialog else android.R.style.Theme_Holo_Dialog)
+        val picker = TimePicker(holo).apply { setIs24HourView(true); this.hour = hour; this.minute = minute }
+        val chosen = days.toMutableSet()
+        val chips = LinearLayout(this).apply { gravity = Gravity.CENTER; setPadding(0, dp(8), 0, dp(8)) }
+        for (d in 1..7) {
+            val chip = TextView(this).apply {
+                text = Recurrence.dayName(d).take(2); gravity = Gravity.CENTER; textSize = 13f
+            }
+            val paint = {
+                val on = d in chosen
+                chip.setTextColor(if (on) android.graphics.Color.WHITE else pal.sub)
+                chip.background = android.graphics.drawable.GradientDrawable().apply {
+                    shape = android.graphics.drawable.GradientDrawable.OVAL; setColor(if (on) pal.accentFill else pal.surface)
+                }
+            }
+            paint()
+            chip.setOnClickListener { if (!chosen.add(d)) chosen.remove(d); paint() }
+            chips.addView(chip, LinearLayout.LayoutParams(dp(38), dp(38)).apply { setMargins(dp(3), 0, dp(3), 0) })
+        }
+        val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; addView(picker); addView(chips) }
+        AlertDialog.Builder(this).setTitle(title).setView(ScrollView(this).apply { addView(form) })
+            .setPositiveButton("Save") { _, _ ->
+                picker.clearFocus()
+                onSave(picker.hour, picker.minute, chosen.toSet())
+            }.setNegativeButton("Cancel", null).show()
+    }
+
     private fun addAlarm() = pickEcho { echo ->
-        TimePickerDialog(this, { _, h, m -> run({ api.createAlarm(echo, h, m) }) { show(1) } }, 7, 0, true).show()
+        alarmDialog("New alarm", 7, 0, emptySet()) { h, m, days -> run({ api.createAlarm(echo, h, m, days) }) { show(1) } }
+    }
+
+    private fun editAlarm(n: Notification, days: Set<Int>) {
+        val h = n.clock.substringBefore(':').toIntOrNull() ?: 7
+        val m = n.clock.substringAfter(':').toIntOrNull() ?: 0
+        alarmDialog("Edit alarm", h, m, days) { nh, nm, nd -> run({ api.updateAlarm(n, nh, nm, nd) }) { show(1) } }
     }
 
     private fun addTimer() = pickEcho { echo ->
@@ -273,7 +367,7 @@ class MainActivity : Activity() {
         run({ api.history() }) { items ->
             box.removeAllViews()
             if (items.isEmpty()) box.addView(message("No voice history."))
-            val fmt = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT)
+            val fmt = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM)
             items.forEach {
                 val sub = listOf(fmt.format(Date(it.time)), it.device, it.reply).filter { s -> s.isNotBlank() }.joinToString(" · ")
                 box.addView(row(it.summary, sub, null))

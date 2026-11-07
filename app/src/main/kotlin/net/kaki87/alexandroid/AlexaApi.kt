@@ -213,25 +213,42 @@ class AlexaApi(private val store: Store) {
         request("POST", "/api/behaviors/preview", JSONObject().put("behaviorId", "PREVIEW").put("sequenceJson", seq.toString()).put("status", "ENABLED").toString())
     }
 
-    fun createAlarm(device: EchoDevice, hour: Int, minute: Int) {
-        ensureCsrf()
-        val zone = devicePrefs(device.serial)?.optString("timeZoneId")?.takeIf { it.isNotBlank() && it != "null" } ?: TimeZone.getDefault().id
+    private fun alarmFields(zone: String, hour: Int, minute: Int, days: Set<Int>): JSONObject {
         val cal = java.util.Calendar.getInstance(TimeZone.getTimeZone(zone)).apply {
             set(java.util.Calendar.HOUR_OF_DAY, hour); set(java.util.Calendar.MINUTE, minute)
             set(java.util.Calendar.SECOND, 0); set(java.util.Calendar.MILLISECOND, 0)
-            if (timeInMillis <= System.currentTimeMillis()) add(java.util.Calendar.DAY_OF_YEAR, 1)
+            while (timeInMillis <= System.currentTimeMillis() || (days.isNotEmpty() && isoDay(this) !in days)) add(java.util.Calendar.DAY_OF_YEAR, 1)
         }
         val date = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).apply { timeZone = TimeZone.getTimeZone(zone) }.format(cal.time)
-        val time = String.format(java.util.Locale.US, "%02d:%02d:00.000", hour, minute)
-        val body = baseNotification(device, "Alarm", System.currentTimeMillis())
+        return JSONObject()
             .put("timeZoneId", zone)
             .put("alarmTime", cal.timeInMillis)
             .put("originalDate", date)
-            .put("originalTime", time)
-            .put("isRecurring", false)
-            .put("recurringPattern", JSONObject.NULL)
+            .put("originalTime", String.format(java.util.Locale.US, "%02d:%02d:00.000", hour, minute))
+            .put("isRecurring", days.isNotEmpty())
+            .put("recurringPattern", Recurrence.toPattern(days))
             .put("status", "ON")
+    }
+
+    private fun isoDay(cal: java.util.Calendar) = (cal.get(java.util.Calendar.DAY_OF_WEEK) + 5) % 7 + 1
+
+    private fun zoneOf(serial: String) =
+        devicePrefs(serial)?.optString("timeZoneId")?.takeIf { it.isNotBlank() && it != "null" } ?: TimeZone.getDefault().id
+
+    fun createAlarm(device: EchoDevice, hour: Int, minute: Int, days: Set<Int>) {
+        ensureCsrf()
+        val body = baseNotification(device, "Alarm", System.currentTimeMillis())
+        val fields = alarmFields(zoneOf(device.serial), hour, minute, days)
+        fields.keys().forEach { body.put(it, fields.get(it)) }
         request("PUT", "/api/notifications/createReminder", body.toString())
+    }
+
+    fun updateAlarm(n: Notification, hour: Int, minute: Int, days: Set<Int>) {
+        ensureCsrf()
+        val body = JSONObject(n.raw.toString())
+        val fields = alarmFields(zoneOf(n.deviceSerial), hour, minute, days)
+        fields.keys().forEach { body.put(it, fields.get(it)) }
+        request("PUT", "/api/notifications/${n.id}", body.toString())
     }
 
     private fun baseNotification(d: EchoDevice, type: String, now: Long) = JSONObject()

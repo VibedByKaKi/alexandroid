@@ -140,11 +140,31 @@ class MainActivity : Activity() {
 
     private fun toast(m: String) = Toast.makeText(this, m, Toast.LENGTH_LONG).show()
 
-    private fun row(title: String, subtitle: String?, right: View?, onClick: (() -> Unit)? = null): View {
+    private fun icon(res: Int, color: Int, description: String, onClick: () -> Unit) = ImageView(this).apply {
+        setImageResource(res); setColorFilter(color); contentDescription = description
+        setPadding(dp(10), dp(10), dp(10), dp(10))
+        setOnClickListener { onClick() }
+    }
+
+    private fun typeLabel(type: String) = when (type) {
+        "LIGHT" -> "Light"; "SMARTPLUG" -> "Plug"; "SWITCH" -> "Switch"; "SMARTLOCK" -> "Lock"; "THERMOSTAT" -> "Climate"
+        "AIR_CONDITIONER" -> "A/C"; "FAN" -> "Fan"; "TV" -> "TV"; "SPEAKER" -> "Speaker"; "DOOR" -> "Door"; "SCENE_TRIGGER" -> "Scene"
+        "" -> "Device"
+        else -> type.lowercase().replace('_', ' ').replaceFirstChar { it.uppercase() }
+    }
+
+    private fun row(title: String, subtitle: String?, right: View?, tag: String? = null, onClick: (() -> Unit)? = null): View {
         val r = LinearLayout(this).apply {
             gravity = Gravity.CENTER_VERTICAL
             setPadding(dp(16), dp(12), dp(16), dp(12))
             onClick?.let { c -> setOnClickListener { c() } }
+        }
+        tag?.let { t ->
+            r.addView(TextView(this).apply {
+                text = t; textSize = 11f; gravity = Gravity.CENTER; setTextColor(pal.sub); maxLines = 1
+                setPadding(dp(6), dp(3), dp(6), dp(3))
+                background = android.graphics.drawable.GradientDrawable().apply { cornerRadius = dp(6).toFloat(); setColor(pal.surface) }
+            }, LinearLayout.LayoutParams(dp(64), ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = dp(12) })
         }
         val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         col.addView(TextView(this).apply { text = title; textSize = 16f; setTextColor(pal.text) })
@@ -197,8 +217,10 @@ class MainActivity : Activity() {
         var pill = pill(d.on, d.reachable)
         val holder = FrameLayout(this)
         holder.addView(pill)
-        val r = row(d.name, if (d.adjustable) "Tap to adjust light" else null, holder)
-        if (d.adjustable && d.reachable) r.setOnClickListener { lightDialog(d) }
+        val right = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
+        if (d.adjustable && d.reachable) right.addView(icon(R.drawable.ic_settings, pal.sub, "Adjust") { lightDialog(d) })
+        right.addView(holder)
+        val r = row(d.name, null, right, typeLabel(d.type))
         if (d.reachable) holder.setOnClickListener {
             val target = d.on != true
             holder.isEnabled = false
@@ -276,12 +298,6 @@ class MainActivity : Activity() {
         loadNotifications(box)
     }
 
-    private fun smallButton(label: String, color: Int, onClick: () -> Unit) = TextView(this).apply {
-        text = label; textSize = 14f; setTextColor(color); typeface = Typeface.DEFAULT_BOLD
-        setPadding(dp(10), dp(8), dp(10), dp(8))
-        setOnClickListener { onClick() }
-    }
-
     private fun loadNotifications(box: LinearLayout) {
         tick?.let { ui.removeCallbacks(it) }
         run({ api.notifications() to api.echoDevices() }) { (list, echos) ->
@@ -297,12 +313,12 @@ class MainActivity : Activity() {
                     val paused = n.status == "PAUSED"
                     val title = TextView(this).apply { textSize = 22f; setTextColor(pal.text); typeface = Typeface.DEFAULT_BOLD }
                     val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
-                    buttons.addView(smallButton(if (paused) "Resume" else "Pause", pal.accent) {
+                    buttons.addView(icon(if (paused) R.drawable.ic_play else R.drawable.ic_pause, pal.accent, if (paused) "Resume" else "Pause") {
                         run({ api.setStatus(n, if (paused) "ON" else "PAUSED") }) { reload() }
                     })
-                    buttons.addView(smallButton("Delete", pal.danger) { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
-                    val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons)
-                    val col = (r as ViewGroup).getChildAt(0) as ViewGroup
+                    buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
+                    val r = row("", listOf(n.label.ifBlank { "Timer" }, where, if (paused) "paused" else "").filter { it.isNotBlank() }.joinToString(" · "), buttons, "Timer")
+                    val col = (r as ViewGroup).getChildAt(1) as ViewGroup
                     col.removeViewAt(0); col.addView(title, 0)
                     box.addView(r)
                     timers += TimerView(n, title, "", fetchedAt)
@@ -311,10 +327,10 @@ class MainActivity : Activity() {
                     val sw = Switch(this).apply { isChecked = n.status == "ON" }
                     sw.setOnClickListener { run({ api.setStatus(n, if (sw.isChecked) "ON" else "OFF") }) { } }
                     val buttons = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
-                    buttons.addView(smallButton("Delete", pal.danger) { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
+                    buttons.addView(icon(R.drawable.ic_delete, pal.danger, "Delete") { confirmDelete(n) { run({ api.delete(n) }) { reload() } } })
                     buttons.addView(sw)
-                    val r = row(n.clock, listOf(where, Recurrence.date(n.recurring)?.let { "On $it" } ?: Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons) { editAlarm(n, days) }
-                    val title = ((r as ViewGroup).getChildAt(0) as ViewGroup).getChildAt(0) as TextView
+                    val r = row(n.clock, listOf(where, Recurrence.date(n.recurring)?.let { "On $it" } ?: Recurrence.describe(days)).filter { it.isNotBlank() }.joinToString(" · "), buttons, "Alarm") { editAlarm(n, days) }
+                    val title = ((r as ViewGroup).getChildAt(1) as ViewGroup).getChildAt(0) as TextView
                     title.textSize = 22f; title.typeface = Typeface.DEFAULT_BOLD
                     box.addView(r)
                 }
@@ -419,7 +435,12 @@ class MainActivity : Activity() {
         val form = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(20), dp(8), dp(20), 0); addView(minutes) }
         dialog().setTitle("New timer").setView(form).setPositiveButton("Start") { _, _ ->
             val m = minutes.text.toString().toIntOrNull() ?: return@setPositiveButton
-            run({ api.createTimer(echo, m) }) { show(1); ui.postDelayed({ if (tab == 1) show(1) }, 4000) }
+            run({
+                val before = api.notifications().count { it.type == "Timer" }
+                api.createTimer(echo, m)
+                // Alexa registers the timer asynchronously; wait until it appears in the list.
+                for (i in 0 until 10) { Thread.sleep(1000); if (api.notifications().count { it.type == "Timer" } > before) break }
+            }) { if (tab == 1) show(1) }
         }.setNegativeButton("Cancel", null).show()
     }
 

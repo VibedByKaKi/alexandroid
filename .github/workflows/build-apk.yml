@@ -74,3 +74,12 @@ jobs:
             sleep $((attempt * 10))
           done
           exit 1
+
+      - name: Publish latest pre-release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --cleanup-tag --yes || true
+          gh release create latest alexandroid.apk --prerelease --target "$GITHUB_SHA" \
+            --title "Latest build" --notes "Signed APK built from ${GITHUB_SHA}."

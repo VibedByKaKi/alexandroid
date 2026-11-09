@@ -1,25 +1,30 @@
-# Alexandroid
+# VibedByKaKi/alexandroid
 
-A small native Android client for Alexa, written in Kotlin with no AndroidX or Compose dependency.
+Lightweight native Android client for Alexa, written in Kotlin with no AndroidX or Compose dependency. It controls smart home devices, alarms and timers, and shows voice history.
 
-It covers four things:
+| [![](.github/assets/get-it-on-github.png)](https://github.com/VibedByKaKi/alexandroid/releases/tag/latest) | [![](.github/assets/badge_obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A%2F%2Fapp%2F%257B%2522id%2522%253A%2520%2522net.kaki87.alexandroid%2522%252C%2520%2522url%2522%253A%2520%2522https%253A%252F%252Fgithub.com%252FVibedByKaKi%252Falexandroid%2522%252C%2520%2522author%2522%253A%2520%2522VibedByKaKi%2522%252C%2520%2522name%2522%253A%2520%2522Alexandroid%2522%252C%2520%2522preferredApkIndex%2522%253A%25200%252C%2520%2522additionalSettings%2522%253A%2520%2522%257B%255C%2522includePrereleases%255C%2522%253A%2520true%252C%2520%255C%2522fallbackToOlderReleases%255C%2522%253A%2520true%252C%2520%255C%2522apkFilterRegEx%255C%2522%253A%2520%255C%2522.%252A%255C%255C%255C%255C.apk%2524%255C%2522%257D%2522%257D) |
+| --- | --- |
 
-- Smart home devices: read the current state, toggle on, toggle off.
-- Launcher widgets for the same: a scrollable list of every device, and a single-device toggle.
-- Alarms and timers: list, enable or disable, pause or resume, delete, create.
-- Voice history, and a light, dark or system theme.
+The APK is a rolling GitHub pre-release on the [`latest`](https://github.com/VibedByKaKi/alexandroid/releases/tag/latest) tag. Direct download: [alexandroid.apk](https://github.com/VibedByKaKi/alexandroid/releases/download/latest/alexandroid.apk).
 
-Voice control, chats, lists, notes, reminders, routines, skills and the calendar are out of scope.
+## What this app does
+
+- **Smart home.** Read the state of each device, toggle it, and set brightness, color and white temperature on lights.
+- **Widgets.** A scrollable list of every device, and a single-device toggle.
+- **Alarms and timers.** List, enable or disable, pause or resume, delete and create.
+- **Voice history.** Browse past requests, with a light, dark or system theme.
+- **Out of scope.** Voice control, chats, lists, notes, reminders, routines, skills and the calendar.
 
 ## Build
 
-```bash
-./gradlew :app:assembleDebug
-```
+    ./gradlew :app:assembleDebug
 
-CI (`.github/workflows/build-apk.yml`) builds a release APK and signs it with the keystore stored in the
-`ALEXA_KEYSTORE_BASE64`, `ALEXA_KEYSTORE_PASSWORD`, `ALEXA_KEY_PASSWORD` and `ALEXA_KEY_ALIAS` repository secrets.
-The APK is attached to a `build-<sha>` pre-release (and to the `alexandroid-apk` artifact when storage quota allows).
+## CI
+
+- **Build** runs on every push, on pull requests and on manual dispatch. It builds a release APK and signs it with the keystore stored in the `ALEXA_KEYSTORE_BASE64`, `ALEXA_KEYSTORE_PASSWORD`, `ALEXA_KEY_PASSWORD` and `ALEXA_KEY_ALIAS` repository secrets.
+- Each push outside a pull request attaches the APK to a `build-<time>-<sha>` pre-release.
+- On `master`, it also replaces the `latest` pre-release with `alexandroid.apk`.
+- The APK is also uploaded as the `alexandroid-apk` artifact when storage quota allows.
 
 ## Sign-in
 

@@ -60,7 +60,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="build-${GITHUB_SHA::8}"
+          # Tags sort by name, so lead with the commit time (UTC) to keep releases chronological.
+          STAMP=$(TZ=UTC git show -s --format=%cd --date=format-local:%Y%m%d-%H%M%S "$GITHUB_SHA")
+          TAG="build-${STAMP}-${GITHUB_SHA::8}"
           for attempt in 1 2 3 4 5; do
             if gh release view "$TAG" >/dev/null 2>&1; then
               gh release upload "$TAG" alexandroid.apk --clobber && exit 0

@@ -310,12 +310,14 @@ class AlexaApi(private val store: Store) {
 
     // ---- Voice history (Alexa privacy dashboard) ----------------------------------------------
 
-    /** The dashboard returns 10 records per call. Its page token is rejected, so the end of the window moves back instead. */
-    fun history(days: Int = 30, pages: Int = 4): List<Activity> {
+    /**
+     * The dashboard returns 10 records per call, newest first. Its page token is rejected, so the end of the window moves back instead.
+     * Each page goes to [onPage] as soon as it arrives.
+     */
+    fun history(days: Int = 30, pages: Int = 4, onPage: (List<Activity>) -> Unit) {
         val now = System.currentTimeMillis()
         val start = now - days * 86_400_000L
         var end = now + 86_400_000L
-        val out = ArrayList<Activity>()
         for (page in 1..pages) {
             val url = "https://www.amazon.${store.tld}/alexa-privacy/apd/rvh/customer-history-records?startTime=$start&endTime=$end"
             val root = if (page == 1) JSONObject(request("GET", url)) else {
@@ -324,13 +326,14 @@ class AlexaApi(private val store: Store) {
             }
             val records = root.optJSONArray("customerHistoryRecords") ?: break
             if (records.length() == 0) break
-            parseHistory(root, out)
+            val items = ArrayList<Activity>()
+            parseHistory(root, items)
+            onPage(items)
             var oldest = Long.MAX_VALUE
             for (i in 0 until records.length()) oldest = minOf(oldest, records.getJSONObject(i).optLong("timestamp", Long.MAX_VALUE))
             if (oldest == Long.MAX_VALUE || oldest >= end || root.optString("encodedRequestToken").let { it.isBlank() || it == "null" }) break
             end = oldest
         }
-        return out.distinctBy { it.id }.sortedByDescending { it.time }
     }
 
     private fun parseHistory(root: JSONObject, out: MutableList<Activity>) {

@@ -443,6 +443,8 @@ class MainActivity : Activity() {
 
     // ---- Voice history ------------------------------------------------------------------------
 
+    private val historyCache = LinkedHashMap<String, net.kaki87.alexandroid.Activity>()
+
     private fun historyTab() {
         val outer = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         val actions = LinearLayout(this).apply { gravity = Gravity.END }
@@ -451,15 +453,32 @@ class MainActivity : Activity() {
         outer.addView(sv, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
         content.addView(outer)
         actions.addView(button("Refresh") { show(2) })
-        box.addView(message("Loading history..."))
-        run({ api.history() }) { items ->
+        val fmt = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM)
+        var loading = true
+        val render = {
             box.removeAllViews()
-            if (items.isEmpty()) box.addView(message("No voice history."))
-            val fmt = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM)
+            val items = historyCache.values.sortedByDescending { it.time }
+            if (items.isEmpty()) box.addView(message(if (loading) "Loading history..." else "No voice history."))
             items.forEach {
                 val sub = listOf(fmt.format(Date(it.time)), it.device, it.reply).filter { s -> s.isNotBlank() }.joinToString(" · ")
                 box.addView(row(it.summary, sub, null))
             }
+        }
+        render()
+        // First visit loads the whole window page by page. Later visits only refetch the newest page and keep the older ones.
+        val pages = if (historyCache.isEmpty()) 4 else 1
+        io.execute {
+            try {
+                api.history(pages = pages) { page ->
+                    ui.post { if (tab == 2 && box.isAttachedToWindow) { page.forEach { historyCache[it.id] = it }; render() } else page.forEach { historyCache[it.id] = it } }
+                }
+            } catch (e: AuthException) {
+                ui.post { store.logout(); login() }
+            } catch (e: Exception) {
+                android.util.Log.e("Alexandroid", "history failed", e)
+                ui.post { toast(e.message ?: e.javaClass.simpleName) }
+            }
+            ui.post { loading = false; if (tab == 2 && box.isAttachedToWindow) render() }
         }
     }
 }

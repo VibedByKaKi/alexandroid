@@ -444,8 +444,13 @@ class MainActivity : Activity() {
     // ---- Voice history ------------------------------------------------------------------------
 
     private fun historyTab() {
+        val outer = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
+        val actions = LinearLayout(this).apply { gravity = Gravity.END }
+        outer.addView(actions)
         val (sv, box) = scrollList()
-        content.addView(sv)
+        outer.addView(sv, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+        content.addView(outer)
+        actions.addView(button("Refresh") { show(2) })
         box.addView(message("Loading history..."))
         run({ api.history() }) { items ->
             box.removeAllViews()

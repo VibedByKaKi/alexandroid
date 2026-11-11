@@ -443,7 +443,9 @@ class MainActivity : Activity() {
 
     // ---- Voice history ------------------------------------------------------------------------
 
-    private val historyCache = LinkedHashMap<String, net.kaki87.alexandroid.Activity>()
+    private val historyCache by lazy { LinkedHashMap<String, net.kaki87.alexandroid.Activity>().also { m -> store.history.forEach { m[it.id] = it } } }
+
+    private fun saveHistory() { store.history = historyCache.values.sortedByDescending { it.time }.take(300) }
 
     private fun historyTab() {
         val outer = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
@@ -470,7 +472,7 @@ class MainActivity : Activity() {
         io.execute {
             try {
                 api.history(pages = pages) { page ->
-                    ui.post { if (tab == 2 && box.isAttachedToWindow) { page.forEach { historyCache[it.id] = it }; render() } else page.forEach { historyCache[it.id] = it } }
+                    ui.post { page.forEach { historyCache[it.id] = it }; saveHistory(); if (tab == 2 && box.isAttachedToWindow) render() }
                 }
             } catch (e: AuthException) {
                 ui.post { store.logout(); login() }

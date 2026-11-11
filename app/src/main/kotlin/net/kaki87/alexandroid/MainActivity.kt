@@ -454,7 +454,8 @@ class MainActivity : Activity() {
         val (sv, box) = scrollList()
         outer.addView(sv, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
         content.addView(outer)
-        actions.addView(button("Refresh") { show(2) })
+        val refresh = button("Refresh") { show(2) }.apply { isEnabled = false; alpha = 0.4f }
+        actions.addView(refresh)
         val fmt = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM)
         var loading = true
         val render = {
@@ -480,7 +481,7 @@ class MainActivity : Activity() {
                 android.util.Log.e("Alexandroid", "history failed", e)
                 ui.post { toast(e.message ?: e.javaClass.simpleName) }
             }
-            ui.post { loading = false; if (tab == 2 && box.isAttachedToWindow) render() }
+            ui.post { loading = false; refresh.isEnabled = true; refresh.alpha = 1f; if (tab == 2 && box.isAttachedToWindow) render() }
         }
     }
 }

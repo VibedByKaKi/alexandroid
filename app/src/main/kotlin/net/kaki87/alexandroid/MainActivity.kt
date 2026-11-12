@@ -259,7 +259,13 @@ class MainActivity : Activity() {
                     }
                 })
             })
-            dialog().setTitle(e.name).setView(col).setPositiveButton("Close", null).show()
+            val title = LinearLayout(this).apply {
+                gravity = Gravity.CENTER_VERTICAL; setPadding(dp(24), dp(20), dp(24), 0)
+                addView(TextView(this@MainActivity).apply { text = e.name; textSize = 20f; setTextColor(pal.text) },
+                    LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+                addView(TextView(this@MainActivity).apply { text = DeviceModels.name(e.type); textSize = 13f; setTextColor(pal.sub); gravity = Gravity.END })
+            }
+            dialog().setCustomTitle(title).setView(col).setPositiveButton("Close", null).show()
         }
     }
 
@@ -392,7 +398,7 @@ class MainActivity : Activity() {
     private fun pickEcho(onPick: (EchoDevice) -> Unit) {
         run({ api.echoDevices() }) { echos ->
             if (echos.isEmpty()) { toast("No Alexa device found"); return@run }
-            dialog().setTitle("Device").setItems(echos.map { it.name + "\n" + DeviceModels.name(it.type) }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
+            dialog().setTitle("Device").setItems(echos.map { it.name }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
         }
     }
 

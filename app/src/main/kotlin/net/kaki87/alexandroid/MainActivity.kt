@@ -392,7 +392,7 @@ class MainActivity : Activity() {
     private fun pickEcho(onPick: (EchoDevice) -> Unit) {
         run({ api.echoDevices() }) { echos ->
             if (echos.isEmpty()) { toast("No Alexa device found"); return@run }
-            dialog().setTitle("Device").setItems(echos.map { it.name }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
+            dialog().setTitle("Device").setItems(echos.map { it.name + "\n" + DeviceModels.name(it.type) }.toTypedArray()) { _, i -> onPick(echos[i]) }.show()
         }
     }
 

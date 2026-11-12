@@ -243,15 +243,15 @@ class MainActivity : Activity() {
         val label = TextView(this).apply { textSize = 14f; setTextColor(pal.sub); text = current?.let { "$it%" }.orEmpty() }
         return row(e.name, null, label, R.drawable.ic_type_echo) {
             val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(24), dp(16), dp(24), 0) }
-            val value = TextView(this).apply { setTextColor(pal.sub); textSize = 13f; text = "Volume ${current ?: 0}%" }
+            val value = TextView(this).apply { setTextColor(pal.sub); textSize = 13f; text = "Volume ${(current ?: 10).coerceAtLeast(10)}%" }
             col.addView(value)
             col.addView(SeekBar(this).apply {
-                max = 100; progress = (current ?: 0).coerceIn(0, 100)
+                max = 90; progress = ((current ?: 10) - 10).coerceIn(0, 90)
                 setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                    override fun onProgressChanged(s: SeekBar?, p: Int, user: Boolean) { value.text = "Volume $p%" }
+                    override fun onProgressChanged(s: SeekBar?, p: Int, user: Boolean) { value.text = "Volume ${p + 10}%" }
                     override fun onStartTrackingTouch(s: SeekBar?) {}
                     override fun onStopTrackingTouch(s: SeekBar) {
-                        val v = s.progress
+                        val v = s.progress + 10
                         io.execute {
                             try { api.setVolume(e, v); ui.post { current = v; label.text = "$v%" } }
                             catch (ex: Exception) { android.util.Log.e("Alexandroid", "volume failed", ex); ui.post { toast(ex.message ?: "Volume failed") } }

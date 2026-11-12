@@ -241,7 +241,7 @@ class MainActivity : Activity() {
     private fun echoRow(e: EchoDevice, volume: Int?): View {
         var current = volume
         val label = TextView(this).apply { textSize = 14f; setTextColor(pal.sub); text = current?.let { "$it%" }.orEmpty() }
-        return row(e.name, null, label, R.drawable.ic_type_speaker) {
+        return row(e.name, null, label, R.drawable.ic_type_echo) {
             val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(24), dp(16), dp(24), 0) }
             val value = TextView(this).apply { setTextColor(pal.sub); textSize = 13f; text = "Volume ${current ?: 0}%" }
             col.addView(value)

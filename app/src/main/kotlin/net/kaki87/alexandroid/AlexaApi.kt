@@ -248,13 +248,34 @@ class AlexaApi(private val store: Store) {
             "it" -> "timer di $minutes minuti"
             else -> "set a timer for $minutes minutes"
         }
-        val customerId = JSONObject(request("GET", "/api/bootstrap?version=0")).getJSONObject("authentication").getString("customerId")
+        val customerId = customerId()
         val payload = JSONObject().put("deviceType", device.type).put("deviceSerialNumber", device.serial)
             .put("locale", locale.substringBefore('-') + "-" + locale.substringAfter('-', "US").uppercase())
             .put("customerId", customerId).put("text", text)
         val seq = JSONObject().put("@type", "com.amazon.alexa.behaviors.model.Sequence").put("startNode", JSONObject()
             .put("@type", "com.amazon.alexa.behaviors.model.OpaquePayloadOperationNode")
             .put("type", "Alexa.TextCommand").put("skillId", "amzn1.ask.1p.tellalexa").put("operationPayload", payload))
+        request("POST", "/api/behaviors/preview", JSONObject().put("behaviorId", "PREVIEW").put("sequenceJson", seq.toString()).put("status", "ENABLED").toString())
+    }
+
+    private fun customerId() = JSONObject(request("GET", "/api/bootstrap?version=0")).getJSONObject("authentication").getString("customerId")
+
+    /** Current speaker volume (0..100) of every Echo, by serial number. */
+    fun echoVolumes(): Map<String, Int> {
+        ensureCsrf()
+        val arr = JSONObject(request("GET", "/api/devices/deviceType/dsn/audio/v1/allDeviceVolumes")).optJSONArray("volumes") ?: return emptyMap()
+        return (0 until arr.length()).map { arr.getJSONObject(it) }
+            .filter { it.has("speakerVolume") }
+            .associate { it.getString("dsn") to it.getInt("speakerVolume") }
+    }
+
+    fun setVolume(device: EchoDevice, percent: Int) {
+        ensureCsrf()
+        val payload = JSONObject().put("deviceType", device.type).put("deviceSerialNumber", device.serial)
+            .put("customerId", customerId()).put("locale", JSONObject.NULL).put("value", percent.coerceIn(0, 100))
+        val seq = JSONObject().put("@type", "com.amazon.alexa.behaviors.model.Sequence").put("startNode", JSONObject()
+            .put("@type", "com.amazon.alexa.behaviors.model.OpaquePayloadOperationNode")
+            .put("type", "Alexa.DeviceControls.Volume").put("operationPayload", payload))
         request("POST", "/api/behaviors/preview", JSONObject().put("behaviorId", "PREVIEW").put("sequenceJson", seq.toString()).put("status", "ENABLED").toString())
     }
 

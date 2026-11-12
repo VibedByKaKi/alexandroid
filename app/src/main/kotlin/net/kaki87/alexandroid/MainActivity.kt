@@ -187,10 +187,11 @@ class MainActivity : Activity() {
         val (sv, box) = scrollList()
         content.addView(sv)
         box.addView(message("Loading devices..."))
-        run({ api.smartHomeDevices() }) { devices ->
+        run({ Triple(api.smartHomeDevices(), api.echoDevices(), runCatching { api.echoVolumes() }.getOrDefault(emptyMap())) }) { (devices, echos, volumes) ->
             box.removeAllViews()
-            if (devices.isEmpty()) box.addView(message("No controllable smart home devices found."))
+            if (devices.isEmpty() && echos.isEmpty()) box.addView(message("No controllable devices found."))
             devices.forEach { d -> box.addView(deviceRow(d)) }
+            echos.forEach { e -> box.addView(echoRow(e, volumes[e.serial])) }
             ListWidgetProvider.refreshAll(this)
         }
     }
@@ -235,6 +236,31 @@ class MainActivity : Activity() {
             }
         }
         return r
+    }
+
+    private fun echoRow(e: EchoDevice, volume: Int?): View {
+        var current = volume
+        val label = TextView(this).apply { textSize = 14f; setTextColor(pal.sub); text = current?.let { "$it%" }.orEmpty() }
+        return row(e.name, null, label, R.drawable.ic_type_speaker) {
+            val col = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(24), dp(16), dp(24), 0) }
+            val value = TextView(this).apply { setTextColor(pal.sub); textSize = 13f; text = "Volume ${current ?: 0}%" }
+            col.addView(value)
+            col.addView(SeekBar(this).apply {
+                max = 100; progress = (current ?: 0).coerceIn(0, 100)
+                setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                    override fun onProgressChanged(s: SeekBar?, p: Int, user: Boolean) { value.text = "Volume $p%" }
+                    override fun onStartTrackingTouch(s: SeekBar?) {}
+                    override fun onStopTrackingTouch(s: SeekBar) {
+                        val v = s.progress
+                        io.execute {
+                            try { api.setVolume(e, v); ui.post { current = v; label.text = "$v%" } }
+                            catch (ex: Exception) { android.util.Log.e("Alexandroid", "volume failed", ex); ui.post { toast(ex.message ?: "Volume failed") } }
+                        }
+                    }
+                })
+            })
+            dialog().setTitle(e.name).setView(col).setPositiveButton("Close", null).show()
+        }
     }
 
     private fun lightDialog(d: Device) {

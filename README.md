@@ -1,6 +1,6 @@
 # VibedByKaKi/alexandroid
 
-Lightweight native Android client for Alexa, written in Kotlin with no AndroidX or Compose dependency. It controls smart home devices, alarms and timers, and shows voice history.
+Lightweight native Android client for Alexa, written in Kotlin with no AndroidX or Compose dependency. It controls smart home devices, Echo volume, alarms and timers, and shows voice history.
 
 | [![](.github/assets/get-it-on-github.png)](https://github.com/VibedByKaKi/alexandroid/releases) | [![](.github/assets/badge_obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A%2F%2Fapp%2F%257B%2522id%2522%253A%2520%2522net.kaki87.alexandroid%2522%252C%2520%2522url%2522%253A%2520%2522https%253A%252F%252Fgithub.com%252FVibedByKaKi%252Falexandroid%2522%252C%2520%2522author%2522%253A%2520%2522VibedByKaKi%2522%252C%2520%2522name%2522%253A%2520%2522Alexandroid%2522%252C%2520%2522preferredApkIndex%2522%253A%25200%252C%2520%2522additionalSettings%2522%253A%2520%2522%257B%255C%2522includePrereleases%255C%2522%253A%2520true%252C%2520%255C%2522fallbackToOlderReleases%255C%2522%253A%2520true%252C%2520%255C%2522apkFilterRegEx%255C%2522%253A%2520%255C%2522.%252A%255C%255C%255C%255C.apk%2524%255C%2522%257D%2522%257D) |
 | --- | --- |
@@ -47,6 +47,7 @@ against a live account.
 | Echo devices | `GET /api/devices-v2/device?cached=false` |
 | Voice history | `GET https://www.amazon.<tld>/alexa-privacy/apd/rvh/customer-history-records?startTime=&endTime=` (10 records per call; the page token is rejected, so the app moves `endTime` back to the oldest record and deduplicates) |
 
+| Echo volume | `GET /api/devices/deviceType/dsn/audio/v1/allDeviceVolumes` reads `speakerVolume`. Setting it sends a `Alexa.DeviceControls.Volume` node (payload `value` 0..100) to `POST /api/behaviors/preview` |
 The older `/api/phoenix` and `/api/activities` endpoints no longer answer, which is why the app does not use them.
 
 ## Decompiled app

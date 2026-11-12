@@ -17,7 +17,7 @@ The APK is attached to a `build-<time>-<sha>` pre-release on the [releases page]
 
 # Screenshots
 
-| ![](./screenshots/1_devices.webp) | ![](./screenshots/2_echo_device_volume.webp) | ![](./screenshots/3_light_device_color.webp) | |
+| ![](./screenshots/1_devices.webp) | ![](./screenshots/2_echo_device_volume.webp) | ![](./screenshots/3_light_device_color.webp) | ![](./screenshots/8_widgets.webp) |
 | --- | --- | --- | ---
 | ![](./screenshots/4_alarms_timers.webp) | ![](./screenshots/5_new_alarm.webp) | ![](./screenshots/6_new_timer.webp) | ![](./screenshots/7_history.webp)
 

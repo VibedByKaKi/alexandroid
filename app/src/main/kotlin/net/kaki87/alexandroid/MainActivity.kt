@@ -190,8 +190,8 @@ class MainActivity : Activity() {
         run({ Triple(api.smartHomeDevices(), api.echoDevices(), runCatching { api.echoVolumes() }.getOrDefault(emptyMap())) }) { (devices, echos, volumes) ->
             box.removeAllViews()
             if (devices.isEmpty() && echos.isEmpty()) box.addView(message("No controllable devices found."))
-            devices.forEach { d -> box.addView(deviceRow(d)) }
             echos.forEach { e -> box.addView(echoRow(e, volumes[e.serial])) }
+            devices.forEach { d -> box.addView(deviceRow(d)) }
             ListWidgetProvider.refreshAll(this)
         }
     }

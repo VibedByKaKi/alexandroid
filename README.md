@@ -45,9 +45,9 @@ against a live account.
 | Alarm repeat and date | `recurringPattern`: `P1D` daily, `XXXX-WD` weekdays, `XXXX-WE` weekends, `XXXX-WXX-1` to `XXXX-WXX-7` for single days (comma-separated for several), `""` for once, and `YYYY-MM-DD` for a one-time alarm on that date. Setting `originalDate` alone is ignored by the server |
 | Timers | listed, paused (`PUT` with `status: PAUSED`), resumed and deleted through `/api/notifications`. Creating one through that endpoint returns HTTP 500, so the app sends the text command "set a timer for N minutes" (in the device's language) to `POST /api/behaviors/preview` |
 | Echo devices | `GET /api/devices-v2/device?cached=false` |
+| Echo volume | `GET /api/devices/deviceType/dsn/audio/v1/allDeviceVolumes` reads `speakerVolume`. Setting it sends a `Alexa.DeviceControls.Volume` node (payload `value` 0..100) to `POST /api/behaviors/preview` |
 | Voice history | `GET https://www.amazon.<tld>/alexa-privacy/apd/rvh/customer-history-records?startTime=&endTime=` (10 records per call; the page token is rejected, so the app moves `endTime` back to the oldest record and deduplicates) |
 
-| Echo volume | `GET /api/devices/deviceType/dsn/audio/v1/allDeviceVolumes` reads `speakerVolume`. Setting it sends a `Alexa.DeviceControls.Volume` node (payload `value` 0..100) to `POST /api/behaviors/preview` |
 The older `/api/phoenix` and `/api/activities` endpoints no longer answer, which is why the app does not use them.
 
 ## Decompiled app

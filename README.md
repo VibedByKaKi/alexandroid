@@ -15,6 +15,12 @@ The APK is attached to a `build-<time>-<sha>` pre-release on the [releases page]
 - **Voice history.** Browse past requests, with a light, dark or system theme.
 - **Out of scope.** Voice control, chats, lists, notes, reminders, routines, skills and the calendar.
 
+# Screenshots
+
+| ![](./screenshots/1_devices.webp) | ![](./screenshots/2_echo_device_volume.webp) | ![](./screenshots/3_light_device_color.webp) | ![](./screenshots/4_alarms_timers.webp)
+| --- | --- | --- | ---
+| ![](./screenshots/5_new_alarm.webp) | ![](./screenshots/6_new_timer.webp) | ![](./screenshots/7_history.webp)
+
 ## Build
 
     ./gradlew :app:assembleDebug
